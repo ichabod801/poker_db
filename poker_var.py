@@ -43,6 +43,7 @@ Viewer: A command line interface for Ichabod's Poker Variant Database. (cmd.Cmd)
 """
 
 import cmd
+import sqlite3 as sql
 import traceback
 
 class Viewer(cmd.Cmd):
