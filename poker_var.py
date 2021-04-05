@@ -4,7 +4,7 @@ poker_db.py
 A command line interface for Ichabod's Poker Variant Database.
 
 WARNING: This program uses eval in Viewer.do_shell. Before running this program
-over a network or other insecure situations, you should nerf that method.
+over a network or in other insecure situations, you should nerf that method.
 
 To Do:
 * Convert to sqlite.
@@ -53,8 +53,13 @@ class Viewer(cmd.Cmd):
 	Attributes:
 	conn: A connection to the poker variant database. (Connection)
 	cursor: An SQL command executor. (Cursor)
-	rule_type_lookup: A lookup table for rule types. (dict of int: str) 
-	rule_type_ids: A lookup tabe for rule type IDs. (dict of str: int)
+	rule_lookup: A lookup table for rules. (dict of int: str)
+	rule_type_ids: A lookup table for rule type IDs. (dict of str: int)
+	rule_type_lookup: A lookup table for rule types. (dict of int: str)
+	source_ids: A lookup table for source IDs. (dict of str: int)
+	source_lookup: A lookup table for sources. (dict of int: tuple)
+	tag_ids: A lookup table for tag IDs. (dict of str: int)
+	tag_lookup: A lookup table for tag. (dict of int: str)
 
 	Class Attributes:
 	aliases: Command aliases. (dict of str: str)
@@ -64,6 +69,9 @@ class Viewer(cmd.Cmd):
 	do_reset: Reset the SQL database based on the csv files. (None)
 	load_csv_data: Load csv data from the old database. (dict of str: tuple)
 	reset_rule_types: Load the old rule type data into the database. (None)
+	reset_rules: Load the old rule data into the database. (None)
+	reset_sources: Load the old source data into the database. (None)
+	reset_tags: Load the old tag data into the database. (None)
 
 	Overridden Methods:
 	default
@@ -116,6 +124,8 @@ class Viewer(cmd.Cmd):
 			data = self.load_csv_data()
 			self.reset_rule_types(data)
 			self.reset_sources(data)
+			self.reset_tags(data)
+			self.reset_rules(data)
 		else:
 			# Note that the reset was aborted.
 			print('Reset aborted.')
@@ -205,21 +215,73 @@ class Viewer(cmd.Cmd):
 		rule_types.sort()
 		self.rule_type_lookup = {}
 		self.rule_type_ids = {}
-		code = 'insert into rule_types(text) values(?)'
+		code = 'insert into rule_types(type) values(?)'
 		for rule_type in rule_types:
 			self.cursor.execute(code, (rule_type,))
 			type_id = self.cursor.lastrowid
 			self.rule_type_ids[rule_type] = type_id
 			self.rule_type_lookup[type_id] = rule_type
+		self.conn.commit()
 
-	def reset_source(self, data):
+	def reset_rules(self, data):
+		"""
+		Load the old rule data into the database. (None)
+
+		Parameters:
+		data: The data loaded from the csv files. (dict of str: tuple)
+		"""
+		self.rule_lookup = {}
+		code = 'insert into rules(type_id, cards, short, full) values(?, ?, ?, ?)'
+		for rule in data['rules']:
+			data = (self.rule_type_ids[rule[1]], int(rule[2]), rule[3], rule[4])
+			self.cursor.execute(code, data)
+			rule_id = self.cursor.lastrowid
+			if rule_id != int(rule[0]):
+				raise ValueError(f'Rule ID mismatch for old rule #{rule[0]}, new rule #{rule_id}')
+			self.rule_lookup[rule_id] = data
+		self.conn.commit()
+
+	def reset_sources(self, data):
 		"""
 		Load the old source data into the database. (None)
 
 		Parameters:
 		data: The data loaded from the csv files. (dict of str: tuple)
 		"""
-		pass
+		sources = list(set(row[-2:] for row in data['variants']))
+		sources.sort()
+		self.source_lookup = {}
+		self.source_ids = {}
+		code = 'insert in sources(name, link) values(?, ?)'
+		for name, link in sources:
+			if link == 'N/A' or 'amazon' in link:
+				link = None
+			self.cursor.execute(code, (name, link))
+			source_id = self.cursor.lastrowid
+			self.source_ids[name] = source_id
+			self.source_lookup[source_id] = (name, link)
+		self.conn.commit()
+
+	def reset_tags(self, data):
+		"""
+		Load the old tag data into the database. (None)
+
+		Parameters:
+		data: The data loaded from the csv files. (dict of str: tuple)
+		"""
+		tags = list(set(row[1] for row in data['tags']))
+		tags.sort()
+		new_tag_order = ['common', 'discard', 'draw', 'flip' 'guts', 'pass', 'straight', 'stud']
+		new_tag_order.extend(tag for tag in tags if tag not in new_tag_order)
+		self.tag_lookup = {}
+		self.tag_ids = {}
+		code = 'insert into tags(tag) values(?)'
+		for tag in new_tag_order:
+			self.cursor.execute(code, (tag,))
+			tag_id = self.cursor.lastrowid
+			self.tag_ids[tag] = tag_id
+			self.tag_lookup[tag_id] = tag
+		self.conn.commit()
 
 if __name__ == '__main__':
 	viewer = Viewer()
