@@ -7,7 +7,6 @@ WARNING: This program uses eval in Viewer.do_shell. Before running this program
 over a network or other insecure situations, you should nerf that method.
 
 To Do:
-* Restart git, with a remote on github.
 * Convert to sqlite.
 * Create the user interface.
 	* Filters
@@ -43,6 +42,7 @@ Viewer: A command line interface for Ichabod's Poker Variant Database. (cmd.Cmd)
 """
 
 import cmd
+import csv
 import sqlite3 as sql
 import traceback
 
@@ -50,11 +50,20 @@ class Viewer(cmd.Cmd):
 	"""
 	A command line interface for Ichabod's Poker Variant Database. (cmd.Cmd)
 
+	Attributes:
+	conn: A connection to the poker variant database. (Connection)
+	cursor: An SQL command executor. (Cursor)
+	rule_type_lookup: A lookup table for rule types. (dict of int: str) 
+	rule_type_ids: A lookup tabe for rule type IDs. (dict of str: int)
+
 	Class Attributes:
 	aliases: Command aliases. (dict of str: str)
 
 	Methods:
 	do_quit: Quit the interface. (True)
+	do_reset: Reset the SQL database based on the csv files. (None)
+	load_csv_data: Load csv data from the old database. (dict of str: tuple)
+	reset_rule_types: Load the old rule type data into the database. (None)
 
 	Overridden Methods:
 	default
@@ -84,11 +93,64 @@ class Viewer(cmd.Cmd):
 
 	def do_quit(self, arguments):
 		"""Quit the IPVDB interface. (q)"""
+		self.cursor.close()
+		self.conn.close()
 		return True
+
+	def do_reset(self, arguments):
+		"""Reset the SQL database based on the csv files."""
+		# Confirm resetting the database.
+		print('+--------------------------------------------------------------+')
+		print('| WARNING: This will DESTROY any changes made to the database! |')
+		print('+--------------------------------------------------------------+')
+		print()
+		confirm = input('Are you sure you want to do this? ')
+		if confirm.lower() in ('y', 'yes'):
+			# Reset the table definitions.
+			with open('poker_var.sql') as code_file:
+				db_code = code_file.read()
+				self.cursor.execute('drop tables;')
+				self.cursor.execute(db_code)
+				self.conn.commit()
+			# Load the old data.
+			data = self.load_csv_data()
+			self.reset_rule_types(data)
+			self.reset_sources(data)
+		else:
+			# Note that the reset was aborted.
+			print('Reset aborted.')
 
 	def do_shell(self, arguments):
 		"""Handle raw Python code. (!)"""
 		print(eval(arguments))
+
+	def load_csv_data(self):
+		"""
+		Load the csv data from the old database. (dict of str: tuple)
+
+		Each table in the old data is given a key in the returned dictionary. Note
+		that the tables in the old database do not correspond exactly to the tables in
+		the new database. Some things that should have been lookup tables weren't.
+		"""
+		data = {}
+		with open('alias_data.csv') as alias_file:
+			alias_reader = csv.reader(alias_file)
+			data['aliases'] = tuple(alias_reader)
+		with open('game_data.csv') as game_file:
+			game_reader = csv.reader(game_file)
+			data['variants'] = tuple(game_reader)
+		with open('game_rules.csv') as game_rules_file:
+			game_rules_reader = csv.reader(game_rules_file)
+			data['game-rules'] = tuple(game_rules_reader)
+		with open('game_tags.csv') as game_tags_file:
+			game_tags_reader = csv.reader(game_tags_file)
+			data['game-tags'] = tuple(game_tags_reader)
+		with open('rule_data.csv') as rule_file:
+			rule_reader = csv.reader(rule_file)
+			data['rules'] = tuple(rule_reader)
+		with open('rule_data.csv') as tag_file:
+			tags_reader = csv.reader(tag_file)
+			data['tags'] = tuple(tags_reader)
 
 	def onecmd(self, line):
 		"""
@@ -115,12 +177,8 @@ class Viewer(cmd.Cmd):
 
 	def preloop(self):
 		"""Set up the interface. (None)"""
-		self.load_data()
-		self.current = self.variants['Five Card Draw']
-		self.current_rule = self.rules[950]   # One-eyed jacks are wild.
-		self.changed = set()
-		self.count, self.match_index = 0, 0
-		self.matches, self.rule_matches = [], []
+		self.conn = sql.connect('poker_db.db')
+		self.cursor = self.conn.cursor()
 		print()
 
 	def postcmd(self, stop, line):
@@ -134,6 +192,34 @@ class Viewer(cmd.Cmd):
 		if not stop:
 			print()
 		return stop
+
+	def reset_rule_types(self, data):
+		"""
+		Load the old rule type data into the database. (None)
+
+		Parameters:
+		data: The data loaded from the csv files. (dict of str: tuple)
+		"""
+		rule_types = list(set(row[1] for row in data['rules']))
+		rule_types.append('variant')
+		rule_types.sort()
+		self.rule_type_lookup = {}
+		self.rule_type_ids = {}
+		code = 'insert into rule_types(text) values(?)'
+		for rule_type in rule_types:
+			self.cursor.execute(code, (rule_type,))
+			type_id = self.cursor.lastrowid
+			self.rule_type_ids[rule_type] = type_id
+			self.rule_type_lookup[type_id] = rule_type
+
+	def reset_source(self, data):
+		"""
+		Load the old source data into the database. (None)
+
+		Parameters:
+		data: The data loaded from the csv files. (dict of str: tuple)
+		"""
+		pass
 
 if __name__ == '__main__':
 	viewer = Viewer()

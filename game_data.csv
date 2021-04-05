@@ -19,7 +19,7 @@
 19,Blind Tiger,Draw,5,2,0,6,9,1,Joker Poker,http://www.freewebs.com/jokerpoker/
 20,California Draw with the Bug,Draw,5,2,1,6,9,1,Public Domain,N/A
 21,Call a Wild,Draw,5,2,16,6,9,1,Graham's Card Club,http://www.gccpokertables.com/
-22,Canadian Draw,Draw,5,2,0,6,9,1,Source misplaced.,N/A
+22,Canadian Draw,Draw,5,2,0,6,9,1,Source misplaced,N/A
 23,Chappy,Draw,5,2,7,6,9,1,Free Times,http://www.free-times.com/archive/coverstorarch/poker.html
 24,Connect Four,Draw,5,2,28,6,9,1,Poker Mike,http://www.pokermike.com/poker/
 25,Devore,Draw,5,2,8,6,9,1,Aidtopia,http://www.aidtopia.com/communities/poker/
@@ -40,7 +40,7 @@
 40,Five Draw Any Card Wild,Draw,5,2,6,6,9,1,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
 41,Five Draw Any Value Wild,Draw,5,2,24,6,9,1,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
 42,Five Draw Pair No Pair,Draw,5,2,0,6,9,1,Rec.Gambling.Poker,N/A
-43,Four Card Draw,Draw,4,2,0,6,8,1,Source misplaced.,N/A
+43,Four Card Draw,Draw,4,2,0,6,8,1,Source misplaced,N/A
 44,Frankenstein,Draw,5,2,0,6,9,1,Legion West,http://interoz.com/madhatters/legionwest/poker.htm
 45,Freak of Nature,Draw,5,2,4,6,9,1,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
 46,Fuzzy Draw,Draw,5,2,30,6,9,1,Aidtopia,http://www.aidtopia.com/communities/poker/
@@ -48,13 +48,13 @@
 48,Hot Pastrami,Draw,5,2,0,6,9,1,Tom Jolly,http://www.silcom.com/~tomjolly/poker_sf.htm
 49,Jack Shit,Draw,5,2,0,6,9,1,Poker Variant Database,http://www.pvdb.org/
 50,Jackpot Poker,Draw,5,202,4,8,205,1,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
-51,Jacks High,Draw,5,2,0,6,9,1,Source misplaced.,N/A
+51,Jacks High,Draw,5,2,0,6,9,1,Source misplaced,N/A
 52,Jacks or Better,Draw,5,2,0,6,9,1,Public Domain,N/A
 53,Kings and Low Men,Draw,5,2,28,6,9,1,Poker Mike,http://www.pokermike.com/poker/
 54,Kinky Sex Draw,Draw,5,2,8,6,9,1,Aidtopia,http://www.aidtopia.com/communities/poker/
 55,Lalapalooza,Draw,5,2,0,6,9,1,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
 56,Lefty Louie,Draw,5,2,4,6,9,1,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
-57,Low Card,Draw,5,2,24,6,9,1,Source misplaced.,N/A
+57,Low Card,Draw,5,2,24,6,9,1,Source misplaced,N/A
 58,Lowboy,Draw,5,2,0,6,9,1,Xaos Dog,http://www.xaosdog.com
 59,Magic,Draw,5,2,30,6,9,1,Jay Close,N/A
 60,Making Babies,Draw,5,2,12,6,9,1,Joker Poker,http://www.freewebs.com/jokerpoker/
@@ -63,7 +63,7 @@
 63,Micky Mantle,Draw,5,2,4,6,9,1,Mike Tsao,http://www.sowbug.org/cards.html
 64,Monkey Love,Draw,9,2,0,6,13,1,Jeff Prillaman,N/A
 65,Neal Deal Red,Draw,5,2,12,6,9,1,Graham's Card Club,http://www.gccpokertables.com/
-66,Old English Draw,Draw,5,2,0,6,9,1,Source misplaced.,N/A
+66,Old English Draw,Draw,5,2,0,6,9,1,Source misplaced,N/A
 67,One Eyed King,Draw,5,2,1,6,9,1,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
 68,Pass the Crap,Draw,5,2,0,10,13,1,P. D. Magnus,http://www.fucundity.com/pmagnus/poker.html
 69,Pay for Your Draw,Draw,5,2,0,6,9,1,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
@@ -74,7 +74,7 @@
 74,Red and Black,Nonpoker,5,2,0,6,9,1,Joker Poker,http://www.freewebs.com/jokerpoker/
 75,Rollouts,Draw,5,6,0,6,9,1,Public Domain,N/A
 76,Rubidoux,Draw,5,2,4,6,9,1,Aidtopia,http://www.aidtopia.com/communities/poker/
-77,Ruin Your Neighbor,Draw,5,2,0,6,10,1,Source misplaced.,N/A
+77,Ruin Your Neighbor,Draw,5,2,0,6,10,1,Source misplaced,N/A
 78,Seven Card Draw II,Draw,7,2,0,4,12,1,Intellectual Orgy,http://tinkrbel.greyduck.net/
 79,Short Deck Draw,Draw,5,2,0,6,9,1,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 80,Shotgun,Draw,5,3,0,6,9,1,Wikipedia,http://en.wikipedia.org/wiki/Poker
@@ -100,8 +100,8 @@
 100,Beat Your Neighbor,Nonpoker,5,301,0,10,5,2,Public Domain,N/A
 101,Best Flush,Nonpoker,5,4,0,10,5,2,Poker Mike,http://www.pokermike.com/poker/
 102,Bid'em,Stud,5,5,0,8,6,2,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
-103,Blind Pig,Stud,5,99,0,10,5,2,Source misplaced.,N/A
-104,Blind Stud,Stud,5,4,0,10,5,2,Source misplaced.,N/A
+103,Blind Pig,Stud,5,99,0,10,5,2,Source misplaced,N/A
+104,Blind Stud,Stud,5,4,0,10,5,2,Source misplaced,N/A
 105,Bombay,Stud,5,5,0,8,6,2,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 106,Bug Stud,Stud,5,4,0,10,5,2,Graham's Card Club,http://www.gccpokertables.com/
 107,Canadian,Stud,5,5,0,6,8,2,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
@@ -109,7 +109,7 @@
 109,Crocodile Stud,Stud,6,4,0,8,6,2,Gambling Poker,http://www.gambling-poker.com/
 110,Do Ya,Stud,5,4,24,6,8,2,Joker Poker,http://www.freewebs.com/jokerpoker/
 111,Double Double,Stud,5,4,0,5,10,2,Erich Friedman,http://www.stetson.edu/~efriedma/poker/variants.html
-112,Double Handed,Stud,5,4,0,5,5,2,Source misplaced.,N/A
+112,Double Handed,Stud,5,4,0,5,5,2,Source misplaced,N/A
 113,Fairview,Stud,2,5,0,10,5,2,Scarne's Guide to Modern Poker,http://www.amazon.com/exec/obidos/ASIN/0671530763/qid=1124201165/sr=2-1/ref=pd_bbs_b_2_1/102-4548851-4904951
 114,Five Card Bet or Drop,Stud,5,4,0,10,5,2,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
 115,Five Card Blind II,Stud,5,4,0,10,5,2,Poker Tips,http://www.pokertips.org/variants/
@@ -120,11 +120,11 @@
 120,Five Stud Ghost Hand,Stud,5,4,0,9,5,2,Poker.Net,http://www.poker.net/school/games/variations/default.htm
 121,Five Stud Kinky Sex,Stud,5,4,8,10,5,2,Aidtopia,http://www.aidtopia.com/communities/poker/
 122,Five Stud Place,Stud,5,4,0,10,5,2,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
-123,Four Card Stud,Stud,4,3,0,13,4,2,Source misplaced.,N/A
+123,Four Card Stud,Stud,4,3,0,13,4,2,Source misplaced,N/A
 124,Give Me Five,Stud,10,4,0,5,10,2,Erich Friedman,http://www.stetson.edu/~efriedma/poker/variants.html
 125,Jackal,Stud,5,4,0,5,10,2,Oswald Jacoby on Poker,http://www.amazon.com/exec/obidos/tg/detail/-/0385175906/qid=1124201229/sr=1-1/ref=sr_1_1/102-4548851-4904951?v=glance&s=books
 126,Joker Stud,Stud,5,4,0,5,10,2,Oswald Jacoby on Poker,http://www.amazon.com/exec/obidos/tg/detail/-/0385175906/qid=1124201229/sr=1-1/ref=sr_1_1/102-4548851-4904951?v=glance&s=books
-127,Last Card Down,Stud,5,4,0,10,5,2,Source misplaced.,N/A
+127,Last Card Down,Stud,5,4,0,10,5,2,Source misplaced,N/A
 128,Left to Right,Stud,5,4,0,10,5,2,Poker Phil,http://www.notdeadyet.com/pokerphil/games.html
 129,Little Ones,Stud,5,4,40,10,5,2,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
 130,Mediocre,Stud,5,4,0,10,5,2,Poker Mike,http://www.pokermike.com/poker/
@@ -141,7 +141,7 @@
 141,Pig,Stud,5,4,0,6,9,2,Wikipedia,http://en.wikipedia.org/wiki/Poker
 142,Pistol Pete,Stud,5,5,0,10,5,2,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
 143,Pure Luck,Stud,5,3,0,10,5,2,Poker Mike,http://www.pokermike.com/poker/
-144,Raze,Stud,5,4,0,10,5,2,Source misplaced.,N/A
+144,Raze,Stud,5,4,0,10,5,2,Source misplaced,N/A
 145,Satan,Stud,5,4,0,10,5,2,Poker Mike,http://www.pokermike.com/poker/
 146,Showdown Straight,Stud,5,0,0,10,5,2,Scarne's Guide to Modern Poker,http://www.amazon.com/exec/obidos/ASIN/0671530763/qid=1124201165/sr=2-1/ref=pd_bbs_b_2_1/102-4548851-4904951
 147,Six Card Stud,Stud,6,5,0,8,6,2,Wikipedia,http://en.wikipedia.org/wiki/Poker
@@ -152,7 +152,7 @@
 152,The Game,Stud,5,5,0,5,10,2,Public Domain,N/A
 153,Three Card Monte,Stud,3,3,0,17,3,2,Poker Mike,http://www.pokermike.com/poker/
 154,Three Card Substitution,Stud,5,7,0,6,8,2,Poker Mike,http://www.pokermike.com/poker/
-155,Three Out of Five,Stud,5,4,0,10,5,2,Source misplaced.,N/A
+155,Three Out of Five,Stud,5,4,0,10,5,2,Source misplaced,N/A
 156,Turbo,Stud,5,4,0,7,7,2,Game Report,http://www.gamereport.com/poker/
 157,Uncle Bob,Stud,5,4,0,10,5,2,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 158,Who da Babby Daddy Is?,Stud,5,3,40,10,5,2,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
@@ -188,19 +188,19 @@
 188,English Stud,Stud,5,5,0,7,7,3,Public Domain,N/A
 189,Evil Wilds,Stud,7,1,8,7,7,3,Ox House,http://oxhouse.org/~brent/writing/poker/
 190,Flick a Booger in Your Neighbor's Stew,Stud,7,5,4,7,7,3,Brian O'Neil's Poker Page,http://www.oinc.net/poker/
-191,Flip Seven,Stud,7,4,0,7,7,3,Source misplaced.,N/A
+191,Flip Seven,Stud,7,4,0,7,7,3,Source misplaced,N/A
 192,Float Your Boat,Stud,7,5,0,7,7,3,Poker Mike,http://www.pokermike.com/poker/
 193,Floater,Stud,7,5,0,8,7,3,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 194,Follow the Queen,Stud,7,5,4,7,7,3,Public Domain,N/A
 195,Fourplay,Stud,7,5,0,6,11,3,Poker News,http://www.pokernews.info/poker-variants/
 196,Fuzzy Stud,Stud,7,5,35,7,7,3,Aidtopia,http://www.aidtopia.com/communities/poker/
-197,Girl's Best Friend,Stud,7,5,13,7,7,3,Source misplaced.,N/A
+197,Girl's Best Friend,Stud,7,5,13,7,7,3,Source misplaced,N/A
 198,Hamlet,Stud,7,5,4,7,7,3,Legion West,http://interoz.com/madhatters/legionwest/poker.htm
 199,Have a Heart,Stud,7,5,0,7,11,3,Public Domain,N/A
 200,Heinz 57,Stud,7,5,8,7,7,3,Public Domain,N/A
 201,High/Low 8 or Better,Stud,7,5,0,7,7,3,Public Domain,N/A
 202,Hoosier Seven Card Stud,Stud,7,4,0,7,7,3,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
-203,Insanity,Stud,7,5,12,7,7,3,Source misplaced.,N/A
+203,Insanity,Stud,7,5,12,7,7,3,Source misplaced,N/A
 204,Iron Chef,Stud,7,5,0,7,7,3,P. D. Magnus,http://www.fucundity.com/pmagnus/poker.html
 205,J-2-7,Stud,7,5,8,7,7,3,Graham's Card Club,http://www.gccpokertables.com/
 206,Jacks and Fives,Stud,7,5,4,7,7,3,Joker Poker,http://www.freewebs.com/jokerpoker/
@@ -208,12 +208,12 @@
 208,Kanakee,Stud,7,6,28,7,7,3,Poker Phil,http://www.notdeadyet.com/pokerphil/games.html
 209,King Little II,Stud,7,5,32,7,7,3,Graham's Card Club,http://www.gccpokertables.com/
 210,Liebscher,Stud,7,5,0,7,7,3,Tom Jolly,http://www.silcom.com/~tomjolly/poker_sf.htm
-211,Low in the Hole,Stud,7,5,28,7,7,3,Source misplaced.,N/A
+211,Low in the Hole,Stud,7,5,28,7,7,3,Source misplaced,N/A
 212,Luck of the Irish,Stud,7,5,4,7,8,3,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
 213,Ma Furgeson,Stud,7,5,28,7,7,3,Poker Phil,http://www.notdeadyet.com/pokerphil/games.html
 214,Macintosh,Stud,7,5,35,7,7,3,Poker Phil,http://www.notdeadyet.com/pokerphil/games.html
 215,Manslaughter,Stud,7,5,0,7,7,3,Brian O'Neil's Poker Page,http://www.oinc.net/poker/
-216,Mao,Stud,7,5,26,7,7,3,Source misplaced.,N/A
+216,Mao,Stud,7,5,26,7,7,3,Source misplaced,N/A
 217,Marriage,Stud,7,5,8,7,7,3,Aidtopia,http://www.aidtopia.com/communities/poker/
 218,Mississippi Stud,Stud,7,4,0,7,7,3,David Zanetti,http:// www.geocities.com/mississippi_seven/
 219,Multiple Seven,Stud,7,5,35,7,7,3,Poker Phil,http://www.notdeadyet.com/pokerphil/games.html
@@ -221,8 +221,8 @@
 221,No Way,Stud,8,5,28,6,11,3,Kurt Hanna,http://www.reflexblue.org/clanhanna/poker.html
 222,Number Nine,Stud,7,5,20,7,7,3,Wikipedia,http://en.wikipedia.org/wiki/Poker
 223,Number Nine II,Stud,7,5,16,7,7,3,Wikipedia,http://en.wikipedia.org/wiki/Poker
-224,Peek,Stud,7,5,0,7,7,3,Source misplaced.,N/A
-225,Pick Up and Roll,Stud,7,9,0,5,9,3,Source misplaced.,N/A
+224,Peek,Stud,7,5,0,7,7,3,Source misplaced,N/A
+225,Pick Up and Roll,Stud,7,9,0,5,9,3,Source misplaced,N/A
 226,Position Poker,Stud,7,5,32,7,7,3,Poker Mike,http://www.pokermike.com/poker/
 227,Psycho,Stud,7,5,0,4,11,3,Public Domain,N/A
 228,Razz,Stud,7,5,0,7,7,3,Public Domain,N/A
@@ -289,7 +289,7 @@
 289,One Man's Trash,Common,7,99,0,11,29,4,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
 290,Oxford Stud,Common,7,4,0,12,7,4,Wikipedia,http://en.wikipedia.org/wiki/Poker
 291,Party Girl Hold'em,Common,7,4,0,23,7,4,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
-292,Progressive Hold'em,Common,7,4,0,23,7,4,Source misplaced.,N/A
+292,Progressive Hold'em,Common,7,4,0,23,7,4,Source misplaced,N/A
 293,Reverse Flop,Common,7,4,0,23,7,4,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 294,River Down Hold'em,Common,7,4,0,16,7,4,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 295,Seven Card Mutual,Common,7,5,0,16,7,4,Poker Omaha,http://www.pokeromaha.com/poker_067.html
@@ -338,11 +338,11 @@
 338,Three Card Low Guts,Guts,3,100,0,13,4,6,Rec.Gambling.Poker,N/A
 339,Three Card Man or Mouse,Guts,3,100,0,13,3,6,Rec.Gambling.Poker,N/A
 340,Three Card Punishment,Guts,3,100,0,13,4,6,John McLeod,http://www.pagat.com/invented/index.html
-341,Three Card Screw,Guts,3,100,0,13,4,6,Source misplaced.,N/A
+341,Three Card Screw,Guts,3,100,0,13,4,6,Source misplaced,N/A
 342,Three Five Seven,Guts,7,100,4,7,7,6,Public Domain,N/A
 343,Two and One,Guts,3,100,0,17,3,6,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
 344,Two Card Guts,Guts,2,100,0,25,2,6,Public Domain,N/A
-345,Alternating guts,Guts,5,100,12,6,5,7,Source misplaced.,N/A
+345,Alternating guts,Guts,5,100,12,6,5,7,Source misplaced,N/A
 346,Auction Guts,Guts,5,100,0,6,13,7,Poker News,http://www.pokernews.info/poker-variants/
 347,Balls III,Guts,5,100,0,10,5,7,Poker Tips,http://www.pokertips.org/variants/
 348,Balls to the Wall,Guts,5,100,0,6,9,7,Jay Close,N/A
@@ -352,7 +352,7 @@
 352,Consecutive Guts,Guts,5,100,30,10,5,7,Poker Team,https://www.pokerteam.com
 353,Cowgirl,Guts,5,100,0,8,6,7,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
 354,Cowpie Guts,Guts,5,100,0,6,9,7,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
-355,Cuban Guts,Guts,9,103,0,8,9,7,Source misplaced.,N/A
+355,Cuban Guts,Guts,9,103,0,8,9,7,Source misplaced,N/A
 356,Deadman's Dance,Guts,5,100,0,5,9,7,Other Worlds Poker,http://www.geocities.com/grifflik/Shelter-Otherworlds-Poker.html
 357,Dr. Pepper II,Guts,5,100,0,6,9,7,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 358,Everybody Antes,Guts,5,100,0,6,9,7,Pro Forums,http://www.pokerproforums.com/
@@ -360,19 +360,19 @@
 360,Five Card Guts with a Draw,Guts,5,100,0,6,9,7,Rec.Gambling.Poker,N/A
 361,Five Card Guts with the Weenie Rule,Guts,5,100,0,6,9,7,Public Domain,N/A
 362,Five Card Punishment,Guts,5,100,0,6,9,7,John McLeod,http://www.pagat.com/invented/index.html
-363,Five Card Screw,Guts,5,100,0,6,9,7,Source misplaced.,N/A
+363,Five Card Screw,Guts,5,100,0,6,9,7,Source misplaced,N/A
 364,Five Card With a Phantom Hand,Guts,5,100,0,5,9,7,Xaos Dog,http://www.xaosdog.com
 365,Hold Your Guts,Guts,5,100,0,6,9,7,Poker News,http://www.pokernews.info/poker-variants/
 366,In/Out,Guts,5,100,0,9,8,7,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 367,Jacks and Piss,Guts,5,101,8,6,9,7,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
-368,King Little,Guts,5,102,24,5,9,7,Source misplaced.,N/A
+368,King Little,Guts,5,102,24,5,9,7,Source misplaced,N/A
 369,Pass Your Guts,Guts,5,100,0,6,34,7,Poker News,http://www.pokernews.info/poker-variants/
 370,Position Guts,Guts,5,100,0,6,9,7,Poker Mike,http://www.pokermike.com/poker/
 371,Rohr,Guts,7,100,0,23,7,7,Softsource,http://www.softsource.com/softsource/poker.html
 372,Three to Five,Guts,5,101,0,10,5,7,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
 373,Western,Guts,5,100,0,5,9,7,Antismite,http://www.antismite.com/
 374,3/33,Nonpoker,202,202,0,98,202,8,Poker Mike,http://www.pokermike.com/poker/
-375,5 1/2 = 21,Nonpoker,202,202,0,98,202,8,Source misplaced.,N/A
+375,5 1/2 = 21,Nonpoker,202,202,0,98,202,8,Source misplaced,N/A
 376,7/27 Double Clubs,Nonpoker,202,202,0,98,202,8,Erich Friedman,http://www.stetson.edu/~efriedma/poker/variants.html
 377,7/27 No Chaser,Nonpoker,202,202,0,98,202,8,Craig O'Brien,N/A
 378,7/27 with a Lock,Nonpoker,202,202,0,98,202,8,Poker Mike,http://www.pokermike.com/poker/
@@ -384,7 +384,7 @@
 384,Price is Right 7/27,Nonpoker,202,202,0,98,202,8,Poker Mike,http://www.pokermike.com/poker/
 385,Red 7/27,Nonpoker,202,202,0,98,202,8,Poker Mike,http://www.pokermike.com/poker/
 386,Thirty One,Nonpoker,202,202,0,98,202,8,Poker Phil,http://www.notdeadyet.com/pokerphil/games.html
-387,Butcherboy,Nonpoker,99,300,0,13,99,9,Source misplaced.,N/A
+387,Butcherboy,Nonpoker,99,300,0,13,99,9,Source misplaced,N/A
 388,Anaconda 33,Pass,7,5,0,7,13,10,Mike Tsao,http://www.sowbug.org/cards.html
 389,Anaconda II,Pass,7,5,0,7,9,10,Mike Tsao,http://www.sowbug.org/cards.html
 390,Anaconda III,Pass,7,4,0,7,10,10,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
@@ -392,7 +392,7 @@
 392,Anacondaha,Pass,9,4,0,13,52,10,Rec.Gambling.Poker,N/A
 393,Anorexia,Pass,7,4,0,7,28,10,Aidtopia,http://www.aidtopia.com/communities/poker/
 394,Australian Rules Anaconda,Pass,7,4,0,7,13,10,Craig O'Brien,N/A
-395,Basketball,Pass,7,3,0,7,13,10,Source misplaced.,N/A
+395,Basketball,Pass,7,3,0,7,13,10,Source misplaced,N/A
 396,Bisexual,Pass,7,4,0,7,13,10,Poker Mike,http://www.pokermike.com/poker/
 397,Blastoff,Pass,7,7,0,7,13,10,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 398,Craw Worm,Pass,7,4,35,7,13,10,Jay Close,N/A
@@ -403,11 +403,11 @@
 403,Nasty Anaconda,Pass,7,4,0,7,13,10,Aidtopia,http://www.aidtopia.com/communities/poker/
 404,Pass the Trash IV,Pass,7,1,0,7,13,10,Intellectual Orgy,http://tinkrbel.greyduck.net/
 405,Perfected Pass the Trash,Pass,7,6,0,7,13,10,Rec.Gambling.Poker,N/A
-406,Progressive Pass Anaconda,Pass,7,4,0,7,13,10,Source misplaced.,N/A
+406,Progressive Pass Anaconda,Pass,7,4,0,7,13,10,Source misplaced,N/A
 407,Risskov Lose'em,Pass,8,4,0,8,11,10,Poker Mike,http://www.pokermike.com/poker/
 408,Screwy Louie,Pass,7,5,0,7,9,10,Joker Poker,http://www.freewebs.com/jokerpoker/
 409,Seven Card Draw,Pass,7,6,0,4,14,10,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
-410,Snake Eyes,Pass,7,4,28,7,13,10,Source misplaced.,N/A
+410,Snake Eyes,Pass,7,4,28,7,13,10,Source misplaced,N/A
 411,Sneaker,Pass,7,4,0,7,13,10,Craig O'Brien,N/A
 412,"Take One Down, Pass it Around",Pass,7,7,0,7,28,10,Erich Friedman,http://www.stetson.edu/~efriedma/poker/variants.html
 413,Double Take,Draw,5,2,0,6,9,16,Craig O'Brien,N/A
@@ -445,7 +445,7 @@
 445,Dumpster Diving,Draw,9,2,0,6,13,64,P. D. Magnus,http://www.fucundity.com/pmagnus/poker.html
 446,Neal Deal Black,Draw,5,2,12,6,9,65,Graham's Card Club,http://www.gccpokertables.com/
 447,Neal Deal Men,Draw,5,2,8,6,9,65,Graham's Card Club,http://www.gccpokertables.com/
-448,"Priscilla, Queen of the Desert",Draw,5,2,13,6,9,1,Source misplaced.,N/A
+448,"Priscilla, Queen of the Desert",Draw,5,2,13,6,9,1,Source misplaced,N/A
 449,Fire Sale,Stud,6,4,0,8,10,75,Tom Jolly,http://www.silcom.com/~tomjolly/poker_sf.htm
 450,Henway,Stud,5,5,0,5,10,75,Public Domain,N/A
 451,High/Low Jim,Stud,7,4,0,7,7,75,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
@@ -467,25 +467,25 @@
 467,Three Card Poker,Draw,3,2,5,12,5,90,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 468,Three Legged Race,Draw,3,102,0,8,6,463,Poker Mike,http://www.pokermike.com/poker/
 469,Three Two One with Wild,Draw,6,3,2,4,12,92,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
-470,Paradise Trees,Pass,5,2,0,10,50,94,Source misplaced.,N/A
+470,Paradise Trees,Pass,5,2,0,10,50,94,Source misplaced,N/A
 471,Five Draw Place and Show,Draw,5,2,0,6,9,96,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
 472,Super Bid'em,Stud,5,5,0,8,6,102,Poker Tips,http://www.pokertips.org/variants/
 473,Shuck'em,Stud,5,5,0,7,7,105,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 474,Foosball,Stud,5,4,0,10,5,106,Graham's Card Club,http://www.gccpokertables.com/
 475,Machine Gun Stud,Stud,5,4,0,8,15,107,Tim P. McNerny,http://users.erols.com/hondo/poker.html compiled by Tim P. McNerny
 476,Ebola,Stud,8,5,0,6,12,108,Rec.Gambling.Poker,N/A
-477,Green Push,Stud,5,5,0,8,10,108,Source misplaced.,N/A
+477,Green Push,Stud,5,5,0,8,10,108,Source misplaced,N/A
 478,Kings,Stud,5,4,4,9,9,108,Joker Poker,http://www.freewebs.com/jokerpoker/
 479,Pass the Card,Stud,6,5,0,8,10,108,Mike Tsao,http://www.sowbug.org/cards.html
-480,Plain Push,Stud,5,4,0,9,9,108,Source misplaced.,N/A
+480,Plain Push,Stud,5,4,0,9,9,108,Source misplaced,N/A
 481,Polish II,Stud,5,4,32,9,9,108,American Poker,http://www.americanpoker.com
 482,Pussy Cat,Stud,6,5,0,8,10,108,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
 483,Rothschild,Stud,5,5,0,8,10,108,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
 484,Do Ya Too,Stud,5,4,24,6,8,110,Joker Poker,http://www.freewebs.com/jokerpoker/
 485,Bunk Beds,Stud,5,9,0,5,10,111,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 486,Tripple Double,Stud,5,4,0,3,15,111,Erich Friedman,http://www.stetson.edu/~efriedma/poker/variants.html
-487,Two Card Acey Duecy,Stud,2,5,8,10,5,113,Source misplaced.,N/A
-488,Two Card Murder,Stud,2,3,0,10,5,113,Source misplaced.,N/A
+487,Two Card Acey Duecy,Stud,2,5,8,10,5,113,Source misplaced,N/A
+488,Two Card Murder,Stud,2,3,0,10,5,113,Source misplaced,N/A
 489,Five Stud Place and Show,Stud,5,4,0,10,5,122,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
 490,Golf,Nonpoker,4,201,0,10,52,123,John McLeod,http://www.pagat.com/invented/index.html
 491,Joker Stud II,Stud,5,4,0,5,10,126,iPoker,http://www.ouzts.net/iPoker/
@@ -493,7 +493,7 @@
 493,Grodnikonda,Stud,7,4,0,7,7,128,Tom Jolly,http://www.silcom.com/~tomjolly/poker_sf.htm
 494,Pick a Partner,Stud,5,3,0,10,10,128,John McLeod,http://www.pagat.com/invented/index.html
 495,Slow Death,Stud,5,4,0,10,5,128,Tom Jolly,http://www.silcom.com/~tomjolly/poker_sf.htm
-496,Wild in the Hole with a Twist,Stud,5,4,40,10,5,129,Source misplaced.,N/A
+496,Wild in the Hole with a Twist,Stud,5,4,40,10,5,129,Source misplaced,N/A
 497,Mexican Poker II,Stud,5,4,1,8,5,131,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 498,Echo Park,Stud,5,5,0,10,5,132,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
 499,Mexican Stud IV,Stud,5,6,0,10,5,132,Sweet Foca,http://sweetfoca.com/Poker.html
@@ -513,10 +513,10 @@
 513,Go for Broke,Stud,5,6,0,8,6,139,Mike Tsao,http://www.sowbug.org/cards.html
 514,Myron's Game,Stud,5,5,4,5,10,139,Rec.Gambling.Poker,N/A
 515,Pair No Pair,Stud,5,5,0,8,6,139,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
-516,Cathy's Game,Stud,5,5,0,6,9,142,Source misplaced.,N/A
+516,Cathy's Game,Stud,5,5,0,6,9,142,Source misplaced,N/A
 517,Beelzebub,Stud,5,4,0,10,5,145,Poker Mike,http://www.pokermike.com/poker/
 518,Five Stud High/Low,Stud,5,4,0,10,5,145,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
-519,Fubar,Stud,5,4,0,10,5,145,Source misplaced.,N/A
+519,Fubar,Stud,5,4,0,10,5,145,Source misplaced,N/A
 520,Hawaii High/Low,Stud,5,4,0,10,5,145,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 521,Low Todd,Stud,5,4,0,10,5,145,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 522,One Three One,Stud,5,4,0,10,5,145,Antismite,http://www.antismite.com/
@@ -527,20 +527,20 @@
 527,Devil's Own,Stud,6,5,4,8,6,147,Kurt Hanna,http://www.reflexblue.org/clanhanna/poker.html
 528,Love Canal,Stud,6,3,0,8,18,147,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 529,Six Card Option,Stud,6,6,0,7,7,147,Wikipedia,http://en.wikipedia.org/wiki/Poker
-530,Sixty Nine,Stud,6,5,8,8,6,147,Source misplaced.,N/A
+530,Sixty Nine,Stud,6,5,8,8,6,147,Source misplaced,N/A
 531,Three Card Nutso,Common,6,5,0,9,6,147,Rec.Gambling.Poker,N/A
 532,Three Thirty Three,Stud,6,5,4,8,6,147,Poker Mike,http://www.pokermike.com/poker/
-533,Zanetti Sound,Stud,6,4,0,8,6,147,Source misplaced.,N/A
+533,Zanetti Sound,Stud,6,4,0,8,6,147,Source misplaced,N/A
 534,Doubles,Stud,5,5,0,5,10,152,Erich Friedman,http://www.stetson.edu/~efriedma/poker/variants.html
 535,Suck,Stud,48,3,0,17,48,153,Cheapass Games,http://www.cheapass.com/
 536,Three Card Stud High,Stud,3,3,0,17,3,153,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 537,Tripoli,Stud,3,3,0,10,3,153,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
-538,One Card Substitution,Stud,5,5,0,8,6,154,Source misplaced.,N/A
-539,Two Card Substitution,Stud,5,6,0,7,7,154,Source misplaced.,N/A
+538,One Card Substitution,Stud,5,5,0,8,6,154,Source misplaced,N/A
+539,Two Card Substitution,Stud,5,6,0,7,7,154,Source misplaced,N/A
 540,.357 Magnum II,Stud,7,5,12,7,7,159,Thursday Cards,http://www.simplephrase.com/thursdaycards.html
 541,Ambivalent Hearts,Stud,7,5,13,7,7,162,Jon Shemitz,http://www.midnightbeach.com/jon/poker/variations.html
 542,Buffalo Stud,Stud,7,5,0,7,7,166,Wikipedia,http://en.wikipedia.org/wiki/Poker
-543,A League of Their Own,Stud,7,5,16,6,11,167,Source misplaced.,N/A
+543,A League of Their Own,Stud,7,5,16,6,11,167,Source misplaced,N/A
 544,Baseball with Rainouts,Stud,7,5,8,6,11,167,Public Domain,N/A
 545,Extra Inning Baseball,Stud,7,5,8,6,11,167,Poker Phil,http://www.notdeadyet.com/pokerphil/games.html
 546,Field of Dreams,Stud,7,5,30,6,11,167,Jay Close,N/A
@@ -566,7 +566,7 @@
 566,Six Sixty Six II,Nonpoker,7,300,0,7,7,168,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 567,Spanish Fly,Nonpoker,7,300,8,7,7,168,Rec.Gambling.Poker,N/A
 568,Ben Franklin with Spade Spoilers,Stud,7,5,8,7,7,169,Hoyle,http://www.amazon.com/exec/obidos/search-handle-form/102-4548851-4904951
-569,Five and Dime,Stud,7,5,8,7,7,169,Source misplaced.,N/A
+569,Five and Dime,Stud,7,5,8,7,7,169,Source misplaced,N/A
 570,Woolworth's,Stud,7,5,8,7,7,169,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
 571,Nine to Five,Stud,7,5,8,7,7,170,Poker Phil,http://www.notdeadyet.com/pokerphil/games.html
 572,Bastard,Stud,7,5,0,7,7,171,Sanjay Udani,http://www.cis.upenn.edu/~udani/cardgames.html
@@ -575,7 +575,7 @@
 575,Queen of Spades/10 of Diamonds,Stud,7,5,0,7,7,171,Rec.Gambling.Poker,N/A
 576,The Queen II,Stud,7,5,1,7,7,171,Hand Bet,http://www.handbet.com/
 577,Crazy Ass Chicago,Stud,7,5,13,7,7,173,Rec.Gambling.Poker,N/A
-578,Down Your Own,Stud,7,5,0,7,7,173,Source misplaced.,N/A
+578,Down Your Own,Stud,7,5,0,7,7,173,Source misplaced,N/A
 579,High San Francisco,Stud,7,5,0,7,7,173,Poker Mike,http://www.pokermike.com/poker/
 580,John's Thumb,Stud,7,5,0,7,7,173,Erich Friedman,http://www.stetson.edu/~efriedma/poker/variants.html
 581,Low Chicago,Stud,7,5,0,7,7,173,Public Domain,N/A
@@ -628,7 +628,7 @@
 628,Hong Kong,Stud,7,5,28,7,7,211,Tom Jolly,http://www.silcom.com/~tomjolly/poker_sf.htm
 629,King Spot Low,Stud,7,5,32,7,7,211,Craig O'Brien,N/A
 630,Low in the Hole II,Stud,7,5,28,7,7,211,"Oh, to be",http://www.o2b.net/
-631,Low in the Hole with a Twist,Stud,7,6,28,6,8,211,Source misplaced.,N/A
+631,Low in the Hole with a Twist,Stud,7,6,28,6,8,211,Source misplaced,N/A
 632,Mississippi Mud,Stud,7,5,32,7,7,211,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 633,Roll Your Own,Stud,7,5,28,7,7,211,Public Domain,N/A
 634,Ma Furgeson II,Stud,5,4,40,10,5,213,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
@@ -646,13 +646,13 @@
 646,Fives,Stud,7,5,12,7,7,222,Cheapass Games,http://www.cheapass.com/
 647,Lucky Nines,Stud,7,5,20,7,7,222,Joker Poker,http://www.freewebs.com/jokerpoker/
 648,Magic Eight Ball,Stud,7,5,18,7,7,222,Poker Phil,http://www.notdeadyet.com/pokerphil/games.html
-649,Makeable Sevens,Stud,7,5,16,7,7,222,Source misplaced.,N/A
+649,Makeable Sevens,Stud,7,5,16,7,7,222,Source misplaced,N/A
 650,Tens and Adders,Stud,7,5,22,7,7,222,All Poker Rules,http://www.all-poker-rules.com/poker-variants.html
 651,Bonecrusher,Stud,7,8,0,7,7,225,Rec.Gambling.Poker,N/A
 652,Drawback,Stud,7,4,0,6,11,227,Craig O'Brien,N/A
 653,Fight Club,Stud,7,5,4,4,11,227,Craig O'Brien,N/A
 654,Five to Seven Switch,Stud,7,6,0,5,10,227,Poker.Net,http://www.poker.net/school/games/variations/default.htm
-655,Psycho Pepper,Stud,7,5,12,4,11,227,Source misplaced.,N/A
+655,Psycho Pepper,Stud,7,5,12,4,11,227,Source misplaced,N/A
 656,Super Stud,Stud,7,5,0,5,9,227,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 657,Partial Rotate,Stud,7,5,0,7,18,231,Craig O'Brien,N/A
 658,Two Way Rotate,Stud,7,5,0,7,26,231,Brian O'Neil's Poker Page,http://www.oinc.net/poker/
@@ -725,8 +725,8 @@
 725,Kryky,Common,7,5,3,7,10,310,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
 726,Bel-Aire,Common,13,4,0,10,13,314,Wikipedia,http://en.wikipedia.org/wiki/Poker
 727,Buddy's Game,Common,8,4,0,6,11,314,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
-728,Checkerboard,Common,11,6,0,9,11,314,Source misplaced.,N/A
-729,Cincinnati Ohio,Common,10,5,4,9,10,314,Source misplaced.,N/A
+728,Checkerboard,Common,11,6,0,9,11,314,Source misplaced,N/A
+729,Cincinnati Ohio,Common,10,5,4,9,10,314,Source misplaced,N/A
 730,Circle,Common,13,5,0,8,13,314,Public Domain,N/A
 731,Cross Over,Common,9,6,0,11,9,314,Public Domain,N/A
 732,Dianna's Game,Common,6,4,4,16,6,314,John McLeod,http://www.pagat.com/invented/index.html
@@ -734,7 +734,7 @@
 734,Elevator,Common,8,5,0,9,12,314,Public Domain,N/A
 735,Forty Four,Common,8,5,4,12,8,314,Brian O'Neil's Poker Page,http://www.oinc.net/poker/
 736,Heaven and Hell,Common,10,6,0,9,10,314,Joker Poker,http://www.freewebs.com/jokerpoker/
-737,Hollywood,Common,15,10,0,8,15,314,Source misplaced.,N/A
+737,Hollywood,Common,15,10,0,8,15,314,Source misplaced,N/A
 738,La Bumba,Common,9,4,0,9,9,314,Rec.Gambling.Poker,N/A
 739,Lamarckian Poker,Common,300,98,0,12,300,314,Cheapass Games,http://www.cheapass.com/
 740,Little Opposite,Common,10,5,4,9,10,314,Joker Poker,http://www.freewebs.com/jokerpoker/
@@ -771,13 +771,13 @@
 771,Tennesee Guts,Guts,1,100,0,52,1,344,Poker News,http://www.pokernews.info/poker-variants/
 772,Two Card Guts II,Guts,2,100,0,26,2,344,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 773,Two Card Guts III,Guts,2,100,0,25,2,344,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
-774,Two to Five,Guts,5,100,0,10,5,344,Source misplaced.,N/A
+774,Two to Five,Guts,5,100,0,10,5,344,Source misplaced,N/A
 775,Grundy County Auction,Pass,5,2,0,9,52,350,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 776,Five Card Guts II,Guts,5,100,0,10,5,359,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 777,Three Flip Two,Guts,5,100,4,10,5,359,Graham's Card Club,http://www.gccpokertables.com/
 778,Beat the Board,Guts,5,100,0,5,9,360,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 779,Five Card Guts with the Nelly Rule,Guts,5,100,0,6,9,361,Xaos Dog,http://www.xaosdog.com
-780,Burn,Guts,5,100,8,12,5,367,Source misplaced.,N/A
+780,Burn,Guts,5,100,8,12,5,367,Source misplaced,N/A
 781,Five Card Bullshit,Guts,5,100,24,7,7,368,Rec.Gambling.Poker,N/A
 782,Jackson Five,Guts,5,102,8,5,9,368,Sanjay Udani,http://www.cis.upenn.edu/~udani/cardgames.html
 783,Pass Guts,Guts,2,100,0,26,52,369,Xaos Dog,http://www.xaosdog.com
@@ -795,7 +795,7 @@
 795,Rich's Revenge,Pass,7,4,0,7,13,394,Poker Mike,http://www.pokermike.com/poker/
 796,Draft'em,Pass,7,4,0,12,13,395,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 797,Python,Pass,5,3,0,10,8,395,Poker Mike,http://www.pokermike.com/poker/
-798,Real Poker,Pass,7,3,0,7,15,395,Source misplaced.,N/A
+798,Real Poker,Pass,7,3,0,7,15,395,Source misplaced,N/A
 799,Anaconda with a Twist II,Pass,7,8,8,7,17,399,Rec.Gambling.Poker,N/A
 800,Pass More Trash,Pass,8,1,0,6,14,404,Intellectual Orgy,http://tinkrbel.greyduck.net/
 801,Pass the Trash High/Low,Pass,7,1,0,7,13,404,Intellectual Orgy,http://tinkrbel.greyduck.net/
@@ -862,7 +862,7 @@
 862,Three Card Stud High II,Stud,3,3,0,17,3,536,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 863,Three Card Stud High III,Stud,3,3,0,17,3,536,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 864,Sixty Six,Stud,5,5,4,8,6,538,Poker.Net Glossary,http://www.poker.net/school/glossary/default.htm
-865,Lady Cubs,Stud,7,5,16,6,11,543,Source misplaced.,N/A
+865,Lady Cubs,Stud,7,5,16,6,11,543,Source misplaced,N/A
 866,Baseball with Rainouts II,Stud,7,5,8,6,11,544,Sweet Foca,http://sweetfoca.com/Poker.html
 867,Baseball with Rainouts III,Stud,7,5,8,6,11,544,Rec.Gambling.Poker,N/A
 868,Chicks with Dicks,Stud,7,5,16,6,11,547,Jeff Prillaman,N/A
@@ -921,7 +921,7 @@
 921,Happy Murder Cascade,Stud,7,5,28,7,7,662,Brian O'Neil's Poker Page,http://www.oinc.net/poker/
 922,Happy Murder Manslaughter,Stud,7,5,28,7,7,662,Brian O'Neil's Poker Page,http://www.oinc.net/poker/
 923,Sandy Burns,Stud,7,8,0,5,10,670,Tom Jolly,http://www.silcom.com/~tomjolly/poker_sf.htm
-924,Country Store,Stud,7,5,4,6,7,675,Source misplaced.,N/A
+924,Country Store,Stud,7,5,4,6,7,675,Source misplaced,N/A
 925,Free Enterprise,Stud,7,5,0,6,7,675,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
 926,Grocery Store Dots,Stud,7,5,0,6,7,675,John McLeod,http://www.pagat.com/invented/index.html
 927,Chowaha Teddy Prime,Common,9,4,0,10,16,685,Rec.Gambling.Poker,N/A
@@ -946,7 +946,7 @@
 946,Hawaii Omaha Hold'em,Common,9,5,0,11,9,704,Rec.Gambling.Poker,N/A
 947,Highlander,Common,9,5,0,11,9,704,Poker Variant Database,http://www.pvdb.org/
 948,Joemaha,Common,9,4,8,11,9,704,Poker Variant Database,http://www.pvdb.org/
-949,Mutual of Omaha,Common,9,4,0,11,9,704,Source misplaced.,N/A
+949,Mutual of Omaha,Common,9,4,0,11,9,704,Source misplaced,N/A
 950,Omaha 33,Common,9,4,0,11,9,704,Mike Tsao,http://www.sowbug.org/cards.html
 951,Omaha Burns,Common,9,4,0,11,9,704,Poker Mike,http://www.pokermike.com/poker/
 952,Omaha High/High,Common,9,4,0,11,9,704,Poker Variant Database,http://www.pvdb.org/
@@ -972,8 +972,8 @@
 972,Death Wheel,Common,13,9,0,8,13,730,Poker Mike,http://www.pokermike.com/poker/
 973,Merry-go-Round,Common,10,4,0,11,10,730,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
 974,No Holds Barred,Common,13,9,0,8,13,730,Poker Mike,http://www.pokermike.com/poker/
-975,Orbit,Common,13,5,4,8,13,730,Source misplaced.,N/A
-976,Twister,Common,13,5,32,8,13,730,Source misplaced.,N/A
+975,Orbit,Common,13,5,4,8,13,730,Source misplaced,N/A
+976,Twister,Common,13,5,32,8,13,730,Source misplaced,N/A
 977,Wheel of Fortune,Common,13,5,2,8,13,730,Poker Mike,http://www.pokermike.com/poker/
 978,Wheel of Fortune II,Common,13,5,2,8,13,730,Poker Mike,http://www.pokermike.com/poker/
 979,Bush League,Common,13,6,8,5,13,731,John McLeod,http://www.pagat.com/invented/index.html
@@ -1013,13 +1013,13 @@
 1013,Four Three,Guts,7,100,0,7,7,785,Home Poker Cookbook,http://www.homepoker.com/games01.asp?group=pokerists_cookbook
 1014,Rich's Taste of the Unpleasant,Pass,7,4,0,7,13,795,Poker Mike,http://www.pokermike.com/poker/
 1015,Screw Your Neighbor,Pass,7,3,0,7,13,798,Tim Murtaugh,http://o2b.net/archives/the-rules-of-poker-a-quick-reference-guide/
-1016,Surreal Poker,Pass,7,3,3,7,15,798,Source misplaced.,N/A
+1016,Surreal Poker,Pass,7,3,3,7,15,798,Source misplaced,N/A
 1017,Bid Double Slam,Draw,5,99,0,8,13,803,Poker News,http://www.pokernews.info/poker-variants/
 1018,Acey Duecey Triple Draw,Draw,5,4,8,6,17,806,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 1019,Badugi,Draw,4,4,0,7,13,806,Public Domain,N/A
 1020,Triple Draw with a Twist,Draw,5,4,0,5,18,806,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 1021,Two Card Triple Draw Lowball,Draw,2,4,0,10,5,806,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
-1022,Progressive Ante,Draw,5,2,0,5,10,809,Source misplaced.,N/A
+1022,Progressive Ante,Draw,5,2,0,5,10,809,Source misplaced,N/A
 1023,WTF,Stud,5,4,8,5,10,811,Sanjay Udani,http://www.cis.upenn.edu/~udani/cardgames.html
 1024,Full Bicester,Draw,9,4,0,8,9,812,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 1025,Double Exposure High/Low,Stud,5,4,0,10,5,814,Poker Tips,http://www.pokertips.org/variants/
@@ -1067,9 +1067,9 @@
 1067,Double Board Super Crazy Pineapple,Common,7,4,0,9,10,961,Poker Tips,http://www.pokertips.org/variants/
 1068,Really Crazy Pineapple,Common,7,4,0,15,9,961,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
 1069,Aviation Poker,Common,7,4,0,11,9,962,Two Plus Two Forums,http://forumserver.twoplustwo.com/ubbthreads.php
-1070,No Pair Pyramid,Common,8,4,6,8,8,971,Source misplaced.,N/A
+1070,No Pair Pyramid,Common,8,4,6,8,8,971,Source misplaced,N/A
 1071,Pyramid II,Common,12,4,0,9,12,971,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
-1072,Slow and Painful Pyramid,Common,8,7,6,8,8,971,Source misplaced.,N/A
+1072,Slow and Painful Pyramid,Common,8,7,6,8,8,971,Source misplaced,N/A
 1073,Six Pack,Common,10,4,0,11,10,973,John McLeod,http://www.pagat.com/invented/index.html
 1074,Cage Match,Common,13,9,16,8,13,974,Poker Mike,http://www.pokermike.com/poker/
 1075,Tic-Tac-Toe,Common,12,6,0,14,12,974,Invented Poker Variations,http://www.pagat.com/invented/poker_vars.html
