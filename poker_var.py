@@ -57,6 +57,7 @@ Viewer: A command line interface for Ichabod's Poker Variant Database. (cmd.Cmd)
 
 import cmd
 import csv
+import os
 import sqlite3 as sql
 import traceback
 
@@ -128,11 +129,20 @@ class Viewer(cmd.Cmd):
 		print()
 		confirm = input('Are you sure you want to do this? ')
 		if confirm.lower() in ('y', 'yes'):
+			# Delete the database.
+			self.cursor.close()
+			self.conn.close()
+			try:
+				os.remove('poker_db.db')
+			except IOError:
+				pass
+			# Restart the database.
+			self.conn = sql.connect('poker_db.db')
+			self.cursor = self.conn.cursor()
 			# Reset the table definitions.
 			with open('poker_var.sql') as code_file:
 				db_code = code_file.read()
-				self.cursor.execute('drop tables;')
-				self.cursor.execute(db_code)
+				self.cursor.executescript(db_code)
 				self.conn.commit()
 			# Load the old data.
 			data = self.load_csv_data()
@@ -178,6 +188,7 @@ class Viewer(cmd.Cmd):
 		with open('rule_data.csv') as tag_file:
 			tags_reader = csv.reader(tag_file)
 			data['tags'] = tuple(tags_reader)
+		return data
 
 	def onecmd(self, line):
 		"""
@@ -263,11 +274,11 @@ class Viewer(cmd.Cmd):
 		Parameters:
 		data: The data loaded from the csv files. (dict of str: tuple)
 		"""
-		sources = list(set(row[-2:] for row in data['variants']))
+		sources = list(set(tuple(row[-2:]) for row in data['variants']))
 		sources.sort()
 		self.source_lookup = {}
 		self.source_ids = {}
-		code = 'insert in sources(name, link) values(?, ?)'
+		code = 'insert into sources(name, link) values(?, ?)'
 		for name, link in sources:
 			if link == 'N/A' or 'amazon' in link:
 				link = None
