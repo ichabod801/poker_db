@@ -87,6 +87,9 @@ class Viewer(cmd.Cmd):
 	reset_rules: Load the old rule data into the database. (None)
 	reset_sources: Load the old source data into the database. (None)
 	reset_tags: Load the old tag data into the database. (None)
+	reset_variant_rules: Load the old variant rules data into the database. (None)
+	reset_variant_tags: Load the old variant tag data into the database. (None)
+	reset_variants: Load the old variant data into the database. (None)
 
 	Overridden Methods:
 	default
