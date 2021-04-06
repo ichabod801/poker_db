@@ -36,87 +36,100 @@ This is the data dictionary for Ichabod's Poker Variant Database.
 
 ## Variants
 
-Standard Numbers
-98: Undefined due to variability in cards or max seen.
-99: Depends on the number of players
-10N: N rounds plus Match Pot.
-20N: N card plus more based on player choice
-30N: N card plus more based on the deal.
+### Standard Numbers
 
-Cards: The number of cards used to make the final hand.
-	One issue is five down, five sets of two common cards. I used to say 7, now I say 17. How to code both?
-		Go back to coding intuitively, and clarify with max-seen.
-		And is that 5 ways to do 7, or 7 to 17. The first doesn't tell us the max number. The first is clearer.
-			Really want 5 plus 5 ways to do 2.
-			This shit gets complicated. There needs to be a limit on what I code.
-		Could code 10717, 7 to 17.
-			It would be better to split it into two numbers in the database.
-			Note this would work for Three Five Seven, as 3 to 7.
-	intuition doesn't work
-Max Players: How many players can play without the deck running out of cards.
-Betting Rounds: How many times you get to bet.
-	We would want to add N plus player choice/deal, but 100s for match pot, that would not be consistent.
-Max Seen: The maximum number of cards that go through your hand during the game.
+* 98: Undefined due to variability in cards or max seen.
+* 99: Depends on the number of players
+* 10N: N rounds plus Match Pot.
+* 20N: N card plus more based on player choice
+* 30N: N card plus more based on the deal.
+
+### Data Fields
+
+* Variant ID: The unique numerica ID for the variant.
+	* It was originally it's place in the variant tree, in depth first order. 
+	* That is not necessarily true any more.
+* Name: Names (and aliases) in the database are unique. 
+	* This is not true in the real world.
+	* Multiple variants with the same name are distinguished by roman numerals.
+* Cards: The number of cards used to make the final hand.
+* Max Players: How many players can play without the deck running out of cards.
+* Betting Rounds: How many times you get to bet.
+* Max Seen: The maximum number of cards that go through your hand during the game.
+* Wilds: The (maximum) number of wild cards in the game.
+* Source ID: The ID for the source of the variant.
+	* The source is not necessarily the creator, but the place where I found the game.
 
 ## Tags
 
-stud: up cards/down cards (dealt, flip games are not necessarily stud games)
-draw: drawing. does not count instant rejects.
-pass: passing
-guts: in/out & match pot
-common: common cards, including usable by multiple players but not all (love canal)
-table: table cards
-fee: involves extra fees, including forced bets and auctions.
-wilds: has wilds
-limited: has limited wilds
-dead: has dead cards
-odd-ranks: non-standard poker hands (not used if only split hand is odd ranks)
-mod-ranks: standard poker hands with slight changes
-odd-deal: not deal per player, doesn't include common cards (for things like dutch)
-split-card: splits with a specific card
-lowball
-split-pot: splits to the pot beyond high/low and split-card
-no-peek: includes other cards you do not see until showdown (deal one down right before showdown).
-flip
-must-fold
-fee-fold
-redeal: hands can be redealt, non-guts (make guts a search tag? no, want it for organizing)
-jokers: there are jokers in the deck.
-forced-bet: There are forced bets in the game.
-qualifier: A restriction on hands, either on betting or winning.
-straight: Cards dealt face down, no stud, draw, pass, guts, or common.
-discard: Attrition through discarding.
+### Primary Tags
 
-### Have search tags, that group common searches. User editable?
+These are tags commonly used to classify poker games by type.
 
-plain: has only one tag
-classic: stud or draw
-poker-ranks: no (odd-ranks or mod-ranks)
-fold: must-fold or fee-fold
-hold-em: common and no (stud or draw)?
+* common: The game has common cards, including those usable by multiple players but not all.
+* discard: Games using attrition through discarding.
+* draw: Players discarding cards to get new ones. Does not count instant rejects.
+* flip: The game involves flipping down cards face up.
+* guts: The game involves declaring in or out, losers matching the pot, until one person goes in.
+	* Includes games with legs.
+* pass: Cards being passed from one player to another.
+* straight: Cards dealt face down, no stud, draw, pass, guts, or common.
+* stud: The game has cards dealt face up. Does not count flipping down cards up (see 'flip').
+
+### Secondary Tags
+
+These tags involve other features common to many poker games.
+
+* dead: The game has dead cards, which do not contribute to the value of hands.
+* fee: The game involves extra fees, including auctions.
+* fee-fold: The game has conditions which force players pay a fee or fold their hand.
+* forced-bet: There are forced bets in the game.
+* jokers: There are jokers in the deck.
+* limited: The game has limited wild cards, which have limits on what they can represent.
+* lowball: The low hand wins the game.
+* mod-ranks: The game uses standard poker hands with slight changes.
+* must-fold: The game has conditions which force players to fold with no recourse.
+* no-peek: The game includes cards you do not see until showdown, excluding those dealt just before the showdown.
+* odd-deal: The cards are not deal to the players on a per player basis.
+* odd-deck: The game uses something besides a standard 52 card deck.
+* odd-ranks: The game uses non-standard hand ranks. This is not used if only split hand is odd ranks.
+* qualifier: There is a restriction on hands, either on betting or winning.
+* redeal: Hands can be redealt, non-guts.
+* split-card: The pot is split with whoever has a specified card.
+* split-pot: The pot is split in some way besides high/low or split-card
+* table: The game has table cards.
+* wilds: The game has full wild cards. See also 'limited' and 'dead'.
+
+### Search Tags
+
+These are tags that can be used in the interface, but that are not stored in the database. That is, they are calculated from other tags.
+
+* classic: stud or draw
+* fold: must-fold or fee-fold
+* plain: has only one tag
+* poker-ranks: no (odd-ranks or mod-ranks)
 
 ## Rules
 
-standard card numbers
-	108 is all available cards
-	109 is the number of jokers in the game.
-	110 is the number of cards initially dealt
-	111 is the current number of cards in hand
-	112 is the current number of up cards in hand
-	113 is the current number of down cards in hand
-	114 is the number of cards in the deck.
-	115	is the number of cards in a layout feature
-	116 is the number of cards until an event happens
-	117 is the number of hands a player has
-	118 is the number of each player's discarded cards
-	119 is the number of remaining no peek cards
-	200+ is cards per player (for typically absolute rules)
-	300+ is absolute number of cards (for typically per player rules)
-	400+ is cards per layout feature (row/column/whatever)
-	500+ is cards per common card
-	600+ is cards per table card
-	for the hundreds, an even hundred is an odd value based on that value.
-		200 is an odd value based on the number of players.
+Special card numbers used in rules.
+	
+* 108 is all available cards
+* 109 is the number of jokers in the game.
+* 110 is the number of cards initially dealt
+* 111 is the current number of cards in hand
+* 112 is the current number of up cards in hand
+* 113 is the current number of down cards in hand
+* 114 is the number of cards in the deck.
+* 115	is the number of cards in a layout feature
+* 116 is the number of cards until an event happens
+* 117 is the number of hands a player has
+* 118 is the number of each player's discarded cards
+* 119 is the number of remaining no peek cards
+* 200+ is cards per player (for typically absolute rules)
+* 300+ is absolute number of cards (for typically per player rules)
+* 400+ is cards per layout feature (row/column/whatever)
+* 500+ is cards per common card
+* 600+ is cards per table card
 
 bet
 	a round of payments into the pot.
