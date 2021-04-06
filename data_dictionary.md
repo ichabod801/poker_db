@@ -14,7 +14,7 @@ This is the data dictionary for Ichabod's Poker Variant Database.
 * variant_rules
 	* variant_id
 	* rule_id
-	* order
+	* rule_order
 * variant_tags
 	* variant_id
 	* tag_id

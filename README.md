@@ -17,3 +17,7 @@ I also changed how some of the numbers (mainly the number of cards in the varian
 I removed 70 variants from the database. I came into this planning to get rid of the racist and misogynist variants. Younger me was willing to record them for historical purposes, older me wants nothing to do with that shit. I did leave in one misogynist variant because it is so damn popular, but I changed the name. If you have a problem with any of that, make your own database. I also removed variants I could not make sense of, if the original source was no longer available for clarification.
 
 The old database categorized variants by draw, stud, common, and so on. I changed that into a tag system, like the one at pagat.com. Now if a stud variant has a draw in it, it can be coded as both draw and stud. I also included other tags, to assist in searching the database.
+
+## License
+
+This project is licensed under the GPLv3 license. See the LICENSE.txt file for details.

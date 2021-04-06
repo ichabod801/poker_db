@@ -45,7 +45,7 @@ create table if not exists variant_rules (
 	pair_id integer primary key,
 	variant_id integer not null,
 	rule_id integer not null,
-	order integer not null,
+	rule_order integer not null,
 	foreign key (variant_id) references variants,
 	foreign key (rule_id) reference rules
 );
