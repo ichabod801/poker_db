@@ -35,8 +35,10 @@ create table if not exists variants (
 	rounds integer not null,
 	max_seen integer not null,
 	wilds integer not null,
+	parent_id integer,
 	source_id integer not null,
-	foreign key (source_id) references sources
+	foreign key (source_id) references sources,
+	foreign key (parent_id) references variants(variant_id)
 );
 
 /* Data combination tables */

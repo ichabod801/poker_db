@@ -140,6 +140,9 @@ class Viewer(cmd.Cmd):
 			self.reset_sources(data)
 			self.reset_tags(data)
 			self.reset_rules(data)
+			self.reset_variants(data)
+			self.reset_variant_rules(data)
+			self.reset_variant_tags(data)
 		else:
 			# Note that the reset was aborted.
 			print('Reset aborted.')
@@ -165,10 +168,10 @@ class Viewer(cmd.Cmd):
 			data['variants'] = tuple(game_reader)
 		with open('game_rules.csv') as game_rules_file:
 			game_rules_reader = csv.reader(game_rules_file)
-			data['game-rules'] = tuple(game_rules_reader)
+			data['variant-rules'] = tuple(game_rules_reader)
 		with open('game_tags.csv') as game_tags_file:
 			game_tags_reader = csv.reader(game_tags_file)
-			data['game-tags'] = tuple(game_tags_reader)
+			data['variant-tags'] = tuple(game_tags_reader)
 		with open('rule_data.csv') as rule_file:
 			rule_reader = csv.reader(rule_file)
 			data['rules'] = tuple(rule_reader)
@@ -244,15 +247,13 @@ class Viewer(cmd.Cmd):
 		Parameters:
 		data: The data loaded from the csv files. (dict of str: tuple)
 		"""
-		self.rule_lookup = {}
 		code = 'insert into rules(type_id, cards, short, full) values(?, ?, ?, ?)'
 		for rule in data['rules']:
-			data = (self.rule_type_ids[rule[1]], int(rule[2]), rule[3], rule[4])
-			self.cursor.execute(code, data)
+			row = (self.rule_type_ids[rule[1]], int(rule[2]), rule[3], rule[4])
+			self.cursor.execute(code, row)
 			rule_id = self.cursor.lastrowid
 			if rule_id != int(rule[0]):
 				raise ValueError(f'Rule ID mismatch for old rule #{rule[0]}, new rule #{rule_id}')
-			self.rule_lookup[rule_id] = data
 		self.conn.commit()
 
 	def reset_sources(self, data):
@@ -295,6 +296,51 @@ class Viewer(cmd.Cmd):
 			tag_id = self.cursor.lastrowid
 			self.tag_ids[tag] = tag_id
 			self.tag_lookup[tag_id] = tag
+		self.conn.commit()
+
+	def reset_variant_rules(self, data):
+		"""
+		Load the old variant rules data into the database. (None)
+
+		Parameters:
+		data: The data loaded from the csv files. (dict of str: tuple)
+		"""
+		code = 'insert into variant_rules(variant_id, rule_id, rule_order) values(?, ?, ?)'
+		for old_row in data['variant-rules']:
+			row = tuple(int(x) for x in old_row)
+			self.cursor.execute(code, row)
+		self.conn.commit()
+
+	def reset_variant_tags(self, data):
+		"""
+		Load the old variant tag data into the database. (None)
+
+		Parameters:
+		data: The data loaded from the csv files. (dict of str: tuple)
+		"""
+		code = 'insert into variant_tags(variant_id, tag_id) values(?, ?)'
+		for variant_id, tag_id in data['variant-tags']:
+			row = (int(variant_id), int(tag_id))
+			self.cursor.execute(code, row)
+		self.conn.commit()
+
+	def reset_variants(self, data):
+		"""
+		Load the old variant data into the database. (None)
+
+		Parameters:
+		data: The data loaded from the csv files. (dict of str: tuple)
+		"""
+		code = 'insert into variants(name, cards, players, rounds, max_seen, wilds, parent_id, source_id)'
+		code = f'{code} values(?, ?, ?, ?, ?, ?, ?, ?)'
+		for variant in data['variants']:
+			row = (variant[1], int(variant[3]), int(variant[6]), int(variant[4]), int(variant[7]))
+			row += (int(variant[5]), int(variant[8]), self.source_ids[variant[9]])
+			self.cursor.execute(code, row)
+			variant_id = self.cursor.lastrowid
+			if variant_id != int(variant[0]):
+				text = f'Variant ID mismatch for old variant #{variant[0]}, new variant #{variant_id}'
+				raise ValueError(text)
 		self.conn.commit()
 
 if __name__ == '__main__':

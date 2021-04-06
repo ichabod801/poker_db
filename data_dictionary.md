@@ -10,6 +10,7 @@ This is the data dictionary for Ichabod's Poker Variant Database.
 	* rounds
 	* max_seen
 	* wilds
+	* parent_id
 	* source_id
 * variant_rules
 	* variant_id
@@ -57,6 +58,9 @@ This is the data dictionary for Ichabod's Poker Variant Database.
 * Betting Rounds: How many times you get to bet.
 * Max Seen: The maximum number of cards that go through your hand during the game.
 * Wilds: The (maximum) number of wild cards in the game.
+* Parent ID: The ID of the parent variant in the variant tree.
+	* Child variants are not necessarily derived from the parent variants.
+	* It's more of a hierarchy of similar games.
 * Source ID: The ID for the source of the variant.
 	* The source is not necessarily the creator, but the place where I found the game.
 
@@ -272,7 +276,7 @@ Rules about players putting their cards into a stack. The card number is the num
 
 Rules about dealing table cards. Flipping over face down table cards should be coded as a 'turn' rule. The card number is the total number of table cards dealt.
 
-###turn
+### turn
 
 Rules about flipping over face down table or common cards. The card number is the total number of cards turned over.
 
