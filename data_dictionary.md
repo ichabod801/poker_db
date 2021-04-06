@@ -111,7 +111,7 @@ These are tags that can be used in the interface, but that are not stored in the
 
 ## Rules
 
-Special card numbers used in rules.
+Special card numbers used in rules are listed below. Note the 200 and 300 ranges especially. Some rule types (like deal) have card numbers on a per player basis. Cards = 2 means two cards are dealt per player. Other rules (like table) have an absolute card number. Cards = 2 means two cards are dealt total. The 200 and 300 ranges allow for switching that around, and dealing one card to one player, or one table card per player.
 	
 * 108 is all available cards
 * 109 is the number of jokers in the game.
@@ -120,7 +120,7 @@ Special card numbers used in rules.
 * 112 is the current number of up cards in hand
 * 113 is the current number of down cards in hand
 * 114 is the number of cards in the deck.
-* 115	is the number of cards in a layout feature
+* 115 is the number of cards in a layout feature
 * 116 is the number of cards until an event happens
 * 117 is the number of hands a player has
 * 118 is the number of each player's discarded cards
@@ -131,65 +131,83 @@ Special card numbers used in rules.
 * 500+ is cards per common card
 * 600+ is cards per table card
 
-bet
-	a round of payments into the pot.
-	0 = changes to ante.
-	1 = full betting round
-	2 = multiple hands
-common
-	deal common cards
-	use turn for flipping them over.
-	n is total cards dealt
-dead
-	Cards with no value.
-	number is absolute number of cards.
-	standard text: foos do not count toward hand value.
-deal
-	deal cards from the deck, without corresponding discards
-	includes redeals (cards = 110/cards initially dealt)
-	number is the cards dealt to each player (expected/median)
-deck
-	add or remove cards from the deck
-	number is the change in deck size.
-declare
-	hi/low declarations and similar.
-	same card numbers as showdown
-		0 = declare in/out
-deprecated
-	deprecated rules are no longer used.
-discard
-	remove cards from hand with out getting cards back.
-	number is how many each player discards. (max if necc)
-draw
-	discard cards to get more cards from the deck (or somewhere)
-	includes twisting (paying to draw).
-	number is the max number of cards you can draw.
-hand
-	rules determining which cards you can use.
-	number is the number of cards mentioned/manipulated.
-flip
-	flipping over cards from your hand.
-	number is the max number each player can flip
-fold
-	Actions/events that cause a player to fold.
-	-2 = paid reentry
-	-1 = reentry
-	0 = forced fold
-	1 = pay or fold
-	2 = other player can force fold
-limited
-	limited wild cards. Bugs, ambivalents, that sort of thing.
-		also includes rank boosters. Note that one wild typically boosts more than one rank.
-	cards same as wilds
-match
-	Matching the pot or other fees after a declare or showdown.
-	Cards:
-		0 = losers match
-		1 = winners match
-		2 = could have won match
-		3 = all match
-		4 = out match
-		5 = in match
+Not all card numbers refer to actual cards. Some rule types just use the card number to differentiate different sub-types of the rule type. The specific rule types with definitions of their card numbers are below.
+
+All rules have a short text and a full text. The full text is the text that should be used when playing the game. The short text is there for short summaries of how the game plays, as in a list of games. Note that the short text never ends in a period (it is expected to be joined by semi-colons) while the full text always ends in a period.
+
+### bet
+
+Rules for rounds of payments into the pot.
+
+* 0 = changes to ante.
+* 1 = full betting round
+* 2 = multiple hands
+
+### common
+
+Rules for dealing common cards. Use turn for flipping face-down commons over. The card number is the number of cards dealt.
+
+### dead
+	
+Rules specifying cards with that do not contribute to hand value. The card number is absolute number of dead cards.
+
+### deal
+
+Rules for dealing cards to players from the deck. This includes If players discard cards to get cards from the deck, that is a draw rule instead. The card number is the number of cards dealt to each player.
+
+### deck
+
+Rules for adding or removing cards from the deck. The card number is the change to the size of the deck. So cards = 2 means two cards are added to the deck, and cards = -4 means four cards are removed from the deck.
+
+### declare
+	
+Rules for player declarations, such as declaring whether they are going for the high or low hand, or if they are staying in or going out in a guts game. Cards are the same as for showdown rules, but cards = 0 is for in/out declarations.
+
+### deprecated
+
+Deprecated rules are no longer used. These should have all been removed from the database at this point, but the rule type was left in as a possibility in case more rules get deprecated in the future. All deprecated rules should have a card number of -108.
+
+### discard
+
+Rules for removing cards from a player's hand with out getting cards back. The card number is how many cards each player discards. If necessary, the maximum possible number of discarded cards is used.
+
+### draw
+	
+Rules for discarding cards to get more cards from the deck (or somewhere). This includes 'twisting,' which is paying money to the pot in order to draw cards. The card number is the maximum number of cards each player can draw.
+
+### hand
+	
+Rules determining which cards you can use in your hand. The card number is the number of cards mentioned/manipulated.
+
+### flip
+	
+Rules for flipping down cards face up, from a player's hand. The card number is the maximum number of cards a player can flip.
+
+### fold
+
+Rules for actions or events that can cause a player to fold. Cards numbers are:
+
+* -2 = You may pay to reenter the game after folding.
+* -1 = You may reenter the game for free after folding.
+* 0 = You are forced to fold with no recourse.
+* 1 = You must pay a fee to the pot or forld.
+* 2 = Other players can force you to fold.
+
+### limited
+
+Rules for limited wild cards. This includes bugs, which can count as an ace or be used to complete a straight or a flush; ambivalent cards, which can change their rank one step up or down; or rank boosters, which can change a hand's value up or down a rank. Rank boosters are considered limited wild cards because full wilds typically boost a hand by more than one rank. For example, a wild boosts a pair over two pair to three of a kind, and boosts two pair all the way to full house. The card numbers are the same as for wilds.
+
+### match
+	
+Rules for matching the pot or other fees after a declare or showdown. The card number specifies who has to match:
+
+* 0 = losers match
+* 1 = winners match
+* 2 = could have won match
+* 3 = all match
+* 4 = out match
+* 5 = in match
+
 other
 	everything else, review these at the end. [done]
 	Cards

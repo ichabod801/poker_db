@@ -225,7 +225,7 @@ class Viewer(cmd.Cmd):
 		data: The data loaded from the csv files. (dict of str: tuple)
 		"""
 		rule_types = list(set(row[1] for row in data['rules']))
-		rule_types.append('variant')
+		rule_types.extend(['deprecated', 'variant'])
 		rule_types.sort()
 		self.rule_type_lookup = {}
 		self.rule_type_ids = {}
