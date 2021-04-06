@@ -21,7 +21,6 @@ details.
 See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 To Do:
-* Convert to sqlite.
 * Create the user interface.
 	* Filters
 	* SQL searches
@@ -82,6 +81,7 @@ class Viewer(cmd.Cmd):
 	Methods:
 	do_quit: Quit the interface. (True)
 	do_reset: Reset the SQL database based on the csv files. (None)
+	do_sql: Handle raw SQL code. (None)
 	load_csv_data: Load csv data from the old database. (dict of str: tuple)
 	reset_rule_types: Load the old rule type data into the database. (None)
 	reset_rules: Load the old rule data into the database. (None)
@@ -163,6 +163,12 @@ class Viewer(cmd.Cmd):
 	def do_shell(self, arguments):
 		"""Handle raw Python code. (!)"""
 		print(eval(arguments))
+
+	def do_sql(self, arguments):
+		"""Handle raw SQL code."""
+		self.cursor.execute(arguments)
+		for row in self.cursor:
+			print(row)
 
 	def load_csv_data(self):
 		"""
