@@ -208,74 +208,85 @@ Rules for matching the pot or other fees after a declare or showdown. The card n
 * 4 = out match
 * 5 = in match
 
-other
-	everything else, review these at the end. [done]
-	Cards
-		1 = shifting games
-		2 = dice
-		3 = pot actions
-		4 = odd fees
-		5 = card actions
-pass
-	pass cards from one player to another
-	number is max cards passed.
-qualifier
-	Something that must be beat to win/open.
-		0 = no qualifier
-		1 = set qualifier
-		2 = deck qualifier
-		3 = table qualifier
-		4 = other
-rank
-	How hands are ranked against each other.
-		1 = standard
-		2 = modified standard
-		3 = split cards
-		4 = points
-		5 = other
-repeat
-	repeat a number of actions for a number of rounds, or until a condition is met.
-	number is number of actions repeated
-	-1 for a condition related to repeating actions, independent of the repeat
-showdown
-	see who has the best hand and divide the pot.
-	instant win goes under win
-	Use a bit map:
-		1 = low
-		2 = high
-		4 = both
-		8 = card
-		16 = other
-		32 = other II
-		64 = tba
-		high/low = 3
-		high/low/both = 7
-		high/card = 10
-		low/low = 17
-		high/high = 18
-shuffle
-	(re)shuffle the deck somehow
-	0 = conditional shuffle
-	1 = reshuffle
-stack
-	put your cards into a stack.
-	111 all cards
-	otherwise number of cards stacked
-table
-	deal table cards
-	use turn for flipping them over
-	n is total cards dealt
-	201+ for per player
-turn
-	flip over table or common cards.
-variant
-	play a specific variant. For things like HORSE, which would have a combined tag.
-wild
-	includes wilds, double wilds (double the cards), half wilds (halve the cards)
-	number should be the number of wild cards (max) the rule introduces
-		double wilds count as 2 cards
-		0 is a rule that nefs wilds, or provides wilds to the table.
-win
-	instant win rule
-	1 = specific cards
-	2 = multiple wins
+### other
+
+Rules for everything else, categorized by card number:
+
+* 1 = shifting games
+* 2 = dice
+* 3 = pot actions
+* 4 = odd fees
+* 5 = card actions
+
+### pass
+
+Rules about passing cards from one player to another. The card number is the maximum number of cards passed per player.
+
+### qualifier
+
+Rules for hands required to open betting or to win the pot.
+
+* 0 = eliminate a qualifier
+* 1 = a specific hand qualifier
+* 2 = a beat the deck qualifier
+* 3 = a beat the table qualifier
+* 4 = other qualifiers
+
+### rank
+
+Rules about how hands are ranked against each other. The card number categorizes the types of ranks:
+
+* 1 = standard poker hands (such as using three card hands in a five card game)
+* 2 = modified standard poker hands (removing hands or adding hands)
+* 3 = split cards
+* 4 = points (some form of counting)
+* 5 = other
+
+### repeat
+	
+Rules about repeat a number of actions (other rules) until a condition is met. The card number is the number of actions repeated. A card number of -1 is for a condition related to repeating actions, independent of the repeat.
+
+### showdown
+
+Rules about how to divide the pot. Note that instant wins that don't involve comparing hands are coded as 'win' rules. The card numbers for showdowns use a bit map. You take the card number, and change it to a sum of powers of two. The powers of two in the sum determine what types of hands can win the pot. For example, a high/low game is coded as 3, which is 1 (low) + 2 (high). A high game with a split card would have a card number of 10, which is 2 (high) + 8 (high card).
+
+* 1 = low
+* 2 = high
+* 4 = both (can take high and low as opposed to either high or low)
+* 8 = split card (like low spade in the hole)
+* 16 = other
+* 32 = a different other
+
+### shuffle
+
+Rules about shuffling or reshuffling the deck somehow. The card numbers are:
+
+* 0 = conditional shuffle
+* 1 = reshuffle
+
+### stack
+
+Rules about players putting their cards into a stack. The card number is the number of cards stacked.
+
+### table
+
+Rules about dealing table cards. Flipping over face down table cards should be coded as a 'turn' rule. The card number is the total number of table cards dealt.
+
+###turn
+
+Rules about flipping over face down table or common cards. The card number is the total number of cards turned over.
+
+### variant
+
+Rules about playing a specific variant. For things like HORSE, which would have a 'meta' tag.
+
+### wild
+
+Rules about what cards are wild. This includes wilds, double wilds, and half wilds (two cards counting as one wild card). The card number is the maximum number of wild cards possible at the end of the game. Double the card number for double wilds, halve it for half wilds. A card number of 0 is a rule that gets rid of wild cards.
+
+### win
+
+Rules covering situations where a player instantly wins the game. The card numbers are:
+
+* 1 = Wins due to specific cards
+* 2 = Wins due to multiple sub-wins or sub-losses, like legs or posts
