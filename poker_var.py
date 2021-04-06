@@ -24,10 +24,9 @@ To Do:
 * Create the user interface.
 	* Filters
 	* SQL searches
-	* Output formats
+	* Output formats (markdown, html, json?)
 	* New variant command.
 	* Random poker game? Random 1st rule, random 2nd rule based on 1st, ...
-* Create output formats (markdown, html, json?)
 * Add new games.
 	* Dealer's Choice, book by James Ernest, Phil Foglio, & Mike Selinker. (fair use?)
 	* poker.fandom.com/wiki
@@ -51,6 +50,7 @@ To Do:
 		* Currently I like the idea of a tree starting with Showdown Straight.
 
 Classes:
+Variant: A poker variant from the SQL database. (object)
 Viewer: A command line interface for Ichabod's Poker Variant Database. (cmd.Cmd)
 """
 
@@ -59,6 +59,61 @@ import csv
 import os
 import sqlite3 as sql
 import traceback
+
+class Variant(object):
+	"""
+	A poker variant from the SQL database. (object)
+
+	Overridden Methods:
+	__init__
+	"""
+
+	base_tags = ('common', 'discard', 'draw', 'flip', 'guts', 'pass', 'straight', 'stud')
+
+	def __init__(self, row, cursor, rules):
+		"""
+		Pull the other data needed to fill out the database. (None)
+
+		Parameters:
+		row: A row from the variants table of the database. (tuple)
+		cursor: A cursor for executing SQL commands. (Cursor)
+		"""
+		# Save the base attributes
+		self.variant_id = row['variant_id']
+		self.name = row['name']
+		self.cards = row['cards']
+		self.players = row['players']
+		self.rounds = row['rounds']
+		self.max_seen = row['max_seen']
+		self.wilds = row['wilds']
+		self.parent_id = row['parent_id']
+		self.source_id = row['source_id']
+		# Get the tags for the game.
+		code = 'select tag from tags, variant_tags where tag.tag_id = variant_tags.tag_id'
+		code = f'{code} and variant_tags.variant_id = ?'
+		cursor.execute(code, (self.variant_id,))
+		tags = [row[0] for row in cursor.fetchall()]
+		tags.sort()
+		self.tags = [tag for tag in tags if tag in self.base_tags]
+		self.tags += [tag for tag in tags in tag not in self.base_tags]
+		# Get the rules for the game.
+		code = 'select rules.* from rules, variant_rules where rules.rule_id = variant_rules.rule_id'
+		code = f'{code} and variant_rules.variant_id = ? order by rules.rule_order'
+		cursor.execute(code, (self.variant_id,))
+		self.rules = [row for row in cursor.fetchall()]
+		# Get the source for the game.
+		code = 'select * from sources where source_id = ?'
+		cursor.execute(code, (self.source_id,))
+		self.source, self.source_link = cursor.fetchone()
+
+	def __repr__(self):
+		"""Debugging text representation. (str)"""
+		return f'<Variant {self.variant_id}: {self.name}>'
+
+	def __str__(self):
+		"""Human readable representation. (str)"""
+		tags = ', '.join(self.tags)
+		return f'{self.name} (#{self.variant_id}): {tags}'
 
 class Viewer(cmd.Cmd):
 	"""
@@ -169,6 +224,7 @@ class Viewer(cmd.Cmd):
 		self.cursor.execute(arguments)
 		for row in self.cursor:
 			print(row)
+		self.conn.commit()
 
 	def load_csv_data(self):
 		"""
