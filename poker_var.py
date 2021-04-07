@@ -49,6 +49,9 @@ To Do:
 	* Look at distance analysis again.
 		* Currently I like the idea of a tree starting with Showdown Straight.
 
+Constants:
+WORDS: Poker terms for defualt names of libraries. (list of str)
+
 Classes:
 Variant: A poker variant from the SQL database. (object)
 Viewer: A command line interface for Ichabod's Poker Variant Database. (cmd.Cmd)
@@ -60,12 +63,33 @@ import os
 import sqlite3 as sql
 import traceback
 
+WORDS = ['Ace', 'Bet', 'Card', 'Deal', 'Edge', 'Flush', 'Guts', 'High-Low', 'Inside', 'Joker', 'Kicker',
+	'Lowball', 'Maverick', 'Nut', 'Odds', 'Pair', 'Qualifier', 'Royal', 'Showdown', 'Trips', 'Up',
+	'Value', 'Wheel']
+
 class Variant(object):
 	"""
 	A poker variant from the SQL database. (object)
 
+	Attributes:
+	cards: How many cards are used to make the final hand. (int)
+	children: The database rows for this variant's children. (list of tuple)
+	name: The name of the variant. (str)
+	parent_id: The variant ID of this variant's parent. (int)
+	players: The maximum number of possible players. (int)
+	rounds: The number of betting rounds. (int)
+	rules: The rules for the game. (list of tuple)
+	source: The name of this variant's source. (str)
+	source_id: The numeric ID of this variant's source. (int)
+	source_link: The link to this variant's source, if any. (str)
+	tags: The tags for the game. (list of str)
+	variant_id: A unique numeric ID. (int)
+	wilds: The maximum possible wild cards. (int)
+
 	Overridden Methods:
 	__init__
+	__repr__
+	__str__
 	"""
 
 	base_tags = ('common', 'discard', 'draw', 'flip', 'guts', 'pass', 'straight', 'stud')
@@ -105,6 +129,10 @@ class Variant(object):
 		code = 'select * from sources where source_id = ?'
 		cursor.execute(code, (self.source_id,))
 		self.source, self.source_link = cursor.fetchone()
+		# Get the children of the game.
+		code = 'select * from variants where parent_id = ? order by variant_id'
+		cursor.execute(code, (self.variant_id,))
+		self.children = list(self.cursor.fetchall())
 
 	def __repr__(self):
 		"""Debugging text representation. (str)"""
@@ -122,6 +150,7 @@ class Viewer(cmd.Cmd):
 	Attributes:
 	conn: A connection to the poker variant database. (Connection)
 	cursor: An SQL command executor. (Cursor)
+	libraries: Sets of variants. (dict of str: list)
 	rule_lookup: A lookup table for rules. (dict of int: str)
 	rule_type_ids: A lookup table for rule type IDs. (dict of str: int)
 	rule_type_lookup: A lookup table for rule types. (dict of int: str)
@@ -129,15 +158,19 @@ class Viewer(cmd.Cmd):
 	source_lookup: A lookup table for sources. (dict of int: tuple)
 	tag_ids: A lookup table for tag IDs. (dict of str: int)
 	tag_lookup: A lookup table for tag. (dict of int: str)
+	variants: Variants that have been loaded, keyed by ID (dict of int: Variant)
 
 	Class Attributes:
 	aliases: Command aliases. (dict of str: str)
 
 	Methods:
+	do_load: Load variants into a library. (None)
 	do_quit: Quit the interface. (True)
 	do_reset: Reset the SQL database based on the csv files. (None)
 	do_sql: Handle raw SQL code. (None)
+	load_by_tags: Load variants into a library by tags. (None)
 	load_csv_data: Load csv data from the old database. (dict of str: tuple)
+	next_library: Create and auto-name a new library. (None)
 	reset_rule_types: Load the old rule type data into the database. (None)
 	reset_rules: Load the old rule data into the database. (None)
 	reset_sources: Load the old source data into the database. (None)
@@ -145,6 +178,7 @@ class Viewer(cmd.Cmd):
 	reset_variant_rules: Load the old variant rules data into the database. (None)
 	reset_variant_tags: Load the old variant tag data into the database. (None)
 	reset_variants: Load the old variant data into the database. (None)
+	show_library: Print out a library. (None)
 
 	Overridden Methods:
 	default
@@ -171,6 +205,14 @@ class Viewer(cmd.Cmd):
 			return self.onecmd(' '.join(words))
 		else:
 			return super(Viewer, self).default(line)
+
+	def do_load(self, arguments):
+		"""Load variants into a library."""
+		words = arguments.split()
+		if words[0].lower() == 'by':
+			words.pop(0)
+		if words[0].lower() in ('tag', 'tags'):
+			self.load_by_tags(words[1:])
 
 	def do_quit(self, arguments):
 		"""Quit the IPVDB interface. (q)"""
@@ -226,6 +268,37 @@ class Viewer(cmd.Cmd):
 			print(row)
 		self.conn.commit()
 
+	def load_by_tags(self, tags):
+		"""
+		Load variants into a library by tags.
+
+		Parameters:
+		tags: A list of tags to load by. (list of str)
+		"""
+		# Parse out the tags.
+		positive, negative = [], []
+		for tag in tags:
+			if tag.startswith('-'):
+				negative.append(self.tag_ids[tag[1:].lower()])
+			else:
+				positive.append(self.tag_ids[tag].lower())
+		# Build the SQL code.
+		code = 'select distinct variants.* from variants, tags where variants.variant_id = tags.variant_id'
+		if positive:
+			qmarks = ', '.join(['?'] * len(positive))
+			code = f'{code} and tag.tag_id in ({qmark})'
+		if negative:
+			qmarks = ', '.join(['?'] * len(negative))
+			code = f'{code} and tag.tag_id not in ({qmark})'
+		# Pull the values.
+		self.cursor.execute(code, positive + negative)
+		key = self.next_library()
+		for row in self.cursor.fetchall():
+			if row[0] not in self.variants:
+				self.variants[row[0]] = Variant(row)
+			self.libraries[key].append(self.variants[row[0]])
+		self.show_library()
+
 	def load_csv_data(self):
 		"""
 		Load the csv data from the old database. (dict of str: tuple)
@@ -255,6 +328,21 @@ class Viewer(cmd.Cmd):
 			data['tags'] = tuple(tags_reader)
 		return data
 
+	def next_library(self):
+		"""Create and auto-name a new library. (None)"""
+		# Get the new library name.
+		self.library_count += 1
+		library_number = self.library_count
+		words = []
+		while library_number:
+			words.append(WORDS[library_number % len(WORDS)])
+			library_number //= len(WORDS)
+		key = ' '.join(reversed(words))
+		# Add the library.
+		self.libraries[key] = []
+		self.current_library = key
+		return key
+
 	def onecmd(self, line):
 		"""
 		Interpret the argument. (str)
@@ -282,6 +370,10 @@ class Viewer(cmd.Cmd):
 		"""Set up the interface. (None)"""
 		self.conn = sql.connect('poker_db.db')
 		self.cursor = self.conn.cursor()
+		self.libraries = {}
+		self.current_library = ''
+		self.library_count = 0
+		self.variants = {}
 		print()
 
 	def postcmd(self, stop, line):
@@ -418,6 +510,26 @@ class Viewer(cmd.Cmd):
 				text = f'Variant ID mismatch for old variant #{variant[0]}, new variant #{variant_id}'
 				raise ValueError(text)
 		self.conn.commit()
+
+	def show_library(self, key = None):
+		"""
+		Print out a library. (None)
+
+		Parameters:
+		key: The name of the library. (str)
+		"""
+		if key is None:
+			key = self.current_library
+			if key == '':
+				print('There are no libraries at the moment. Use the load command to create one.')
+				return
+		if key not in self.libraries:
+			print('I do not know that library. Library names are case sensitive.')
+			return
+		library = self.libraries[key]
+		print(f'The {key} library has {len(library)} variants in it.')
+		for variant in library:
+			print(variant)
 
 if __name__ == '__main__':
 	viewer = Viewer()
