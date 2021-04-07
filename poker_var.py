@@ -94,7 +94,7 @@ class Variant(object):
 
 	base_tags = ('common', 'discard', 'draw', 'flip', 'guts', 'pass', 'straight', 'stud')
 
-	def __init__(self, row, cursor, rules):
+	def __init__(self, row, cursor):
 		"""
 		Pull the other data needed to fill out the database. (None)
 
@@ -113,26 +113,26 @@ class Variant(object):
 		self.parent_id = row['parent_id']
 		self.source_id = row['source_id']
 		# Get the tags for the game.
-		code = 'select tag from tags, variant_tags where tag.tag_id = variant_tags.tag_id'
+		code = 'select tag from tags, variant_tags where tags.tag_id = variant_tags.tag_id'
 		code = f'{code} and variant_tags.variant_id = ?'
 		cursor.execute(code, (self.variant_id,))
 		tags = [row[0] for row in cursor.fetchall()]
 		tags.sort()
 		self.tags = [tag for tag in tags if tag in self.base_tags]
-		self.tags += [tag for tag in tags in tag not in self.base_tags]
+		self.tags += [tag for tag in tags if tag not in self.base_tags]
 		# Get the rules for the game.
 		code = 'select rules.* from rules, variant_rules where rules.rule_id = variant_rules.rule_id'
-		code = f'{code} and variant_rules.variant_id = ? order by rules.rule_order'
+		code = f'{code} and variant_rules.variant_id = ? order by variant_rules.rule_order'
 		cursor.execute(code, (self.variant_id,))
 		self.rules = [row for row in cursor.fetchall()]
 		# Get the source for the game.
-		code = 'select * from sources where source_id = ?'
+		code = 'select name, link from sources where source_id = ?'
 		cursor.execute(code, (self.source_id,))
 		self.source, self.source_link = cursor.fetchone()
 		# Get the children of the game.
 		code = 'select * from variants where parent_id = ? order by variant_id'
 		cursor.execute(code, (self.variant_id,))
-		self.children = list(self.cursor.fetchall())
+		self.children = list(cursor.fetchall())
 
 	def __repr__(self):
 		"""Debugging text representation. (str)"""
@@ -170,6 +170,7 @@ class Viewer(cmd.Cmd):
 	do_sql: Handle raw SQL code. (None)
 	load_by_tags: Load variants into a library by tags. (None)
 	load_csv_data: Load csv data from the old database. (dict of str: tuple)
+	load_lookups: Load the lookups tables that are used internally. (None)
 	next_library: Create and auto-name a new library. (None)
 	reset_rule_types: Load the old rule type data into the database. (None)
 	reset_rules: Load the old rule data into the database. (None)
@@ -281,21 +282,22 @@ class Viewer(cmd.Cmd):
 			if tag.startswith('-'):
 				negative.append(self.tag_ids[tag[1:].lower()])
 			else:
-				positive.append(self.tag_ids[tag].lower())
+				positive.append(self.tag_ids[tag.lower()])
 		# Build the SQL code.
-		code = 'select distinct variants.* from variants, tags where variants.variant_id = tags.variant_id'
+		code = 'select distinct variants.* from variants, variant_tags'
+		code = f'{code} where variants.variant_id = variant_tags.variant_id'
 		if positive:
 			qmarks = ', '.join(['?'] * len(positive))
-			code = f'{code} and tag.tag_id in ({qmark})'
+			code = f'{code} and variant_tags.tag_id in ({qmarks})'
 		if negative:
 			qmarks = ', '.join(['?'] * len(negative))
-			code = f'{code} and tag.tag_id not in ({qmark})'
+			code = f'{code} and variant_tags.tag_id not in ({qmarks})'
 		# Pull the values.
 		self.cursor.execute(code, positive + negative)
 		key = self.next_library()
 		for row in self.cursor.fetchall():
 			if row[0] not in self.variants:
-				self.variants[row[0]] = Variant(row)
+				self.variants[row[0]] = Variant(row, self.cursor)
 			self.libraries[key].append(self.variants[row[0]])
 		self.show_library()
 
@@ -327,6 +329,30 @@ class Viewer(cmd.Cmd):
 			tags_reader = csv.reader(tag_file)
 			data['tags'] = tuple(tags_reader)
 		return data
+
+	def load_lookups(self):
+		"""Load the lookups tables that are used internally. (None)"""
+		# Load rule type lookups.
+		self.rule_type_ids, self.rule_type_lookup = {}, {}
+		code = 'select * from rule_types'
+		self.cursor.execute(code)
+		for type_id, rule_type in self.cursor.fetchall():
+			self.rule_type_ids[rule_type] = type_id
+			self.rule_type_lookup[type_id] = rule_type
+		# Load the source lookups.
+		self.source_ids, self.source_lookup = {}, {}
+		code = 'select * from sources'
+		self.cursor.execute(code)
+		for source_id, name, link in self.cursor.fetchall():
+			self.source_ids[name] = source_id
+			self.source_lookup[source_id] = (name, link)
+		# Load the tag lookups.
+		self.tag_ids, self.tag_lookup = {}, {}
+		code = 'select * from tags'
+		self.cursor.execute(code)
+		for tag_id, tag in self.cursor.fetchall():
+			self.tag_ids[tag] = tag_id
+			self.tag_lookup[tag_id] = tag
 
 	def next_library(self):
 		"""Create and auto-name a new library. (None)"""
@@ -369,7 +395,9 @@ class Viewer(cmd.Cmd):
 	def preloop(self):
 		"""Set up the interface. (None)"""
 		self.conn = sql.connect('poker_db.db')
+		self.conn.row_factory = sql.Row
 		self.cursor = self.conn.cursor()
+		self.load_lookups()
 		self.libraries = {}
 		self.current_library = ''
 		self.library_count = 0
