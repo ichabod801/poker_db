@@ -23,6 +23,7 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 To Do:
 * Create the user interface.
 	* Change all sql to use joins.
+	* Fix load by tags
 	* SQL searches
 	* Filters
 	* Output formats (markdown, html, json?)
@@ -378,9 +379,9 @@ class Viewer(cmd.Cmd):
 		words: The words specifying what rules to search for. (list of str)
 		"""
 		# Set up the base code.
-		code = 'select distinct variants.* from variants, variant_rules, rules'
-		code = f'{code} where variants.variant_id = variant_rules.variant_id'
-		code = f'{code} and variant_rules.rule_id = rules.rule_id'
+		code = 'select distinct variants.* from variants'
+		code = f'{code} inner join variant_rules on variants.variant_id = variant_rules.variant_id'
+		code = f'{code} inner join rules on variant_rules.rule_id = rules.rule_id'
 		# Finish the code based on search type.
 		if words[0].isdigit():
 			# Rule ID searches.
@@ -407,6 +408,15 @@ class Viewer(cmd.Cmd):
 				self.variants[row[0]] = Variant(row, self.cursor)
 			self.libraries[key].append(self.variants[row[0]])
 		self.show_library()
+
+	def load_by_sql(self, words):
+		"""
+		Load variants into a library by sql code. (None)
+
+		Parameters:
+		words: The words specifying the sql where clause. (list of str)
+		"""
+		pass
 
 	def load_by_stats(self, words):
 		"""
@@ -481,15 +491,15 @@ class Viewer(cmd.Cmd):
 		tags: A list of tags to load by. (list of str)
 		"""
 		# Parse out the tags.
-		positive, neutral, negative = [], [], []
+		negative, neutral = [], []
 		for tag in tags:
 			if tag.startswith('-'):
 				negative.append(self.tag_ids[tag[1:].lower()])
 			else:
-				positive.append(self.tag_ids[tag.lower()])
+				neutral.append(self.tag_ids[tag.lower()])
 		# Build the SQL code.
-		code = 'select distinct variants.* from variants, variant_tags'
-		code = f'{code} where variants.variant_id = variant_tags.variant_id'
+		code = 'select distinct variants.* from variants'
+		code = f'{code} inner join variant_tags on variants.variant_id = variant_tags.variant_id'
 		if neutral:
 			qmarks = ', '.join(['?'] * len(neutral))
 			code = f'{code} and variant_tags.tag_id in ({qmarks})'
@@ -497,7 +507,7 @@ class Viewer(cmd.Cmd):
 			qmarks = ', '.join(['?'] * len(negative))
 			code = f'{code} and variant_tags.tag_id not in ({qmarks})'
 		# Pull the values.
-		self.cursor.execute(code, positive + negative)
+		self.cursor.execute(code, neutral + negative)
 		key = self.next_library()
 		for row in self.cursor.fetchall():
 			if row[0] not in self.variants:
