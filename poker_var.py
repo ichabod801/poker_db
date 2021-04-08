@@ -105,15 +105,15 @@ class Variant(object):
 		cursor: A cursor for executing SQL commands. (Cursor)
 		"""
 		# Save the base attributes
-		self.variant_id = row['variant_id']
-		self.name = row['name']
-		self.cards = row['cards']
-		self.players = row['players']
-		self.rounds = row['rounds']
-		self.max_seen = row['max_seen']
-		self.wilds = row['wilds']
-		self.parent_id = row['parent_id']
-		self.source_id = row['source_id']
+		self.variant_id = row[0]
+		self.name = row[1]
+		self.cards = row[2]
+		self.players = row[3]
+		self.rounds = row[4]
+		self.max_seen = row[5]
+		self.wilds = row[6]
+		self.parent_id = row[7]
+		self.source_id = row[8]
 		# Get the tags for the game.
 		code = 'select tag from tags, variant_tags where tags.tag_id = variant_tags.tag_id'
 		code = f'{code} and variant_tags.variant_id = ?'
@@ -385,7 +385,7 @@ class Viewer(cmd.Cmd):
 		with open('rule_data.csv') as rule_file:
 			rule_reader = csv.reader(rule_file)
 			data['rules'] = tuple(rule_reader)
-		with open('rule_data.csv') as tag_file:
+		with open('tag_data.csv') as tag_file:
 			tags_reader = csv.reader(tag_file)
 			data['tags'] = tuple(tags_reader)
 		return data
@@ -420,6 +420,8 @@ class Viewer(cmd.Cmd):
 		self.library_count += 1
 		library_number = self.library_count - 1
 		words = []
+		if library_number == 0:
+			words = WORDS[0]
 		while library_number:
 			words.append(WORDS[library_number % len(WORDS)])
 			library_number //= len(WORDS)
@@ -455,7 +457,6 @@ class Viewer(cmd.Cmd):
 	def preloop(self):
 		"""Set up the interface. (None)"""
 		self.conn = sql.connect('poker_db.db')
-		self.conn.row_factory = sql.Row
 		self.cursor = self.conn.cursor()
 		self.load_lookups()
 		self.libraries = {}
@@ -509,7 +510,7 @@ class Viewer(cmd.Cmd):
 			self.cursor.execute(code, row)
 			rule_id = self.cursor.lastrowid
 			if rule_id != int(rule[0]):
-				raise ValueError(f'Rule ID mismatch for old rule #{rule[0]}, new rule #{rule_id}')
+				raise ValueError(f'Rule ID mismatch for old rule #{rule[0]}, new rule #{rule_id}.')
 		self.conn.commit()
 
 	def reset_sources(self, data):
@@ -540,16 +541,14 @@ class Viewer(cmd.Cmd):
 		Parameters:
 		data: The data loaded from the csv files. (dict of str: tuple)
 		"""
-		tags = list(set(row[1] for row in data['tags']))
-		tags.sort()
-		new_tag_order = ['common', 'discard', 'draw', 'flip' 'guts', 'pass', 'straight', 'stud']
-		new_tag_order.extend(tag for tag in tags if tag not in new_tag_order)
 		self.tag_lookup = {}
 		self.tag_ids = {}
 		code = 'insert into tags(tag) values(?)'
-		for tag in new_tag_order:
+		for old_id, tag in data['tags']:
 			self.cursor.execute(code, (tag,))
 			tag_id = self.cursor.lastrowid
+			if tag_id != int(old_id):
+				raise ValueError(f'Tag ID mismatch for old tag #{old_id}, new tag #{tag_id}.')
 			self.tag_ids[tag] = tag_id
 			self.tag_lookup[tag_id] = tag
 		self.conn.commit()
