@@ -27,6 +27,8 @@ To Do:
 	* Output formats (markdown, html, json?)
 	* New variant command.
 	* Random poker game? Random 1st rule, random 2nd rule based on 1st, ...
+* More cleanup.
+	* Guts games without guts tag. (go by declare in/out?)
 * Add new games.
 	* Dealer's Choice, book by James Ernest, Phil Foglio, & Mike Selinker. (fair use?)
 	* poker.fandom.com/wiki
@@ -63,8 +65,8 @@ import os
 import sqlite3 as sql
 import traceback
 
-WORDS = ['Ace', 'Bet', 'Card', 'Deal', 'Edge', 'Flush', 'Guts', 'High-Low', 'Inside', 'Joker', 'Kicker',
-	'Lowball', 'Maverick', 'Nut', 'Odds', 'Pair', 'Qualifier', 'Royal', 'Showdown', 'Trips', 'Up',
+WORDS = ['Ace', 'Bet', 'Card', 'Duece', 'Edge', 'Flush', 'Guts', 'High-Low', 'Inside', 'Joker', 'King',
+	'Lowball', 'Maverick', 'Nut', 'Odds', 'Pair', 'Queen', 'Royal', 'Showdown', 'Trips', 'Up',
 	'Value', 'Wheel']
 
 class Variant(object):
@@ -168,6 +170,7 @@ class Viewer(cmd.Cmd):
 	do_quit: Quit the interface. (True)
 	do_reset: Reset the SQL database based on the csv files. (None)
 	do_sql: Handle raw SQL code. (None)
+	load_by_rules: Load variants into a library by rules. (None)
 	load_by_tags: Load variants into a library by tags. (None)
 	load_csv_data: Load csv data from the old database. (dict of str: tuple)
 	load_lookups: Load the lookups tables that are used internally. (None)
@@ -208,11 +211,28 @@ class Viewer(cmd.Cmd):
 			return super(Viewer, self).default(line)
 
 	def do_load(self, arguments):
-		"""Load variants into a library."""
+		"""Load variants into a library.
+
+		Currently you can only load by tags.
+
+		Loading by rules can be done three ways. If you just pass a number, it will
+		search for games with that rule ID. If you pass the word 'type' and a rule 
+		type it will search for games with that rule type. When you search by type,
+		you can also pass a card number to search by rule type and card number. 
+		Anything else will be interpretted as a search of the rule's full text. Use
+		SQL wildcards when doing this search: % for any sequence of zero or more
+		characters and _ for any single character.
+
+		Loading by tags takes a list of tags as an argument. Tags can be listed plain
+		or with a preceding - Matching variants will have one of the plain tags, and 
+		none of the -tags."""
 		words = arguments.split()
 		if words[0].lower() == 'by':
 			words.pop(0)
-		if words[0].lower() in ('tag', 'tags'):
+		search_type = words[0].lower()
+		if search_type in ('rule', 'rules'):
+			self.load_by_rules(words[1:])
+		elif search_type in ('tag', 'tags'):
 			self.load_by_tags(words[1:])
 
 	def do_quit(self, arguments):
@@ -269,6 +289,46 @@ class Viewer(cmd.Cmd):
 			print(row)
 		self.conn.commit()
 
+	def load_by_rules(self, words):
+		"""
+		Load variants into a library by rules.
+
+		See the documentation for do_load for details on the words parameter.
+
+		Parameters:
+		words: The words specifying what words to load. (list of str)
+		"""
+		# Set up the base code.
+		code = 'select distinct variants.* from variants, variant_rules, rules'
+		code = f'{code} where variants.variant_id = variant_rules.variant_id'
+		code = f'{code} and variant_rules.rule_id = rules.rule_id'
+		# Finish the code based on search type.
+		if words[0].isdigit():
+			# Rule ID searches.
+			code = f'{code} and variant_rules.rule_id = ?'
+			params = (int(words[0]),)
+		elif words[0].lower() == 'type':
+			# Rule type searches.
+			type_id = self.rule_type_ids[words[1].lower()]
+			if len(words) > 2:
+				code = f'{code} and rules.type_id = ? and rules.cards = ?'
+				params = (type_id, int(words[2]))
+			else:
+				code = f'{code} and rules.type_id = ?'
+				params = (type_id,)
+		else:
+			# Rule text searches.
+			code = f'{code} and rules.full like ?'
+			params = (' '.join(words),)
+		# Pull the values.
+		self.cursor.execute(code, params)
+		key = self.next_library()
+		for row in self.cursor.fetchall():
+			if row[0] not in self.variants:
+				self.variants[row[0]] = Variant(row, self.cursor)
+			self.libraries[key].append(self.variants[row[0]])
+		self.show_library()
+
 	def load_by_tags(self, tags):
 		"""
 		Load variants into a library by tags.
@@ -277,7 +337,7 @@ class Viewer(cmd.Cmd):
 		tags: A list of tags to load by. (list of str)
 		"""
 		# Parse out the tags.
-		positive, negative = [], []
+		positive, neutral, negative = [], [], []
 		for tag in tags:
 			if tag.startswith('-'):
 				negative.append(self.tag_ids[tag[1:].lower()])
@@ -286,8 +346,8 @@ class Viewer(cmd.Cmd):
 		# Build the SQL code.
 		code = 'select distinct variants.* from variants, variant_tags'
 		code = f'{code} where variants.variant_id = variant_tags.variant_id'
-		if positive:
-			qmarks = ', '.join(['?'] * len(positive))
+		if neutral:
+			qmarks = ', '.join(['?'] * len(neutral))
 			code = f'{code} and variant_tags.tag_id in ({qmarks})'
 		if negative:
 			qmarks = ', '.join(['?'] * len(negative))
@@ -358,7 +418,7 @@ class Viewer(cmd.Cmd):
 		"""Create and auto-name a new library. (None)"""
 		# Get the new library name.
 		self.library_count += 1
-		library_number = self.library_count
+		library_number = self.library_count - 1
 		words = []
 		while library_number:
 			words.append(WORDS[library_number % len(WORDS)])
