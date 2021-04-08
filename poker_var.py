@@ -22,13 +22,12 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 To Do:
 * Create the user interface.
-	* Filters
+	* Change all sql to use joins.
 	* SQL searches
+	* Filters
 	* Output formats (markdown, html, json?)
 	* New variant command.
 	* Random poker game? Random 1st rule, random 2nd rule based on 1st, ...
-* More cleanup.
-	* Guts games without guts tag. (go by declare in/out?)
 * Add new games.
 	* Dealer's Choice, book by James Ernest, Phil Foglio, & Mike Selinker. (fair use?)
 	* poker.fandom.com/wiki
@@ -63,7 +62,26 @@ import cmd
 import csv
 import os
 import sqlite3 as sql
+import textwrap
 import traceback
+
+HELP_GENERAL = """
+This is an interface to Ichabod's Poker Variant Database, which is a database
+of different ways to play poker. The idea is that poker variants are largely a
+series of actions that you take, and those actions are often common across 
+several variants. So the actions are stored separately, and the variants are
+stored as a list of references to those actions. Plus some bells and whistles.
+
+Sets of variants can be loaded into libraries using the load command.
+
+I'm still working on other functionality, including:
+	* Set joins with libraries.
+	* Filters and other controls on the libraries.
+	* Viewing the individual variants.
+	* Exporting of libraries to files.
+	* The creation of new rules and variants.
+	* The modification of current rules and variants (for data cleaning).
+"""
 
 WORDS = ['Ace', 'Bet', 'Card', 'Duece', 'Edge', 'Flush', 'Guts', 'High-Low', 'Inside', 'Joker', 'King',
 	'Lowball', 'Maverick', 'Nut', 'Odds', 'Pair', 'Queen', 'Royal', 'Showdown', 'Trips', 'Up',
@@ -164,6 +182,7 @@ class Viewer(cmd.Cmd):
 
 	Class Attributes:
 	aliases: Command aliases. (dict of str: str)
+	help_text: Help for non-command topics. (None)
 
 	Methods:
 	do_load: Load variants into a library. (None)
@@ -186,6 +205,7 @@ class Viewer(cmd.Cmd):
 
 	Overridden Methods:
 	default
+	do_help
 	do_shell
 	onecmd
 	precmd
@@ -194,6 +214,7 @@ class Viewer(cmd.Cmd):
 	"""
 
 	aliases = {'q': 'quit'}
+	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
 
 	def default(self, line):
@@ -209,6 +230,51 @@ class Viewer(cmd.Cmd):
 			return self.onecmd(' '.join(words))
 		else:
 			return super(Viewer, self).default(line)
+
+	def do_help(self, arguments):
+		"""
+		Handle help requests. (bool)
+
+		Parameters:
+		arguments: What to provide help for. (str)
+		"""
+		topic = arguments.lower()
+		# check for aliases
+		topic = self.aliases.get(topic, topic)
+		# The help_text dictionary takes priority.
+		if topic in self.help_text:
+			print(self.help_text[topic].strip())
+		# General help is given with no arguments.
+		elif not topic:
+			# Show the base help text.
+			print(self.help_text['help'].strip())
+			# Get the names of other help topics.
+			names = [name[3:] for name in dir(self.__class__) if name.startswith('do_')]
+			names.extend([name[5:] for name in dir(self.__class__) if name.startswith('help_')])
+			names.extend(self.help_text.keys())
+			# Clean up the names.
+			names = list(set(names) - set(('debug', 'help', 'text')))
+			names.sort()
+			# Convert the names to cleanly wrapped text and output.
+			name_lines = textwrap.wrap(', '.join(names), width = 79)
+			if name_lines:
+				print()
+				print("Additional help topics available with 'help <topic>':")
+				print('\n'.join(name_lines))
+		# help_foo methods take priority over do_foo docstrings.
+		elif hasattr(self, 'help_' + topic):
+			help_method = getattr(self, 'help_' + topic)
+			# Exit without pausing if requested by the help_foo method.
+			if help_method():
+				return True
+		# Method docstrings are given for recognized commands.
+		elif hasattr(self, 'do_' + topic):
+			help_text = getattr(self, 'do_' + topic).__doc__
+			help_text = textwrap.dedent(help_text).strip()
+			print(help_text)
+		# Display default text for unknown arguments.
+		else:
+			print("I can't help you with that.")
 
 	def do_load(self, arguments):
 		"""
