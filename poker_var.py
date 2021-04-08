@@ -211,9 +211,10 @@ class Viewer(cmd.Cmd):
 			return super(Viewer, self).default(line)
 
 	def do_load(self, arguments):
-		"""Load variants into a library.
+		"""
+		Load variants into a library.
 
-		Currently you can only load by tags.
+		Currently you can only load by rules, stats, or tags.
 
 		Loading by rules can be done three ways. If you just pass a number, it will
 		search for games with that rule ID. If you pass the word 'type' and a rule 
@@ -223,17 +224,29 @@ class Viewer(cmd.Cmd):
 		SQL wildcards when doing this search: % for any sequence of zero or more
 		characters and _ for any single character.
 
+		Loading by stats can be done using three part search terms. The first part 
+		of a search term can be any variable on the variants table: variant_id, name, 
+		cards, players, rounds, max_seen, wilds, parent_id, or source_id. The second
+		part is an operator, one of '=', '>', '<', or '~' (like). The third part is
+		the value to search for. Multiple search terms can be used, but resulting
+		variants must match all search terms.
+
 		Loading by tags takes a list of tags as an argument. Tags can be listed plain
-		or with a preceding - Matching variants will have one of the plain tags, and 
-		none of the -tags."""
+		or with a preceding -. Matching variants will have one of the plain tags, and 
+		none of the -tags.
+		"""
 		words = arguments.split()
 		if words[0].lower() == 'by':
 			words.pop(0)
 		search_type = words[0].lower()
 		if search_type in ('rule', 'rules'):
 			self.load_by_rules(words[1:])
+		elif search_type == 'stats':
+			self.load_by_stats(words[1:])
 		elif search_type in ('tag', 'tags'):
 			self.load_by_tags(words[1:])
+		else:
+			print('Invalid search type.')
 
 	def do_quit(self, arguments):
 		"""Quit the IPVDB interface. (q)"""
@@ -291,12 +304,12 @@ class Viewer(cmd.Cmd):
 
 	def load_by_rules(self, words):
 		"""
-		Load variants into a library by rules.
+		Load variants into a library by rules. (None)
 
 		See the documentation for do_load for details on the words parameter.
 
 		Parameters:
-		words: The words specifying what words to load. (list of str)
+		words: The words specifying what rules to search for. (list of str)
 		"""
 		# Set up the base code.
 		code = 'select distinct variants.* from variants, variant_rules, rules'
@@ -329,9 +342,74 @@ class Viewer(cmd.Cmd):
 			self.libraries[key].append(self.variants[row[0]])
 		self.show_library()
 
+	def load_by_stats(self, words):
+		"""
+		Load variants into a library by statistics. (None)
+
+		Parameters:
+		words: The words specifying what variants to load. (list of str)
+		"""
+		# Parse out the individual search terms.
+		operators = tuple('=><~')
+		chunks = []
+		this_chunk = []
+		for word in words:
+			if not this_chunk:
+				# Handle the first word.
+				if word[-1] in operators:
+					# With a terminal operator.
+					this_chunk = [word[:-1], word[-1]]
+				else:
+					for operator in operators:
+						if operator in word:
+							# With an internal operator.
+							this_chunk = word.partition(operator)
+							break
+					else:
+						# With no operator
+						this_chunk = [word]
+			elif len(this_chunk) == 1:
+				# Handle the second word.
+				if word in operators:
+					# As a lone operator.
+					this_chunk.append(word)
+				elif word[0] in operators:
+					# With an initial operator.
+					this_chunk.extend([word[0], word[1:]])
+				else:
+					# With no operator.
+					print(f'Invalid second word in stat specs: {word!r}.')
+					return
+			elif len(this_chunk) == 2:
+				# Handle the third word.
+				this_chunk.append(word)
+			# Check for completed search term.
+			if len(this_chunk) == 3:
+				chunks.append(this_chunk)
+				this_chunk = []
+		# Create the code.
+		clauses, params = [], []
+		for variable, operator, parameter in chunks:
+			if operator == '~':
+				operator = 'like'
+			clauses.append(f'{variable} {operator} ?')
+			if variable != 'name':
+				parameter = int(parameter)
+			params.append(parameter)
+		clause_text = ' and '.join(clauses)
+		code = f'select * from variants where {clause_text}'
+		# Pull the values.
+		self.cursor.execute(code, params)
+		key = self.next_library()
+		for row in self.cursor.fetchall():
+			if row[0] not in self.variants:
+				self.variants[row[0]] = Variant(row, self.cursor)
+			self.libraries[key].append(self.variants[row[0]])
+		self.show_library()
+
 	def load_by_tags(self, tags):
 		"""
-		Load variants into a library by tags.
+		Load variants into a library by tags. (None)
 
 		Parameters:
 		tags: A list of tags to load by. (list of str)
@@ -421,7 +499,7 @@ class Viewer(cmd.Cmd):
 		library_number = self.library_count - 1
 		words = []
 		if library_number == 0:
-			words = WORDS[0]
+			words = [WORDS[0]]
 		while library_number:
 			words.append(WORDS[library_number % len(WORDS)])
 			library_number //= len(WORDS)
