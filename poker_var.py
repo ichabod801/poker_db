@@ -187,6 +187,7 @@ class Viewer(cmd.Cmd):
 
 	Methods:
 	do_intersection: Generate the intersection between two libraries. (None)
+	do_library: Process library related commands. (None)
 	do_load: Load variants into a library. (None)
 	do_minus: Remove the values in the second libary from the first one. (None)
 	do_page: Change the page being viewed. (None)
@@ -219,8 +220,8 @@ class Viewer(cmd.Cmd):
 	postcmd
 	"""
 
-	aliases = {'&': 'intersection', '-': 'minus', '|': 'union', 'lbt': 'load by tag', 'lbr': 'load by rule', 
-		'lbs': 'load by stats', 'p': 'page', 'q': 'quit'}
+	aliases = {'&': 'intersection', '-': 'minus', '|': 'union', 'lib': 'library', 'lbt': 'load by tag', 
+		'lbr': 'load by rule', 'lbs': 'load by stats', 'p': 'page', 'q': 'quit'}
 	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
 
@@ -292,6 +293,47 @@ class Viewer(cmd.Cmd):
 			key = self.next_library()
 			self.libraries[key] = [variant for variant in left if variant in right]
 			self.show_library()
+
+	def do_library(self, arguments):
+		"""
+		Process library commands. (lib)
+
+		Possible arguments include:
+			* Nothing, to redisplay the current library.
+			* The name of a library, to switch to that library.
+			* 'rename' or 'rn' and a new name, to change the name of the current
+				library.
+			* 'sort' and a sort type to sort the current library. Valid sort types
+				include: variant_id, name, cards, players, rounds, max_seen, wilds, 
+				and tags. You can give a third argument of 'reverse' to reverse the
+				sort order.
+		"""
+		# Parse arguments.
+		words = arguments.split()
+		command = words[0].lower()
+		# Change libraries.
+		if arguments in self.libraries:
+			self.current_library = words[0]
+		# Rename the current libraries.
+		elif command in ('rename', 'rn'):
+			new_name = ' '.join(words[1:])
+			self.libraries[new_name] = self.libraries[self.current_library]
+			del self.libraries[self.current_library]
+			self.current_library = new_name
+		# Show the current library.
+		elif not arguments:
+			pass  # it will be shown at the end of the method.
+		# Sort the current library.
+		elif command == 'sort':
+			sorter = lambda variant: getattr(variant, words[1].lower())
+			self.libraries[self.current_library].sort(key = sorter)
+			if len(words) > 2 and words[3].lower() == 'reverse':
+				self.libraries[self.current_library].reverse()
+		# Error for invalid input.
+		else:
+			print('I do not understand.')
+			return
+		self.show_library()
 
 	def do_load(self, arguments):
 		"""
