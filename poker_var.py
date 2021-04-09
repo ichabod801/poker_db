@@ -22,8 +22,6 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 To Do:
 * Create the user interface.
-	* Change all sql to use joins.
-	* Fix load by tags
 	* SQL searches
 	* Filters
 	* Output formats (markdown, html, json?)
@@ -61,6 +59,7 @@ Viewer: A command line interface for Ichabod's Poker Variant Database. (cmd.Cmd)
 
 import cmd
 import csv
+import math
 import os
 import sqlite3 as sql
 import textwrap
@@ -187,6 +186,7 @@ class Viewer(cmd.Cmd):
 
 	Methods:
 	do_load: Load variants into a library. (None)
+	do_page: Change the page being viewed. (None)
 	do_quit: Quit the interface. (True)
 	do_reset: Reset the SQL database based on the csv files. (None)
 	do_sql: Handle raw SQL code. (None)
@@ -214,7 +214,7 @@ class Viewer(cmd.Cmd):
 	postcmd
 	"""
 
-	aliases = {'q': 'quit'}
+	aliases = {'p': 'page', 'q': 'quit'}
 	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
 
@@ -315,6 +315,39 @@ class Viewer(cmd.Cmd):
 		else:
 			print('Invalid search type.')
 
+	def do_page(self, arguments):
+		"""
+		Switch pages in the library view. (p)
+
+		Without arguments, this command will move one page forward. You can give b or
+		back as an argument to move one page back. You can also give an integer
+		argument to move to a specific page. Finally, you can use 'size N' as an
+		argument to change the number of variants showed at a time to N.
+		"""
+		# Pre-processing.
+		arguments = arguments.lower()
+		library = self.libraries[self.current_library]
+		# Go back.
+		if arguments in ('b', 'back'):
+			self.page = max(1, self.page - 1)
+		# Go to a specific page.
+		elif arguments.isdigit():
+			self.page = min(math.ceil(len(library) / self.page_size), int(arguments))
+		# Go forward.
+		elif not arguments:
+			self.page = min(math.ceil(len(library) / self.page_size), self.page + 1)
+		# Change the page size.
+		elif arguments.startswith('size'):
+			words = arguments.split()
+			if words[1].isdigit():
+				self.page_size = int(words[1])
+			else:
+				print(f'Invalid page size: {words[1]!r}.')
+		# Say what?
+		else:
+			print(f'Invalid arguments: {arguments!r}')
+		self.show_library()
+
 	def do_quit(self, arguments):
 		"""Quit the IPVDB interface. (q)"""
 		self.cursor.close()
@@ -409,15 +442,6 @@ class Viewer(cmd.Cmd):
 			self.libraries[key].append(self.variants[row[0]])
 		self.show_library()
 
-	def load_by_sql(self, words):
-		"""
-		Load variants into a library by sql code. (None)
-
-		Parameters:
-		words: The words specifying the sql where clause. (list of str)
-		"""
-		pass
-
 	def load_by_stats(self, words):
 		"""
 		Load variants into a library by statistics. (None)
@@ -509,7 +533,6 @@ class Viewer(cmd.Cmd):
 			code = f'{code} inner join variant_tags var_tag2 on var2.variant_id = var_tag2.variant_id'
 			code = f'{code} and var_tag2.tag_id in ({qmarks})'
 		# Pull the values.
-		print(code)
 		self.cursor.execute(code, neutral + negative)
 		key = self.next_library()
 		for row in self.cursor.fetchall():
@@ -613,13 +636,19 @@ class Viewer(cmd.Cmd):
 
 	def preloop(self):
 		"""Set up the interface. (None)"""
+		# Set the database connection.
 		self.conn = sql.connect('poker_db.db')
 		self.cursor = self.conn.cursor()
+		# Set the lookup tables.
 		self.load_lookups()
+		self.variants = {}
+		# Set the library tracking.
 		self.libraries = {}
 		self.current_library = ''
 		self.library_count = 0
-		self.variants = {}
+		self.page_size = 23
+		self.page = 1
+		# Formatting.
 		print()
 
 	def postcmd(self, stop, line):
@@ -771,8 +800,11 @@ class Viewer(cmd.Cmd):
 			print('I do not know that library. Library names are case sensitive.')
 			return
 		library = self.libraries[key]
-		print(f'The {key} library has {len(library)} variants in it.')
-		for variant in library:
+		max_pages = math.ceil(len(library) / self.page_size)
+		header = f'The {key} library has {len(library)} variants in it. Page {self.page}/{max_pages}'
+		print(header)
+		print('-' * len(header))
+		for variant in library[((self.page - 1) * self.page_size):(self.page * self.page_size)]:
 			print(variant)
 
 if __name__ == '__main__':
