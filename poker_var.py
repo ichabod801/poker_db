@@ -73,10 +73,10 @@ stored as a list of references to those actions. Plus some bells and whistles.
 
 Sets of variants can be loaded into libraries using the load command, or by
 certain calls to the sql command. You can look through the libraries using the
-page command.
+page command. You can join libraries together with the intersection, minus, 
+union, and xor commands.
 
 I'm still working on other functionality, including:
-	* Set joins with libraries.
 	* Filters and other controls on the libraries.
 	* Viewing the individual variants.
 	* Exporting of libraries to files.
@@ -186,11 +186,15 @@ class Viewer(cmd.Cmd):
 	help_text: Help for non-command topics. (None)
 
 	Methods:
+	do_intersection: Generate the intersection between two libraries. (None)
 	do_load: Load variants into a library. (None)
+	do_minus: Remove the values in the second libary from the first one. (None)
 	do_page: Change the page being viewed. (None)
 	do_quit: Quit the interface. (True)
 	do_reset: Reset the SQL database based on the csv files. (None)
 	do_sql: Handle raw SQL code. (None)
+	do_union: Generate the union of two libraries. (None)
+	do_xor: Generate the exclusive or of two libraries. (None)
 	load_by_rules: Load variants into a library by rules. (None)
 	load_by_tags: Load variants into a library by tags. (None)
 	load_csv_data: Load csv data from the old database. (dict of str: tuple)
@@ -215,8 +219,8 @@ class Viewer(cmd.Cmd):
 	postcmd
 	"""
 
-	aliases = {'&': 'intersection', '|': 'union', 'lbt': 'load by tag', 'lbr': 'load by rule', 'lbs': 'load by stats', 
-		'p': 'page', 'q': 'quit'}
+	aliases = {'&': 'intersection', '-': 'minus', '|': 'union', 'lbt': 'load by tag', 'lbr': 'load by rule', 
+		'lbs': 'load by stats', 'p': 'page', 'q': 'quit'}
 	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
 
@@ -327,6 +331,16 @@ class Viewer(cmd.Cmd):
 			self.load_by_tags(words[1:])
 		else:
 			print('Invalid search type.')
+
+	def do_minus(self, arguments):
+		"""
+		Remove the values in the second libary from the first library. (-)
+		"""
+		left, right = self.get_libraries(*arguments.split())
+		if left is not None:
+			key = self.next_library()
+			self.libraries[key] = [variant for variant in left if variant not in right]
+			self.show_library()
 
 	def do_page(self, arguments):
 		"""
@@ -441,6 +455,22 @@ class Viewer(cmd.Cmd):
 			union = list(set(left + right))
 			union.sort(key = lambda variant: variant.variant_id)
 			self.libraries[key] = union
+			self.show_library()
+
+	def do_xor(self, arguments):
+		"""
+		Generate the exclusive or of two libraries.
+
+		That is, generate a new library with variants that are in one of the two 
+		libraries, but not both of the libraries.
+		"""
+		left, right = self.get_libraries(*arguments.split())
+		if left is not None:
+			key = self.next_library()
+			xor = [variant for variant in left if variant not in right]
+			xor += [variant for variant in right if variant not in left]
+			xor.sort(key = lambda variant: variant.variant_id)
+			self.libraries[key] = xor
 			self.show_library()
 
 	def get_libraries(self, left, right):
