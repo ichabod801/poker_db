@@ -505,8 +505,11 @@ class Viewer(cmd.Cmd):
 			code = f'{code} and variant_tags.tag_id in ({qmarks})'
 		if negative:
 			qmarks = ', '.join(['?'] * len(negative))
-			code = f'{code} and variant_tags.tag_id not in ({qmarks})'
+			code = f'{code} except select var2.* from variants var2'
+			code = f'{code} inner join variant_tags var_tag2 on var2.variant_id = var_tag2.variant_id'
+			code = f'{code} and var_tag2.tag_id in ({qmarks})'
 		# Pull the values.
+		print(code)
 		self.cursor.execute(code, neutral + negative)
 		key = self.next_library()
 		for row in self.cursor.fetchall():
