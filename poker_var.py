@@ -71,7 +71,9 @@ series of actions that you take, and those actions are often common across
 several variants. So the actions are stored separately, and the variants are
 stored as a list of references to those actions. Plus some bells and whistles.
 
-Sets of variants can be loaded into libraries using the load command.
+Sets of variants can be loaded into libraries using the load command, or by
+certain calls to the sql command. You can look through the libraries using the
+page command.
 
 I'm still working on other functionality, including:
 	* Set joins with libraries.
@@ -82,9 +84,9 @@ I'm still working on other functionality, including:
 	* The modification of current rules and variants (for data cleaning).
 """
 
-WORDS = ['Ace', 'Bet', 'Card', 'Duece', 'Edge', 'Flush', 'Guts', 'High-Low', 'Inside', 'Joker', 'King',
-	'Lowball', 'Maverick', 'Nut', 'Odds', 'Pair', 'Queen', 'Royal', 'Showdown', 'Trips', 'Up',
-	'Value', 'Wheel']
+WORDS = ['ace', 'bet', 'card', 'duece', 'edge', 'flush', 'guts', 'high-low', 'inside', 'joker', 'king',
+	'lowball', 'maverick', 'nut', 'odds', 'pair', 'queen', 'royal', 'showdown', 'trips', 'up',
+	'value', 'wheel']
 
 class Variant(object):
 	"""
@@ -213,7 +215,7 @@ class Viewer(cmd.Cmd):
 	postcmd
 	"""
 
-	aliases = {'&': 'intersection', 'lbt': 'load by tag', 'lbr': 'load by rule', 'lbs': 'load by stats', 
+	aliases = {'&': 'intersection', '|': 'union', 'lbt': 'load by tag', 'lbr': 'load by rule', 'lbs': 'load by stats', 
 		'p': 'page', 'q': 'quit'}
 	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
@@ -428,6 +430,18 @@ class Viewer(cmd.Cmd):
 			for row in self.cursor:
 				print(row)
 		self.conn.commit()
+
+	def do_union(self, arguments):
+		"""
+		Generate the union of two libraries. (|)
+		"""
+		left, right = self.get_libraries(*arguments.split())
+		if left is not None:
+			key = self.next_library()
+			union = list(set(left + right))
+			union.sort(key = lambda variant: variant.variant_id)
+			self.libraries[key] = union
+			self.show_library()
 
 	def get_libraries(self, left, right):
 		"""
