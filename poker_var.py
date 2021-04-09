@@ -74,10 +74,11 @@ stored as a list of references to those actions. Plus some bells and whistles.
 Sets of variants can be loaded into libraries using the load command, or by
 certain calls to the sql command. You can look through the libraries using the
 page command. You can join libraries together with the intersection, minus, 
-union, and xor commands.
+union, and xor commands. The library command allows for switching, renaming,
+and sorting libraries.
 
 I'm still working on other functionality, including:
-	* Filters and other controls on the libraries.
+	* Filters.
 	* Viewing the individual variants.
 	* Exporting of libraries to files.
 	* The creation of new rules and variants.
@@ -106,6 +107,9 @@ class Variant(object):
 	tags: The tags for the game. (list of str)
 	variant_id: A unique numeric ID. (int)
 	wilds: The maximum possible wild cards. (int)
+
+	Methods:
+	display: Text representation for viewing in the CLI. (str)
 
 	Overridden Methods:
 	__init__
@@ -164,6 +168,22 @@ class Variant(object):
 		tags = ', '.join(self.tags)
 		return f'{self.name} (#{self.variant_id}): {tags}'
 
+	def display(self):
+		"""Text representation for viewing in the CLI. (str)"""
+		lines = [f'{self.name} (#{self.variant_id})']
+		lines.append('-' * len(lines[0]))
+		lines.append(f'Cards:          {cards}')
+		lines.append(f'Players:        {players}')
+		lines.append(f'Betting Rounds: {rounds}')
+		lines.append(f'Max Cards Seen: {max_seen}')
+		lines.append(f'Wilds:          {wilds}')
+		lines.append('Rules:')
+		for rule_index, rule in enumerate(self.rules, start = 1):
+			lines.append(f'{rule_index}: {rule[4]} (#{rule[0]})')
+		lines.append('-----')
+		lines.append(self.source)
+		return '\n'.join(lines)
+
 class Viewer(cmd.Cmd):
 	"""
 	A command line interface for Ichabod's Poker Variant Database. (cmd.Cmd)
@@ -196,6 +216,8 @@ class Viewer(cmd.Cmd):
 	do_sql: Handle raw SQL code. (None)
 	do_union: Generate the union of two libraries. (None)
 	do_xor: Generate the exclusive or of two libraries. (None)
+	library_list: Create a new library from a list of variants. (None)
+	library_sql: Create a new library from the most recent query. (None)
 	load_by_rules: Load variants into a library by rules. (None)
 	load_by_tags: Load variants into a library by tags. (None)
 	load_csv_data: Load csv data from the old database. (dict of str: tuple)
@@ -290,9 +312,7 @@ class Viewer(cmd.Cmd):
 		"""
 		left, right = self.get_libraries(*arguments.split())
 		if left is not None:
-			key = self.next_library()
-			self.libraries[key] = [variant for variant in left if variant in right]
-			self.show_library()
+			self.library_list([variant for variant in left if variant in right])
 
 	def do_library(self, arguments):
 		"""
@@ -380,9 +400,7 @@ class Viewer(cmd.Cmd):
 		"""
 		left, right = self.get_libraries(*arguments.split())
 		if left is not None:
-			key = self.next_library()
-			self.libraries[key] = [variant for variant in left if variant not in right]
-			self.show_library()
+			self.library_list([variant for variant in left if variant not in right])
 
 	def do_page(self, arguments):
 		"""
@@ -476,12 +494,7 @@ class Viewer(cmd.Cmd):
 		# Check for library vs. displaying raw rows.
 		args = arguments[:26].lower()
 		if args.startswith('select variants.*') or args.startswith('select distinct variants.*'):
-			key = self.next_library()
-			for row in self.cursor.fetchall():
-				if row[0] not in self.variants:
-					self.variants[row[0]] = Variant(row, self.cursor)
-				self.libraries[key].append(self.variants[row[0]])
-			self.show_library()
+			self.library_sql()
 		else:
 			for row in self.cursor:
 				print(row)
@@ -493,11 +506,9 @@ class Viewer(cmd.Cmd):
 		"""
 		left, right = self.get_libraries(*arguments.split())
 		if left is not None:
-			key = self.next_library()
 			union = list(set(left + right))
 			union.sort(key = lambda variant: variant.variant_id)
-			self.libraries[key] = union
-			self.show_library()
+			self.library_list(union)
 
 	def do_xor(self, arguments):
 		"""
@@ -508,12 +519,10 @@ class Viewer(cmd.Cmd):
 		"""
 		left, right = self.get_libraries(*arguments.split())
 		if left is not None:
-			key = self.next_library()
 			xor = [variant for variant in left if variant not in right]
 			xor += [variant for variant in right if variant not in left]
 			xor.sort(key = lambda variant: variant.variant_id)
-			self.libraries[key] = xor
-			self.show_library()
+			self.library_list(xor)
 
 	def get_libraries(self, left, right):
 		"""
@@ -532,6 +541,27 @@ class Viewer(cmd.Cmd):
 		else:
 			return self.libraries[left], self.libraries[right]
 		return None, None
+
+	def library_list(self, variants):
+		"""
+		Create a new library from a list of variants. (None)
+
+		Parameters:
+		variants: The variants to put in the library. (list of Variant)
+		"""
+		key = self.next_library()
+		self.libraries[key] = variants
+		self.show_library()
+
+	def library_sql(self):
+		"""Create a new library from the most recent query. (None)"""
+		key = self.next_library()
+		for row in self.cursor.fetchall():
+			if row[0] not in self.variants:
+				self.variants[row[0]] = Variant(row, self.cursor)
+				self.variants[row[1]] = self.variants[row[0]]
+			self.libraries[key].append(self.variants[row[0]])
+		self.show_library()
 
 	def load_by_rules(self, words):
 		"""
@@ -566,12 +596,7 @@ class Viewer(cmd.Cmd):
 			params = (' '.join(words),)
 		# Pull the values.
 		self.cursor.execute(code, params)
-		key = self.next_library()
-		for row in self.cursor.fetchall():
-			if row[0] not in self.variants:
-				self.variants[row[0]] = Variant(row, self.cursor)
-			self.libraries[key].append(self.variants[row[0]])
-		self.show_library()
+		self.library_sql()
 
 	def load_by_stats(self, words):
 		"""
@@ -631,12 +656,7 @@ class Viewer(cmd.Cmd):
 		code = f'select * from variants where {clause_text}'
 		# Pull the values.
 		self.cursor.execute(code, params)
-		key = self.next_library()
-		for row in self.cursor.fetchall():
-			if row[0] not in self.variants:
-				self.variants[row[0]] = Variant(row, self.cursor)
-			self.libraries[key].append(self.variants[row[0]])
-		self.show_library()
+		self.library_sql()
 
 	def load_by_tags(self, tags):
 		"""
@@ -665,12 +685,7 @@ class Viewer(cmd.Cmd):
 			code = f'{code} and var_tag2.tag_id in ({qmarks})'
 		# Pull the values.
 		self.cursor.execute(code, neutral + negative)
-		key = self.next_library()
-		for row in self.cursor.fetchall():
-			if row[0] not in self.variants:
-				self.variants[row[0]] = Variant(row, self.cursor)
-			self.libraries[key].append(self.variants[row[0]])
-		self.show_library()
+		self.library_sql()
 
 	def load_csv_data(self):
 		"""
