@@ -213,7 +213,8 @@ class Viewer(cmd.Cmd):
 	postcmd
 	"""
 
-	aliases = {'p': 'page', 'q': 'quit'}
+	aliases = {'&': 'intersection', 'lbt': 'load by tag', 'lbr': 'load by rule', 'lbs': 'load by stats', 
+		'p': 'page', 'q': 'quit'}
 	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
 
@@ -276,11 +277,22 @@ class Viewer(cmd.Cmd):
 		else:
 			print("I can't help you with that.")
 
+	def do_intersection(self, arguments):
+		"""
+		Generate the intersection between two libraries. (&)
+		"""
+		left, right = self.get_libraries(*arguments.split())
+		if left is not None:
+			key = self.next_library()
+			self.libraries[key] = [variant for variant in left if variant in right]
+			self.show_library()
+
 	def do_load(self, arguments):
 		"""
 		Load variants into a library.
 
-		Currently you can only load by rules, stats, or tags.
+		Currently you can only load by rules, stats, or tags. The aliases for these
+		are lbr, lbs, and lbt, respectively.
 
 		Loading by rules can be done three ways. If you just pass a number, it will
 		search for games with that rule ID. If you pass the word 'type' and a rule 
@@ -416,6 +428,24 @@ class Viewer(cmd.Cmd):
 			for row in self.cursor:
 				print(row)
 		self.conn.commit()
+
+	def get_libraries(self, left, right):
+		"""
+		Get libraries for binary set operations. (tuple of dict)
+
+		Returns None, None if either library key is invalid.
+
+		Parameters:
+		left: The key for the left hand library. (str)
+		right: The key for the right hand library. (str)
+		"""
+		if left not in self.libraries:
+			print(f'Invalid library name: {left!r}. Library names are case sensitive.')
+		elif right not in self.libraries:
+			print(f'Invalid library name: {right!r}. Library names are case sensitive.')
+		else:
+			return self.libraries[left], self.libraries[right]
+		return None, None
 
 	def load_by_rules(self, words):
 		"""
