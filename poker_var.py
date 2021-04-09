@@ -172,11 +172,11 @@ class Variant(object):
 		"""Text representation for viewing in the CLI. (str)"""
 		lines = [f'{self.name} (#{self.variant_id})']
 		lines.append('-' * len(lines[0]))
-		lines.append(f'Cards:          {cards}')
-		lines.append(f'Players:        {players}')
-		lines.append(f'Betting Rounds: {rounds}')
-		lines.append(f'Max Cards Seen: {max_seen}')
-		lines.append(f'Wilds:          {wilds}')
+		lines.append(f'Cards:          {self.cards}')
+		lines.append(f'Players:        {self.players}')
+		lines.append(f'Betting Rounds: {self.rounds}')
+		lines.append(f'Max Cards Seen: {self.max_seen}')
+		lines.append(f'Wilds:          {self.wilds}')
 		lines.append('Rules:')
 		for rule_index, rule in enumerate(self.rules, start = 1):
 			lines.append(f'{rule_index}: {rule[4]} (#{rule[0]})')
@@ -191,6 +191,8 @@ class Viewer(cmd.Cmd):
 	Attributes:
 	conn: A connection to the poker variant database. (Connection)
 	cursor: An SQL command executor. (Cursor)
+	current_library: A key to the current library. (str)
+	current_variant: The current variant. (Variant)
 	libraries: Sets of variants. (dict of str: list)
 	rule_lookup: A lookup table for rules. (dict of int: str)
 	rule_type_ids: A lookup table for rule type IDs. (dict of str: int)
@@ -243,7 +245,7 @@ class Viewer(cmd.Cmd):
 	"""
 
 	aliases = {'&': 'intersection', '-': 'minus', '|': 'union', 'lib': 'library', 'lbt': 'load by tag', 
-		'lbr': 'load by rule', 'lbs': 'load by stats', 'p': 'page', 'q': 'quit'}
+		'lbr': 'load by rule', 'lbs': 'load by stats', 'p': 'page', 'q': 'quit', 'var': 'variant'}
 	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
 
@@ -330,7 +332,7 @@ class Viewer(cmd.Cmd):
 		"""
 		# Parse arguments.
 		words = arguments.split()
-		command = words[0].lower()
+		command = words[0] if words else ''
 		# Change libraries.
 		if arguments in self.libraries:
 			self.current_library = words[0]
@@ -509,6 +511,37 @@ class Viewer(cmd.Cmd):
 			union = list(set(left + right))
 			union.sort(key = lambda variant: variant.variant_id)
 			self.library_list(union)
+
+	def do_variant(self, arguments):
+		"""
+		Process variant commands. (var)
+
+		You can pass a variant ID or name (case sensitive) as an argument to show 
+		that variant, but only if it has been loaded fromm the database. You may give
+		no arguments to view the current variant.
+		"""
+		# Parse the arguments.
+		words = arguments.split()
+		command = words[0] if words else ''
+		# Get a variant by ID.
+		if command.isdigit():
+			variant_id = int(command)
+			if variant_id in self.variants:
+				self.current_variant = self.variants[variant_id]
+			else:
+				print('That variant has not been loaded from the database.')
+				return
+		# Get a variant by name.
+		elif arguments in self.variants:
+			self.current_variant = self.variants[arguments]
+		# Show the current variant
+		elif not arguments:
+			pass
+		# Warn user of invalid input.
+		else:
+			print('That is an invalid command or a variant that has not been loaded from the database.')
+		# Show the current variant.
+		print(self.current_variant.display())
 
 	def do_xor(self, arguments):
 		"""
@@ -794,6 +827,8 @@ class Viewer(cmd.Cmd):
 		self.library_count = 0
 		self.page_size = 23
 		self.page = 1
+		# Set the variant tracking.
+		self.current_variant = None
 		# Formatting.
 		print()
 
