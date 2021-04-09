@@ -22,7 +22,6 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 To Do:
 * Create the user interface.
-	* SQL searches
 	* Filters
 	* Output formats (markdown, html, json?)
 	* New variant command.
@@ -396,10 +395,26 @@ class Viewer(cmd.Cmd):
 		print(eval(arguments))
 
 	def do_sql(self, arguments):
-		"""Handle raw SQL code."""
+		"""
+		Handle raw SQL code.
+
+		If the SQL code starrts with 'select variants.*' or 'select distinct 
+		variants.*', the code will try to convert the returned rows into a 
+		library. Otherwise, it will just display the row tuples.
+		"""
 		self.cursor.execute(arguments)
-		for row in self.cursor:
-			print(row)
+		# Check for library vs. displaying raw rows.
+		args = arguments[:26].lower()
+		if args.startswith('select variants.*') or args.startswith('select distinct variants.*'):
+			key = self.next_library()
+			for row in self.cursor.fetchall():
+				if row[0] not in self.variants:
+					self.variants[row[0]] = Variant(row, self.cursor)
+				self.libraries[key].append(self.variants[row[0]])
+			self.show_library()
+		else:
+			for row in self.cursor:
+				print(row)
 		self.conn.commit()
 
 	def load_by_rules(self, words):
