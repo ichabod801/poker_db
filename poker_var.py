@@ -22,7 +22,6 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 To Do:
 * Create the user interface.
-	* Filters
 	* Output formats (markdown, html, json?)
 	* New variant command.
 	* Random poker game? Random 1st rule, random 2nd rule based on 1st, ...
@@ -86,7 +85,7 @@ I'm still working on other functionality, including:
 		* Views (tag, summary, stats)
 		* Copy (needed for filters)
 	* Viewing the individual variants.
-		* Navigation. (var parent, var child, step)
+		* Navigation. (step)
 	* Exporting of libraries to files.
 		* By tag (multiple?)
 		* By cards (2-, 3, 4, ..., 8, 9, 10+)
@@ -120,6 +119,9 @@ class Variant(object):
 
 	Methods:
 	display: Text representation for viewing in the CLI. (str)
+	serial_number: Give a serial number of the stats of the variant. (str)
+	summary: Give a summary of the rules of the variant. (str)
+	view: Give a simplified view of the variant. (str)
 
 	Overridden Methods:
 	__init__
@@ -216,6 +218,30 @@ class Variant(object):
 				lines.append('...')
 		# Combine and return.
 		return '\n'.join(lines)
+
+	def serial_number(self):
+		"""Give a serial number of the stats of the variant. (str)"""
+		return f'{self.cards}-{self.players}-{self.rounds}-{self.max_seen}-{self.wilds}'
+
+	def summary(self):
+		"""Give a summary of the rules of the variant. (str)"""
+		return '; '.join(rule[3] for rule in self.rules)
+
+	def view(self, mode = 'tags'):
+		"""
+		Give a simplified view of the variant. (str)
+
+		Parameters:
+		mode: The type of view to give. (str)
+		"""
+		if mode == 'stats':
+			serial_num = self.serial_number()
+			return f'{self.name} (#{self.variant_id}): {serial_num}'
+		elif mode == 'summary':
+			summary = self.summary()
+			return f'{self.name} (#{self.variant_id}): {summary}'
+		elif mode == 'tags':
+			return str(self)
 
 class Viewer(cmd.Cmd):
 	"""
@@ -409,6 +435,8 @@ class Viewer(cmd.Cmd):
 				include: variant_id, name, cards, players, rounds, max_seen, wilds, 
 				and tags. You can give a third argument of 'reverse' to reverse the
 				sort order.
+			* 'view' and a view mode (stats, summary, or tags) to use to display the
+				variants.
 		"""
 		# Parse arguments.
 		words = arguments.split()
@@ -431,6 +459,14 @@ class Viewer(cmd.Cmd):
 			self.libraries[self.current_library].sort(key = sorter)
 			if len(words) > 2 and words[3].lower() == 'reverse':
 				self.libraries[self.current_library].reverse()
+		# Set the view mode.
+		elif command == 'view':
+			view_mode = words[1].lower()
+			if view_mode in ('stats', 'summary', 'tags'):
+				self.view_mode = view_mode
+			else:
+				print('Invalid view mode.')
+				return
 		# Error for invalid input.
 		else:
 			print('I do not understand.')
@@ -973,6 +1009,7 @@ class Viewer(cmd.Cmd):
 		self.library_count = 0
 		self.page_size = 23
 		self.page = 1
+		self.view_mode = 'tags'
 		# Set the variant tracking.
 		self.current_variant = None
 		# Formatting.
@@ -1132,7 +1169,7 @@ class Viewer(cmd.Cmd):
 		print(header)
 		print('-' * len(header))
 		for variant in library[((self.page - 1) * self.page_size):(self.page * self.page_size)]:
-			print(variant)
+			print(variant.view(self.view_mode))
 
 if __name__ == '__main__':
 	viewer = Viewer()
