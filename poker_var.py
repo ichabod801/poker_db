@@ -97,6 +97,7 @@ class Variant(object):
 	cards: How many cards are used to make the final hand. (int)
 	children: The database rows for this variant's children. (list of tuple)
 	name: The name of the variant. (str)
+	parent: The database row for the parent of this variant. (tuple)
 	parent_id: The variant ID of this variant's parent. (int)
 	players: The maximum number of possible players. (int)
 	rounds: The number of betting rounds. (int)
@@ -154,6 +155,13 @@ class Variant(object):
 		code = 'select name, link from sources where source_id = ?'
 		cursor.execute(code, (self.source_id,))
 		self.source, self.source_link = cursor.fetchone()
+		# Get the parent of the game.
+		if self.parent_id:
+			code = 'select * from variants where variant_id = ?'
+			cursor.execute(code, (self.parent_id,))
+			self.parent = cursor.fetchone()
+		else:
+			self.parent = (0, 'Root Game')
 		# Get the children of the game.
 		code = 'select * from variants where parent_id = ? order by variant_id'
 		cursor.execute(code, (self.variant_id,))
@@ -170,18 +178,32 @@ class Variant(object):
 
 	def display(self):
 		"""Text representation for viewing in the CLI. (str)"""
+		# Set up the title.
 		lines = [f'{self.name} (#{self.variant_id})']
 		lines.append('-' * len(lines[0]))
+		# Set up the stats.
 		lines.append(f'Cards:          {self.cards}')
 		lines.append(f'Players:        {self.players}')
 		lines.append(f'Betting Rounds: {self.rounds}')
 		lines.append(f'Max Cards Seen: {self.max_seen}')
 		lines.append(f'Wilds:          {self.wilds}')
+		lines.append(f'Source:         {self.source}')
+		lines.append('-' * len(lines[-1]))
+		# Set up the rules
 		lines.append('Rules:')
 		for rule_index, rule in enumerate(self.rules, start = 1):
 			lines.append(f'{rule_index}: {rule[4]} (#{rule[0]})')
-		lines.append('-----')
-		lines.append(self.source)
+		# Set up the variant tree information.
+		parent_text = f'Parent: {self.parent[1]} (#{self.parent[0]})'
+		lines.append('-' * len(parent_text))
+		lines.append(parent_text)
+		if self.children:
+			lines.append('Children:')
+			for child in self.children[:9]:
+				lines.append(f'{child[1]} (#{child[0]})')
+			if len(self.children) > 9:
+				lines.append('...')
+		# Combine and return.
 		return '\n'.join(lines)
 
 class Viewer(cmd.Cmd):
