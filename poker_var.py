@@ -77,10 +77,19 @@ page command. You can join libraries together with the intersection, minus,
 union, and xor commands. The library command allows for switching, renaming,
 and sorting libraries.
 
+The variant command allows for pulling out variants to view in full.
+
 I'm still working on other functionality, including:
 	* Filters.
+		* Keep/Drop (one filter method, pass args through, replace/remove)
+	* Libraries
+		* Views (tag, summary, stats)
+		* Copy (needed for filters)
 	* Viewing the individual variants.
+		* Navigation. (var parent, var child, step)
 	* Exporting of libraries to files.
+		* By tag (multiple?)
+		* By cards (2-, 3, 4, ..., 8, 9, 10+)
 	* The creation of new rules and variants.
 	* The modification of current rules and variants (for data cleaning).
 """
@@ -240,6 +249,8 @@ class Viewer(cmd.Cmd):
 	do_sql: Handle raw SQL code. (None)
 	do_union: Generate the union of two libraries. (None)
 	do_xor: Generate the exclusive or of two libraries. (None)
+	get_child: Get a child variant from the current variant. (None)
+	get_libraries: Get libraries for binary set operations. (tuple of dict)
 	library_list: Create a new library from a list of variants. (None)
 	library_sql: Create a new library from the most recent query. (None)
 	load_by_rules: Load variants into a library by rules. (None)
@@ -545,8 +556,12 @@ class Viewer(cmd.Cmd):
 		# Parse the arguments.
 		words = arguments.split()
 		command = words[0] if words else ''
+		# Get a variant's child
+		if command == 'child':
+			if not self.get_child():
+				return
 		# Get a variant by ID.
-		if command.isdigit():
+		elif command.isdigit():
 			variant_id = int(command)
 			if variant_id in self.variants:
 				self.current_variant = self.variants[variant_id]
@@ -556,6 +571,19 @@ class Viewer(cmd.Cmd):
 		# Get a variant by name.
 		elif arguments in self.variants:
 			self.current_variant = self.variants[arguments]
+		# Get a variant's parent.
+		elif command in ('parent', 'rent'):
+			if self.current_variant.parent_id:
+				try:
+					self.current_variant = self.variants[self.current_variant.parent_id]
+				except KeyError:
+					parent = Variant(self.current_variant.parent, self.cursor)
+					self.variants[parent.variant_id] = parent
+					self.variants[parent.name] = parent
+					self.current_variant = parent
+			else:
+				print('The current variant is a root game, it has no parent.')
+				return
 		# Show the current variant
 		elif not arguments:
 			pass
@@ -578,6 +606,40 @@ class Viewer(cmd.Cmd):
 			xor += [variant for variant in right if variant not in left]
 			xor.sort(key = lambda variant: variant.variant_id)
 			self.library_list(xor)
+
+	def get_child(self):
+		"""
+		Get a child variant from the current variant. (None or Variant)
+
+		The return value can be used as a condition to check if a child was 
+		successfully chosen.
+		"""
+		# Determine which child to change to.
+		children = self.current_variant.children
+		if not children:
+			print('There are no children of the current variant.')
+			return
+		elif len(children) == 1:
+			child = children[0]
+		else:
+			for child_index, child in enumerate(children):
+				print(f'{child_index}: {child[1]}')
+			choice = input('\nWhich child (by number) would you like to view? ')
+			print()
+			try:
+				child = children[int(choice)]
+			except (IndexError, ValueError):
+				print('That is not a valid choice.')
+				return
+		# Set the child from a data row.
+		if child[0] in self.variants:
+			self.current_variant = self.variants[child[0]]
+		else:
+			child = Variant(child, self.cursor)
+			self.variants[child.variant_id] = child
+			self.variants[child.name] = child
+			self.current_variant = child
+		return child
 
 	def get_libraries(self, left, right):
 		"""
