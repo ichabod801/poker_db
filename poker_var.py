@@ -82,8 +82,6 @@ also use it to navigate the variant tree through a variant's parents and
 children.
 
 I'm still working on other functionality, including:
-	* Filters.
-		* Keep/Drop (one filter method, pass args through, replace/remove)
 	* Libraries
 		* Views (tag, summary, stats)
 		* Copy (needed for filters)
@@ -243,7 +241,9 @@ class Viewer(cmd.Cmd):
 	help_text: Help for non-command topics. (None)
 
 	Methods:
+	do_drop: Specify which variants to remove from the current library. (None)
 	do_intersection: Generate the intersection between two libraries. (None)
+	do_keep: Specify which variants to keep in the current library. (None)
 	do_library: Process library related commands. (None)
 	do_load: Load variants into a library. (None)
 	do_minus: Remove the values in the second libary from the first one. (None)
@@ -261,6 +261,7 @@ class Viewer(cmd.Cmd):
 	load_by_tags: Load variants into a library by tags. (None)
 	load_csv_data: Load csv data from the old database. (dict of str: tuple)
 	load_lookups: Load the lookups tables that are used internally. (None)
+	load_variants: Load variants from the database. (None)
 	next_library: Create and auto-name a new library. (None)
 	reset_rule_types: Load the old rule type data into the database. (None)
 	reset_rules: Load the old rule data into the database. (None)
@@ -281,8 +282,10 @@ class Viewer(cmd.Cmd):
 	postcmd
 	"""
 
-	aliases = {'&': 'intersection', '-': 'minus', '|': 'union', 'lib': 'library', 'lbt': 'load by tag', 
-		'lbr': 'load by rule', 'lbs': 'load by stats', 'p': 'page', 'q': 'quit', 'var': 'variant'}
+	aliases = {'&': 'intersection', '-': 'minus', '|': 'union', 'dbr': 'drop by rule', 'drs': 'drop by stats',
+		'drt': 'drop by tag', 'kbr': 'keep by rule', 'kbs': 'keep by stats', 'kbt': 'keep by tag',
+		'lib': 'library', 'lbr': 'load by rule', 'lbs': 'load by stats', 'lbt': 'load by tag', 'p': 'page', 
+		'q': 'quit', 'var': 'variant'}
 	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
 
@@ -299,6 +302,26 @@ class Viewer(cmd.Cmd):
 			return self.onecmd(' '.join(words))
 		else:
 			return super(Viewer, self).default(line)
+
+	def do_drop(self, arguments):
+		"""
+		Specify which variants to remove from the current library.
+
+		Currently you can drop by rules, stats, or tags. The 'by' is optional, so 
+		you can use 'drop by tags' or 'drop stats', followed by the search
+		specification as detailed in 'help load'. The aliases for these ways to drop 
+		are kbr, kbs, and kbt, respectively.
+		"""
+		try:
+			self.load_variants(arguments)
+		except ValueError:
+			pass
+		else:
+			drop_ids = set(row[0] for row in self.cursor.fetchall())
+			library = self.libraries[self.current_library]
+			kept = [var for var in library if var.variant_id not in drop_ids]
+			self.libraries[self.current_library] = kept
+			self.show_library()
 
 	def do_help(self, arguments):
 		"""
@@ -353,6 +376,26 @@ class Viewer(cmd.Cmd):
 		if left is not None:
 			self.library_list([variant for variant in left if variant in right])
 
+	def do_keep(self, arguments):
+		"""
+		Specify which variants to keep in the current library.
+
+		Currently you can keep by rules, stats, or tags. The 'by' is optional, so 
+		you can use 'keep by tags' or 'keep stats', followed by the search
+		specification as detailed in 'help load'. The aliases for these ways to keep 
+		are kbr, kbs, and kbt, respectively.
+		"""
+		try:
+			self.load_variants(arguments)
+		except ValueError:
+			pass
+		else:
+			keep_ids = set(row[0] for row in self.cursor.fetchall())
+			library = self.libraries[self.current_library]
+			kept = [var for var in library if var.variant_id in keep_ids]
+			self.libraries[self.current_library] = kept
+			self.show_library()
+
 	def do_library(self, arguments):
 		"""
 		Process library commands. (lib)
@@ -398,8 +441,10 @@ class Viewer(cmd.Cmd):
 		"""
 		Load variants into a library.
 
-		Currently you can only load by rules, stats, or tags. The aliases for these
-		are lbr, lbs, and lbt, respectively.
+		Currently you can load by rules, stats, or tags. The 'by' is optional, so 
+		you can use 'load by tags' or 'load stats', followed by the search
+		specification as detailed below. The aliases for these ways to load are 
+		lbr, lbs, and lbt, respectively.
 
 		Loading by rules can be done three ways. If you just pass a number, it will
 		search for games with that rule ID. If you pass the word 'type' and a rule 
@@ -420,18 +465,12 @@ class Viewer(cmd.Cmd):
 		or with a preceding -. Matching variants will have one of the plain tags, and 
 		none of the -tags.
 		"""
-		words = arguments.split()
-		if words[0].lower() == 'by':
-			words.pop(0)
-		search_type = words[0].lower()
-		if search_type in ('rule', 'rules'):
-			self.load_by_rules(words[1:])
-		elif search_type == 'stats':
-			self.load_by_stats(words[1:])
-		elif search_type in ('tag', 'tags'):
-			self.load_by_tags(words[1:])
+		try:
+			self.load_variants(arguments)
+		except ValueError:
+			pass
 		else:
-			print('Invalid search type.')
+			self.library_sql()
 
 	def do_minus(self, arguments):
 		"""
@@ -717,7 +756,6 @@ class Viewer(cmd.Cmd):
 			params = (' '.join(words),)
 		# Pull the values.
 		self.cursor.execute(code, params)
-		self.library_sql()
 
 	def load_by_stats(self, words):
 		"""
@@ -777,7 +815,6 @@ class Viewer(cmd.Cmd):
 		code = f'select * from variants where {clause_text}'
 		# Pull the values.
 		self.cursor.execute(code, params)
-		self.library_sql()
 
 	def load_by_tags(self, tags):
 		"""
@@ -806,7 +843,6 @@ class Viewer(cmd.Cmd):
 			code = f'{code} and var_tag2.tag_id in ({qmarks})'
 		# Pull the values.
 		self.cursor.execute(code, neutral + negative)
-		self.library_sql()
 
 	def load_csv_data(self):
 		"""
@@ -860,6 +896,28 @@ class Viewer(cmd.Cmd):
 		for tag_id, tag in self.cursor.fetchall():
 			self.tag_ids[tag] = tag_id
 			self.tag_lookup[tag_id] = tag
+
+	def load_variants(self, arguments):
+		"""
+		Load variants from the database. (None)
+
+		Parameters:
+		arguments: The user's specification of what variants to load. (str)
+		"""
+		# Get the search type.
+		words = arguments.split()
+		if words[0].lower() == 'by':
+			words.pop(0)
+		search_type = words[0].lower()
+		# Process the search.
+		if search_type in ('rule', 'rules'):
+			self.load_by_rules(words[1:])
+		elif search_type == 'stats':
+			self.load_by_stats(words[1:])
+		elif search_type in ('tag', 'tags'):
+			self.load_by_tags(words[1:])
+		else:
+			raise ValueError('Invalid search type.')
 
 	def next_library(self):
 		"""Create and auto-name a new library. (None)"""
