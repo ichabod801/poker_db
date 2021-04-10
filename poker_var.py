@@ -77,7 +77,9 @@ page command. You can join libraries together with the intersection, minus,
 union, and xor commands. The library command allows for switching, renaming,
 and sorting libraries.
 
-The variant command allows for pulling out variants to view in full.
+The variant command allows for pulling out variants to view in full. You can
+also use it to navigate the variant tree through a variant's parents and
+children.
 
 I'm still working on other functionality, including:
 	* Filters.
@@ -197,6 +199,8 @@ class Variant(object):
 		lines.append(f'Max Cards Seen: {self.max_seen}')
 		lines.append(f'Wilds:          {self.wilds}')
 		lines.append(f'Source:         {self.source}')
+		tag_text = ', '.join(self.tags)
+		lines.append(f'Tags:           {tag_text}')
 		lines.append('-' * len(lines[-1]))
 		# Set up the rules
 		lines.append('Rules:')
