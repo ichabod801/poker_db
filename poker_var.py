@@ -82,7 +82,6 @@ children.
 
 I'm still working on other functionality, including:
 	* Libraries
-		* Views (tag, summary, stats)
 		* Copy (needed for filters)
 	* Viewing the individual variants.
 		* Navigation. (step)
@@ -429,6 +428,7 @@ class Viewer(cmd.Cmd):
 		Possible arguments include:
 			* Nothing, to redisplay the current library.
 			* The name of a library, to switch to that library.
+			* 'copy' to make a copy of the library.
 			* 'rename' or 'rn' and a new name, to change the name of the current
 				library.
 			* 'sort' and a sort type to sort the current library. Valid sort types
@@ -444,15 +444,19 @@ class Viewer(cmd.Cmd):
 		# Change libraries.
 		if arguments in self.libraries:
 			self.current_library = words[0]
+		# Show the current library.
+		elif not arguments:
+			pass  # it will be shown at the end of the method.
+		# Copy the current library.
+		elif command == 'copy':
+			self.library_list(self.libraries[self.current_library][:])
+			return # library list will show the library.
 		# Rename the current libraries.
 		elif command in ('rename', 'rn'):
 			new_name = ' '.join(words[1:])
 			self.libraries[new_name] = self.libraries[self.current_library]
 			del self.libraries[self.current_library]
 			self.current_library = new_name
-		# Show the current library.
-		elif not arguments:
-			pass  # it will be shown at the end of the method.
 		# Sort the current library.
 		elif command == 'sort':
 			sorter = lambda variant: getattr(variant, words[1].lower())
