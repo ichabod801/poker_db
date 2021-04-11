@@ -484,7 +484,8 @@ class Viewer(cmd.Cmd):
 		Currently you can load by rules, stats, or tags. The 'by' is optional, so 
 		you can use 'load by tags' or 'load stats', followed by the search
 		specification as detailed below. The aliases for these ways to load are 
-		lbr, lbs, and lbt, respectively.
+		lbr, lbs, and lbt, respectively. You can also use 'load all' to load the
+		entire database into one library.
 
 		Loading by rules can be done three ways. If you just pass a number, it will
 		search for games with that rule ID. If you pass the word 'type' and a rule 
@@ -969,7 +970,9 @@ class Viewer(cmd.Cmd):
 			words.pop(0)
 		search_type = words[0].lower()
 		# Process the search.
-		if search_type in ('rule', 'rules'):
+		if search_type == 'all':
+			self.cursor.execute('select * from variants')
+		elif search_type in ('rule', 'rules'):
 			self.load_by_rules(words[1:])
 		elif search_type == 'stats':
 			self.load_by_stats(words[1:])
