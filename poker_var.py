@@ -73,16 +73,15 @@ stored as a list of references to those actions. Plus some bells and whistles.
 Sets of variants can be loaded into libraries using the load command, or by
 certain calls to the sql command. You can look through the libraries using the
 page command. You can join libraries together with the intersection, minus, 
-union, and xor commands. The library command allows for switching, renaming,
-and sorting libraries.
+union, and xor commands. The library command allows for copying, switching, 
+renaming, and sorting libraries. It also allows you to change how the variants
+are displayed in the libraries.
 
 The variant command allows for pulling out variants to view in full. You can
 also use it to navigate the variant tree through a variant's parents and
 children.
 
 I'm still working on other functionality, including:
-	* Libraries
-		* Copy (needed for filters)
 	* Viewing the individual variants.
 		* Navigation. (step)
 	* Exporting of libraries to files.
@@ -617,6 +616,22 @@ class Viewer(cmd.Cmd):
 			for row in self.cursor:
 				print(row)
 		self.conn.commit()
+
+	def do_step(self, arguments):
+		"""
+		Step to the next variant in the library. (s)
+		"""
+		try:
+			variant_index = self.libraries[self.current_library].index(self.current_variant)
+		except IndexError:
+			print('The current variant is not in the current library, so step cannot be used.')
+			return
+		if arguments.lower() in ('b', 'back'):
+			variant_index = max(0, variant_index - 1)
+		else:
+			variant_index = min(len(self.libraries[self.current_library]) - 1, variant_index + 1)
+		self.current_variant = self.libraries[self.current_library][variant_index]
+		print(self.current_variant.display())
 
 	def do_union(self, arguments):
 		"""
