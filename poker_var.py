@@ -79,11 +79,10 @@ are displayed in the libraries.
 
 The variant command allows for pulling out variants to view in full. You can
 also use it to navigate the variant tree through a variant's parents and
-children.
+children. To navigate to the next (or previous) varaint in the library, use 
+the step command.
 
 I'm still working on other functionality, including:
-	* Viewing the individual variants.
-		* Navigation. (step)
 	* Exporting of libraries to files.
 		* By tag (multiple?)
 		* By cards (2-, 3, 4, ..., 8, 9, 10+)
@@ -237,7 +236,9 @@ class Variant(object):
 			return f'{self.name} (#{self.variant_id}): {serial_num}'
 		elif mode == 'summary':
 			summary = self.summary()
-			return f'{self.name} (#{self.variant_id}): {summary}'
+			text = f'{self.name} (#{self.variant_id}): {summary}'
+			lines = textwrap.wrap(text, width = 79, subsequent_indent = '   ')
+			return '\n'.join(lines)
 		elif mode == 'tags':
 			return str(self)
 
@@ -620,6 +621,9 @@ class Viewer(cmd.Cmd):
 	def do_step(self, arguments):
 		"""
 		Step to the next variant in the library. (s)
+
+		You can use 'b' or 'back' as an argument to see the previous variant in the
+		library.
 		"""
 		try:
 			variant_index = self.libraries[self.current_library].index(self.current_variant)
