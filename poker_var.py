@@ -114,8 +114,15 @@ class Variant(object):
 	variant_id: A unique numeric ID. (int)
 	wilds: The maximum possible wild cards. (int)
 
+	Class Attributes:
+	primary_tags: The tags usually used to categorize variants. (tuple of str)
+
 	Methods:
 	display: Text representation for viewing in the CLI. (str)
+	export: Export the variant to a file. (None)
+	export_html: Export the variant to a file as HTML. (None)
+	export_markdown: Export the variant to a file as markdown. (None)
+	export_text: Export the variant to a file as text. (None)
 	serial_number: Give a serial number of the stats of the variant. (str)
 	summary: Give a summary of the rules of the variant. (str)
 	view: Give a simplified view of the variant. (str)
@@ -126,7 +133,7 @@ class Variant(object):
 	__str__
 	"""
 
-	base_tags = ('common', 'discard', 'draw', 'flip', 'guts', 'pass', 'straight', 'stud')
+	primary_tags = ('common', 'discard', 'draw', 'flip', 'guts', 'pass', 'straight', 'stud')
 
 	def __init__(self, row, cursor):
 		"""
@@ -152,8 +159,8 @@ class Variant(object):
 		cursor.execute(code, (self.variant_id,))
 		tags = [row[0] for row in cursor.fetchall()]
 		tags.sort()
-		self.tags = [tag for tag in tags if tag in self.base_tags]
-		self.tags += [tag for tag in tags if tag not in self.base_tags]
+		self.tags = [tag for tag in tags if tag in self.primary_tags]
+		self.tags += [tag for tag in tags if tag not in self.primary_tags]
 		# Get the rules for the game.
 		code = 'select rules.* from rules, variant_rules where rules.rule_id = variant_rules.rule_id'
 		code = f'{code} and variant_rules.variant_id = ? order by variant_rules.rule_order'
@@ -216,6 +223,106 @@ class Variant(object):
 		# Combine and return.
 		return '\n'.join(lines)
 
+	def export(self, variant_file, arguments, known_variants, cursor):
+		"""
+		Export the variant to a file. (None)
+
+		Parameters:
+		variant_file: The file to export to. (file)
+		arguments: The options chosen for the export. (set of str)
+		known_variants: The variants pulled from the database so far. (dict)
+		cursor: A connection for executing SQL code. (Cursor)
+		"""
+		if 'html' in arguments:
+			self.export_html(variant_file, arguments, known_variants, cursor)
+		elif 'markdown' in arguments:
+			self.export_markdown(variant_file, arguments, known_variants, cursor)
+		elif 'text' in arguments:
+			self.export_text(variant_file, arguments, known_variants, cursor)
+
+	def export_html(self, variant_file, arguments, known_variants, cursor):
+		"""
+		Export the variant to a file as HTML. (None)
+
+		Parameters:
+		variant_file: The file to export to. (file)
+		arguments: The options chosen for the export. (set of str)
+		known_variants: The variants pulled from the database so far. (dict)
+		cursor: A connection for executing SQL code. (Cursor)
+		"""
+		print('WARNING: HTML export format not implemented yet.')
+
+	def export_markdown(self, variant_file, arguments, known_variants, cursor):
+		"""
+		Export the variant to a file as markdown. (None)
+
+		Parameters:
+		variant_file: The file to export to. (file)
+		arguments: The options chosen for the export. (set of str)
+		cursor: A connection for executing SQL code. (Cursor)
+		"""
+		print('WARNING: Markdown export format not implemented yet.')
+
+	def export_text(self, variant_file, arguments, known_variants, cursor):
+		"""
+		Export the variant to a file as text. (None)
+
+		Parameters:
+		variant_file: The file to export to. (file)
+		arguments: The options chosen for the export. (set of str)
+		known_variants: The variants pulled from the database so far. (dict)
+		cursor: A connection for executing SQL code. (Cursor)
+		"""
+		# Set up the title.
+		lines = [f'{self.name} (#{self.variant_id})']
+		lines.append('-' * len(lines[0]))
+		# Set up the stats.
+		lines.append(f'Cards:          {self.cards}')
+		lines.append(f'Players:        {self.players}')
+		lines.append(f'Betting Rounds: {self.rounds}')
+		lines.append(f'Max Cards Seen: {self.max_seen}')
+		lines.append(f'Wilds:          {self.wilds}')
+		lines.append(f'Source:         {self.source}')
+		tag_text = ', '.join(self.tags)
+		lines.append(f'Tags:           {tag_text}')
+		lines.append('-' * len(lines[-1]))
+		# Set up the rules
+		lines.append('Rules:')
+		for rule_index, rule in enumerate(self.rules, start = 1):
+			lines.append(f'{rule_index}: {rule[4]}')
+		# Set up the variant tree information.
+		# Check for a child mode.
+		try:
+			child_mode = [arg for arg in arguments if arg.startswith('child')][0]
+		except IndexError:
+			child_mode = ''
+		if child_mode:
+			# Set up the parent.
+			parent_text = f'Parent: {self.parent[1]} (#{self.parent[0]})'
+			lines.append('-' * len(parent_text))
+			lines.append(parent_text)
+			# Set up the children, if any.
+			if self.children:
+				lines.append('Children:')
+				for child in self.children:
+					# Get the text by child mode.
+					if child_mode == 'child-name':
+						lines.append(f'{child[1]} (#{child[0]})')
+					elif child_mode == 'child-serial':
+						serial_text = '{2}-{3}-{4}-{5}-{6}'.format(*child)
+						lines.append(f'{child[1]} (#{child[0]}): {serial_text}')
+					else:
+						child = known_variants.get(child[0], Variant(child, cursor))
+						if child_mode == 'child-summary':
+							summary = child.summary()
+							lines.append(f'   {child.name} (#{child.variant_id}): {summary}')
+						elif child_mode == 'child-tags':
+							tag_text = ', '.join(child.tags)
+							lines.append(f'{child.name} (#{child.variant_id}): {tag_text}')
+		# Export the variant.
+		lines.extend(('', '', ''))
+		variant_file.write('\n'.join(lines))
+
 	def serial_number(self):
 		"""Give a serial number of the stats of the variant. (str)"""
 		return f'{self.cards}-{self.players}-{self.rounds}-{self.max_seen}-{self.wilds}'
@@ -264,9 +371,11 @@ class Viewer(cmd.Cmd):
 	Class Attributes:
 	aliases: Command aliases. (dict of str: str)
 	help_text: Help for non-command topics. (None)
+	valid_export: The valid arguments to the export command. (set of str)
 
 	Methods:
 	do_drop: Specify which variants to remove from the current library. (None)
+	do_export: Export a library to one or more files. (None)
 	do_intersection: Generate the intersection between two libraries. (None)
 	do_keep: Specify which variants to keep in the current library. (None)
 	do_library: Process library related commands. (None)
@@ -310,9 +419,11 @@ class Viewer(cmd.Cmd):
 	aliases = {'&': 'intersection', '-': 'minus', '|': 'union', 'dbr': 'drop by rule', 'drs': 'drop by stats',
 		'drt': 'drop by tag', 'kbr': 'keep by rule', 'kbs': 'keep by stats', 'kbt': 'keep by tag',
 		'lib': 'library', 'lbr': 'load by rule', 'lbs': 'load by stats', 'lbt': 'load by tag', 'p': 'page', 
-		'q': 'quit', 'var': 'variant'}
+		'q': 'quit', 's': 'step', 'var': 'variant'}
 	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
+	valid_export = set(('by-cards', 'by-tag', 'child-name', 'child-serial', 'child-summary', 'child-tags',
+		'html', 'markdown', 'multi-all', 'multi-alpha', 'mutli-freq', 'text'))
 
 	def default(self, line):
 		"""
@@ -347,6 +458,123 @@ class Viewer(cmd.Cmd):
 			kept = [var for var in library if var.variant_id not in drop_ids]
 			self.libraries[self.current_library] = kept
 			self.show_library()
+
+	def do_export(self, arguments):
+		"""
+		Export a library to one or more files.
+
+		NOT ALL OF THIS FUNCTIONALITY HAS BEEN IMPLEMENTED AS OF YET.
+
+		Variants will be exported in the order they are in the library, so sort the
+		library as desired with the library command before exporting.
+
+		Arguments for the export command include:
+		   * by-cards: Break into files by number of cards in the game.
+		   * by-tag: Break into files by primary tags.
+		      * mutli-all: Put variants with mutliple primary tags with all of
+		        the tags they have.
+		      * multi-alpha: Put variants with multiple primary tags with the 
+		        first tag alpahbetically.
+		      * multi-freq: Put variants with multiple primary tags with the most 
+		        common tag.
+	       * child-name: Children are listed by name and ID only.
+	       * child-serial: Children are listed with serial numbers.
+	       * child-summary: Children are listed with summaries.
+	       * child-tags: Children are listed with tags.
+		   * html: Export as HTML.
+		   * markdown: Export as a Markdown file.
+		   * text: Export as a text file (this is the default).
+
+		If the by-cards and by-tag arguments are both given, the files will be split
+		into folders by primary tag, and then into files by cards within those those
+		folders. If none of the child-foo arguments are given, neither children nor
+		parents are listed.
+		"""
+		# Validate the export arguments.
+		args = set(arguments.lower().split())
+		invalid_args = args - self.valid_export
+		if invalid_args:
+			invalid_text = ', '.join(invalid_args)
+			print(f'Invalid arguments detected: {invalid_text}.')
+			print('Export aborted.')
+			return
+		# Set the defaults
+		if 'multi-all' not in args and 'multi-alpha' not in args:
+			args.add('multi-freq')
+		if 'html' not in args and 'markdown' not in args:
+			args.add('text')
+		# Get the overall name.
+		name = input('Enter the name for the file or folder: ')
+		# Split the library based on by-foo commands.
+		variants = self.libraries[self.current_library][:]
+		files = [(name, variants)]
+		# Split by tag
+		if 'by-tag' in args:
+			# Set the tag list
+			if 'multi-freq' in args:
+				# Calculate the tag frequencies if necessary.
+				counts = {tag: 0 for tag in Variant.primary_tags}
+				for variant in variants:
+					for tag in variant.tags:
+						if tag in counts:
+							counts[tag] += 1
+						else:
+							break
+				counts = [(count, tag) for tag, count in counts.items()]
+				counts.sort(reverse = True)
+				tags = tuple(tag for count, tag in counts)
+			else:
+				tags = Variant.primary_tags
+			# Set the dupe handling.
+			drop_dupes = 'multi-all' not in args
+			# Split the file data.
+			files = []
+			for tag in tags:
+				files.append((f'{name}/{tag}', [var for var in variants if tag in var.tags]))
+				if drop_dupes:
+					variants = [var for var in variants if var not in files[-1][1]]
+		# Split by cards
+		if 'by-cards' in args:
+			split_files = []
+			for name, variants in files:
+				# Split out the low end.
+				split_variants = [var for var in variants if var.cards < 3]
+				if split_variants:
+					split_files.append((f'{name}/02-card-', split_variants))
+				# Split the middle range by individual card number.
+				for cards in range(3, 10):
+					split_variants = [var for var in variants if var.cards == cards]
+					if split_variants:
+						split_files.append((f'{name}/0{cards}-card', split_variants))
+				# Split out the high end.
+				split_variants = [var for var in variants if var.cards > 9]
+				if split_variants:
+					split_files.append((f'{name}/10-card+', split_variants))
+			files = split_files
+		# Get the proper extension.
+		if 'text' in args:
+			ext = 'txt'
+		elif 'html' in args:
+			ext = 'html'
+		elif 'markdown' in args:
+			ext = 'md'
+		# Export to the files.
+		file_count = 0
+		for path, variants in files:
+			if variants:
+				# Open the file, creating new directories as needed.
+				try:
+					variant_file = open(f'{path}.{ext}', 'w')
+				except FileNotFoundError:
+					folder = path[:path.rindex('/')]
+					os.makedirs(folder)
+					variant_file = open(f'{path}.{ext}', 'w')
+				# Export the variants.
+				for variant in variants:
+					variant.export(variant_file, args, self.variants, self.cursor)
+				file_count += 1
+		# Update the user.
+		print('\n{} file(s) exported.'.format(file_count))
 
 	def do_help(self, arguments):
 		"""
