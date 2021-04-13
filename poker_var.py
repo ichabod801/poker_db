@@ -222,12 +222,11 @@ class Variant(object):
 		# Combine and return.
 		return '\n'.join(lines)
 
-	def export_html(self, variant_file, arguments, known_variants, cursor):
+	def export_html(self, arguments, known_variants, cursor):
 		"""
 		Export the variant to a file as HTML. (None)
 
 		Parameters:
-		variant_file: The file to export to. (file)
 		arguments: The options chosen for the export. (set of str)
 		known_variants: The variants pulled from the database so far. (dict)
 		cursor: A connection for executing SQL code. (Cursor)
@@ -288,14 +287,13 @@ class Variant(object):
 				lines.append('</ul>')
 		# Export the variant.
 		lines.extend(('', '', ''))
-		variant_file.write('\n'.join(lines))
+		return '\n'.join(lines)
 
-	def export_markdown(self, variant_file, arguments, known_variants, cursor):
+	def export_markdown(self, arguments, known_variants, cursor):
 		"""
 		Export the variant to a file as markdown. (None)
 
 		Parameters:
-		variant_file: The file to export to. (file)
 		arguments: The options chosen for the export. (set of str)
 		cursor: A connection for executing SQL code. (Cursor)
 		"""
@@ -346,14 +344,13 @@ class Variant(object):
 							lines.append(f'* {child.name} (#{child.variant_id}): *{tag_text}*')
 		# Export the variant.
 		lines.extend(('', '', ''))
-		variant_file.write('\n'.join(lines))
+		return '\n'.join(lines)
 
-	def export_text(self, variant_file, arguments, known_variants, cursor):
+	def export_text(self, arguments, known_variants, cursor):
 		"""
 		Export the variant to a file as text. (None)
 
 		Parameters:
-		variant_file: The file to export to. (file)
 		arguments: The options chosen for the export. (set of str)
 		known_variants: The variants pulled from the database so far. (dict)
 		cursor: A connection for executing SQL code. (Cursor)
@@ -664,11 +661,14 @@ class Viewer(cmd.Cmd):
 					variant_file.write('<body>\n')
 				for variant in variants:
 					if 'html' in args:
-						variant.export_html(variant_file, args, self.variants, self.cursor)
+						variant_text = variant.export_html(args, self.variants, self.cursor)
+						variant_file.write(variant_text)
 					elif 'markdown' in args:
-						variant.export_markdown(variant_file, args, self.variants, self.cursor)
+						variant_text = variant.export_markdown(args, self.variants, self.cursor)
+						variant_file.write(variant_text)
 					elif 'text' in args:
-						variant.export_text(variant_file, args, self.variants, self.cursor)
+						variant_text = variant.export_text(args, self.variants, self.cursor)
+						variant_file.write(variant_text)
 				if 'html' in args:
 					variant_file.write('</body>\n')
 					variant_file.write('</html>\n')
