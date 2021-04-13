@@ -261,7 +261,54 @@ class Variant(object):
 		arguments: The options chosen for the export. (set of str)
 		cursor: A connection for executing SQL code. (Cursor)
 		"""
-		print('WARNING: Markdown export format not implemented yet.')
+		# Set up the title.
+		lines = [f'## {self.name} (#{self.variant_id})']
+		# Set up the stats.
+		lines.append('|Statistic|Value|')
+		lines.append('|---------|-----|')
+		lines.append(f'|Cards|{self.cards}|')
+		lines.append(f'|Players|{self.players}|')
+		lines.append(f'|Betting Rounds|{self.rounds}|')
+		lines.append(f'|Max Cards Seen|{self.max_seen}|')
+		lines.append(f'|Wilds|{self.wilds}|')
+		lines.append(f'|Source|{self.source}|')
+		tag_text = ', '.join(self.tags)
+		lines.append(f'Tags: *{tag_text}*')
+		# Set up the rules
+		lines.append('### Rules:')
+		for rule_index, rule in enumerate(self.rules, start = 1):
+			lines.append(f'{rule_index}. {rule[4]}')
+		# Set up the variant tree information.
+		# Check for a child mode.
+		try:
+			child_mode = [arg for arg in arguments if arg.startswith('child')][0]
+		except IndexError:
+			child_mode = ''
+		if child_mode:
+			# Set up the parent.
+			lines.append('')
+			lines.append(f'Parent: {self.parent[1]} (#{self.parent[0]})')
+			# Set up the children, if any.
+			if self.children:
+				lines.append('### Children:')
+				for child in self.children:
+					# Get the text by child mode.
+					if child_mode == 'child-name':
+						lines.append(f'* {child[1]} (#{child[0]})')
+					elif child_mode == 'child-serial':
+						serial_text = '{2}-{3}-{4}-{5}-{6}'.format(*child)
+						lines.append(f'* {child[1]} (#{child[0]}): *{serial_text}*')
+					else:
+						child = known_variants.get(child[0], Variant(child, cursor))
+						if child_mode == 'child-summary':
+							summary = child.summary()
+							lines.append(f'* {child.name} (#{child.variant_id}): *{summary}*')
+						elif child_mode == 'child-tags':
+							tag_text = ', '.join(child.tags)
+							lines.append(f'* {child.name} (#{child.variant_id}): *{tag_text}*')
+		# Export the variant.
+		lines.extend(('', '', ''))
+		variant_file.write('\n'.join(lines))
 
 	def export_text(self, variant_file, arguments, known_variants, cursor):
 		"""
