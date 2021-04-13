@@ -119,7 +119,6 @@ class Variant(object):
 
 	Methods:
 	display: Text representation for viewing in the CLI. (str)
-	export: Export the variant to a file. (None)
 	export_html: Export the variant to a file as HTML. (None)
 	export_markdown: Export the variant to a file as markdown. (None)
 	export_text: Export the variant to a file as text. (None)
@@ -222,23 +221,6 @@ class Variant(object):
 				lines.append('...')
 		# Combine and return.
 		return '\n'.join(lines)
-
-	def export(self, variant_file, arguments, known_variants, cursor):
-		"""
-		Export the variant to a file. (None)
-
-		Parameters:
-		variant_file: The file to export to. (file)
-		arguments: The options chosen for the export. (set of str)
-		known_variants: The variants pulled from the database so far. (dict)
-		cursor: A connection for executing SQL code. (Cursor)
-		"""
-		if 'html' in arguments:
-			self.export_html(variant_file, arguments, known_variants, cursor)
-		elif 'markdown' in arguments:
-			self.export_markdown(variant_file, arguments, known_variants, cursor)
-		elif 'text' in arguments:
-			self.export_text(variant_file, arguments, known_variants, cursor)
 
 	def export_html(self, variant_file, arguments, known_variants, cursor):
 		"""
@@ -618,7 +600,12 @@ class Viewer(cmd.Cmd):
 					variant_file = open(f'{path}.{ext}', 'w')
 				# Export the variants.
 				for variant in variants:
-					variant.export(variant_file, args, self.variants, self.cursor)
+					if 'html' in arguments:
+						variant.export_html(variant_file, args, self.variants, self.cursor)
+					elif 'markdown' in arguments:
+						variant.export_markdown(variant_file, args, self.variants, self.cursor)
+					elif 'text' in arguments:
+						variant.export_text(variant_file, args, self.variants, self.cursor)
 				file_count += 1
 		# Update the user.
 		print('\n{} file(s) exported.'.format(file_count))
