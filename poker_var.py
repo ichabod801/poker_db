@@ -232,7 +232,63 @@ class Variant(object):
 		known_variants: The variants pulled from the database so far. (dict)
 		cursor: A connection for executing SQL code. (Cursor)
 		"""
-		print('WARNING: HTML export format not implemented yet.')
+		# Set up the title.
+		lines = [f'<h2 class="name">{self.name} <span class="variant-id">(#{self.variant_id})</span></h2>']
+		# Set up the stats.
+		lines.append('<table class="statistics">')
+		lines.append(f'<tr><td class="cards">Cards</td><td>{self.cards}</td></tr>')
+		lines.append(f'<tr><td class="players">Players</td><td>{self.players}</td></tr>')
+		lines.append(f'<tr><td class="rounds">Betting Rounds</td><td>{self.rounds}</td></tr>')
+		lines.append(f'<tr><td class="max-seen">Max Cards Seen</td><td>{self.max_seen}</td></tr>')
+		lines.append(f'<tr><td class="wilds">Wilds</td><td>{self.wilds}</td></tr>')
+		lines.append(f'<tr><td class="source">Source</td><td>{self.source}</td></tr>')
+		lines.append('</table>')
+		tag_text = ', '.join(self.tags)
+		lines.append(f'<p class="tags">Tags: <span="tags">{tag_text}</span></p>')
+		# Set up the rules
+		lines.append('<h3 class="rules">Rules:</h3>')
+		lines.append('<ol class="rule-list">')
+		for rule_index, rule in enumerate(self.rules, start = 1):
+			lines.append(f'<li class="rule-line">{rule[4]}</li>')
+		lines.append('</ol>')
+		# Set up the variant tree information.
+		# Check for a child mode.
+		try:
+			child_mode = [arg for arg in arguments if arg.startswith('child')][0]
+		except IndexError:
+			child_mode = ''
+		if child_mode:
+			# Set up the parent.
+			parent_text = '<p class="parent">Parent: {1} <span class="variant-id">(#{0})</span></p>'
+			lines.append(parent_text.format(*self.parent))
+			# Set up the children, if any.
+			if self.children:
+				lines.append('<h3 class="children">Children:</h3>')
+				lines.append('<ul class="child-list">')
+				for child in self.children:
+					# Get the text by child mode.
+					if child_mode == 'child-name':
+						child_text = '<li class="child">{1} <span class="variant-id">(#{0})</span></li>'
+						lines.append(child_text.format(*child))
+					elif child_mode == 'child-serial':
+						lines.append(f'<li class="child">{child[1]}')
+						lines.append(f'<span class="variant_id">(#{child[0]})</span>')
+						serial_text = '<span class="serial-number">{2}-{3}-{4}-{5}-{6}</span></li>'
+						lines.append(serial_text.format(*child))
+					else:
+						child = known_variants.get(child[0], Variant(child, cursor))
+						lines.append(f'<li class="child">{child.name}')
+						lines.append(f'<span class="variant_id">(#{child.variant_id})</span>')
+						if child_mode == 'child-summary':
+							summary = child.summary()
+							lines.append(f'<span class="summary">{summary}</span></li>')
+						elif child_mode == 'child-tags':
+							tag_text = ', '.join(child.tags)
+							lines.append(f'<span class="tags">{tag_text}</span></li>')
+				lines.append('</ul>')
+		# Export the variant.
+		lines.extend(('', '', ''))
+		variant_file.write('\n'.join(lines))
 
 	def export_markdown(self, variant_file, arguments, known_variants, cursor):
 		"""
@@ -599,13 +655,23 @@ class Viewer(cmd.Cmd):
 					os.makedirs(folder)
 					variant_file = open(f'{path}.{ext}', 'w')
 				# Export the variants.
+				if 'html' in args:
+					title = 'Poker Variants'
+					variant_file.write('<html>\n')
+					variant_file.write('<head>\n')
+					variant_file.write(f'<title>{title}</title>\n')
+					variant_file.write('</head>\n')
+					variant_file.write('<body>\n')
 				for variant in variants:
-					if 'html' in arguments:
+					if 'html' in args:
 						variant.export_html(variant_file, args, self.variants, self.cursor)
-					elif 'markdown' in arguments:
+					elif 'markdown' in args:
 						variant.export_markdown(variant_file, args, self.variants, self.cursor)
-					elif 'text' in arguments:
+					elif 'text' in args:
 						variant.export_text(variant_file, args, self.variants, self.cursor)
+				if 'html' in args:
+					variant_file.write('</body>\n')
+					variant_file.write('</html>\n')
 				file_count += 1
 		# Update the user.
 		print('\n{} file(s) exported.'.format(file_count))
