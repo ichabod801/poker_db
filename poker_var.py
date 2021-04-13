@@ -653,7 +653,9 @@ class Viewer(cmd.Cmd):
 					variant_file = open(f'{path}.{ext}', 'w')
 				# Export the variants.
 				if 'html' in args:
-					title = 'Poker Variants'
+					file_words = [word.strip('0').title() for word in path.split('/')]
+					file_words.reverse()
+					title = '{} Poker Variants'.format(' '.join(file_words))
 					variant_file.write('<html>\n')
 					variant_file.write('<head>\n')
 					variant_file.write(f'<title>{title}</title>\n')
