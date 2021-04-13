@@ -222,7 +222,7 @@ class Variant(object):
 		# Combine and return.
 		return '\n'.join(lines)
 
-	def export_html(self, arguments, known_variants, cursor):
+	def export_html(self, arguments, known_variants, cursor, variant_paths):
 		"""
 		Export the variant to a file as HTML. (None)
 
@@ -230,9 +230,12 @@ class Variant(object):
 		arguments: The options chosen for the export. (set of str)
 		known_variants: The variants pulled from the database so far. (dict)
 		cursor: A connection for executing SQL code. (Cursor)
+		variant_paths: The path to the HTML file for each variant. (dict of int: str)
 		"""
 		# Set up the title.
-		lines = [f'<h2 class="name">{self.name} <span class="variant-id">(#{self.variant_id})</span></h2>']
+		lines = [f'<h2 class="name" id="variant-{self.variant_id}">']
+		lines.append(f'{self.name} <span class="variant-id">(#{self.variant_id})</span>')
+		lines.append(f'</h2>')
 		# Set up the stats.
 		lines.append('<table class="statistics">')
 		lines.append(f'<tr><td class="cards">Cards</td><td>{self.cards}</td></tr>')
@@ -257,26 +260,41 @@ class Variant(object):
 		except IndexError:
 			child_mode = ''
 		if child_mode:
+			# Find this variant.
+			my_path = variant_paths[self.variant_id].split('/')
 			# Set up the parent.
-			parent_text = '<p class="parent">Parent: {1} <span class="variant-id">(#{0})</span></p>'
-			lines.append(parent_text.format(*self.parent))
+			try:
+				parent_path = self.relative_path(my_path, variant_paths[self.parent[0]], self.parent[0])
+			except KeyError:
+				parent_text = '<p class="parent">Parent: {1} <span class="variant-id">(#{0})</span></p>'
+				lines.append(parent_text.format(*self.parent))
+			else:
+				lines.append(f'<p class="parent">Parent: <a href="{parent_path}">{self.parent[1]}</a>')
+				lines.append(f'<span class="variant-id">(#{self.parent[0]})</span>')
+				lines.append('</p>')
 			# Set up the children, if any.
 			if self.children:
 				lines.append('<h3 class="children">Children:</h3>')
 				lines.append('<ul class="child-list">')
 				for child in self.children:
+					try:
+						child_path = self.relative_path(my_path, variant_paths[child[0]], child[0])
+					except KeyError:
+						child_name = child[1]
+					else:
+						child_name = f'<a href="{child_path}">{child[1]}</a>'
 					# Get the text by child mode.
 					if child_mode == 'child-name':
-						child_text = '<li class="child">{1} <span class="variant-id">(#{0})</span></li>'
-						lines.append(child_text.format(*child))
+						child_text = '<li class="child">{} <span class="variant-id">(#{})</span></li>'
+						lines.append(child_text.format(child_name, child[0]))
 					elif child_mode == 'child-serial':
-						lines.append(f'<li class="child">{child[1]}')
+						lines.append(f'<li class="child">{child_name}')
 						lines.append(f'<span class="variant_id">(#{child[0]})</span>')
 						serial_text = '<span class="serial-number">{2}-{3}-{4}-{5}-{6}</span></li>'
 						lines.append(serial_text.format(*child))
 					else:
 						child = known_variants.get(child[0], Variant(child, cursor))
-						lines.append(f'<li class="child">{child.name}')
+						lines.append(f'<li class="child">{child_name}')
 						lines.append(f'<span class="variant_id">(#{child.variant_id})</span>')
 						if child_mode == 'child-summary':
 							summary = child.summary()
@@ -404,6 +422,23 @@ class Variant(object):
 		# Export the variant.
 		lines.extend(('', '', ''))
 		variant_file.write('\n'.join(lines))
+
+	def relative_path(self, my_path, target_path, target_id):
+		"""
+		Get a relative path to another variant. (str)
+
+		Parameters:
+		my_path: The path to the file with this variant. (list of str)
+		target_path: The path to the file with the target variant. (str)
+		target_id: The ID for the target variant. (int)
+		"""
+		target_path = target_path.split('/')
+		if my_path == target_path:
+			return f'#variant-{target_id}'
+		elif my_path[0] == target_path[0]:
+			return f'{target_path[1]}.html#variant-{target_id}'
+		else:
+			return f'../{target_path[0]}/{target_path[1]}.html#variant-{target_id}'
 
 	def serial_number(self):
 		"""Give a serial number of the stats of the variant. (str)"""
@@ -641,6 +676,11 @@ class Viewer(cmd.Cmd):
 		elif 'markdown' in args:
 			ext = 'md'
 		# Export to the files.
+		if 'html' in args:
+			variant_paths = {}
+			for path, variants in files:
+				for variant in variants:
+					variant_paths[variant.variant_id] = path
 		file_count = 0
 		for path, variants in files:
 			if variants:
@@ -663,7 +703,7 @@ class Viewer(cmd.Cmd):
 					variant_file.write('<body>\n')
 				for variant in variants:
 					if 'html' in args:
-						variant_text = variant.export_html(args, self.variants, self.cursor)
+						variant_text = variant.export_html(args, self.variants, self.cursor, variant_paths)
 						variant_file.write(variant_text)
 					elif 'markdown' in args:
 						variant_text = variant.export_markdown(args, self.variants, self.cursor)
