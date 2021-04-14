@@ -232,6 +232,7 @@ class Variant(object):
 		cursor: A connection for executing SQL code. (Cursor)
 		variant_paths: The path to the HTML file for each variant. (dict of int: str)
 		"""
+		# !! aliases
 		# Set up the title.
 		lines = [f'<h2 class="name" id="variant-{self.variant_id}">']
 		lines.append(f'{self.name} <span class="variant-id">(#{self.variant_id})</span>')
@@ -315,6 +316,7 @@ class Variant(object):
 		arguments: The options chosen for the export. (set of str)
 		cursor: A connection for executing SQL code. (Cursor)
 		"""
+		# !! aliases
 		# Set up the title.
 		lines = [f'## {self.name} (#{self.variant_id})']
 		# Set up the stats.
@@ -373,6 +375,7 @@ class Variant(object):
 		known_variants: The variants pulled from the database so far. (dict)
 		cursor: A connection for executing SQL code. (Cursor)
 		"""
+		# !! aliases
 		# Set up the title.
 		lines = [f'{self.name} (#{self.variant_id})']
 		lines.append('-' * len(lines[0]))
@@ -435,10 +438,10 @@ class Variant(object):
 		target_path = target_path.split('/')
 		if my_path == target_path:
 			return f'#variant-{target_id}'
-		elif my_path[0] == target_path[0]:
-			return f'{target_path[1]}.html#variant-{target_id}'
+		elif my_path[-2] != target_path[-2]:
+			return f'../{target_path[1]}/{target_path[2]}.html#variant-{target_id}'
 		else:
-			return f'../{target_path[0]}/{target_path[1]}.html#variant-{target_id}'
+			return f'{target_path[-1]}.html#variant-{target_id}'
 
 	def serial_number(self):
 		"""Give a serial number of the stats of the variant. (str)"""
