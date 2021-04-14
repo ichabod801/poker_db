@@ -22,9 +22,21 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 To Do:
 * Create the user interface.
-	* Output formats (markdown, html, json?)
-	* New variant command.
-	* Random poker game? Random 1st rule, random 2nd rule based on 1st, ...
+	* New variant command. This will require editing.
+		* Edit command, similar to the one in Fiddler.
+		* Edit mode (rule or variant).
+		* Changing out requires commit decision.
+			* Step, parent/child, variant, new.
+			* Commit/discard commands.
+			* Committing requires updating the database.
+				* Rule mode is easy.
+				* Track changes by database table for variants. Update those tables.
+		* Summary of changes:
+			* New Viewer attributes: edit_mode, changes, current_rule
+			* New Viewer commands: commit, discard, edit, new
+			* New Variant attribute: changes
+			* New Variant methods: commit, discard (reload)
+			* Changed Viewer commands: step, variant
 * Add new games.
 	* Dealer's Choice, book by James Ernest, Phil Foglio, & Mike Selinker. (fair use?)
 	* poker.fandom.com/wiki
@@ -39,6 +51,8 @@ To Do:
 	* r/poker (or is there a variants sub? looks like not)
 	* that facebook guy
 * Future improvements (cool, but not necessary)
+	* Export argument child-stag, which shows serial number and tags.
+		* Switch children to a table. Allows easier scanning for differences.
 	* Consider splitting deal into up and down, for better structure analysis.
 		* Could even have no-peek rules.
 		* This would change distance calculations. Perhaps have a structure code on rules table.
@@ -46,9 +60,10 @@ To Do:
 		* I'm really leaning to a second variable.
 	* Look at distance analysis again.
 		* Currently I like the idea of a tree starting with Showdown Straight.
+	* Random poker game? Random 1st rule, random 2nd rule based on 1st, ...
 
 Constants:
-WORDS: Poker terms for defualt names of libraries. (list of str)
+WORDS: Poker terms for default names of libraries. (list of str)
 
 Classes:
 Variant: A poker variant from the SQL database. (object)
@@ -83,8 +98,6 @@ children. To navigate to the next (or previous) varaint in the library, use
 the step command.
 
 I'm still working on other functionality, including:
-	* Exporting of libraries to files.
-		* Export aliases.
 	* The creation of new rules and variants.
 	* The modification of current rules and variants (for data cleaning).
 """
@@ -481,10 +494,13 @@ class Viewer(cmd.Cmd):
 	A command line interface for Ichabod's Poker Variant Database. (cmd.Cmd)
 
 	Attributes:
+	changes: A flag for there being uncommitted changes. (bool)
 	conn: A connection to the poker variant database. (Connection)
 	cursor: An SQL command executor. (Cursor)
 	current_library: A key to the current library. (str)
+	current_rule: The current rule. (tuple)
 	current_variant: The current variant. (Variant)
+	edit_mode: What type of object is currently being edited. (str)
 	libraries: Sets of variants. (dict of str: list)
 	rule_lookup: A lookup table for rules. (dict of int: str)
 	rule_type_ids: A lookup table for rule type IDs. (dict of str: int)
@@ -586,11 +602,32 @@ class Viewer(cmd.Cmd):
 			self.libraries[self.current_library] = kept
 			self.show_library()
 
+	def do_edit(self, arguments):
+		"""
+		Edit the current rule or variant.
+
+		The arguments for the edit command are a sub-command and the arguments for the
+		sub-command. Possible sub-commands include:
+			* mode: Switch what is being edited, to either variant or rule.
+		"""
+		# Parse the arguments.
+		command, space, sub_args = arguments.partition(' ')
+		command = command.lower()
+		sub_args = sub_args.strip()
+		if command == 'mode':
+			new_mode = sub_args.lower()
+			if new_mode in ('variant', 'rule'):
+				if new_mode != self.edit_mode and self.changes:
+					print('There are uncommitted changes. Please commit or discard.')
+				else:
+					self.edit_mode = new_mode
+					# !! need way to get a rule if there isn't one selected.
+			else:
+				print("Invalid edit mode. Please use 'variant' or 'rule'.")
+
 	def do_export(self, arguments):
 		"""
 		Export a library to one or more files.
-
-		NOT ALL OF THIS FUNCTIONALITY HAS BEEN IMPLEMENTED AS OF YET.
 
 		Variants will be exported in the order they are in the library, so sort the
 		library as desired with the library command before exporting.
@@ -617,6 +654,11 @@ class Viewer(cmd.Cmd):
 		folders. If none of the child-foo arguments are given, neither children nor
 		parents are listed.
 		"""
+		# !! refactor
+		# Validate exporting.
+		if not self.libraries or not self.libraries[self.current_library]:
+			print('There is no data loaded to export.')
+			return
 		# Validate the export arguments.
 		args = set(arguments.lower().split())
 		invalid_args = args - self.valid_export
@@ -1419,6 +1461,10 @@ class Viewer(cmd.Cmd):
 		self.view_mode = 'tags'
 		# Set the variant tracking.
 		self.current_variant = None
+		# Set up the edit tracking.
+		self.edit_mode = 'variant'
+		self.changes = False
+		self.current_rule = None
 		# Formatting.
 		print()
 
