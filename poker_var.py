@@ -32,10 +32,10 @@ To Do:
 				* Rule mode is easy.
 				* Track changes by database table for variants. Update those tables.
 		* Summary of changes:
-			* New Viewer attributes: edit_mode, changes, current_rule
-			* New Viewer commands: commit, discard, edit, new
-			* New Variant attribute: changes
-			* New Variant methods: commit, discard (reload)
+			* New Viewer attributes: edit_mode*, current_rule*, rule_changes*.
+			* New Viewer commands: commit, discard, edit, new, rules
+			* New Variant attribute: changes*
+			* New Variant methods: commit', discard (reload)
 			* Changed Viewer commands: step, variant
 * Add new games.
 	* Dealer's Choice, book by James Ernest, Phil Foglio, & Mike Selinker. (fair use?)
@@ -112,6 +112,7 @@ class Variant(object):
 
 	Attributes:
 	cards: How many cards are used to make the final hand. (int)
+	changes: What parts of the variant have been changed. (list of tuple)
 	children: The database rows for this variant's children. (list of tuple)
 	name: The name of the variant. (str)
 	parent: The database row for the parent of this variant. (tuple)
@@ -130,6 +131,7 @@ class Variant(object):
 	primary_tags: The tags usually used to categorize variants. (tuple of str)
 
 	Methods:
+	commit: Commit any modifications made to the variant. (None)
 	display: Text representation for viewing in the CLI. (str)
 	export_html: Export the variant to a file as HTML. (None)
 	export_markdown: Export the variant to a file as markdown. (None)
@@ -164,6 +166,8 @@ class Variant(object):
 		self.wilds = row[6]
 		self.parent_id = row[7]
 		self.source_id = row[8]
+		# Set the edit tracking.
+		self.changes = []
 		# Get the aliases of the game.
 		code = 'select alias from aliases where aliases.variant_id = ? order by alias'
 		cursor.execute(code, (self.variant_id,))
@@ -205,6 +209,24 @@ class Variant(object):
 		"""Human readable representation. (str)"""
 		tags = ', '.join(self.tags)
 		return f'{self.name} (#{self.variant_id}): {tags}'
+
+	def commit(self, conn, cursor):
+		"""
+		Commit any modifications made to the variant. (None)
+
+		Parameters:
+		conn: A database connection. (Connection)
+		cursor: A cursor to execute database commands. (Cursor)
+		"""
+		for variable, action, value in self.changes:
+			if (variable, action) == ('alias', 'add'):
+				code = 'insert into aliases(variant_id, alias) values (?, ?)'
+				cursor.execute(code, (self.variant_id, self.alias))
+			elif (variable, action) == ('alias', 'remove'):
+				code = 'delete from aliases where variant_id = ? and alias = ?'
+				cursor.execute(code, (self.variant_id, self.alias))
+		conn.commit()
+		self.changes = []
 
 	def display(self):
 		"""Text representation for viewing in the CLI. (str)"""
@@ -582,6 +604,27 @@ class Viewer(cmd.Cmd):
 		else:
 			return super(Viewer, self).default(line)
 
+	def do_commit(self, arguments):
+		"""
+		Commit the latest changes to the database.
+		"""
+		if self.edit_mode == 'variant':
+			if self.current_variant is None or not self.current_variant.changes:
+				print('There are no changes to commit.')
+			else:
+				self.current_variant.commit(self.conn, self.cursor)
+		else:
+			if self.rule_changes:
+				code = 'update rules set type_id = ?, cards = ?, short = ?, full = ?'
+				code = f'{code} where rule_id = ?'
+				values = (self.rule_type_ids[self.current_rule[1]],)
+				values += self.current_rule[2:] + self.current_rule[:1]
+				self.cursor.execute(code, values)
+				self.conn.commit()
+				self.rule_changes = False
+			else:
+				print('There are no changes to commit.')
+
 	def do_drop(self, arguments):
 		"""
 		Specify which variants to remove from the current library.
@@ -608,13 +651,24 @@ class Viewer(cmd.Cmd):
 
 		The arguments for the edit command are a sub-command and the arguments for the
 		sub-command. Possible sub-commands include:
+			* alias: Add the alias given as an argument, or remove it if it's already
+				listed for the current variant.
 			* mode: Switch what is being edited, to either variant or rule.
 		"""
 		# Parse the arguments.
 		command, space, sub_args = arguments.partition(' ')
 		command = command.lower()
 		sub_args = sub_args.strip()
-		if command == 'mode':
+		# Handle adding or removing aliases.
+		if command == 'alias':
+			if sub_args in self.current_variant.aliases:
+				self.current_variant.aliases.remove(sub_args)
+				self.current_variant.changes.append(('alias', 'remove', sub_args))
+			else:
+				self.current_variant.aliases.append(sub_args)
+				self.current_variant.changes.append(('alias', 'add', sub_args))
+		# Handle changing the edit mode.
+		elif command == 'mode':
 			new_mode = sub_args.lower()
 			if new_mode in ('variant', 'rule'):
 				if new_mode != self.edit_mode and self.changes:
@@ -1463,8 +1517,8 @@ class Viewer(cmd.Cmd):
 		self.current_variant = None
 		# Set up the edit tracking.
 		self.edit_mode = 'variant'
-		self.changes = False
 		self.current_rule = None
+		self.rule_changes = False
 		# Formatting.
 		print()
 
