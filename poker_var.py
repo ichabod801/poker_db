@@ -33,7 +33,7 @@ To Do:
 				* Track changes by database table for variants. Update those tables.
 		* Summary of changes:
 			* New Viewer attributes: edit_mode*, current_rule*, rule_changes*.
-			* New Viewer commands: commit, discard, edit, new, rules
+			* New Viewer commands: commit*, discard*, edit, new, rules
 			* New Variant attribute: changes*
 			* New Variant methods: commit', discard (reload)
 			* Changed Viewer commands: step, variant
@@ -136,6 +136,9 @@ class Variant(object):
 	export_html: Export the variant to a file as HTML. (None)
 	export_markdown: Export the variant to a file as markdown. (None)
 	export_text: Export the variant to a file as text. (None)
+	load_data: Load attributes from the database. (None)
+	load_row: Load the attributes from the row on the variants table. (None)
+	relative_path: Get a relative path to another variant. (str)
 	serial_number: Give a serial number of the stats of the variant. (str)
 	summary: Give a summary of the rules of the variant. (str)
 	view: Give a simplified view of the variant. (str)
@@ -157,49 +160,11 @@ class Variant(object):
 		cursor: A cursor for executing SQL commands. (Cursor)
 		"""
 		# Save the base attributes
-		self.variant_id = row[0]
-		self.name = row[1]
-		self.cards = row[2]
-		self.players = row[3]
-		self.rounds = row[4]
-		self.max_seen = row[5]
-		self.wilds = row[6]
-		self.parent_id = row[7]
-		self.source_id = row[8]
+		self.load_row(row)
 		# Set the edit tracking.
 		self.changes = []
-		# Get the aliases of the game.
-		code = 'select alias from aliases where aliases.variant_id = ? order by alias'
-		cursor.execute(code, (self.variant_id,))
-		self.aliases = [row[0] for row in cursor.fetchall()]
-		# Get the tags for the game.
-		code = 'select tag from tags, variant_tags where tags.tag_id = variant_tags.tag_id'
-		code = f'{code} and variant_tags.variant_id = ?'
-		cursor.execute(code, (self.variant_id,))
-		tags = [row[0] for row in cursor.fetchall()]
-		tags.sort()
-		self.tags = [tag for tag in tags if tag in self.primary_tags]
-		self.tags += [tag for tag in tags if tag not in self.primary_tags]
-		# Get the rules for the game.
-		code = 'select rules.* from rules, variant_rules where rules.rule_id = variant_rules.rule_id'
-		code = f'{code} and variant_rules.variant_id = ? order by variant_rules.rule_order'
-		cursor.execute(code, (self.variant_id,))
-		self.rules = [row for row in cursor.fetchall()]
-		# Get the source for the game.
-		code = 'select name, link from sources where source_id = ?'
-		cursor.execute(code, (self.source_id,))
-		self.source, self.source_link = cursor.fetchone()
-		# Get the parent of the game.
-		if self.parent_id:
-			code = 'select * from variants where variant_id = ?'
-			cursor.execute(code, (self.parent_id,))
-			self.parent = cursor.fetchone()
-		else:
-			self.parent = (0, 'Root Game')
-		# Get the children of the game.
-		code = 'select * from variants where parent_id = ? order by variant_id'
-		cursor.execute(code, (self.variant_id,))
-		self.children = list(cursor.fetchall())
+		# Load the attributes from the database.
+		self.load_data(cursor)
 
 	def __repr__(self):
 		"""Debugging text representation. (str)"""
@@ -225,6 +190,7 @@ class Variant(object):
 			elif (variable, action) == ('alias', 'remove'):
 				code = 'delete from aliases where variant_id = ? and alias = ?'
 				cursor.execute(code, (self.variant_id, self.alias))
+			print(f'Change: {variable}/{action}')
 		conn.commit()
 		self.changes = []
 
@@ -468,6 +434,63 @@ class Variant(object):
 		lines.extend(('', '', ''))
 		return '\n'.join(lines)
 
+	def load_data(self, cursor):
+		"""
+		Load attributes from the database. (None)
+
+		Parameters:
+		cursor: A cursor to execute SQL commands. (Cursor)
+		"""
+		# Get the aliases of the game.
+		code = 'select alias from aliases where aliases.variant_id = ? order by alias'
+		cursor.execute(code, (self.variant_id,))
+		self.aliases = [row[0] for row in cursor.fetchall()]
+		# Get the tags for the game.
+		code = 'select tag from tags, variant_tags where tags.tag_id = variant_tags.tag_id'
+		code = f'{code} and variant_tags.variant_id = ?'
+		cursor.execute(code, (self.variant_id,))
+		tags = [row[0] for row in cursor.fetchall()]
+		tags.sort()
+		self.tags = [tag for tag in tags if tag in self.primary_tags]
+		self.tags += [tag for tag in tags if tag not in self.primary_tags]
+		# Get the rules for the game.
+		code = 'select rules.* from rules, variant_rules where rules.rule_id = variant_rules.rule_id'
+		code = f'{code} and variant_rules.variant_id = ? order by variant_rules.rule_order'
+		cursor.execute(code, (self.variant_id,))
+		self.rules = [row for row in cursor.fetchall()]
+		# Get the source for the game.
+		code = 'select name, link from sources where source_id = ?'
+		cursor.execute(code, (self.source_id,))
+		self.source, self.source_link = cursor.fetchone()
+		# Get the parent of the game.
+		if self.parent_id:
+			code = 'select * from variants where variant_id = ?'
+			cursor.execute(code, (self.parent_id,))
+			self.parent = cursor.fetchone()
+		else:
+			self.parent = (0, 'Root Game')
+		# Get the children of the game.
+		code = 'select * from variants where parent_id = ? order by variant_id'
+		cursor.execute(code, (self.variant_id,))
+		self.children = list(cursor.fetchall())
+
+	def load_row(self, row):
+		"""
+		Load the attributes from the row on the variants table. (None)
+
+		Parameters:
+		row: A row from the variants table. (tuple)
+		"""
+		self.variant_id = row[0]
+		self.name = row[1]
+		self.cards = row[2]
+		self.players = row[3]
+		self.rounds = row[4]
+		self.max_seen = row[5]
+		self.wilds = row[6]
+		self.parent_id = row[7]
+		self.source_id = row[8]
+
 	def relative_path(self, my_path, target_path, target_id):
 		"""
 		Get a relative path to another variant. (str)
@@ -484,6 +507,21 @@ class Variant(object):
 			return f'../{target_path[1]}/{target_path[2]}.html#variant-{target_id}'
 		else:
 			return f'{target_path[-1]}.html#variant-{target_id}'
+
+	def reset(self, cursor):
+		"""
+		Reset the variant from the database. (None)
+
+		Parameters:
+		cursor: A cursor for executing SQL commands. (Cursor)
+		"""
+		# !! need to pull the row.
+		# Save the base attributes
+		self.load_row(row)
+		# Set the edit tracking.
+		self.changes = []
+		# Load the attributes from the database.
+		self.load_data(cursor)
 
 	def serial_number(self):
 		"""Give a serial number of the stats of the variant. (str)"""
@@ -539,6 +577,8 @@ class Viewer(cmd.Cmd):
 	valid_export: The valid arguments to the export command. (set of str)
 
 	Methods:
+	do_commit: Commit the latest changes to the database. (None)
+	do_discard: Discard any changes made to the database. (None)
 	do_drop: Specify which variants to remove from the current library. (None)
 	do_export: Export a library to one or more files. (None)
 	do_intersection: Generate the intersection between two libraries. (None)
@@ -621,6 +661,24 @@ class Viewer(cmd.Cmd):
 				values += self.current_rule[2:] + self.current_rule[:1]
 				self.cursor.execute(code, values)
 				self.conn.commit()
+				self.rule_changes = False
+				print('Note that rule changes do no propogate to variants already loaded.')
+				print('You must reload your libraries to change the rules loaded for them.')
+			else:
+				print('There are no changes to commit.')
+
+	def do_discard(self, arguments):
+		"""
+		Discard any changes made to the database.
+		"""
+		if self.edit_mod == 'variant':
+			if self.current_variant is None or not self.current_variant.changes:
+				print('There are no changes to commit.')
+			else:
+				self.current_variant.reset(self.conn, self.cursor)
+		else:
+			if self.rule_changes:
+				self.current_rule = None
 				self.rule_changes = False
 			else:
 				print('There are no changes to commit.')
