@@ -29,7 +29,7 @@ To Do:
 	* Dealer's Choice, book by James Ernest, Phil Foglio, & Mike Selinker. (fair use?)
 	* poker.fandom.com/wiki
 	* Hurricane (one down, bet, one up, bet, showdown)
-	* HORSE (need tag, rule type)
+	* HORSE (need tag, rule type, tag must be base tag)
 		* Wikipedia calls them mixed games.
 		* 3-6-9/2-4-10
 		* Redo Jack the Switch
@@ -84,8 +84,7 @@ the step command.
 
 I'm still working on other functionality, including:
 	* Exporting of libraries to files.
-		* By tag (multiple?)
-		* By cards (2-, 3, 4, ..., 8, 9, 10+)
+		* Export aliases.
 	* The creation of new rules and variants.
 	* The modification of current rules and variants (for data cleaning).
 """
@@ -152,6 +151,10 @@ class Variant(object):
 		self.wilds = row[6]
 		self.parent_id = row[7]
 		self.source_id = row[8]
+		# Get the aliases of the game.
+		code = 'select alias from aliases where aliases.variant_id = ? order by alias'
+		cursor.execute(code, (self.variant_id,))
+		self.aliases = [row[0] for row in cursor.fetchall()]
 		# Get the tags for the game.
 		code = 'select tag from tags, variant_tags where tags.tag_id = variant_tags.tag_id'
 		code = f'{code} and variant_tags.variant_id = ?'
@@ -232,11 +235,13 @@ class Variant(object):
 		cursor: A connection for executing SQL code. (Cursor)
 		variant_paths: The path to the HTML file for each variant. (dict of int: str)
 		"""
-		# !! aliases
 		# Set up the title.
 		lines = [f'<h2 class="name" id="variant-{self.variant_id}">']
 		lines.append(f'{self.name} <span class="variant-id">(#{self.variant_id})</span>')
 		lines.append(f'</h2>')
+		if self.aliases:
+			alias_text = ', '.join(self.aliases)
+			lines.append(f'<p class="aliases">Also known as: <span class="aliases">{alias_text}</span>.</p>')
 		# Set up the stats.
 		lines.append('<table class="statistics">')
 		lines.append(f'<tr><td class="cards">Cards</td><td>{self.cards}</td></tr>')
@@ -247,7 +252,7 @@ class Variant(object):
 		lines.append(f'<tr><td class="source">Source</td><td>{self.source}</td></tr>')
 		lines.append('</table>')
 		tag_text = ', '.join(self.tags)
-		lines.append(f'<p class="tags">Tags: <span="tags">{tag_text}</span></p>')
+		lines.append(f'<p class="tags">Tags: <span class="tags">{tag_text}</span></p>')
 		# Set up the rules
 		lines.append('<h3 class="rules">Rules:</h3>')
 		lines.append('<ol class="rule-list">')
@@ -316,9 +321,10 @@ class Variant(object):
 		arguments: The options chosen for the export. (set of str)
 		cursor: A connection for executing SQL code. (Cursor)
 		"""
-		# !! aliases
 		# Set up the title.
 		lines = [f'## {self.name} (#{self.variant_id})']
+		if self.aliases:
+			lines.append('Also known as: *{}*.'.format(', '.join(self.aliases)))
 		# Set up the stats.
 		lines.append('|Statistic|Value|')
 		lines.append('|---------|-----|')
@@ -375,9 +381,10 @@ class Variant(object):
 		known_variants: The variants pulled from the database so far. (dict)
 		cursor: A connection for executing SQL code. (Cursor)
 		"""
-		# !! aliases
 		# Set up the title.
 		lines = [f'{self.name} (#{self.variant_id})']
+		if self.aliases:
+			lines.append('Also known as: {}.'.format(', '.join(self.aliases)))
 		lines.append('-' * len(lines[0]))
 		# Set up the stats.
 		lines.append(f'Cards:          {self.cards}')
@@ -424,7 +431,7 @@ class Variant(object):
 							lines.append(f'{child.name} (#{child.variant_id}): {tag_text}')
 		# Export the variant.
 		lines.extend(('', '', ''))
-		variant_file.write('\n'.join(lines))
+		return '\n'.join(lines)
 
 	def relative_path(self, my_path, target_path, target_id):
 		"""
@@ -964,6 +971,7 @@ class Viewer(cmd.Cmd):
 			self.reset_tags(data)
 			self.reset_rules(data)
 			self.reset_variants(data)
+			self.reset_aliases(data)
 			self.reset_variant_rules(data)
 			self.reset_variant_tags(data)
 		else:
@@ -1425,6 +1433,18 @@ class Viewer(cmd.Cmd):
 		if not stop:
 			print()
 		return stop
+
+	def reset_aliases(self, data):
+		"""
+		Load the old alias data into the database. (None)
+
+		Parameters:
+		data: The data loaded from the csv files. (dict of str: tuple)
+		"""
+		code = 'insert into aliases(variant_id, alias) values (?, ?)'
+		for variant_id, alias in data['aliases']:
+			self.cursor.execute(code, (variant_id, alias))
+		self.conn.commit()
 
 	def reset_rule_types(self, data):
 		"""

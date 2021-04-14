@@ -43,6 +43,13 @@ create table if not exists variants (
 
 /* Data combination tables */
 
+create table if not exists aliases (
+	pair_id integer primary key,
+	variant_id integer not null,
+	alias text not null,
+	foreign key (variant_id) references variants
+);
+
 create table if not exists variant_rules (
 	pair_id integer primary key,
 	variant_id integer not null,
