@@ -74,6 +74,7 @@ import cmd
 import csv
 import math
 import os
+import shutil
 import sqlite3 as sql
 import textwrap
 import traceback
@@ -849,7 +850,8 @@ class Viewer(cmd.Cmd):
 					variant_paths[variant.variant_id] = path
 			parts = path.split('/')
 			if len(parts) > 1:
-				shutil.copyfile('poker_style.css', f'parts[0]/poker_style.css')
+				os.mkdir(parts[0])
+				shutil.copyfile('poker_style.css', f'{parts[0]}/poker_style.css')
 		file_count = 0
 		for path, variants in files:
 			if variants:
