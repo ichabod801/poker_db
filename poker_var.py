@@ -139,6 +139,7 @@ class Variant(object):
 	load_data: Load attributes from the database. (None)
 	load_row: Load the attributes from the row on the variants table. (None)
 	relative_path: Get a relative path to another variant. (str)
+	reset: Reset the variant from the database. (None)
 	serial_number: Give a serial number of the stats of the variant. (str)
 	summary: Give a summary of the rules of the variant. (str)
 	view: Give a simplified view of the variant. (str)
@@ -515,9 +516,10 @@ class Variant(object):
 		Parameters:
 		cursor: A cursor for executing SQL commands. (Cursor)
 		"""
-		# !! need to pull the row.
 		# Save the base attributes
-		self.load_row(row)
+		code = 'select * from variants where variant_id = ?'
+		cursor.execute(code, (self.variant_id,))
+		self.load_row(cursor.fetchone())
 		# Set the edit tracking.
 		self.changes = []
 		# Load the attributes from the database.
@@ -845,6 +847,9 @@ class Viewer(cmd.Cmd):
 			for path, variants in files:
 				for variant in variants:
 					variant_paths[variant.variant_id] = path
+			parts = path.split('/')
+			if len(parts) > 1:
+				shutil.copyfile('poker_style.css', f'parts[0]/poker_style.css')
 		file_count = 0
 		for path, variants in files:
 			if variants:
@@ -863,6 +868,10 @@ class Viewer(cmd.Cmd):
 					variant_file.write('<html>\n')
 					variant_file.write('<head>\n')
 					variant_file.write(f'<title>{title}</title>\n')
+					if len(file_words) == 3:
+						variant_file.write(f'<link rel="stylesheet" href="../poker_style.css">')
+					else:
+						variant_file.write(f'<link rel="stylesheet" href="poker_style.css">')
 					variant_file.write('</head>\n')
 					variant_file.write('<body>\n')
 				for variant in variants:
