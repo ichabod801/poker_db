@@ -284,7 +284,10 @@ class Variant(object):
 			# Set up the children, if any.
 			if self.children:
 				lines.append('<h3 class="children">Children:</h3>')
-				lines.append('<ul class="child-list">')
+				if child_mode == 'child-stags':
+					lines.append('<table class="child-table">')
+				else:
+					lines.append('<ul class="child-list">')
 				for child in self.children:
 					try:
 						child_path = self.relative_path(my_path, variant_paths[child[0]], child[0])
@@ -301,6 +304,16 @@ class Variant(object):
 						lines.append(f'<span class="variant_id">(#{child[0]})</span>')
 						serial_text = '<span class="serial-number">{2}-{3}-{4}-{5}-{6}</span></li>'
 						lines.append(serial_text.format(*child))
+					elif child_mode == 'child-stags':
+						child_obj = known_variants.get(child[0], Variant(child, cursor))
+						lines.append('<tr>')
+						child_text = '<td class="name">{} <span class="variant-id">(#{})</span></td>'
+						lines.append(child_text.format(child_name, child_obj.variant_id))
+						serial_text = '<td><span class="serial-number">{2}-{3}-{4}-{5}-{6}</span></td>'
+						lines.append(serial_text.format(*child))
+						tag_text = ', '.join(child_obj.tags)
+						lines.append(f'<td><span class="tags">{tag_text}</span></td>')
+						lines.append('</tr>')
 					else:
 						child = known_variants.get(child[0], Variant(child, cursor))
 						lines.append(f'<li class="child">{child_name}')
@@ -311,7 +324,10 @@ class Variant(object):
 						elif child_mode == 'child-tags':
 							tag_text = ', '.join(child.tags)
 							lines.append(f'<span class="tags">{tag_text}</span></li>')
-				lines.append('</ul>')
+				if child_mode == 'child-stags':
+					lines.append('</table>')
+				else:
+					lines.append('</ul>')
 		# Export the variant.
 		lines.extend(('', '', ''))
 		return '\n'.join(lines)
@@ -630,8 +646,8 @@ class Viewer(cmd.Cmd):
 		'q': 'quit', 's': 'step', 'var': 'variant'}
 	help_text = {'help': HELP_GENERAL}
 	prompt = 'IPVDB >> '
-	valid_export = set(('by-cards', 'by-tag', 'child-name', 'child-serial', 'child-summary', 'child-tags',
-		'html', 'markdown', 'multi-all', 'multi-alpha', 'mutli-freq', 'text'))
+	valid_export = set(('by-cards', 'by-tag', 'child-name', 'child-serial', 'child-summary', 'child-stags', 
+		'child-tags', 'html', 'markdown', 'multi-all', 'multi-alpha', 'mutli-freq', 'text'))
 
 	def default(self, line):
 		"""

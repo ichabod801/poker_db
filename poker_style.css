@@ -40,9 +40,13 @@ th, td {
 	border-bottom: 1px solid #ddd;
 }
 
+td
+{
+	padding-right: 5px;
+}
+
 td.cards, td.players, td.rounds, td.max-seen, td.wilds, td.source {
 	font-weight: bold;
-	padding-right: 5px;
 }
 
 tr:hover {
