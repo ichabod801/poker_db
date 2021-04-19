@@ -459,13 +459,18 @@ class Variant(object):
 						serial_text = '{2}-{3}-{4}-{5}-{6}'.format(*child)
 						lines.append(f'{child[1]} (#{child[0]}): {serial_text}')
 					else:
-						child = known_variants.get(child[0], Variant(child, cursor))
-						if child_mode == 'child-summary':
-							summary = child.summary()
-							lines.append(f'   {child.name} (#{child.variant_id}): {summary}')
+						child_obj = known_variants.get(child[0], Variant(child, cursor))
+						child_name = f'{child_obj.name} (#{child_obj.variant_id})'
+						if child_mode == 'child-stags':
+							tag_text = ', '.join(child_obj.tags)
+							serial_text = '{2}-{3}-{4}-{5}-{6}'.format(*child)
+							lines.append(f'{child_name}: {serial_text} | {tag_text}')
+						elif child_mode == 'child-summary':
+							summary = child_obj.summary()
+							lines.append(f'   {child_name}: {summary}')
 						elif child_mode == 'child-tags':
-							tag_text = ', '.join(child.tags)
-							lines.append(f'{child.name} (#{child.variant_id}): {tag_text}')
+							tag_text = ', '.join(child_obj.tags)
+							lines.append(f'{child_name}: {tag_text}')
 		# Export the variant.
 		lines.extend(('', '', ''))
 		return '\n'.join(lines)
