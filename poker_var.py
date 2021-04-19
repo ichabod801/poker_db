@@ -22,6 +22,10 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 To Do:
 * Create the user interface.
+	* Output
+		* @media print for css
+		* child-stags for markdown and text.
+		* Move tags and serial to tables. (table/list options?)
 	* New variant command. This will require editing.
 		* Edit command, similar to the one in Fiddler.
 		* Edit mode (rule or variant).
@@ -97,6 +101,10 @@ The variant command allows for pulling out variants to view in full. You can
 also use it to navigate the variant tree through a variant's parents and
 children. To navigate to the next (or previous) varaint in the library, use 
 the step command.
+
+The export command allows for exporting the current library into one or more
+files. You can export to HTML, markdown, or plain text, with or without child
+and parent variants listed (and you can control how the children are listed).
 
 I'm still working on other functionality, including:
 	* The creation of new rules and variants.
@@ -345,6 +353,7 @@ class Variant(object):
 		if self.aliases:
 			lines.append('Also known as: *{}*.'.format(', '.join(self.aliases)))
 		# Set up the stats.
+		lines.append('')
 		lines.append('|Statistic|Value|')
 		lines.append('|---------|-----|')
 		lines.append(f'|Cards|{self.cards}|')
@@ -372,6 +381,10 @@ class Variant(object):
 			# Set up the children, if any.
 			if self.children:
 				lines.append('### Children:')
+				if child_mode == 'child-stags':
+					lines.append('')
+					lines.append('|Name|Serial #|Tags|')
+					lines.append('|----|--------|----|')
 				for child in self.children:
 					# Get the text by child mode.
 					if child_mode == 'child-name':
@@ -380,13 +393,18 @@ class Variant(object):
 						serial_text = '{2}-{3}-{4}-{5}-{6}'.format(*child)
 						lines.append(f'* {child[1]} (#{child[0]}): *{serial_text}*')
 					else:
-						child = known_variants.get(child[0], Variant(child, cursor))
-						if child_mode == 'child-summary':
+						child_obj = known_variants.get(child[0], Variant(child, cursor))
+						child_name = f'{child_obj.name} (#{child_obj.variant_id})'
+						if child_mode == 'child-stags':
+							tag_text = ', '.join(child_obj.tags)
+							serial_text = '{2}-{3}-{4}-{5}-{6}'.format(*child)
+							lines.append(f'|{child_name}|{serial_text}|{tag_text}')
+						elif child_mode == 'child-summary':
 							summary = child.summary()
-							lines.append(f'* {child.name} (#{child.variant_id}): *{summary}*')
+							lines.append(f'* {child_name}: *{summary}*')
 						elif child_mode == 'child-tags':
 							tag_text = ', '.join(child.tags)
-							lines.append(f'* {child.name} (#{child.variant_id}): *{tag_text}*')
+							lines.append(f'* {child_name}: *{tag_text}*')
 		# Export the variant.
 		lines.extend(('', '', ''))
 		return '\n'.join(lines)

@@ -50,7 +50,7 @@ td.cards, td.players, td.rounds, td.max-seen, td.wilds, td.source {
 }
 
 tr:hover {
-	background-color: #39603d !important;
+	background-color: #59805d !important;
 }
 
 tr:nth-child(even) {
