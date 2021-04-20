@@ -21,10 +21,9 @@ details.
 See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 To Do:
-* Create the user interface.
+* User interface.
 	* Output
-		* @media print for css
-		* child-stags for markdown and text.
+		* @media print for css (implemented, not tested)
 		* Move tags and serial to tables. (table/list options?)
 	* New variant command. This will require editing.
 		* Edit command, similar to the one in Fiddler.
@@ -41,6 +40,7 @@ To Do:
 			* New Variant attribute: changes*
 			* New Variant methods: commit', discard (reload)
 			* Changed Viewer commands: step, variant
+			* foo* = foo is implemented, foo' = foo is partially implemented.
 * Add new games.
 	* Dealer's Choice, book by James Ernest, Phil Foglio, & Mike Selinker. (fair use?)
 	* poker.fandom.com/wiki

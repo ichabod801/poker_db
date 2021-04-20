@@ -49,10 +49,33 @@ td.cards, td.players, td.rounds, td.max-seen, td.wilds, td.source {
 	font-weight: bold;
 }
 
-tr:hover {
-	background-color: #59805d !important;
-}
-
 tr:nth-child(even) {
 	background-color: #a3bcb6;
+}
+
+tr:hover {
+	background-color: #59805d;
+}
+
+@media print {
+	body
+	{
+		background-color: transparent;
+	}
+
+	span.variant-id {
+		color: black;
+	}
+
+	th, td {
+		border-bottom: 1px solid black;
+	}
+
+	tr:nth-child(even) {
+		background-color: transparent;
+	}
+
+	tr:hover {
+		background-color: transparent;
+	}
 }
