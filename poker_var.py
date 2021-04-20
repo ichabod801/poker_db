@@ -23,7 +23,6 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 To Do:
 * User interface.
 	* Output
-		* @media print for css (implemented, not tested)
 		* Move tags and serial to tables. (table/list options?)
 	* New variant command. This will require editing.
 		* Edit command, similar to the one in Fiddler.
@@ -292,10 +291,10 @@ class Variant(object):
 			# Set up the children, if any.
 			if self.children:
 				lines.append('<h3 class="children">Children:</h3>')
-				if child_mode == 'child-stags':
-					lines.append('<table class="child-table">')
-				else:
+				if child_mode in ('child-name', 'child-summary'):
 					lines.append('<ul class="child-list">')
+				else:
+					lines.append('<table class="child-table">')
 				for child in self.children:
 					try:
 						child_path = self.relative_path(my_path, variant_paths[child[0]], child[0])
@@ -307,35 +306,29 @@ class Variant(object):
 					if child_mode == 'child-name':
 						child_text = '<li class="child">{} <span class="variant-id">(#{})</span></li>'
 						lines.append(child_text.format(child_name, child[0]))
-					elif child_mode == 'child-serial':
-						lines.append(f'<li class="child">{child_name}')
-						lines.append(f'<span class="variant_id">(#{child[0]})</span>')
-						serial_text = '<span class="serial-number">{2}-{3}-{4}-{5}-{6}</span></li>'
-						lines.append(serial_text.format(*child))
-					elif child_mode == 'child-stags':
-						child_obj = known_variants.get(child[0], Variant(child, cursor))
-						lines.append('<tr>')
-						child_text = '<td class="name">{} <span class="variant-id">(#{})</span></td>'
-						lines.append(child_text.format(child_name, child_obj.variant_id))
-						serial_text = '<td><span class="serial-number">{2}-{3}-{4}-{5}-{6}</span></td>'
-						lines.append(serial_text.format(*child))
-						tag_text = ', '.join(child_obj.tags)
-						lines.append(f'<td><span class="tags">{tag_text}</span></td>')
-						lines.append('</tr>')
-					else:
+					elif child_mode == 'child-summary':
 						child = known_variants.get(child[0], Variant(child, cursor))
 						lines.append(f'<li class="child">{child_name}')
 						lines.append(f'<span class="variant_id">(#{child.variant_id})</span>')
 						if child_mode == 'child-summary':
 							summary = child.summary()
 							lines.append(f'<span class="summary">{summary}</span></li>')
-						elif child_mode == 'child-tags':
-							tag_text = ', '.join(child.tags)
-							lines.append(f'<span class="tags">{tag_text}</span></li>')
-				if child_mode == 'child-stags':
-					lines.append('</table>')
-				else:
+					else:
+						child_obj = known_variants.get(child[0], Variant(child, cursor))
+						lines.append('<tr>')
+						child_text = '<td class="name">{} <span class="variant-id">(#{})</span></td>'
+						lines.append(child_text.format(child_name, child_obj.variant_id))
+						if child_mode in ('child-serial', 'child-stags'):
+							serial_text = '<td><span class="serial-number">{2}-{3}-{4}-{5}-{6}</span></td>'
+							lines.append(serial_text.format(*child))
+						if child_mode in ('child-tags', 'child-stags'):
+							tag_text = ', '.join(child_obj.tags)
+							lines.append(f'<td><span class="tags">{tag_text}</span></td>')
+						lines.append('</tr>')
+				if child_mode in ('child-name', 'child-summary'):
 					lines.append('</ul>')
+				else:
+					lines.append('</table>')
 		# Export the variant.
 		lines.extend(('', '', ''))
 		return '\n'.join(lines)
@@ -381,7 +374,15 @@ class Variant(object):
 			# Set up the children, if any.
 			if self.children:
 				lines.append('### Children:')
-				if child_mode == 'child-stags':
+				if child_mode == 'child-tags':
+					lines.append('')
+					lines.append('|Name|Tags|')
+					lines.append('|----|----|')
+				elif child_mode == 'child-serial':
+					lines.append('')
+					lines.append('|Name|Serial #|')
+					lines.append('|----|--------|')
+				elif child_mode == 'child-stags':
 					lines.append('')
 					lines.append('|Name|Serial #|Tags|')
 					lines.append('|----|--------|----|')
@@ -391,7 +392,7 @@ class Variant(object):
 						lines.append(f'* {child[1]} (#{child[0]})')
 					elif child_mode == 'child-serial':
 						serial_text = '{2}-{3}-{4}-{5}-{6}'.format(*child)
-						lines.append(f'* {child[1]} (#{child[0]}): *{serial_text}*')
+						lines.append(f'|{child[1]} (#{child[0]})|*{serial_text}*|')
 					else:
 						child_obj = known_variants.get(child[0], Variant(child, cursor))
 						child_name = f'{child_obj.name} (#{child_obj.variant_id})'
@@ -400,11 +401,11 @@ class Variant(object):
 							serial_text = '{2}-{3}-{4}-{5}-{6}'.format(*child)
 							lines.append(f'|{child_name}|{serial_text}|{tag_text}')
 						elif child_mode == 'child-summary':
-							summary = child.summary()
+							summary = child_obj.summary()
 							lines.append(f'* {child_name}: *{summary}*')
 						elif child_mode == 'child-tags':
-							tag_text = ', '.join(child.tags)
-							lines.append(f'* {child_name}: *{tag_text}*')
+							tag_text = ', '.join(child_obj.tags)
+							lines.append(f'|{child_name}|*{tag_text}*|')
 		# Export the variant.
 		lines.extend(('', '', ''))
 		return '\n'.join(lines)
