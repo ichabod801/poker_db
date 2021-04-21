@@ -22,8 +22,6 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 To Do:
 * User interface.
-	* Output
-		* Move tags and serial to tables. (table/list options?)
 	* New variant command. This will require editing.
 		* Edit command, similar to the one in Fiddler.
 		* Edit mode (rule or variant).
@@ -653,6 +651,7 @@ class Viewer(cmd.Cmd):
 	reset_variant_tags: Load the old variant tag data into the database. (None)
 	reset_variants: Load the old variant data into the database. (None)
 	show_library: Print out a library. (None)
+	split_libraries: Split a library based on export arguments. (list of tuple)
 
 	Overridden Methods:
 	default
@@ -798,6 +797,7 @@ class Viewer(cmd.Cmd):
 		        common tag.
 	       * child-name: Children are listed by name and ID only.
 	       * child-serial: Children are listed with serial numbers.
+	       * child-stags: Children are listed with serial numbers and tags.
 	       * child-summary: Children are listed with summaries.
 	       * child-tags: Children are listed with tags.
 		   * html: Export as HTML.
@@ -830,51 +830,7 @@ class Viewer(cmd.Cmd):
 		# Get the overall name.
 		name = input('Enter the name for the file or folder: ')
 		# Split the library based on by-foo commands.
-		variants = self.libraries[self.current_library][:]
-		files = [(name, variants)]
-		# Split by tag
-		if 'by-tag' in args:
-			# Set the tag list
-			if 'multi-freq' in args:
-				# Calculate the tag frequencies if necessary.
-				counts = {tag: 0 for tag in Variant.primary_tags}
-				for variant in variants:
-					for tag in variant.tags:
-						if tag in counts:
-							counts[tag] += 1
-						else:
-							break
-				counts = [(count, tag) for tag, count in counts.items()]
-				counts.sort(reverse = True)
-				tags = tuple(tag for count, tag in counts)
-			else:
-				tags = Variant.primary_tags
-			# Set the dupe handling.
-			drop_dupes = 'multi-all' not in args
-			# Split the file data.
-			files = []
-			for tag in tags:
-				files.append((f'{name}/{tag}', [var for var in variants if tag in var.tags]))
-				if drop_dupes:
-					variants = [var for var in variants if var not in files[-1][1]]
-		# Split by cards
-		if 'by-cards' in args:
-			split_files = []
-			for name, variants in files:
-				# Split out the low end.
-				split_variants = [var for var in variants if var.cards < 3]
-				if split_variants:
-					split_files.append((f'{name}/02-card-', split_variants))
-				# Split the middle range by individual card number.
-				for cards in range(3, 10):
-					split_variants = [var for var in variants if var.cards == cards]
-					if split_variants:
-						split_files.append((f'{name}/0{cards}-card', split_variants))
-				# Split out the high end.
-				split_variants = [var for var in variants if var.cards > 9]
-				if split_variants:
-					split_files.append((f'{name}/10-card+', split_variants))
-			files = split_files
+		files = self.split_libraries([(name, self.libraries[self.current_library][:])], args)
 		# Get the proper extension.
 		if 'text' in args:
 			ext = 'txt'
@@ -1798,6 +1754,65 @@ class Viewer(cmd.Cmd):
 		print('-' * len(header))
 		for variant in library[((self.page - 1) * self.page_size):(self.page * self.page_size)]:
 			print(variant.view(self.view_mode))
+
+	def split_libraries(self, files, args):
+		"""
+		Split the current library based on the export arguments. (list of tuple)
+
+		There are two possible splits: by cards, and by tag. Each is done by creating
+		a list of tuples, the tuples being a file name and a list of variants in that
+		file. The second split (by cards) is done on a list of such tuples, so it can
+		create a two-level split if both split methods are in the arguments.
+
+		Parameters:
+		files: The initial file name and variant list. (tuple of str, list)
+		args: The user provided arguments to the export command. (str)
+		"""
+		# Split by tag
+		if 'by-tag' in args:
+			# Set the tag list
+			if 'multi-freq' in args:
+				# Calculate the tag frequencies if necessary.
+				counts = {tag: 0 for tag in Variant.primary_tags}
+				for variant in variants:
+					for tag in variant.tags:
+						if tag in counts:
+							counts[tag] += 1
+						else:
+							break
+				counts = [(count, tag) for tag, count in counts.items()]
+				counts.sort(reverse = True)
+				tags = tuple(tag for count, tag in counts)
+			else:
+				tags = Variant.primary_tags
+			# Set the dupe handling.
+			drop_dupes = 'multi-all' not in args
+			# Split the file data.
+			name, variants = files[0]
+			files = []
+			for tag in tags:
+				files.append((f'{name}/{tag}', [var for var in variants if tag in var.tags]))
+				if drop_dupes:
+					variants = [var for var in variants if var not in files[-1][1]]
+		# Split by cards
+		if 'by-cards' in args:
+			split_files = []
+			for name, variants in files:
+				# Split out the low end.
+				split_variants = [var for var in variants if var.cards < 3]
+				if split_variants:
+					split_files.append((f'{name}/02-card-', split_variants))
+				# Split the middle range by individual card number.
+				for cards in range(3, 10):
+					split_variants = [var for var in variants if var.cards == cards]
+					if split_variants:
+						split_files.append((f'{name}/0{cards}-card', split_variants))
+				# Split out the high end.
+				split_variants = [var for var in variants if var.cards > 9]
+				if split_variants:
+					split_files.append((f'{name}/10-card+', split_variants))
+			files = split_files
+		return files
 
 if __name__ == '__main__':
 	viewer = Viewer()
