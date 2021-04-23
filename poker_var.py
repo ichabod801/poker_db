@@ -633,6 +633,7 @@ class Viewer(cmd.Cmd):
 	do_sql: Handle raw SQL code. (None)
 	do_union: Generate the union of two libraries. (None)
 	do_xor: Generate the exclusive or of two libraries. (None)
+	export_files: Export data to external files. (int)
 	get_child: Get a child variant from the current variant. (None)
 	get_libraries: Get libraries for binary set operations. (tuple of dict)
 	library_list: Create a new library from a list of variants. (None)
@@ -831,61 +832,8 @@ class Viewer(cmd.Cmd):
 		name = input('Enter the name for the file or folder: ')
 		# Split the library based on by-foo commands.
 		files = self.split_libraries([(name, self.libraries[self.current_library][:])], args)
-		# Get the proper extension.
-		if 'text' in args:
-			ext = 'txt'
-		elif 'html' in args:
-			ext = 'html'
-		elif 'markdown' in args:
-			ext = 'md'
-		# Export to the files.
-		if 'html' in args:
-			variant_paths = {}
-			for path, variants in files:
-				for variant in variants:
-					variant_paths[variant.variant_id] = path
-			parts = path.split('/')
-			if len(parts) > 1:
-				os.mkdir(parts[0])
-				shutil.copyfile('poker_style.css', f'{parts[0]}/poker_style.css')
-		file_count = 0
-		for path, variants in files:
-			if variants:
-				# Open the file, creating new directories as needed.
-				try:
-					variant_file = open(f'{path}.{ext}', 'w')
-				except FileNotFoundError:
-					folder = path[:path.rindex('/')]
-					os.makedirs(folder)
-					variant_file = open(f'{path}.{ext}', 'w')
-				# Export the variants.
-				if 'html' in args:
-					file_words = [word.strip('0').title() for word in path.split('/')]
-					file_words.reverse()
-					title = '{} Poker Variants'.format(' '.join(file_words))
-					variant_file.write('<html>\n')
-					variant_file.write('<head>\n')
-					variant_file.write(f'<title>{title}</title>\n')
-					if len(file_words) == 3:
-						variant_file.write(f'<link rel="stylesheet" href="../poker_style.css">')
-					else:
-						variant_file.write(f'<link rel="stylesheet" href="poker_style.css">')
-					variant_file.write('</head>\n')
-					variant_file.write('<body>\n')
-				for variant in variants:
-					if 'html' in args:
-						variant_text = variant.export_html(args, self.variants, self.cursor, variant_paths)
-						variant_file.write(variant_text)
-					elif 'markdown' in args:
-						variant_text = variant.export_markdown(args, self.variants, self.cursor)
-						variant_file.write(variant_text)
-					elif 'text' in args:
-						variant_text = variant.export_text(args, self.variants, self.cursor)
-						variant_file.write(variant_text)
-				if 'html' in args:
-					variant_file.write('</body>\n')
-					variant_file.write('</html>\n')
-				file_count += 1
+		# Export the files.
+		file_count = self.export_files(files, args)
 		# Update the user.
 		print('\n{} file(s) exported.'.format(file_count))
 
@@ -1251,6 +1199,73 @@ class Viewer(cmd.Cmd):
 			xor += [variant for variant in right if variant not in left]
 			xor.sort(key = lambda variant: variant.variant_id)
 			self.library_list(xor)
+
+	def export_files(self, files, args):
+		"""
+		Export data to external files. (int)
+
+		The return value is the number of files exported.
+
+		Parameters:
+		files: The path and variants for each file. (list of tuple)
+		args: The arguments to the export command. (set of str)
+		"""
+		# Get the proper extension.
+		if 'text' in args:
+			ext = 'txt'
+		elif 'html' in args:
+			ext = 'html'
+		elif 'markdown' in args:
+			ext = 'md'
+		# Export to the files.
+		if 'html' in args:
+			variant_paths = {}
+			for path, variants in files:
+				for variant in variants:
+					variant_paths[variant.variant_id] = path
+			parts = path.split('/')
+			if len(parts) > 1:
+				os.mkdir(parts[0])
+				shutil.copyfile('poker_style.css', f'{parts[0]}/poker_style.css')
+		file_count = 0
+		for path, variants in files:
+			if variants:
+				# Open the file, creating new directories as needed.
+				try:
+					variant_file = open(f'{path}.{ext}', 'w')
+				except FileNotFoundError:
+					folder = path[:path.rindex('/')]
+					os.makedirs(folder)
+					variant_file = open(f'{path}.{ext}', 'w')
+				# Export the variants.
+				if 'html' in args:
+					file_words = [word.strip('0').title() for word in path.split('/')]
+					file_words.reverse()
+					title = '{} Poker Variants'.format(' '.join(file_words))
+					variant_file.write('<html>\n')
+					variant_file.write('<head>\n')
+					variant_file.write(f'<title>{title}</title>\n')
+					if len(file_words) == 3:
+						variant_file.write(f'<link rel="stylesheet" href="../poker_style.css">')
+					else:
+						variant_file.write(f'<link rel="stylesheet" href="poker_style.css">')
+					variant_file.write('</head>\n')
+					variant_file.write('<body>\n')
+				for variant in variants:
+					if 'html' in args:
+						variant_text = variant.export_html(args, self.variants, self.cursor, variant_paths)
+						variant_file.write(variant_text)
+					elif 'markdown' in args:
+						variant_text = variant.export_markdown(args, self.variants, self.cursor)
+						variant_file.write(variant_text)
+					elif 'text' in args:
+						variant_text = variant.export_text(args, self.variants, self.cursor)
+						variant_file.write(variant_text)
+				if 'html' in args:
+					variant_file.write('</body>\n')
+					variant_file.write('</html>\n')
+				file_count += 1
+		return file_count
 
 	def get_child(self):
 		"""
