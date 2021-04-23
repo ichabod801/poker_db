@@ -810,7 +810,6 @@ class Viewer(cmd.Cmd):
 		folders. If none of the child-foo arguments are given, neither children nor
 		parents are listed.
 		"""
-		# !! refactor
 		# Validate exporting.
 		if not self.libraries or not self.libraries[self.current_library]:
 			print('There is no data loaded to export.')
@@ -1227,6 +1226,7 @@ class Viewer(cmd.Cmd):
 			if len(parts) > 1:
 				os.mkdir(parts[0])
 				shutil.copyfile('poker_style.css', f'{parts[0]}/poker_style.css')
+				self.html_contents(files)
 		file_count = 0
 		for path, variants in files:
 			if variants:
@@ -1237,7 +1237,7 @@ class Viewer(cmd.Cmd):
 					folder = path[:path.rindex('/')]
 					os.makedirs(folder)
 					variant_file = open(f'{path}.{ext}', 'w')
-				# Export the variants.
+				# Generate a header for HTML files.
 				if 'html' in args:
 					file_words = [word.strip('0').title() for word in path.split('/')]
 					file_words.reverse()
@@ -1251,6 +1251,7 @@ class Viewer(cmd.Cmd):
 						variant_file.write(f'<link rel="stylesheet" href="poker_style.css">')
 					variant_file.write('</head>\n')
 					variant_file.write('<body>\n')
+				# Export the text for the individual variants.
 				for variant in variants:
 					if 'html' in args:
 						variant_text = variant.export_html(args, self.variants, self.cursor, variant_paths)
@@ -1261,11 +1262,50 @@ class Viewer(cmd.Cmd):
 					elif 'text' in args:
 						variant_text = variant.export_text(args, self.variants, self.cursor)
 						variant_file.write(variant_text)
+				# Generate a footer for HTML files.
 				if 'html' in args:
 					variant_file.write('</body>\n')
 					variant_file.write('</html>\n')
 				file_count += 1
 		return file_count
+
+	def html_contents(self, files):
+		"""
+		Create a table of contents for HTML exports. (None)
+
+		Parameters:
+		files: The path and variants for the exported files. (list of tuple)
+		"""
+		depth = len(files[0][0].split('/')) - 1
+		lines = ['<html>', '<head>']
+		base = files[0][0].split('/')[0]
+		lines.append(f'<title>{base.title()} Table of Contents</title>')
+		lines.append('<link rel="stylesheet" href="poker_style.css">')
+		lines.append('</head>')
+		lines.append('<body>')
+		lines.append(f'<h2>{base.title()} Table of Contents</h2>')
+		lines.append('<ul>')
+		last_tag = ''
+		for path, variants in files:
+			file_words = path.split('/')
+			relative_path = '/'.join(file_words[1:])
+			word = file_words[1].strip('0').title()
+			if depth == 1:
+				lines.append(f'<li><a href="{relative_path}">{word} Games</a></li>')
+			elif depth == 2:
+				if file_words[1] != last_tag:
+					if last_tag:
+						lines.append('</ul>')
+					lines.append(f'<li>{word} Games</li>')
+					lines.append('<ul>')
+					last_tag = file_words[1]
+				sub_word = file_words[2].strip('0').title()
+				lines.append(f'<li><a href="{relative_path}">{sub_word} {word} Games</a></li>')
+		if depth == 2:
+			lines.append('</ul>')
+		lines.append('</ul>')
+		toc_file = open(f'{base}/{base}_toc.html')
+		toc_file.write('\n'.join(lines))
 
 	def get_child(self):
 		"""
