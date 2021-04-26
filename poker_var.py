@@ -39,7 +39,6 @@ To Do:
 			* Changed Viewer commands: step, variant
 			* foo* = foo is implemented, foo' = foo is partially implemented.
 * Add new games.
-	* Dealer's Choice, book by James Ernest, Phil Foglio, & Mike Selinker. (fair use?)
 	* poker.fandom.com/wiki
 	* Hurricane (one down, bet, one up, bet, showdown)
 	* HORSE (need tag, rule type, tag must be base tag)
@@ -64,6 +63,9 @@ To Do:
 	* Random poker game? Random 1st rule, random 2nd rule based on 1st, ...
 
 Constants:
+HELP_GENERAL: General help text for the interface. (str)
+HELP_SERIAL: A description of serial numbers for variants. (str)
+HELP_TAGS: A list of tags and their meaning. (str)
 WORDS: Poker terms for default names of libraries. (list of str)
 
 Classes:
@@ -104,8 +106,79 @@ files. You can export to HTML, markdown, or plain text, with or without child
 and parent variants listed (and you can control how the children are listed).
 
 I'm still working on other functionality, including:
-	* The creation of new rules and variants.
-	* The modification of current rules and variants (for data cleaning).
+   * The creation of new rules and variants.
+   * The modification of current rules and variants (for data cleaning).
+"""
+
+HELP_SERIAL = """
+Serial numbers are a sequence of numbers giving statistics for the variant.
+The are the numbers given in the table at the variant description. The five
+numbers in the serial number are:
+
+* The number of cards in the variant (5-card draw, 7-card stud). This is meant
+   to be the number of cards available to make your hand at the showdown.
+* The maximum number of players in the variant.
+* The number of betting rounds in the variant.
+* The maximum number of cards a player could possibly see in one round of the
+   variant.
+* The number of wild cards in the variant.
+
+Some of the numbers are special codes. For example, a variant with 100 for the
+number of betting rounds is actually a match pot variant. See the data 
+dictionary for details on the special numbers.
+"""
+
+HELP_TAGS = """
+Each poker variant has one or more tags describing features of that variant.
+The tags are split into primary tags and secondary tags. The primary tags are
+the categories that are traditionally used to classify poker variants, such
+and draw, stud, and common. However, many games have features from more than
+one of these categories, so a tag system is used instead. The primary tags
+include:
+
+* common: The variant has common cards, including those usable by multiple 
+   players but not all.
+* discard: Variants using attrition through discarding.
+* draw: Players discarding cards to get new ones. Does not count instant 
+   rejection of cards.
+* flip: The variant involves flipping down cards face up.
+* guts: The variant involves declaring in or out, losers matching the pot, 
+   until one person goes in. This includes games with legs.
+* pass: The variant involves cards being passed from one player to another.
+* straight: The cards in this variant are dealt face down, with no stud, draw,
+   pass, guts, or common.
+* stud: The variant has cards dealt face up. Does not count flipping down cards 
+   up (see 'flip').
+
+The seconary tags cover other features common to many poker varints across the
+standard categories. They include:
+
+* dead: The variant has dead cards, which do not contribute to the value of 
+   hands.
+* fee: The variant involves extra fees, including auctions.
+* fee-fold: The variant has conditions which force players pay a fee or fold 
+   their hand.
+* forced-bet: There are forced bets in the variant.
+* jokers: There are jokers in the deck.
+* limited: The variant has limited wild cards, which have limits on what they 
+   can represent.
+* lowball: The low hand wins the variant.
+* mod-ranks: The variant uses standard poker hands with slight changes.
+* must-fold: The variant has conditions which force players to fold with no 
+   recourse.
+* no-peek: The variant includes cards you do not see until showdown, excluding
+   those dealt just before the showdown.
+* odd-deal: The variant are not deal to the players on a per player basis.
+* odd-deck: The variant uses something besides a standard 52 card deck.
+* odd-ranks: The variant uses non-standard hand ranks. This is not used if only 
+   split hand is odd ranks.
+* qualifier: There is a restriction on hands, either on which hands can bet or
+   which hands can win.
+* redeal: Hands can be redealt, non-guts.
+* split-card: The pot is split with whoever has a specified card.
+* split-pot: The pot is split in some way besides high/low or split-card
+* table: The variant has table cards.
+* wilds: The variant has full wild cards. See also 'limited' and 'dead'.
 """
 
 WORDS = ['ace', 'bet', 'card', 'duece', 'edge', 'flush', 'guts', 'high-low', 'inside', 'joker', 'king',
@@ -668,7 +741,7 @@ class Viewer(cmd.Cmd):
 		'drt': 'drop by tag', 'kbr': 'keep by rule', 'kbs': 'keep by stats', 'kbt': 'keep by tag',
 		'lib': 'library', 'lbr': 'load by rule', 'lbs': 'load by stats', 'lbt': 'load by tag', 'p': 'page', 
 		'q': 'quit', 's': 'step', 'var': 'variant'}
-	help_text = {'help': HELP_GENERAL}
+	help_text = {'help': HELP_GENERAL, 'serial numbers': HELP_SERIAL, 'tags': HELP_TAGS}
 	prompt = 'IPVDB >> '
 	valid_export = set(('by-cards', 'by-tag', 'child-name', 'child-serial', 'child-summary', 'child-stags', 
 		'child-tags', 'html', 'markdown', 'multi-all', 'multi-alpha', 'mutli-freq', 'text'))
