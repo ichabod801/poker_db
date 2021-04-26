@@ -1269,44 +1269,6 @@ class Viewer(cmd.Cmd):
 				file_count += 1
 		return file_count
 
-	def html_contents(self, files):
-		"""
-		Create a table of contents for HTML exports. (None)
-
-		Parameters:
-		files: The path and variants for the exported files. (list of tuple)
-		"""
-		depth = len(files[0][0].split('/')) - 1
-		lines = ['<html>', '<head>']
-		base = files[0][0].split('/')[0]
-		lines.append(f'<title>{base.title()} Table of Contents</title>')
-		lines.append('<link rel="stylesheet" href="poker_style.css">')
-		lines.append('</head>')
-		lines.append('<body>')
-		lines.append(f'<h2>{base.title()} Table of Contents</h2>')
-		lines.append('<ul>')
-		last_tag = ''
-		for path, variants in files:
-			file_words = path.split('/')
-			relative_path = '/'.join(file_words[1:])
-			word = file_words[1].strip('0').title()
-			if depth == 1:
-				lines.append(f'<li><a href="{relative_path}">{word} Games</a></li>')
-			elif depth == 2:
-				if file_words[1] != last_tag:
-					if last_tag:
-						lines.append('</ul>')
-					lines.append(f'<li>{word} Games</li>')
-					lines.append('<ul>')
-					last_tag = file_words[1]
-				sub_word = file_words[2].strip('0').title()
-				lines.append(f'<li><a href="{relative_path}">{sub_word} {word} Games</a></li>')
-		if depth == 2:
-			lines.append('</ul>')
-		lines.append('</ul>')
-		toc_file = open(f'{base}/{base}_toc.html')
-		toc_file.write('\n'.join(lines))
-
 	def get_child(self):
 		"""
 		Get a child variant from the current variant. (None or Variant)
@@ -1358,6 +1320,56 @@ class Viewer(cmd.Cmd):
 		else:
 			return self.libraries[left], self.libraries[right]
 		return None, None
+
+	def html_contents(self, files):
+		"""
+		Create a table of contents for HTML exports. (None)
+
+		Parameters:
+		files: The path and variants for the exported files. (list of tuple)
+		"""
+		# Calculate basic info.
+		depth = len(files[0][0].split('/')) - 1
+		base = files[0][0].split('/')[0]
+		# Set up the header.
+		lines = ['<html>', '<head>']
+		lines.append(f'<title>{base.title()} Table of Contents</title>')
+		lines.append('<link rel="stylesheet" href="poker_style.css">')
+		lines.append('</head>')
+		# Set up the body
+		lines.append('<body>')
+		lines.append(f'<h2>{base.title()} Table of Contents</h2>')
+		lines.append('<ul>')
+		# Loop through the files to be created.
+		last_tag = ''
+		for path, variants in files:
+			# Parse out the path.
+			file_words = path.split('/')
+			relative_path = '/'.join(file_words[1:])
+			word = file_words[1].strip('0').title()
+			if depth == 1:
+				# Handle single by-foo break down.
+				lines.append(f'<li><a href="{relative_path}.html">{word} Games</a></li>')
+			elif depth == 2:
+				# Handle by-cards and by-tag break down.
+				if file_words[1] != last_tag:
+					# Check for ending last sub-list.
+					if last_tag:
+						lines.append('</ul>')
+					# Create a new sub-list as needed.
+					lines.append(f'<li>{word} Games</li>')
+					lines.append('<ul>')
+					last_tag = file_words[1]
+				# Output the file link.
+				sub_word = file_words[2].strip('0').title()
+				lines.append(f'<li><a href="{relative_path}.html">{sub_word} {word} Games</a></li>')
+		# Close off the last sub-list as needed.
+		if depth == 2:
+			lines.append('</ul>')
+		# Close of and export the HTML.
+		lines.extend(('</ul>', '</body>', '</html>'))
+		with open(f'{base}/{base}_toc.html', 'w') as toc_file:
+			toc_file.write('\n'.join(lines))
 
 	def library_list(self, variants):
 		"""
@@ -1825,6 +1837,7 @@ class Viewer(cmd.Cmd):
 		"""
 		# Split by tag
 		if 'by-tag' in args:
+			name, variants = files[0]
 			# Set the tag list
 			if 'multi-freq' in args:
 				# Calculate the tag frequencies if necessary.
@@ -1843,7 +1856,6 @@ class Viewer(cmd.Cmd):
 			# Set the dupe handling.
 			drop_dupes = 'multi-all' not in args
 			# Split the file data.
-			name, variants = files[0]
 			files = []
 			for tag in tags:
 				files.append((f'{name}/{tag}', [var for var in variants if tag in var.tags]))
