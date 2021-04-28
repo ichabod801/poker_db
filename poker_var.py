@@ -51,8 +51,6 @@ To Do:
 	* r/poker (or is there a variants sub? looks like not)
 	* that facebook guy
 * Future improvements (cool, but not necessary)
-	* Export argument child-stag, which shows serial number and tags.
-		* Switch children to a table. Allows easier scanning for differences.
 	* Consider splitting deal into up and down, for better structure analysis.
 		* Could even have no-peek rules.
 		* This would change distance calculations. Perhaps have a structure code on rules table.
@@ -61,6 +59,7 @@ To Do:
 	* Look at distance analysis again.
 		* Currently I like the idea of a tree starting with Showdown Straight.
 	* Random poker game? Random 1st rule, random 2nd rule based on 1st, ...
+	* Search tags? (computed from other tags)
 
 Constants:
 HELP_GENERAL: General help text for the interface. (str)
@@ -159,6 +158,7 @@ standard categories. They include:
 * fee-fold: The variant has conditions which force players pay a fee or fold 
    their hand.
 * forced-bet: There are forced bets in the variant.
+* high-low: The pot is split between a high hand and a low hand.
 * jokers: There are jokers in the deck.
 * limited: The variant has limited wild cards, which have limits on what they 
    can represent.
