@@ -4,6 +4,18 @@ Back in 2006 I made a sort-of database of poker variants. I put that on my websi
 
 However, some people had linked to my collection, and were sad to see it go bye-bye. The idea here is to turn that database into a git repository, maybe with a simple CLI interface written in Python. It's a work in progress, complicated by the lack of the original data files. Everything has to be scraped from the original HTML files.
 
+## Using the Database
+
+To use the database, just go to the all_web folder, and open up the all_web_toc.html file. That provides links to all of the sub-files with the poker variants in them, and you can just browse from there. Alternatively, you can look in the all_md folder for markdown versions of those files (the markdown files do not have links, so there is no table of contents file).
+
+To use the interface to the database, download the zip of the latest release or clone the current repo. Then open poker_var.py with python. The interface has tools for loading subsets of the database into libraries and then exporting them in different formats. Type 'help' for an introduction to those tools.
+
+## Contributions
+
+I am not accepting unsolicited pull requests. Talk to me before doing a pull request.
+
+If you have a problem or want a change, please add a issue to the project. Please use the appropriate tags. Use 'bugs' for bugs with the python program, 'data' for problems with the data (including typos in rules), 'variant' for requests to add a new variant to the database (this is on hold pending adding that functionality to the interface), and 'feature' for new feature request. Please be clear in your description of the problem. I reserve the right to reject any issue I don't understand or that doesn't have proper tags.
+
 ## Changes
 
 I reviewed all of the rules by hand. A part of the old database that was not visible from the HTML output was that rules had a type and card number. So, for example, a rule to deal five cards down to each player would have a rule type of 'deal' and a card number of 5. Some rule types (like showdown rules) don't deal with cards, but the card number was still used to differentiate different sub-types of those rule types. Since this was not visible from the HTML, I had to recreate this from scratch. It's different than it was, but I'm not entirely sure at this point what it was.
