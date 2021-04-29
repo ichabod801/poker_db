@@ -828,11 +828,11 @@ class Viewer(cmd.Cmd):
 		        first tag alpahbetically.
 		      * multi-freq: Put variants with multiple primary tags with the most 
 		        common tag.
-	       * child-name: Children are listed by name and ID only.
-	       * child-serial: Children are listed with serial numbers.
-	       * child-stags: Children are listed with serial numbers and tags.
-	       * child-summary: Children are listed with summaries.
-	       * child-tags: Children are listed with tags.
+		   * child-name: Children are listed by name and ID only.
+		   * child-serial: Children are listed with serial numbers.
+		   * child-stags: Children are listed with serial numbers and tags.
+		   * child-summary: Children are listed with summaries.
+		   * child-tags: Children are listed with tags.
 		   * html: Export as HTML.
 		   * markdown: Export as a Markdown file.
 		   * text: Export as a text file (this is the default).
@@ -1271,7 +1271,7 @@ class Viewer(cmd.Cmd):
 					variant_file = open(f'{path}.{ext}', 'w')
 				# Generate a header for HTML files.
 				if 'html' in args:
-					file_words = [word.strip('0').title() for word in path.split('/')]
+					file_words = [word.strip('0').title() for word in path.split('/')[1:]]
 					file_words.reverse()
 					title = '{} Poker Variants'.format(' '.join(file_words))
 					variant_file.write('<html>\n')
