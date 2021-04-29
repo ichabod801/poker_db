@@ -20,47 +20,6 @@ details.
 
 See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
-To Do:
-* User interface.
-	* New variant command. This will require editing.
-		* Edit command, similar to the one in Fiddler.
-		* Edit mode (rule or variant).
-		* Changing out requires commit decision.
-			* Step, parent/child, variant, new.
-			* Commit/discard commands.
-			* Committing requires updating the database.
-				* Rule mode is easy.
-				* Track changes by database table for variants. Update those tables.
-		* Summary of changes:
-			* New Viewer attributes: edit_mode*, current_rule*, rule_changes*.
-			* New Viewer commands: commit*, discard*, edit, new, rules
-			* New Variant attribute: changes*
-			* New Variant methods: commit', discard (reload)
-			* Changed Viewer commands: step, variant
-			* foo* = foo is implemented, foo' = foo is partially implemented.
-* Add new games.
-	* poker.fandom.com/wiki
-	* Hurricane (one down, bet, one up, bet, showdown)
-	* HORSE (need tag, rule type, tag must be base tag)
-		* Wikipedia calls them mixed games.
-		* 3-6-9/2-4-10
-		* Redo Jack the Switch
-	* Kuhn Poker
-* Release
-	* the pagat guy
-	* r/poker (or is there a variants sub? looks like not)
-	* that facebook guy
-* Future improvements (cool, but not necessary)
-	* Consider splitting deal into up and down, for better structure analysis.
-		* Could even have no-peek rules.
-		* This would change distance calculations. Perhaps have a structure code on rules table.
-	* Figure out 3-5-7 and multiple set common card games.
-		* I'm really leaning to a second variable.
-	* Look at distance analysis again.
-		* Currently I like the idea of a tree starting with Showdown Straight.
-	* Random poker game? Random 1st rule, random 2nd rule based on 1st, ...
-	* Search tags? (computed from other tags)
-
 Constants:
 HELP_GENERAL: General help text for the interface. (str)
 HELP_SERIAL: A description of serial numbers for variants. (str)
