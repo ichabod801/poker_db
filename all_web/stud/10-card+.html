@@ -1,0 +1,777 @@
+<html>
+<head>
+<title>10-Card+ Stud Poker Variants</title>
+<link rel="stylesheet" href="../poker_style.css"></head>
+<body>
+<h2 class="name" id="variant-8">
+7/27 <span class="variant-id">(#8)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Public Domain</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value. The low hand is closest to 7, the high hand is closest to 27. Ties are broken by inside, outside, high, or low as dealer calls or house rules.</li>
+</ol>
+<p class="parent">Parent: Root Game <span class="variant-id">(#0)</span></p>
+<h3 class="children">Children:</h3>
+<table class="child-table">
+<tr>
+<td class="name"><a href="#variant-374">3/33</a> <span class="variant-id">(#374)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-375">5 1/2 = 21</a> <span class="variant-id">(#375)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-376">7/27 Double Clubs</a> <span class="variant-id">(#376)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-377">7/27 No Chaser</a> <span class="variant-id">(#377)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-378">7/27 with a Lock</a> <span class="variant-id">(#378)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-379">7/27 with Replace</a> <span class="variant-id">(#379)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">draw, stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-380">8/28</a> <span class="variant-id">(#380)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-381">Black 7/27</a> <span class="variant-id">(#381)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-382">Chilcoot's 7/27</a> <span class="variant-id">(#382)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-383">Go Fish</a> <span class="variant-id">(#383)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">pass, stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-384">Price is Right 7/27</a> <span class="variant-id">(#384)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-385">Red 7/27</a> <span class="variant-id">(#385)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+<tr>
+<td class="name"><a href="#variant-386">Thirty One</a> <span class="variant-id">(#386)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, odd-ranks</span></td>
+</tr>
+</table>
+
+
+<h2 class="name" id="variant-124">
+Give Me Five <span class="variant-id">(#124)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>10</td></tr>
+<tr><td class="players">Players</td><td>5</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>4</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>10</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Erich Friedman</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">flip, pass, stud, split-pot</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal ten cards face down to each player.</li>
+<li class="rule-line">Each player flips over one down card of their choice.</li>
+<li class="rule-line">Each player simultaneously passes one card to their right, and flips it face up.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Each player flips over one down card of their choice.</li>
+<li class="rule-line">Each player simultaneously passes one card to their right, and flips it face up.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Each player flips over one down card of their choice.</li>
+<li class="rule-line">Each player simultaneously passes one card to their right, and flips it face up.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Each player flips over one down card of their choice.</li>
+<li class="rule-line">Each player simultaneously passes one card to their right, and flips it face up.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Each player flips over one down card of their choice.</li>
+<li class="rule-line">Each player simultaneously passes one card to their right, and flips it face up.</li>
+<li class="rule-line">Showdown, the high hand splits the pot with the player to their left.</li>
+</ol>
+<p class="parent">Parent: <a href="05-card.html#variant-2">Five Card Stud</a>
+<span class="variant-id">(#2)</span>
+</p>
+
+
+<h2 class="name" id="variant-374">
+3/33 <span class="variant-id">(#374)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Poker Mike</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 10, all other cards are face value. The low hand is closest to three without being under, the high hand is closest to 33 without being over.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+<h3 class="children">Children:</h3>
+<table class="child-table">
+<tr>
+<td class="name"><a href="#variant-790">2/22</a> <span class="variant-id">(#790)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">stud, high-low, odd-ranks</span></td>
+</tr>
+</table>
+
+
+<h2 class="name" id="variant-375">
+5 1/2 = 21 <span class="variant-id">(#375)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Source misplaced</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2 or 10, all other cards are face value. Low hand is closest to 5 1/2, high hand is closest to 21. Ties are broken by low.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-376">
+7/27 Double Clubs <span class="variant-id">(#376)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Erich Friedman</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value, clubs count double. The low hand is closest to 7, the high hand is closest to 27. Ties are broken by inside, outside, high, or low as dealer calls or house rules.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-377">
+7/27 No Chaser <span class="variant-id">(#377)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Craig O'Brien</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it and if they got a card dealt to them last round.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value. The low hand is closest to 7, the high hand is closest to 27. Ties are broken by inside, outside, high, or low as dealer calls or house rules.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-378">
+7/27 with a Lock <span class="variant-id">(#378)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Poker Mike</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it and if they haven't declined a card three times in a row.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value. The low hand is closest to 7, the high hand is closest to 27. Ties are broken by inside, outside, high, or low as dealer calls or house rules.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-379">
+7/27 with Replace <span class="variant-id">(#379)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Ultimate Bet</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">draw, stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Each player may draw one card if they wish.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value. The low hand is closest to 7, the high hand is closest to 27. Ties are broken by inside, outside, high, or low as dealer calls or house rules.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-380">
+8/28 <span class="variant-id">(#380)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Poker Mike</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value, clubs count double. The low hand is closest to 8, the high hand is closest to 28. Ties are broken by inside, outside, high, or low as dealer calls or house rules.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-381">
+Black 7/27 <span class="variant-id">(#381)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Poker Mike</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, diamonds and hearts are 0, all other cards are face value. The low hand is closest to 7, the high hand is closest to 27. Ties broken by inside, outside, high, or low as dealer calls or house rules.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-382">
+Chilcoot's 7/27 <span class="variant-id">(#382)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Poker Mike</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal two cards down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value. The low hand is closest to 7, the high hand is closest to 27. Ties are broken by inside, outside, high, or low as dealer calls or house rules.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+<h3 class="children">Children:</h3>
+<table class="child-table">
+<tr>
+<td class="name"><a href="#variant-791">7/27 Twists</a> <span class="variant-id">(#791)</span></td>
+<td><span class="serial-number">202-98-202-202-0</span></td>
+<td><span class="tags">flip, stud, high-low, odd-ranks</span></td>
+</tr>
+</table>
+
+
+<h2 class="name" id="variant-383">
+Go Fish <span class="variant-id">(#383)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Erich Friedman</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">pass, stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Each player in turn may ask another player if they have a down card of a particular rank. If the other player does, the asker gets the card, otherwise they get the top card off the deck.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value. The low hand is closest to 7, the high hand is closest to 27. Ties are broken by inside, outside, high, or low as dealer calls or house rules.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-384">
+Price is Right 7/27 <span class="variant-id">(#384)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Poker Mike</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value, clubs count double. The low hand is closest to 7, the high hand is closest to 27. Hands below the target value beat hands below the target value in all cases.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-385">
+Red 7/27 <span class="variant-id">(#385)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Poker Mike</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, clubs and spades are 0, all other cards are face value. Low hand is closest to 7, high hand is closest to 27. Ties broken by inside, outside, high, or low as dealer calls/house rules.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-386">
+Thirty One <span class="variant-id">(#386)</span>
+</h2>
+<p class="aliases">Also known as: <span class="aliases">31</span>.</p>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Poker Phil</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Showdown, high hand wins.</li>
+<li class="rule-line">31 hands: aces are 1 or 11, face cards are 10, all other cards are face value. Closest to 31 is best, but over 31 can't beat under 31.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-8">7/27</a>
+<span class="variant-id">(#8)</span>
+</p>
+
+
+<h2 class="name" id="variant-387">
+Butcherboy <span class="variant-id">(#387)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>99</td></tr>
+<tr><td class="players">Players</td><td>13</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>300</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>99</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Source misplaced</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, odd-deal</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card to each player in turn, until two cards match in rank. Give the last card to the player who already had a card of that rank.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Repeat the last two actions until someone gets four of a kind.</li>
+<li class="rule-line">The player with four of a kind takes the pot.</li>
+</ol>
+<p class="parent">Parent: <a href="04-card.html#variant-9">Dutch Stud</a>
+<span class="variant-id">(#9)</span>
+</p>
+
+
+<h2 class="name" id="variant-535">
+Suck <span class="variant-id">(#535)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>48</td></tr>
+<tr><td class="players">Players</td><td>17</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>3</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>48</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Cheapass Games</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">pass, stud</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Normal betting round, with the player to the left of the dealer opening.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Showdown, high hand wins.</li>
+<li class="rule-line">Use three card poker hands (straight flush beats three of a kind beats straight beats flush beats pair beats high card).</li>
+<li class="rule-line">If anyone folds, their cards get passed to the player on their left.</li>
+</ol>
+<p class="parent">Parent: <a href="03-card.html#variant-153">Three Card Monte</a>
+<span class="variant-id">(#153)</span>
+</p>
+<h3 class="children">Children:</h3>
+<table class="child-table">
+<tr>
+<td class="name"><a href="#variant-861">Suck Back</a> <span class="variant-id">(#861)</span></td>
+<td><span class="serial-number">48-17-3-48-0</span></td>
+<td><span class="tags">pass, stud</span></td>
+</tr>
+</table>
+
+
+<h2 class="name" id="variant-790">
+2/22 <span class="variant-id">(#790)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Poker Mike</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards and tens are 1/2, all other cards are face value. Low hand is closest to 2 without being under, high hand is closest to 22 without being over.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-374">3/33</a>
+<span class="variant-id">(#374)</span>
+</p>
+
+
+<h2 class="name" id="variant-791">
+7/27 Twists <span class="variant-id">(#791)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>202</td></tr>
+<tr><td class="players">Players</td><td>98</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>202</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>202</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Two Plus Two Forums</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">flip, stud, high-low, odd-ranks</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal three cards face down to each player.</li>
+<li class="rule-line">Each player flips over one down card of their choice.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal each player one card face up, if they want it.</li>
+<li class="rule-line">Repeat the last two actions until no one wants another card.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">The highest showing high hand and the lowest showing low hand split the pot.</li>
+<li class="rule-line">Aces are 1 or 11, face cards are 1/2, all other cards are face value. High hand is closest to 27, low hand is closest to 7. Ties broken by inside, outside, high, or low as dealer calls or house rules. A 27 point hand with 10 or less cards takes high and low.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-382">Chilcoot's 7/27</a>
+<span class="variant-id">(#382)</span>
+</p>
+
+
+<h2 class="name" id="variant-844">
+Open Hand Kenosha <span class="variant-id">(#844)</span>
+</h2>
+<p class="aliases">Also known as: <span class="aliases">Voyeur Edition</span>.</p>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>204</td></tr>
+<tr><td class="players">Players</td><td>0</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>203</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>204</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Softsource</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal two cards down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player to the left of the dealer opening.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player to the left of the dealer opening.</li>
+<li class="rule-line">Repeat the last two actions until one player believes they have the highest hand.</li>
+<li class="rule-line">Normal betting round, with the player to the left of the dealer opening.</li>
+<li class="rule-line">Showdown, high hand wins.</li>
+</ol>
+<p class="parent">Parent: <a href="../straight/10-card+.html#variant-505">Kenosha Cheese Porn</a>
+<span class="variant-id">(#505)</span>
+</p>
+
+
+<h2 class="name" id="variant-861">
+Suck Back <span class="variant-id">(#861)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>48</td></tr>
+<tr><td class="players">Players</td><td>17</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>3</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>48</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Cheapass Games</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">pass, stud</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Normal betting round, with the player to the left of the dealer opening.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Showdown, high hand wins.</li>
+<li class="rule-line">Use three card poker hands (straight flush beats three of a kind beats straight beats flush beats pair beats high card).</li>
+<li class="rule-line">If anyone folds, their cards get passed to the player on their right.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-535">Suck</a>
+<span class="variant-id">(#535)</span>
+</p>
+
+
+<h2 class="name" id="variant-892">
+Ten Card Stud <span class="variant-id">(#892)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>10</td></tr>
+<tr><td class="players">Players</td><td>5</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>8</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>10</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Hoyle</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal two cards down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Showdown, high hand wins.</li>
+</ol>
+<p class="parent">Parent: <a href="09-card.html#variant-600">Nine Card Stud</a>
+<span class="variant-id">(#600)</span>
+</p>
+<h3 class="children">Children:</h3>
+<table class="child-table">
+<tr>
+<td class="name"><a href="#variant-1047">Survivor</a> <span class="variant-id">(#1047)</span></td>
+<td><span class="serial-number">10-5-4-10-0</span></td>
+<td><span class="tags">stud</span></td>
+</tr>
+</table>
+
+
+<h2 class="name" id="variant-1047">
+Survivor <span class="variant-id">(#1047)</span>
+</h2>
+<table class="statistics">
+<tr><td class="cards">Cards</td><td>10</td></tr>
+<tr><td class="players">Players</td><td>5</td></tr>
+<tr><td class="rounds">Betting Rounds</td><td>4</td></tr>
+<tr><td class="max-seen">Max Cards Seen</td><td>10</td></tr>
+<tr><td class="wilds">Wilds</td><td>0</td></tr>
+<tr><td class="source">Source</td><td>Craig O'Brien</td></tr>
+</table>
+<p class="tags">Tags: <span class="tags">stud</span></p>
+<h3 class="rules">Rules:</h3>
+<ol class="rule-list">
+<li class="rule-line">Deal two cards down to each player.</li>
+<li class="rule-line">Deal two cards up to each player</li>
+<li class="rule-line">The high hand showing must discard one card of their choice.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">The high hand showing must discard one card of their choice.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">The high hand showing must discard one card of their choice.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Deal one card down to each player.</li>
+<li class="rule-line">Deal one card up to each player.</li>
+<li class="rule-line">The high hand showing must discard one card of their choice.</li>
+<li class="rule-line">Normal betting round, with the player with the high hand showing opening.</li>
+<li class="rule-line">Showdown, high hand wins.</li>
+</ol>
+<p class="parent">Parent: <a href="#variant-892">Ten Card Stud</a>
+<span class="variant-id">(#892)</span>
+</p>
+
+
+</body>
+</html>

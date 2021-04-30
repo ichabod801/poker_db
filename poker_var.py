@@ -1277,7 +1277,7 @@ class Viewer(cmd.Cmd):
 					variant_file.write('<html>\n')
 					variant_file.write('<head>\n')
 					variant_file.write(f'<title>{title}</title>\n')
-					if len(file_words) == 3:
+					if len(file_words) == 2:
 						variant_file.write(f'<link rel="stylesheet" href="../poker_style.css">')
 					else:
 						variant_file.write(f'<link rel="stylesheet" href="poker_style.css">')
