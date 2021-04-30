@@ -1363,14 +1363,15 @@ class Viewer(cmd.Cmd):
 		# Calculate basic info.
 		depth = len(files[0][0].split('/')) - 1
 		base = files[0][0].split('/')[0]
+		title = base.replace('_', ' ').title()
 		# Set up the header.
 		lines = ['<html>', '<head>']
-		lines.append(f'<title>{base.title()} Table of Contents</title>')
+		lines.append(f'<title>{title} Table of Contents</title>')
 		lines.append('<link rel="stylesheet" href="poker_style.css">')
 		lines.append('</head>')
 		# Set up the body
 		lines.append('<body>')
-		lines.append(f'<h2>{base.title()} Table of Contents</h2>')
+		lines.append(f'<h2>{title} Table of Contents</h2>')
 		lines.append('<ul>')
 		# Loop through the files to be created.
 		last_tag = ''
