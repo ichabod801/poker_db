@@ -1,3 +1,68 @@
+## Spit in the Ocean (#5)
+Also known as: *Spit*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|2|
+|Max Cards Seen|9|
+|Wilds|4|
+|Source|Public Domain|
+Tags: *common, draw, wilds*
+### Rules:
+1. Deal four cards down to each player.
+2. Deal one common card face up to the table.
+3. Normal betting round, with the player to the left of the dealer opening.
+4. Each player may draw up to three cards (four if they show an ace).
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Showdown, high hand wins.
+7. The last common card flipped is wild, as are all other cards of the same rank.
+
+Parent: Root Game (#0)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|11810 (#310)|8-7-3-10-0|common, draw, high-low
+|Double Spit (#311)|6-7-4-9-0|common, draw, lowball
+|Four Two One (#312)|9-5-7-9-0|common, flip, fee
+|Italian Poker (#313)|5-10-2-7-0|common, forced-bet, high-low
+|Lame Brain (#314)|10-9-5-10-0|common, high-low
+|Phlegm (#315)|5-6-5-9-4|common, draw, flip, wilds
+|Spit Guts (#316)|5-6-101-9-28|common, draw, guts, qualifier, table, wilds
+|Spit in the Snatch (#317)|5-6-3-9-4|common, draw, wilds
+|Stormy Weather (#318)|5-6-5-11-0|common, draw
+|Wild Widow (#319)|5-6-2-9-3|common, draw, wilds
+
+
+## Elbow (#277)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|16|
+|Betting Rounds|3|
+|Max Cards Seen|6|
+|Wilds|4|
+|Source|Hoyle|
+Tags: *common, draw, wilds*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal three common cards face down in an 'L' shape.
+3. Flip the top common card face up.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Flip the next common card going clockwise around face up.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Flip one common card face up.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Each player may twist one card for max bet.
+10. Showdown, high hand wins.
+11. The last common card flipped is wild, as are all other cards of the same rank.
+
+Parent: Texas Hold'em (#4)
+
+
 ## Italian Poker (#313)
 
 |Statistic|Value|
@@ -18,6 +83,148 @@ Tags: *common, forced-bet, high-low*
 6. Declare high/low simultaneously.
 7. Showdown, highest declared high hand and lowest declared low hand split the pot.
 8. If a player discarded one card, they can use the first common; if they discarded two they can use both commons; otherwise they cannot use any commons.
+
+Parent: Spit in the Ocean (#5)
+
+
+## Phlegm (#315)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|5|
+|Max Cards Seen|9|
+|Wilds|4|
+|Source|Poker Mike, cross referenced from other pages|
+Tags: *common, draw, flip, wilds*
+### Rules:
+1. Deal four cards down to each player.
+2. Deal one common card face up to the table.
+3. Normal betting round, with the player to the left of the dealer opening.
+4. Each player may draw up to three cards (four if they show an ace).
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Each player simultaneously flips over the top card of their stack.
+7. Normal betting round, with the player to the left of the dealer opening.
+8. Each player simultaneously flips over the top card of their stack.
+9. Normal betting round, with the player to the left of the dealer opening.
+10. Each player simultaneously flips over the top card of their stack.
+11. Normal betting round, with the player to the left of the dealer opening.
+12. Showdown, high hand wins.
+13. The last common card flipped is wild, as are all other cards of the same rank.
+
+Parent: Spit in the Ocean (#5)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Phlegm in the Snatch (#745)|5-6-6-9-4|common, draw, flip, wilds
+
+
+## Spit Guts (#316)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|101|
+|Max Cards Seen|9|
+|Wilds|28|
+|Source|Poker Phil|
+Tags: *common, draw, guts, qualifier, table, wilds*
+### Rules:
+1. Deal four cards down to each player.
+2. Deal four cards face down to the table.
+3. Deal one common card face up to the table.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may draw up to three cards (four if they show an ace).
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Showdown, high hand wins.
+8. Use three card poker hands (straight flush beats three of a kind beats straight beats flush beats pair beats high card).
+9. You must beat the table hand to win.
+10. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+11. The last common card flipped is wild, as are all other cards of the same rank.
+12. You low hole card is wild, as are all cards of the same rank, but only if it is lower than the low common card.
+
+Parent: Spit in the Ocean (#5)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Reverse Blast Guts (#746)|5-6-102-9-28|common, draw, guts, qualifier, table, wilds
+
+
+## Spit in the Snatch (#317)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|3|
+|Max Cards Seen|9|
+|Wilds|4|
+|Source|Home Poker Cookbook|
+Tags: *common, draw, wilds*
+### Rules:
+1. Deal four cards down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal one common card face up to the table.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Showdown, high hand wins.
+8. The last common card flipped is wild, as are all other cards of the same rank.
+
+Parent: Spit in the Ocean (#5)
+
+
+## Stormy Weather (#318)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|5|
+|Max Cards Seen|11|
+|Wilds|0|
+|Source|Public Domain|
+Tags: *common, draw*
+### Rules:
+1. Deal four cards down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal one common card face up to the table.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Deal one common card face up to the table.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. Showdown, high hand wins.
+12. You may use any one of the common cards in your final hand.
+
+Parent: Spit in the Ocean (#5)
+
+
+## Wild Widow (#319)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|2|
+|Max Cards Seen|9|
+|Wilds|3|
+|Source|Home Poker Cookbook|
+Tags: *common, draw, wilds*
+### Rules:
+1. Deal four cards down to each player.
+2. Deal one common card face up to the table.
+3. Normal betting round, with the player to the left of the dealer opening.
+4. Each player may draw up to three cards (four if they show an ace).
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Showdown, high hand wins.
+7. All cards of the same rank as the last common card are wild, but the last common card is not wild itself.
 
 Parent: Spit in the Ocean (#5)
 
@@ -43,6 +250,123 @@ Tags: *common, guts*
 Parent: Five Card Guts (#7)
 
 
+## Jacks and Piss (#367)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|101|
+|Max Cards Seen|9|
+|Wilds|8|
+|Source|Home Poker Cookbook|
+Tags: *common, draw, guts, wilds*
+### Rules:
+1. Deal four cards down to each player.
+2. Deal one common card face up to the table.
+3. Declare in/out one at a time, starting with the player to the left of the dealer.
+4. Each player may draw up to four cards.
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Showdown, high hand wins.
+7. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+8. Jacks are wild.
+9. The common card is wild, as are all cards of the same rank.
+
+Parent: Five Card Guts (#7)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Burn (#780)|5-12-100-5-8|common, guts, wilds
+
+
+## Foosball (#474)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|10|
+|Betting Rounds|4|
+|Max Cards Seen|5|
+|Wilds|0|
+|Source|Graham's Card Club|
+Tags: *common, stud, fee-fold, limited, must-fold*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Showdown, high hand wins.
+11. Threes are bugs (they may complete a straight, a flush, or count as an ace).
+12. If a player is ever dealt a face up six, everyone must pay double ante or fold.
+13. If a player is ever dealt a face up six, deal one common card face up.
+
+Parent: Bug Stud (#106)
+
+
+## Phlegm in the Snatch (#745)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|6|
+|Max Cards Seen|9|
+|Wilds|4|
+|Source|Poker Mike, cross referenced from other pages|
+Tags: *common, draw, flip, wilds*
+### Rules:
+1. Deal four cards down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player simultaneously flips over the top card of their stack.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Each player simultaneously flips over the top card of their stack.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Each player simultaneously flips over the top card of their stack.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. Deal one common card face up to the table.
+12. Normal betting round, with the player to the left of the dealer opening.
+13. Showdown, high hand wins.
+14. The last common card flipped is wild, as are all other cards of the same rank.
+
+Parent: Phlegm (#315)
+
+
+## Reverse Blast Guts (#746)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|102|
+|Max Cards Seen|9|
+|Wilds|28|
+|Source|Poker Phil|
+Tags: *common, draw, guts, qualifier, table, wilds*
+### Rules:
+1. Deal four cards down to each player.
+2. Deal four cards face down to the table.
+3. Deal one common card face up to the table.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may draw up to three cards (four if they show an ace).
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Showdown, high hand wins.
+8. Use three card poker hands (straight flush beats three of a kind beats straight beats flush beats pair beats high card).
+9. You must beat the table hand to win.
+10. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+11. The last common card flipped is wild, as are all other cards of the same rank.
+12. You high hole card is wild, as are all cards of the same rank, but only if it is higher than the high common card.
+
+Parent: Spit Guts (#316)
+
+
 ## Burn (#780)
 
 |Statistic|Value|
@@ -65,6 +389,58 @@ Tags: *common, guts, wilds*
 8. The common card is wild, as are all cards of the same rank.
 
 Parent: Jacks and Piss (#367)
+
+
+## Five and Dime II (#810)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|5|
+|Betting Rounds|2|
+|Max Cards Seen|12|
+|Wilds|0|
+|Source|Ox House|
+Tags: *common, draw, fee*
+### Rules:
+1. Deal seven cards face down to each player.
+2. Each player may twist up to two cards for double ante each.
+3. Shuffle any discarded cards back into the deck.
+4. Deal three cards face down to each player.
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Deal two common cards face up to the table.
+7. Each player splits their cards into two hands of five cards each, arranging them in order in face down stacks. The order of the stacks may not change once made.
+8. Each player flips one hand over, and everyone except the two best hands must fold. The remaining players flip their second hand over, and the higher second hand takes the pot.
+9. Each common card may only be used in one of your hands.
+
+Parent: Henway (#450)
+
+
+## Triple Draw with a Twist (#1020)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|5|
+|Betting Rounds|4|
+|Max Cards Seen|18|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *common, draw, lowball*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may draw up to three cards (four if they show an ace).
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Deal one common card face up to the table.
+8. Each player may draw up to three cards (four if they show an ace).
+9. Normal betting round, with the player to the left of the dealer opening.
+10. Showdown, low hand wins.
+11. If the deck runs out of cards, reshuffle the discards.
+
+Parent: Triple Draw Lowball (#806)
 
 
 ## Tic Tac Hold'em (#1111)

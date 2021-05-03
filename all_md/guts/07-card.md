@@ -34,6 +34,36 @@ Parent: Seven Card Stud (#3)
 |South Chicago (#592)|7-7-104-7-0|guts, split-card, table
 
 
+## Seven Card Burn (#237)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|105|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Jon Shemitz|
+Tags: *guts, stud, redeal*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card down to each player.
+11. Normal betting round, with the player with the high hand showing opening.
+12. If no one opened in the previous round of betting, redeal.
+13. Showdown, high hand wins.
+14. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Seven Card Stud (#3)
+
+
 ## Three Five Seven (#342)
 
 |Statistic|Value|
@@ -73,6 +103,28 @@ Parent: Three Card Guts (#6)
 |Six Seven Eight (#763)|8-7-100-10-4|common, guts, wilds
 |Three Five Seven II (#764)|7-7-100-7-4|guts, wilds
 |Two Three Two (#765)|7-7-100-7-0|guts
+
+
+## Rohr (#371)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|23|
+|Betting Rounds|100|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Softsource|
+Tags: *common, guts*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal five common cards face up.
+3. Declare in/out one at a time, starting with the player to the left of the dealer.
+4. Showdown, high hand wins.
+5. Everyone who went in and lost matches the pot. Redeal (except the common cards) if no one went in or anyone had to match.
+6. If the deck runs out of cards, reshuffle the discards.
+
+Parent: Five Card Guts (#7)
 
 
 ## Iffy Guts (#591)
@@ -233,6 +285,32 @@ Tags: *guts*
 14. Repeat the last twelve actions if there is still money in the pot.
 
 Parent: Three Five Seven (#342)
+
+
+## Two More Inches (#784)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|100|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Poker Mike, cross referenced from other pages|
+Tags: *guts, stud*
+### Rules:
+1. Deal five cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer, no passes are allowed. If the dealer is the first to go in, everyone else gets a second chance to go in.
+3. Deal two cards up to each player
+4. Showdown, high hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Position Guts (#370)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Two More Deadly Inches (#1010)|7-7-100-7-4|guts, must-fold, wilds
 
 
 ## Seven Card Guts (#785)

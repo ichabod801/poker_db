@@ -1908,6 +1908,33 @@ Tags: *draw, qualifier*
 Parent: Five Card Draw (#1)
 
 
+## The Emporer's New Cards (#89)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|2|
+|Max Cards Seen|9|
+|Wilds|0|
+|Source|Craig O'Brien|
+Tags: *draw, stud*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards, four if they show an ace. Everyone declares how many cards they are drawing before any cards are dealt. Cards drawn are dealt face up.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Showdown, high hand wins.
+
+Parent: Five Card Draw (#1)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Flip'em (#460)|5-6-2-9-0|draw, flip
+|Windows (#461)|5-4-2-13-4|draw, stud, wilds
+
+
 ## Three Twist (#91)
 
 |Statistic|Value|
@@ -2023,6 +2050,345 @@ Tags: *draw, table*
 6. Showdown, high hand wins. The second place hand may switch hands with the table cards and make a draw to see if he can beat the winner.
 
 Parent: Five Card Draw (#1)
+
+
+## Bid'em (#102)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Home Poker Cookbook|
+Tags: *draw, stud, fee*
+### Rules:
+1. Deal one card down to each player.
+2. Flip one card, highest bidder gets it. Repeat until each player wins a card, players who have won a card this round may not bid. If at any point no one wants a card, the remaining players pay double ante for one card off the deck.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Flip one card, highest bidder gets it. Repeat until each player wins a card, players who have won a card this round may not bid. If at any point no one wants a card, the remaining players pay double ante for one card off the deck.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Flip one card, highest bidder gets it. Repeat until each player wins a card, players who have won a card this round may not bid. If at any point no one wants a card, the remaining players pay double ante for one card off the deck.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player to the left of the dealer opening.
+10. Each player may twist one card for max bet.
+11. Normal betting round, with the player to the left of the dealer opening.
+12. Showdown, high hand wins.
+
+Parent: Five Card Stud (#2)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Super Bid'em (#472)|5-8-5-6-0|draw, stud, fee
+
+
+## Bombay (#105)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, stud*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may draw one card. Who is going to draw is declared simultaneously.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+
+Parent: Five Card Stud (#2)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Shuck'em (#473)|5-7-5-7-0|draw, stud, lowball
+
+
+## Canadian (#107)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|5|
+|Max Cards Seen|8|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, flip, stud, fee, mod-ranks*
+### Rules:
+1. Deal three cards face down to each player.
+2. Each player discards two cards. You can pay double ante to not discard, or ante to discard only one.
+3. Each player flips a down card of their choice. If they only have one card, they get dealt an up card instead.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Each player flips a down card of their choice. If they only have two cards, they get dealt an up card instead.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card down to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Each player may twist one card for max bet.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Showdown, high hand wins.
+14. Standard poker hands plus a four card flush beats a four card straight which beats a pair, but both lose to two pair.
+
+Parent: Five Card Stud (#2)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Machine Gun Stud (#475)|5-8-4-15-0|flip, stud
+
+
+## Crazy Fives (#108)
+Also known as: *Crazy Stud, Forward Pass, Hilo Piccolo, Push, Shove'em, Take It or Leave It, The Deck II*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|10|
+|Betting Rounds|5|
+|Max Cards Seen|10|
+|Wilds|0|
+|Source|Scarne's Guide to Modern Poker|
+Tags: *draw, pass, stud, high-low*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may draw one card if they wish.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Five Card Stud (#2)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Ebola (#476)|8-6-5-12-0|pass, stud, high-low, must-fold, table
+|Green Push (#477)|5-8-5-10-0|draw, pass, stud, high-low
+|Kings (#478)|5-9-4-9-4|pass, stud, mod-ranks, wilds
+|Pass the Card (#479)|6-8-5-10-0|draw, pass, stud, fee, high-low
+|Plain Push (#480)|5-9-4-9-0|pass, stud, high-low
+|Polish II (#481)|5-9-4-9-32|pass, stud, high-low, wilds
+|Pussy Cat (#482)|6-8-5-10-0|pass, stud, high-low
+|Rothschild (#483)|5-8-5-10-0|draw, pass, stud, fee, high-low
+
+
+## Jackal (#125)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|5|
+|Betting Rounds|4|
+|Max Cards Seen|10|
+|Wilds|0|
+|Source|Oswald Jacoby on Poker|
+Tags: *draw, flip, stud, high-low, mod-ranks*
+### Rules:
+1. Deal five cards face down to each player.
+2. Each player must discard three down cards.
+3. Each player flips over one down card of their choice.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal one card up to each player.
+6. Each player may draw one card if they wish. Everyone discards before anyone gets a new card.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card up to each player.
+11. Each player may draw one card if they wish. Everyone discards before anyone gets a new card.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Declare high/low/both simultaneously.
+14. High declared high hand and lowest declared low hand split the pot. Hands declared as both must win both to win anything.
+15. Aces are considered low in all hands.
+
+Parent: Five Card Stud (#2)
+
+
+## No Low (#136)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|4|
+|Max Cards Seen|17|
+|Wilds|0|
+|Source|Home Poker Cookbook|
+Tags: *draw, stud*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Any down card that is four or less may be discarded face up for a replacement. Repeat until no one wants to draw.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal one card up to each player.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card up to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Showdown, high hand wins.
+
+Parent: Five Card Stud (#2)
+
+
+## Option Alley (#139)
+Also known as: *Choice High/Low, Five Card Option, Little Squeeze, Low-Bo, Old West*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Wikipedia|
+Tags: *draw, stud, fee, high-low*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist one card for max bet.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Five Card Stud (#2)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Go for Broke (#513)|5-8-6-6-0|draw, stud, fee, high-low, mod-ranks
+|Myron's Game (#514)|5-5-5-10-4|draw, stud, fee, high-low, wilds
+|Pair No Pair (#515)|5-8-5-6-0|draw, stud, fee, high-low, qualifier
+|Chili Pepper Low-Bo (#850)|5-8-5-6-32|draw, stud, fee, wilds
+|Dog of the Nile (#851)|5-8-5-6-0|draw, stud, fee, high-low, qualifier
+
+
+## Pig (#141)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|4|
+|Max Cards Seen|9|
+|Wilds|0|
+|Source|Wikipedia|
+Tags: *draw, flip, stud*
+### Rules:
+1. Deal three cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal one card up to each player.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal one card up to each player.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Each player turns two up cards down.
+8. Each player may draw up to three cards (four if they show an ace).
+9. Normal betting round, with the player to the left of the dealer opening.
+10. Showdown, high hand wins.
+
+Parent: Five Card Stud (#2)
+
+
+## Three Card Substitution (#154)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|7|
+|Max Cards Seen|8|
+|Wilds|0|
+|Source|Poker Mike|
+Tags: *draw, stud, fee*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist one card for the ante.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Each player may twist one card for double ante.
+13. Normal betting round, with the player with the high hand showing opening.
+14. Each player may twist one card for max bet.
+15. Normal betting round, with the player with the high hand showing opening.
+16. Showdown, high hand wins.
+
+Parent: Five Card Stud (#2)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|One Card Substitution (#538)|5-8-5-6-0|draw, stud, fee
+|Two Card Substitution (#539)|5-7-6-7-0|draw, stud, fee
+
+
+## English Stud (#188)
+Also known as: *Bank Night*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Public Domain|
+Tags: *draw, stud*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Each player may draw one card if they wish.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may draw one card if they wish.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+
+Parent: Seven Card Stud (#3)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|English Stud II (#601)|6-7-5-7-0|draw, stud
+|English Stud III (#602)|5-8-5-6-0|draw, stud
 
 
 ## Elbow (#277)
@@ -3648,6 +4014,31 @@ Tags: *draw*
 Parent: Shotgun (#80)
 
 
+## Pick'em Poker (#456)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|7|
+|Betting Rounds|3|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Pro Forums|
+Tags: *draw, stud, table*
+### Rules:
+1. Deal two cards down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal a number of face down table cards equal to twice the number of players.
+4. Deal a number of up table cards equal to the number of players.
+5. Each player in turn picks one up table card and the two down table cards that goes with it, and put them in their hand.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Each player may draw up to two cards.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Showdown, high hand wins.
+
+Parent: Shotgun (#80)
+
+
 ## Q Ball (#457)
 
 |Statistic|Value|
@@ -3751,6 +4142,35 @@ Tags: *draw, flip*
 Parent: The Emporer's New Cards (#89)
 
 
+## Windows (#461)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|4|
+|Betting Rounds|2|
+|Max Cards Seen|13|
+|Wilds|4|
+|Source|Mike Tsao|
+Tags: *draw, stud, wilds*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards, four if they show an ace. Everyone declares how many cards they are drawing before any cards are dealt. Cards drawn are dealt face up.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may draw up to three cards, four if they show an ace. Everyone declares how many cards they are drawing before any cards are dealt. Cards drawn are dealt face up.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Showdown, high hand wins.
+8. Sevens are wild.
+
+Parent: The Emporer's New Cards (#89)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Macintosh II (#822)|5-4-2-13-4|draw, stud, wilds
+
+
 ## Paradise Trees (#470)
 
 |Statistic|Value|
@@ -3796,6 +4216,154 @@ Tags: *draw, mod-ranks*
 Parent: Vice President (#96)
 
 
+## Super Bid'em (#472)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Poker Tips|
+Tags: *draw, stud, fee*
+### Rules:
+1. Deal one card down to each player.
+2. Flip one card, highest bidder gets it. Repeat once for each player, players who have won three cards may not bid. If at any point no one wants a card, the remaining players pay double ante for one card off the deck.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Flip one card, highest bidder gets it. Repeat once for each player, players who have won three cards may not bid. If at any point no one wants a card, the remaining players pay double ante for one card off the deck.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Flip one card, highest bidder gets it. Repeat once for each player, players who have won three cards may not bid. If at any point no one wants a card, the remaining players pay double ante for one card off the deck.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player to the left of the dealer opening.
+10. Each player may twist one card for max bet.
+11. Normal betting round, with the player to the left of the dealer opening.
+12. Showdown, high hand wins.
+
+Parent: Bid'em (#102)
+
+
+## Shuck'em (#473)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, stud, lowball*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Starting with the lowest hand showing, each player may draw up to two cards if they wish.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, low hand wins.
+
+Parent: Bombay (#105)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Car Wash (#829)|5-7-4-7-0|draw, stud, lowball
+|Five By Two (#830)|7-5-6-9-0|draw, pass, stud, lowball
+
+
+## Green Push (#477)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|10|
+|Wilds|0|
+|Source|Source misplaced|
+Tags: *draw, pass, stud, high-low*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it becomes the first card dealt in the next round.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it becomes the first card dealt in the next round.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it becomes the first card dealt in the next round.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it becomes the first card dealt in the next round.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may draw one card if they wish.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Crazy Fives (#108)
+
+
+## Rothschild (#483)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|10|
+|Wilds|0|
+|Source|Hoyle|
+Tags: *draw, pass, stud, fee, high-low*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one up to each player. A player can pass the first card he gets each round if they pay double ante, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one up to each player. A player can pass the first card he gets each round if they pay double ante, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one up to each player. A player can pass the first card he gets each round if they pay double ante, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one up to each player. A player can pass the first card he gets each round if they pay double ante, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may draw one card if they wish.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Crazy Fives (#108)
+
+
+## Do Ya Too (#484)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|4|
+|Max Cards Seen|8|
+|Wilds|24|
+|Source|Joker Poker|
+Tags: *draw, stud, wilds*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Each player in turn may discard their hole card for a new one, up to three times each.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal one card up to each player.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card up to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Showdown, high hand wins.
+12. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Do Ya (#110)
+
+
 ## Add'em Up (#506)
 Also known as: *Add It Up*.
 
@@ -3827,6 +4395,228 @@ Tags: *draw, high-low, odd-ranks, table*
 16. Tens and face cards are worth 0 or 10, aces are worth 1 or 11, all other cards are face value.
 
 Parent: Numbers (#137)
+
+
+## Go for Broke (#513)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|6|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Mike Tsao|
+Tags: *draw, stud, fee, high-low, mod-ranks*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card down to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player starting with low hand showing and going up may twist one card. Up cards cost double ante, down cards cost max bet, and for double max bet you can discard an up card and get a down card back.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Normal betting round, with the player with the high hand showing opening.
+14. Showdown, highest declared high hand and lowest declared low hand split the pot.
+15. Low hands are counting hands, ranked based on total of all cards, aces equal 1, face cards equal 10, all other cards face value.
+
+Parent: Option Alley (#139)
+
+
+## Myron's Game (#514)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|5|
+|Betting Rounds|5|
+|Max Cards Seen|10|
+|Wilds|4|
+|Source|Rec.Gambling.Poker|
+Tags: *draw, stud, fee, high-low, wilds*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one up to each player. Each player may reject the first card they are dealt each round and take the top one off the deck instead.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one up to each player. Each player may reject the first card they are dealt each round and take the top one off the deck instead.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one up to each player. Each player may reject the first card they are dealt each round and take the top one off the deck instead.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one up to each player. Each player may reject the first card they are dealt each round and take the top one off the deck instead.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist one card for max bet.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+14. Kings are wild in high hands.
+
+Parent: Option Alley (#139)
+
+
+## Pair No Pair (#515)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, stud, fee, high-low, qualifier*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card down to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist one card for max bet.
+11. Normal betting round, with the player with the high hand showing opening.
+12. The highest showing high hand and the lowest showing low hand split the pot.
+13. To win the low hand, you must have less than a pair.
+14. To win the high hand, you must have at least a pair.
+
+Parent: Option Alley (#139)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Pair No Pair II (#848)|5-6-6-8-0|draw, stud, high-low, qualifier
+
+
+## Cathy's Game (#516)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|5|
+|Max Cards Seen|9|
+|Wilds|0|
+|Source|Source misplaced|
+Tags: *draw, stud*
+### Rules:
+1. Deal one card down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal one up to each player. Once per game each player may switch the card dealt to them with the next card off the deck. This must be done before the next player is dealt a card.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal one up to each player. Once per game each player may switch the card dealt to them with the next card off the deck. This must be done before the next player is dealt a card.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one up to each player. Once per game each player may switch the card dealt to them with the next card off the deck. This must be done before the next player is dealt a card.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one up to each player. Once per game each player may switch the card dealt to them with the next card off the deck. This must be done before the next player is dealt a card.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Showdown, high hand wins.
+
+Parent: Pistol Pete (#142)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Jerry's Game (#849)|5-6-4-9-0|draw, stud
+
+
+## One Card Substitution (#538)
+Also known as: *Six Card Option II*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Source misplaced|
+Tags: *draw, stud, fee*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist one card for max bet.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+
+Parent: Three Card Substitution (#154)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Sixty Six (#864)|5-8-5-6-4|draw, stud, fee, wilds
+
+
+## Two Card Substitution (#539)
+Also known as: *52, Fifty-Two*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|7|
+|Betting Rounds|6|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Source misplaced|
+Tags: *draw, stud, fee*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist one card for double ante.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Each player may twist one card for max bet.
+13. Normal betting round, with the player with the high hand showing opening.
+14. Showdown, high hand wins.
+
+Parent: Three Card Substitution (#154)
+
+
+## English Stud III (#602)
+Also known as: *English Poker II*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, stud*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card down to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may draw one card if they wish.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+
+Parent: English Stud (#188)
 
 
 ## Phlegm in the Snatch (#745)
@@ -4278,6 +5068,300 @@ Tags: *draw, flip*
 Parent: Roll'em Out (#453)
 
 
+## Buck Shot (#821)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|4|
+|Betting Rounds|4|
+|Max Cards Seen|13|
+|Wilds|0|
+|Source|Craig O'Brien|
+Tags: *draw, stud*
+### Rules:
+1. Deal three cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal two cards down to each player.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may draw up to three cards, four if they show an ace. Everyone declares how many cards they are drawing before any cards are dealt. Cards drawn are dealt face up.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Each player starting with the dealer and going counter-clockwise may draw up to three cards, four if they show an ace. Each player declares how many cards they are drawing before cards are dealt. Cards drawn are dealt face up.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Showdown, high hand wins.
+
+Parent: Double Ought (#454)
+
+
+## Macintosh II (#822)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|4|
+|Betting Rounds|2|
+|Max Cards Seen|13|
+|Wilds|4|
+|Source|Mike Tsao|
+Tags: *draw, stud, wilds*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards, four if they show an ace. Everyone declares how many cards they are drawing before any cards are dealt. Cards drawn are dealt face up.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may draw up to three cards, four if they show an ace. Everyone declares how many cards they are drawing before any cards are dealt. Cards drawn are dealt face up.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Showdown, high hand wins.
+8. The wild rank is equal to the latest edition of the Macintosh operating system.
+
+Parent: Windows (#461)
+
+
+## Car Wash (#829)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|7|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Mike Tsao|
+Tags: *draw, stud, lowball*
+### Rules:
+1. Deal one card down to each player. Twice during the game each player may reject their dealt card and get another one.
+2. Deal one card up to each player. Twice during the game each player may reject their dealt card and get another one.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player. Twice during the game each player may reject their dealt card and get another one.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player. Twice during the game each player may reject their dealt card and get another one.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card down to each player. Twice during the game each player may reject their dealt card and get another one.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Showdown, low hand wins.
+
+Parent: Shuck'em (#473)
+
+
+## Wild Kings (#832)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|10|
+|Wilds|4|
+|Source|Poker Phil|
+Tags: *draw, pass, stud, high-low, wilds*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one up to each player. A player can pass the first card he gets each round, even it was passed to him, and get the top card off the deck instead. If a card makes it past the dealer it is discarded.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may draw one card if they wish.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+14. Low hands with wild cards automatically lose to low hands without wild cards.
+15. Kings are wild.
+
+Parent: Kings (#478)
+
+
+## Pair No Pair II (#848)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|6|
+|Max Cards Seen|8|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, stud, high-low, qualifier*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Each player may twist one card for max bet.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card up to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Deal one card down to each player.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Each player may twist one card for max bet.
+14. Normal betting round, with the player with the high hand showing opening.
+15. The highest showing high hand and the lowest showing low hand split the pot.
+16. To win the low hand, you must have less than a pair.
+17. To win the high hand, you must have at least a pair.
+
+Parent: Pair No Pair (#515)
+
+
+## Jerry's Game (#849)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|6|
+|Betting Rounds|4|
+|Max Cards Seen|9|
+|Wilds|0|
+|Source|Poker News|
+Tags: *draw, stud*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one up to each player. Once per game each player may switch the card dealt to them with the next card off the deck. This must be done before the next player is dealt a card.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one up to each player. Once per game each player may switch the card dealt to them with the next card off the deck. This must be done before the next player is dealt a card.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one up to each player. Once per game each player may switch the card dealt to them with the next card off the deck. This must be done before the next player is dealt a card.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one up to each player. Once per game each player may switch the card dealt to them with the next card off the deck. This must be done before the next player is dealt a card.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Showdown, high hand wins.
+
+Parent: Cathy's Game (#516)
+
+
+## Chili Pepper Low-Bo (#850)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|32|
+|Source|Two Plus Two Forums|
+Tags: *draw, stud, fee, wilds*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist one card for max bet.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Option Alley (#139)
+
+
+## Dog of the Nile (#851)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, stud, fee, high-low, qualifier*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist a card for max bet. If you twist an up card, you can get the new card down by flipping your hole card.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+14. To win the low hand, you must have no better than a nine high.
+
+Parent: Option Alley (#139)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Barking Dog of the Nile (#1036)|5-8-5-6-0|draw, stud, fee, qualifier
+|Mad Dog of the Nile (#1037)|5-8-5-6-32|draw, flip, stud, fee, high-low, qualifier, wilds
+|Rolling Dog of the Nile (#1038)|5-8-5-6-0|draw, flip, stud, fee, high-low, qualifier
+|Shifting Dog of the Nile (#1039)|5-8-5-6-32|draw, flip, stud, fee, high-low, qualifier, wilds
+|Spinning Dog of the Nile (#1040)|5-8-5-6-0|draw, flip, stud, fee, high-low, qualifier
+
+
+## One Three One Replace (#852)
+Also known as: *131 Replace*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|7|
+|Betting Rounds|6|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Antismite|
+Tags: *draw, stud, fee, high-low*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card down to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist one card for max bet.
+11. Normal betting round, with the player to the left of the dealer opening.
+12. Each player may twist one card for max bet.
+13. Normal betting round, with the player to the left of the dealer opening.
+14. Declare high/low simultaneously.
+15. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: One Three One (#522)
+
+
+## Sixty Six (#864)
+Also known as: *66*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|4|
+|Source|Poker.Net Glossary|
+Tags: *draw, stud, fee, wilds*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist one card for max bet.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+13. Sixes are wild.
+
+Parent: One Card Substitution (#538)
+
+
 ## Bid Double Slam (#1017)
 
 |Statistic|Value|
@@ -4410,6 +5494,156 @@ Parent: Oppression (#817)
 |Name|Serial #|Tags|
 |----|--------|----|
 |The Oppressed Get Even (#1092)|5-6-2-9-8|draw, guts, match-pot, wilds
+
+
+## Barking Dog of the Nile (#1036)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, stud, fee, qualifier*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist a card for max bet. If you twist an up card, you can get the new card down by flipping your hole card.
+11. Normal betting round, with the player with the high hand showing opening.
+12. The highest showing high hand and the lowest showing low hand split the pot.
+13. To win the low hand, you must have no better than a nine high.
+
+Parent: Dog of the Nile (#851)
+
+
+## Mad Dog of the Nile (#1037)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|32|
+|Source|Two Plus Two Forums|
+Tags: *draw, flip, stud, fee, high-low, qualifier, wilds*
+### Rules:
+1. Deal two cards down to each player.
+2. Each player flips over one down card of their choice.
+3. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+4. Deal one card up to each player.
+5. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+6. Deal one card up to each player.
+7. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+8. Deal one card up to each player.
+9. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+10. Each player may twist a card for max bet. If you twist an up card, you can get the new card down by flipping your hole card.
+11. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+12. The highest showing high hand and the lowest showing low hand split the pot.
+13. To win the low hand, you must have no better than a nine high.
+14. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Dog of the Nile (#851)
+
+
+## Rolling Dog of the Nile (#1038)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, flip, stud, fee, high-low, qualifier*
+### Rules:
+1. Deal two cards down to each player.
+2. Each player flips over one down card of their choice.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist a card for max bet. If you twist an up card, you can get the new card down by flipping your hole card.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+14. To win the low hand, you must have no better than a nine high.
+
+Parent: Dog of the Nile (#851)
+
+
+## Shifting Dog of the Nile (#1039)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|32|
+|Source|Two Plus Two Forums|
+Tags: *draw, flip, stud, fee, high-low, qualifier, wilds*
+### Rules:
+1. Deal two cards down to each player.
+2. Each player flips over one down card of their choice.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player may twist a card for max bet. If you twist an up card, you can get the new card down by flipping your hole card.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+14. To win the low hand, you must have no better than a nine high.
+15. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Dog of the Nile (#851)
+
+
+## Spinning Dog of the Nile (#1040)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|5|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, flip, stud, fee, high-low, qualifier*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+4. Deal one card up to each player.
+5. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+6. Deal one card up to each player.
+7. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+8. Deal one card up to each player.
+9. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+10. Each player may twist a card for max bet. If you twist an up card, you can get the new card down by flipping your hole card.
+11. Normal betting round, first round starts to the left of the dealer, subsequent rounds start rotate around the table.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+14. To win the low hand, you must have no better than a nine high.
+
+Parent: Dog of the Nile (#851)
 
 
 ## The Oppressed Get Even (#1092)

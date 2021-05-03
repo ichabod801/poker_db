@@ -20,6 +20,31 @@ Tags: *draw*
 Parent: Five Card Draw (#1)
 
 
+## 7/27 with Replace (#379)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|202|
+|Players|98|
+|Betting Rounds|202|
+|Max Cards Seen|202|
+|Wilds|0|
+|Source|Ultimate Bet|
+Tags: *draw, stud, high-low, odd-ranks*
+### Rules:
+1. Deal one card down to each player.
+2. Deal one card up to each player.
+3. Each player may draw one card if they wish.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal each player one card face up, if they want it.
+6. Repeat the last two actions until no one wants another card.
+7. Normal betting round, with the player with the high hand showing opening.
+8. The highest showing high hand and the lowest showing low hand split the pot.
+9. Aces are 1 or 11, face cards are 1/2, all other cards are face value. The low hand is closest to 7, the high hand is closest to 27. Ties are broken by inside, outside, high, or low as dealer calls or house rules.
+
+Parent: 7/27 (#8)
+
+
 ## Lamarckian Poker (#739)
 
 |Statistic|Value|

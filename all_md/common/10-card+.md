@@ -467,6 +467,29 @@ Parent: Lame Brain (#314)
 |The Mushroom (#995)|17-8-4-17-0|common
 
 
+## Lamarckian Poker (#739)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|300|
+|Players|12|
+|Betting Rounds|98|
+|Max Cards Seen|300|
+|Wilds|0|
+|Source|Cheapass Games|
+Tags: *common, draw, flip, table*
+### Rules:
+1. Deal four cards down to each player.
+2. Deal four cards face up to the table.
+3. Each player flips over one down card of their choice.
+4. Starting with the highest card showing and going in descending order, each player puts all table cards matching rank or suit with their up card into their hand as down cards, then discards their up card to the table.
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Repeat the last four actions until the deck is out of cards.
+7. Showdown, high hand wins.
+
+Parent: Lame Brain (#314)
+
+
 ## Little Opposite (#740)
 
 |Statistic|Value|
@@ -567,6 +590,38 @@ Tags: *common*
 15. High declared high hand and lowest declared low hand split the pot. Hands declared as both must win both to win anything.
 
 Parent: Lame Brain (#314)
+
+
+## Cincinnati II (#935)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|10|
+|Players|5|
+|Betting Rounds|5|
+|Max Cards Seen|14|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *common, draw*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal three common cards face up to the table.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Deal one common card face up to the table.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. Showdown, high hand wins.
+
+Parent: Padre (#699)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Lame Brain Pete III (#1058)|10-5-5-14-4|common, draw, wilds
 
 
 ## Ped (#938)
@@ -714,6 +769,36 @@ Parent: Omaha High/Low (#704)
 |Name|Serial #|Tags|
 |----|--------|----|
 |One Line Lebanese (#1065)|10-9-6-10-0|common, high-low
+
+
+## Starship Troopers (#954)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|10|
+|Players|4|
+|Betting Rounds|5|
+|Max Cards Seen|15|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *common, draw, high-low, qualifier*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to five cards.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal three common cards face up to the table.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Deal one common card face up to the table.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. The highest showing high hand and the lowest showing low hand split the pot.
+12. You must use exactly two of your down cards in your final hand, but you can use a different two for your high hand and your low hand.
+13. Straights and flushes are ignored in low hands. The lowest possible hand is A-2-3-4-5, known as the Wheel or the Bicycle.
+14. You can't win the low hand if you have better than an high card with an eight.
+
+Parent: Omaha High/Low (#704)
 
 
 ## Pendulum (#969)
@@ -1295,6 +1380,34 @@ Parent: Twin Beds (#743)
 |Name|Serial #|Tags|
 |----|--------|----|
 |Grand Maw (#1087)|10-8-11-14-0|common, qualifier
+
+
+## Lame Brain Pete III (#1058)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|10|
+|Players|5|
+|Betting Rounds|5|
+|Max Cards Seen|14|
+|Wilds|4|
+|Source|Two Plus Two Forums|
+Tags: *common, draw, wilds*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal three common cards face up to the table.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Deal one common card face up to the table.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. Showdown, high hand wins.
+12. The low common card is wild, as are all cards of the same rank.
+
+Parent: Cincinnati II (#935)
 
 
 ## One Line Lebanese (#1065)

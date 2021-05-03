@@ -60,6 +60,70 @@ Parent: Root Game (#0)
 |Take One Down, Pass it Around (#412)|7-7-7-28-0|pass
 
 
+## Nine Card Wild Discard II (#135)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|5|
+|Betting Rounds|6|
+|Max Cards Seen|9|
+|Wilds|0|
+|Source|Jon Shemitz|
+Tags: *flip, stud*
+### Rules:
+1. Deal three cards face down to each player.
+2. Each player discards one card.
+3. Each player flips over one down card of their choice.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal two cards down to each player.
+6. Each player discards one card.
+7. Each player flips over one down card of their choice.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal two cards down to each player.
+10. Each player flips over one down card of their choice.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Deal one card up to each player.
+13. Normal betting round, with the player with the high hand showing opening.
+14. Deal one card down to each player.
+15. Normal betting round, with the player with the high hand showing opening.
+16. Each player must discard two cards of their choice.
+17. Normal betting round, with the player with the high hand showing opening.
+18. Showdown, high hand wins.
+
+Parent: Five Card Stud (#2)
+
+
+## Ace in the Hole (#161)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|4|
+|Source|Poker Phil|
+Tags: *flip, stud, wilds*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card down to each player.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Each player in turn may flip over a face down ace if they have one.
+13. Showdown, high hand wins.
+14. The last player to flip over a face down ace chooses what rank is wild (when they flip it over).
+
+Parent: Seven Card Stud (#3)
+
+
 ## Beat It (#168)
 Also known as: *Beat Your Neighbor II, Mexican Sweat III, No Lookie, No Peeky II, Rollover, Seven Card Sweat*.
 
@@ -100,6 +164,146 @@ Parent: Seven Card Stud (#3)
 |Seven Card Regrets (#565)|7-7-6-7-0|flip, no-peek
 |Six Sixty Six II (#566)|7-7-300-7-0|flip, fee-fold, must-fold, no-peek
 |Spanish Fly (#567)|7-7-300-7-8|flip, fee, must-fold, no-peek, table, wilds
+
+
+## Flip Seven (#191)
+Also known as: *Flip, New Guinea Stud, Seven Card Flip, You Roll Two*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Source misplaced|
+Tags: *flip, stud*
+### Rules:
+1. Deal four cards down to each player.
+2. Each player simultaneously flips two down cards of their choice face up.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card down to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Showdown, high hand wins.
+
+Parent: Seven Card Stud (#3)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|High Heart (#603)|7-7-4-7-0|flip, stud, split-card
+|Trio Flip (#604)|7-7-4-7-4|flip, stud, wilds
+
+
+## Pick Up and Roll (#225)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|5|
+|Betting Rounds|9|
+|Max Cards Seen|9|
+|Wilds|0|
+|Source|Source misplaced|
+Tags: *draw, flip, stud*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card down to each player.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Everyone flips all of their cards face down.
+13. Each player may draw up to two cards.
+14. Each player discards two down cards.
+15. Each player puts their cards in order in a stack face down on the table. The order of the stack may not change once made.
+16. Each player simultaneously flips over the top card of their stack.
+17. Normal betting round, with the player with the high hand showing opening.
+18. Each player simultaneously flips over the top card of their stack.
+19. Normal betting round, with the player with the high hand showing opening.
+20. Each player simultaneously flips over the top card of their stack.
+21. Normal betting round, with the player with the high hand showing opening.
+22. Each player simultaneously flips over the top card of their stack.
+23. Normal betting round, with the player with the high hand showing opening.
+24. Showdown, high hand wins.
+
+Parent: Seven Card Stud (#3)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Bonecrusher (#651)|7-7-8-7-0|flip, stud
+
+
+## Psycho (#227)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|4|
+|Betting Rounds|5|
+|Max Cards Seen|11|
+|Wilds|0|
+|Source|Public Domain|
+Tags: *draw, flip, stud*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player simultaneously flips three cards of their choice face up.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card down to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Showdown, high hand wins.
+
+Parent: Seven Card Stud (#3)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Drawback (#652)|7-6-4-11-0|draw, stud
+|Fight Club (#653)|7-4-5-11-4|draw, flip, stud, high-low, wilds
+|Five to Seven Switch (#654)|7-5-6-10-0|draw, flip, stud
+|Psycho Pepper (#655)|7-4-5-11-12|draw, flip, stud, wilds
+|Super Stud (#656)|7-5-5-9-0|flip, stud, high-low
+
+
+## Blind Man's Bluff (#270)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|23|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|My Poker Home Game|
+Tags: *common, flip, no-peek*
+### Rules:
+1. Deal two cards face down to each player. No player may look at these cards.
+2. Everyone shows their no-peek cards to everyone else.
+3. Normal betting round, with the player to the left of the dealer opening.
+4. Deal three common cards face up to the table.
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Deal one common card face up to the table.
+7. Normal betting round, with the player to the left of the dealer opening.
+8. Deal one common card face up to the table.
+9. Normal betting round, with the player to the left of the dealer opening.
+10. Showdown, high hand wins.
+
+Parent: Texas Hold'em (#4)
 
 
 ## Anaconda 33 (#388)
@@ -652,6 +856,38 @@ Parent: Anaconda (#10)
 |Shift (#802)|5-10-2-9-0|pass
 
 
+## Seven Card Draw (#409)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|4|
+|Betting Rounds|6|
+|Max Cards Seen|14|
+|Wilds|0|
+|Source|Home Poker Cookbook|
+Tags: *draw, flip, pass, high-low*
+### Rules:
+1. Deal seven cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player passes three cards to their left.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may draw up to three cards (four if they show an ace).
+6. Each player discards two down cards.
+7. Each player flips over one down card of their choice.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Each player flips over one down card of their choice.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Each player flips over one down card of their choice.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Each player flips over one down card of their choice.
+14. Normal betting round, with the player with the high hand showing opening.
+15. Declare high/low simultaneously.
+16. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Anaconda (#10)
+
+
 ## Snake Eyes (#410)
 
 |Statistic|Value|
@@ -714,6 +950,38 @@ Tags: *flip, pass, high-low*
 15. Showdown, highest declared high hand and lowest declared low hand split the pot.
 
 Parent: Anaconda (#10)
+
+
+## Five and Two II (#425)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|5|
+|Betting Rounds|7|
+|Max Cards Seen|11|
+|Wilds|0|
+|Source|Graham's Card Club|
+Tags: *common, draw, flip, high-low*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal two common cards face up to the table.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may draw up to three cards (four if they show an ace).
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Each player flips over one down card of their choice.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Each player flips over one down card of their choice.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Each player flips over one down card of their choice.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Each player flips over one down card of their choice.
+14. Normal betting round, with the player with the high hand showing opening.
+15. The highest showing high hand and the lowest showing low hand split the pot.
+16. Your final hand may consist of your down cards, or all of the commons and some of your down cards.
+
+Parent: Five and Two (#37)
 
 
 ## High/Low Jim (#451)
@@ -1205,6 +1473,201 @@ Tags: *flip, fee, must-fold, no-peek, table, wilds*
 Parent: Beat It (#168)
 
 
+## Double Mariah (#590)
+Also known as: *Curacao Stud*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|2|
+|Source|Joker Poker|
+Tags: *flip, stud, jokers, limited, qualifier*
+### Rules:
+1. Use a normal 52 card deck with two jokers added.
+2. Deal seven cards face down to each player.
+3. Each player splits their cards into a hand of five cards and a hand two cards. The two card hand must contain a down card and be worse than the five card hand.
+4. Each players simultaneously flips the top card of their five card hand.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Each players simultaneously flips the top card of their five card hand.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Each players simultaneously flips the top card of their five card hand.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each players simultaneously flips the top card of their five card hand.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Each players simultaneously flips the top card of their two card hand.
+13. Normal betting round, with the player with the high hand showing opening.
+14. Showdown, high hand wins.
+15. You must win the five card hand and the two card hand to win the pot.
+16. If no one beats the qualifier, redeal for all.
+17. The jokers are bugs. Bugs can be used to complete a straight or a flush, or as an ace.
+
+Parent: Cowpie (#179)
+
+
+## High Heart (#603)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Boards IE|
+Tags: *flip, stud, split-card*
+### Rules:
+1. Deal four cards down to each player.
+2. Each player simultaneously flips two down cards of their choice face up.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card down to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Showdown, high hand splits the pot with the split-card
+11. The split-card is the high face-down heart.
+
+Parent: Flip Seven (#191)
+
+
+## Trio Flip (#604)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|4|
+|Source|Graham's Card Club|
+Tags: *flip, stud, wilds*
+### Rules:
+1. Deal four cards down to each player.
+2. Each player simultaneously flips two down cards of their choice face up.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card down to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Showdown, high hand wins.
+11. If a player ever has a natural three of a kind showing, they may declare any rank to be wild.
+
+Parent: Flip Seven (#191)
+
+
+## Kentrell (#620)
+Also known as: *48, Forty Eight*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|6|
+|Betting Rounds|5|
+|Max Cards Seen|8|
+|Wilds|0|
+|Source|Wikipedia|
+Tags: *flip, stud, high-low, qualifier*
+### Rules:
+1. Deal four cards down to each player.
+2. Each player discards one card.
+3. Each player flips over one down card of their choice.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal one card up to each player.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card up to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Deal one card down to each player.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Declare high/low simultaneously.
+14. Showdown, highest declared high hand and lowest declared low hand split the pot.
+15. Straights and flushes are ignored in low hands. The lowest possible hand is A-2-3-4-5, known as the Wheel or the Bicycle.
+16. You can't win the low hand if you have better than an high card with an eight.
+
+Parent: High/Low 8 or Better (#201)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Boston (#907)|7-6-5-8-0|flip, stud
+|Tahoe Pitch and Roll (#908)|7-6-3-8-0|flip, stud
+
+
+## Chicago Piano (#627)
+Also known as: *Dakota*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|28|
+|Source|Hoyle|
+Tags: *flip, stud, high-low, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Each player flips over one down card of their choice.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card down to each player.
+5. Each player flips over one down card of their choice.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card down to each player.
+8. Each player flips over one down card of their choice.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card down to each player.
+11. Each player flips over one down card of their choice.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Deal one card down to each player.
+14. Normal betting round, with the player with the high hand showing opening.
+15. Declare high/low simultaneously.
+16. Showdown, highest declared high hand and lowest declared low hand split the pot.
+17. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Low in the Hole (#211)
+
+
+## Low in the Hole II (#630)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|28|
+|Source|Oh, to be|
+Tags: *flip, stud, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Each player flips over one down card of their choice.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one down to each player, they may get it up if they want.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+13. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Low in the Hole (#211)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Heritage Classic (#913)|7-7-5-7-28|flip, stud, fee, wilds
+
+
 ## Roll Your Own (#633)
 Also known as: *Ian's Low Hole, Mexican Stud III*.
 
@@ -1243,6 +1706,302 @@ Parent: Low in the Hole (#211)
 |Hi/Lo Cherry'O (#914)|7-7-5-7-28|flip, stud, high-low, wilds
 |Roll Your Own Buy Up (#915)|7-7-5-7-28|flip, stud, fee, wilds
 |Shawnahoma (#916)|7-7-4-7-0|flip, high-low
+
+
+## Bonecrusher (#651)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|8|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Rec.Gambling.Poker|
+Tags: *flip, stud*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card down to each player.
+11. Everyone flips all of their cards face down.
+12. Each player discards two down cards.
+13. Each player puts their cards in order in a stack face down on the table. The order of the stack may not change once made.
+14. Each player simultaneously flips over the top card of their stack.
+15. Normal betting round, with the player with the high hand showing opening.
+16. Each player simultaneously flips over the top card of their stack.
+17. Normal betting round, with the player with the high hand showing opening.
+18. Each player simultaneously flips over the top card of their stack.
+19. Normal betting round, with the player with the high hand showing opening.
+20. Each player simultaneously flips over the top card of their stack.
+21. Normal betting round, with the player with the high hand showing opening.
+22. Showdown, high hand wins.
+
+Parent: Pick Up and Roll (#225)
+
+
+## Fight Club (#653)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|4|
+|Betting Rounds|5|
+|Max Cards Seen|11|
+|Wilds|4|
+|Source|Craig O'Brien|
+Tags: *draw, flip, stud, high-low, wilds*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player simultaneously flips three cards of their choice face up.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card down to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Declare high/low simultaneously.
+12. Showdown, highest declared high hand and lowest declared low hand split the pot.
+13. Jacks are wild. If a queen is dealt or flipped face up, jacks are not wild and kings are. Each time a queen comes up, the wild changes back and forth between jacks and kings.
+
+Parent: Psycho (#227)
+
+
+## Five to Seven Switch (#654)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|5|
+|Betting Rounds|6|
+|Max Cards Seen|10|
+|Wilds|0|
+|Source|Poker.Net|
+Tags: *draw, flip, stud*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards, but they may not look at the cards they are dealt.
+4. Any player who drew less than three cards must put enough cards on top of their stack of cards received until it has three cards.
+5. Deal one card up to each player.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Each player simultaneously flips over the top card of their stack.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Each player simultaneously flips over the top card of their stack.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Each player simultaneously flips over the top card of their stack.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Deal one card down to each player.
+14. Normal betting round, with the player with the high hand showing opening.
+15. Showdown, high hand wins.
+
+Parent: Psycho (#227)
+
+
+## Psycho Pepper (#655)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|4|
+|Betting Rounds|5|
+|Max Cards Seen|11|
+|Wilds|12|
+|Source|Source misplaced|
+Tags: *draw, flip, stud, wilds*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player simultaneously flips three cards of their choice face up.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card down to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Showdown, high hand wins.
+12. Tens are wild.
+13. Twos are wild.
+14. Fours are wild.
+
+Parent: Psycho (#227)
+
+
+## Super Stud (#656)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|5|
+|Betting Rounds|5|
+|Max Cards Seen|9|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *flip, stud, high-low*
+### Rules:
+1. Deal five cards face down to each player.
+2. Each player discards two down cards.
+3. Each player flips over one down card of their choice.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal one card up to each player.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card up to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Deal one card down to each player.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Declare high/low simultaneously.
+14. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Psycho (#227)
+
+
+## Big Sol (#665)
+Also known as: *Snookie, TNT*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|9|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Hoyle|
+Tags: *flip, stud, high-low*
+### Rules:
+1. Deal three cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal one card down to each player.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal one card down to each player.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Deal one card down to each player.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Deal one card down to each player.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. Each player discards two down cards.
+12. Each player puts their cards in order in a stack face down on the table. The order of the stack may not change once made.
+13. Each player simultaneously flips over the top card of their stack.
+14. Normal betting round, with the player with the high hand showing opening.
+15. Each player simultaneously flips over the top card of their stack.
+16. Normal betting round, with the player with the high hand showing opening.
+17. Each player simultaneously flips over the top card of their stack.
+18. Normal betting round, with the player with the high hand showing opening.
+19. Each player simultaneously flips over the top card of their stack.
+20. Normal betting round, with the player with the high hand showing opening.
+21. Declare high/low simultaneously.
+22. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Seven Stud High/Low (#243)
+
+
+## Chit Game (#676)
+Also known as: *Exchange*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|6|
+|Betting Rounds|8|
+|Max Cards Seen|7|
+|Wilds|4|
+|Source|Graham's Card Club|
+Tags: *flip, stud, fee, table, wilds*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal one card face up to the table.
+3. Each player may take the table card or pay max bet to get one dealt up to them from the deck. If they take the table card, replace it.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Each player may take the table card or pay max bet to get one dealt up to them from the deck. If they take the table card, replace it.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Each player may take the table card or pay max bet to get one dealt up to them from the deck. If they take the table card, replace it.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Each player may take the table card or pay max bet to get one dealt up to them from the deck. If they take the table card, replace it.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Deal one card down to each player.
+12. Everyone flips all of their cards face down.
+13. Each player discards two down cards.
+14. Each player puts their cards in order in a stack face down on the table. The order of the stack may not change once made.
+15. Each player simultaneously flips over the top card of their stack.
+16. Normal betting round, with the player with the high hand showing opening.
+17. Each player simultaneously flips over the top card of their stack.
+18. Normal betting round, with the player with the high hand showing opening.
+19. Each player simultaneously flips over the top card of their stack.
+20. Normal betting round, with the player with the high hand showing opening.
+21. Each player simultaneously flips over the top card of their stack.
+22. Normal betting round, with the player with the high hand showing opening.
+23. Showdown, high hand wins.
+24. Twos are wild.
+25. If a player has a second chance to take the same table card, discard it and replace it instead.
+
+Parent: The Price is Right (#258)
+
+
+## Whitewater Hold'em (#715)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|16|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Rec.Gambling.Poker|
+Tags: *common, flip*
+### Rules:
+1. Deal two cards down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal three common cards face up to the table.
+4. Each player flips over one down card of their choice.
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Deal one common card face up to the table.
+7. Normal betting round, with the player to the left of the dealer opening.
+8. Deal one card down to each player.
+9. Normal betting round, with the player to the left of the dealer opening.
+10. Showdown, high hand wins.
+
+Parent: River Down Hold'em (#294)
+
+
+## Anaconda 25 (#792)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|9|
+|Wilds|0|
+|Source|Mike Tsao|
+Tags: *draw, flip, pass, fee, high-low*
+### Rules:
+1. Deal seven cards face down to each player.
+2. Each player passes two cards to their left and one card to their right. You may pay five times max bet to pass one card left and one card right.
+3. Each player must discard until they have five cards left.
+4. Each player puts their cards in order in a stack face down on the table. The order of the stack may not change once made.
+5. Each player may buy an up card for max bet. They can reject or keep the card, but if they keep the card they must discard the bottom card from their stack.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Each player simultaneously flips over the top card of their stack.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Each player simultaneously flips over the top card of their stack.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Each player simultaneously flips over the top card of their stack.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Declare high/low simultaneously.
+14. Normal betting round, with the player with the high hand showing opening.
+15. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Anaconda II (#389)
 
 
 ## Orchids (#793)
@@ -1383,6 +2142,112 @@ Tags: *flip, pass, high-low, wilds*
 Parent: Howdy Doody (#399)
 
 
+## Five Seven Nine (#815)
+Also known as: *5/7/9*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|3|
+|Betting Rounds|7|
+|Max Cards Seen|15|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, flip*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may discard up to three cards, four if they show an ace, and draw back one more card than they discarded.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may discard up to three cards, four if they show an ace, and draw back one more card than they discarded.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Each player discards two down cards.
+8. Each player puts their cards in order in a stack face down on the table. The order of the stack may not change once made.
+9. Each player simultaneously flips over the top card of their stack.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Each player simultaneously flips over the top card of their stack.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Each player simultaneously flips over the top card of their stack.
+14. Normal betting round, with the player with the high hand showing opening.
+15. Each player simultaneously flips over the top card of their stack.
+16. Normal betting round, with the player with the high hand showing opening.
+17. Declare high/low simultaneously.
+18. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Roll'em Out (#453)
+
+
+## Nine Card Wild Discard (#831)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|5|
+|Betting Rounds|5|
+|Max Cards Seen|9|
+|Wilds|20|
+|Source|The Joker King|
+Tags: *flip, stud, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Each player discards one card.
+3. Each player flips one of the cards from the last round of dealing.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal two cards down to each player.
+6. Each player discards one card.
+7. Each player flips one of the cards from the last round of dealing.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal two cards down to each player.
+10. Each player flips one of the cards from the last round of dealing.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Deal one card up to each player.
+13. Normal betting round, with the player with the high hand showing opening.
+14. Deal one card down to each player.
+15. Normal betting round, with the player with the high hand showing opening.
+16. Showdown, high hand wins.
+17. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Machine Gun Stud (#475)
+
+
+## Indianapolis (#838)
+Also known as: *Speedway*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|6|
+|Max Cards Seen|8|
+|Wilds|0|
+|Source|Tom Jolly|
+Tags: *draw, flip, stud, fee, high-low*
+### Rules:
+1. Deal seven cards face down to each player.
+2. Each player discards two down cards.
+3. Each player puts their cards in order in a stack face down on the table. The order of the stack may not change once made.
+4. Each player simultaneously flips over the top card of their stack.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Each player simultaneously flips over the top card of their stack.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Each player simultaneously flips over the top card of their stack.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Each player simultaneously flips over the top card of their stack.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Each player simultaneously flips over the top card of their stack.
+13. Normal betting round, with the player with the high hand showing opening.
+14. Each player simultaneously flips over the top card of their stack.
+15. Normal betting round, with the player with the high hand showing opening.
+16. Each player may twist one card for max bet.
+17. Normal betting round, with the player with the high hand showing opening.
+18. Declare in/out simultaneously.
+19. Normal betting round, with the player with the high hand showing opening.
+20. Declare high/low simultaneously.
+21. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Grodnikonda (#493)
+
+
 ## Seven Card Reverse (#843)
 
 |Statistic|Value|
@@ -1438,6 +2303,33 @@ Tags: *flip, fee-fold, jokers*
 11. Showdown, high hand wins.
 
 Parent: Shootout (#510)
+
+
+## Roll'em (#854)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|4|
+|Max Cards Seen|22|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *common, flip, high-low*
+### Rules:
+1. Deal seven cards face down to each player.
+2. Each player splits their cards into a  stack of four cards and a stack of three cards. You may not change the order of the three card stack once betting starts.
+3. Normal betting round, with the player to the left of the dealer opening.
+4. Each player simultaneously flips the top card of their three card stack.
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Each player simultaneously flips the top card of their three card stack.
+7. Normal betting round, with the player to the left of the dealer opening.
+8. Each player simultaneously flips the top card of their three card stack.
+9. Normal betting round, with the player to the left of the dealer opening.
+10. Showdown, high hand wins.
+11. Your hand can use two of your down cards, and any one other player's three up cards. Your high and low hand may use different cards.
+
+Parent: Love Canal (#528)
 
 
 ## Baseball III (#873)
@@ -1551,6 +2443,34 @@ Tags: *flip, must-fold, no-peek, odd-deck, table, wilds*
 Parent: Midnight Baseball (#561)
 
 
+## Twilight Baseball (#877)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|6|
+|Betting Rounds|300|
+|Max Cards Seen|11|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *flip, stud, fee, must-fold, no-peek, table, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Deal four cards down to each player. No player may look at these cards.
+3. Arrange your down and no peek cards in a stack, but do not look at your no peek cards.
+4. Deal one card face up to the table.
+5. The next player in betting order flips over cards one at a time until they have the best hand showing (counting the first table card as a hand).
+6. If the player who just flipped cards didn't fold, normal betting round starting with that player.
+7. Repeat the last two actions until everyone still in has all of their cards face up.
+8. Showdown, high hand wins.
+9. Threes are wild.
+10. Nines are wild.
+11. If you flip all of your cards and cannot beat the best hand showing, you must fold.
+12. If any player ever flips a four face up, they may buy another down card for max bet. In the case of multiple fours in the same round, start with the player to the left of the deal and go around.
+
+Parent: Midnight Baseball (#561)
+
+
 ## Suicide (#885)
 
 |Statistic|Value|
@@ -1582,6 +2502,151 @@ Tags: *flip, fee-fold, wilds*
 17. If a player is ever dealt a face up pair, they must match the pot or fold.
 
 Parent: Murder (#582)
+
+
+## Boston (#907)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|6|
+|Betting Rounds|5|
+|Max Cards Seen|8|
+|Wilds|0|
+|Source|Sweet Foca|
+Tags: *flip, stud*
+### Rules:
+1. Deal four cards down to each player.
+2. Each player discards one card.
+3. Each player flips over one down card of their choice.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal one card up to each player.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one card up to each player.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Deal one card down to each player.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Showdown, high hand wins.
+
+Parent: Kentrell (#620)
+
+
+## Tahoe Pitch and Roll (#908)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|6|
+|Betting Rounds|3|
+|Max Cards Seen|8|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *flip, stud*
+### Rules:
+1. Deal four cards down to each player.
+2. Each player discards one card.
+3. Each player flips over one down card of their choice.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal two cards up to each player
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal two cards up to each player
+8. Normal betting round, with the player with the high hand showing opening.
+9. Showdown, high hand wins.
+
+Parent: Kentrell (#620)
+
+
+## Heritage Classic (#913)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|28|
+|Source|Sweet Foca|
+Tags: *flip, stud, fee, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Each player flips over one down card of their choice.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal each player one face down card. They may pay max bet to get it face up instead
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+13. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Low in the Hole II (#630)
+
+
+## Hi/Lo Cherry'O (#914)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|28|
+|Source|Poker Tips|
+Tags: *flip, stud, high-low, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Each player flips over one down card of their choice.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one down to each player, they may get it up if they want.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+14. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Roll Your Own (#633)
+
+
+## Roll Your Own Buy Up (#915)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|28|
+|Source|Brian O'Neil's Poker Page|
+Tags: *flip, stud, fee, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Each player flips over one down card of their choice.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card down to each player.
+5. Each player flips over one down card of their choice.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one card down to each player.
+8. Each player flips over one down card of their choice.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card down to each player.
+11. Each player flips over one down card of their choice.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Deal each player one face down card. They may pay max bet to get it face up instead
+14. Normal betting round, with the player with the high hand showing opening.
+15. Showdown, high hand wins.
+16. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Roll Your Own (#633)
 
 
 ## Shawnahoma (#916)

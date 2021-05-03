@@ -69,6 +69,94 @@ Parent: Root Game (#0)
 |Wild Mango (#309)|7-16-4-7-0|common
 
 
+## Five and Two (#37)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|5|
+|Betting Rounds|4|
+|Max Cards Seen|11|
+|Wilds|0|
+|Source|John McLeod|
+Tags: *common, draw*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Each player may draw up to three cards (four if they show an ace).
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal one common card face up to the table.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Deal one common card face up to the table.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Showdown, high hand wins.
+10. Your final hand may consist of your down cards, or all of the commons and some of your down cards.
+
+Parent: Five Card Draw (#1)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Five and Two II (#425)|7-5-7-11-0|common, draw, flip, high-low
+
+
+## Floater (#193)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *common, stud*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one common card face up to the table.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card down to each player.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+
+Parent: Seven Card Stud (#3)
+
+
+## Spit for Eight (#253)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|8|
+|Betting Rounds|5|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Graham's Card Club|
+Tags: *common, stud, wilds*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one card up to each player.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one card up to each player.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one card up to each player.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one common card face up to the table.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+13. The last common card flipped is wild, as are all other cards of the same rank.
+
+Parent: Seven Card Stud (#3)
+
+
 ## Austin Hold'em (#269)
 
 |Statistic|Value|
@@ -352,6 +440,38 @@ Parent: Texas Hold'em (#4)
 |Texas Reach Around (#690)|7-16-6-7-52|common, stud, wilds
 
 
+## Hollywood Hold'em (#281)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|15|
+|Betting Rounds|5|
+|Max Cards Seen|8|
+|Wilds|0|
+|Source|Invented Poker Variations|
+Tags: *common, draw*
+### Rules:
+1. Deal two cards down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal three common cards face up to the table.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may twist one card for max bet.
+6. If any player twisted, there is an additional betting round starting with the player to the dealer's left.
+7. Deal one common card face up to the table.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. Showdown, high hand wins.
+
+Parent: Texas Hold'em (#4)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Oklahoma Sold'em (#691)|7-7-5-11-0|common, draw
+
+
 ## Hollywood Park Hold'em (#282)
 
 |Statistic|Value|
@@ -546,6 +666,39 @@ Tags: *common*
 Parent: Texas Hold'em (#4)
 
 
+## Oxford Stud (#290)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|12|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Wikipedia|
+Tags: *common, stud, high-low*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal one card up to each player.
+3. Normal betting round starting with the player with the lowest hand showing.
+4. Deal two common cards face up to the table.
+5. Normal betting round starting with the player with the lowest hand showing.
+6. Deal one card up to each player.
+7. Normal betting round starting with the player with the lowest hand showing.
+8. Deal one common card face up to the table.
+9. Normal betting round starting with the player with the lowest hand showing.
+10. Declare high/low simultaneously.
+11. Showdown, highest declared high hand and lowest declared low hand split the pot.
+
+Parent: Texas Hold'em (#4)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Draw to Five (#711)|7-9-3-8-0|common, draw, stud, high-low, qualifier
+|Shanghai (#712)|7-7-4-7-0|common, stud, odd-deck
+
+
 ## Party Girl Hold'em (#291)
 
 |Statistic|Value|
@@ -694,6 +847,32 @@ Parent: Texas Hold'em (#4)
 |Southern Duece Hold'em (#716)|7-4-5-7-4|common, wilds
 
 
+## Seven Stud Hold'em (#296)
+Also known as: *Stud'em*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|12|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *common, stud*
+### Rules:
+1. Deal two cards down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal three common cards face up to the table.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal one card up to each player.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Deal one card up to each player.
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Showdown, high hand wins.
+
+Parent: Texas Hold'em (#4)
+
+
 ## Sows'em Hold'em (#297)
 
 |Statistic|Value|
@@ -775,6 +954,34 @@ Tags: *common, fee*
 Parent: Texas Hold'em (#4)
 
 
+## Texas Two-Step (#304)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|5|
+|Betting Rounds|4|
+|Max Cards Seen|13|
+|Wilds|0|
+|Source|Texas Hold'em St.|
+Tags: *common, draw, fee*
+### Rules:
+1. Deal two cards down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal three common cards face up to the table.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may twist up to two cards for an ante each.
+6. Deal one common card face up to the table.
+7. Normal betting round, with the player to the left of the dealer opening.
+8. Each player may twist up to two cards for double ante each.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. Each player may twist up to two cards for max bet each.
+12. Showdown, high hand wins.
+
+Parent: Texas Hold'em (#4)
+
+
 ## Turbo Hold'em (#308)
 
 |Statistic|Value|
@@ -845,6 +1052,64 @@ Tags: *common, guts*
 6. If the deck runs out of cards, reshuffle the discards.
 
 Parent: Five Card Guts (#7)
+
+
+## Five and Two II (#425)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|5|
+|Betting Rounds|7|
+|Max Cards Seen|11|
+|Wilds|0|
+|Source|Graham's Card Club|
+Tags: *common, draw, flip, high-low*
+### Rules:
+1. Deal five cards face down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal two common cards face up to the table.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Each player may draw up to three cards (four if they show an ace).
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Each player flips over one down card of their choice.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Each player flips over one down card of their choice.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Each player flips over one down card of their choice.
+12. Normal betting round, with the player with the high hand showing opening.
+13. Each player flips over one down card of their choice.
+14. Normal betting round, with the player with the high hand showing opening.
+15. The highest showing high hand and the lowest showing low hand split the pot.
+16. Your final hand may consist of your down cards, or all of the commons and some of your down cards.
+
+Parent: Five and Two (#37)
+
+
+## Bama Stud (#639)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|10|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *common, stud*
+### Rules:
+1. Deal two cards down to each player.
+2. Deal one card up to each player.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal two cards up to each player
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal one common card face up to the table.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one common card face up to the table.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Showdown, high hand wins.
+
+Parent: Mississippi Stud (#218)
 
 
 ## Psychotic Chowaha (#686)
@@ -960,6 +1225,65 @@ Tags: *common*
 13. Showdown, high hand wins.
 
 Parent: Hold Me (#280)
+
+
+## Texas Reach Around (#690)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|16|
+|Betting Rounds|6|
+|Max Cards Seen|7|
+|Wilds|52|
+|Source|Invented Poker Variations|
+Tags: *common, stud, wilds*
+### Rules:
+1. Deal two cards down to each player.
+2. Normal betting round, with the player to the left of the dealer opening.
+3. Deal one common card face up to the table.
+4. Normal betting round, with the player to the left of the dealer opening.
+5. Deal one common card face up to the table.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Deal each player one face down card. They may pay max bet to get it face up instead
+8. Normal betting round, with the player to the left of the dealer opening.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. Deal one common card face up to the table.
+12. Normal betting round, with the player to the left of the dealer opening.
+13. Showdown, high hand wins.
+14. Your low hole card is wild for you, as are all cards of the same rank.
+
+Parent: Hold Me (#280)
+
+
+## Oklahoma Sold'em (#691)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|11|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *common, draw*
+### Rules:
+1. Deal two cards down to each player.
+2. Each player may twist exactly two cards for double ante.
+3. Normal betting round, with the player to the left of the dealer opening.
+4. Deal three common cards face up to the table.
+5. Each player may twist two cards for double max bet or one card for max bet.
+6. Normal betting round, with the player to the left of the dealer opening.
+7. Each player may twist one card for max bet.
+8. If any player twisted, there is an additional betting round starting with the player to the dealer's left.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player to the left of the dealer opening.
+11. Deal one common card face up to the table.
+12. Normal betting round, with the player to the left of the dealer opening.
+13. Showdown, high hand wins.
+
+Parent: Hollywood Hold'em (#281)
 
 
 ## New Zealand (#692)
@@ -1081,6 +1405,69 @@ Parent: Omaha Hold'em (#287)
 |Jamaican Irish Pineapple (#932)|7-9-4-10-0|common
 |Pitch Two After the Flop (#933)|8-9-4-10-0|common
 |Psychotic Pineapple II (#934)|7-11-4-9-0|common
+
+
+## Draw to Five (#711)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|9|
+|Betting Rounds|3|
+|Max Cards Seen|8|
+|Wilds|0|
+|Source|Rec.Gambling.Poker|
+Tags: *common, draw, stud, high-low, qualifier*
+### Rules:
+1. Deal three cards face down to each player.
+2. Deal one card up to each player.
+3. Normal betting round starting with the player with the lowest hand showing.
+4. Deal three common cards face up to the table.
+5. Normal betting round starting with the player with the lowest hand showing.
+6. Deal one card up to each player.
+7. Each player may draw one card, but only if they do it immediately after getting their last up card.
+8. Normal betting round starting with the player with the lowest hand showing.
+9. Declare high/low simultaneously.
+10. Showdown, highest declared high hand and lowest declared low hand split the pot.
+11. Straights and flushes are ignored in low hands. The lowest possible hand is A-2-3-4-5, known as the Wheel or the Bicycle.
+12. You can't win the low hand if you have better than an high card with an eight.
+
+Parent: Oxford Stud (#290)
+
+
+## Shanghai (#712)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Wikipedia|
+Tags: *common, stud, odd-deck*
+### Rules:
+1. Take the twos through sixes out of the deck.
+2. Deal three cards face down to each player.
+3. Deal one card up to each player.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal two common cards face up to the table.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one common card face up to the table.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Showdown, high hand wins.
+12. Each player may only use two of their down cards in making their final hand.
+
+Parent: Oxford Stud (#290)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Shanghai II (#957)|7-7-4-7-0|common, stud, odd-deck
+|Shanghai III (#958)|7-7-4-7-0|common, stud, odd-deck
+|Shanghai IV (#959)|8-7-4-7-0|common, stud, odd-deck
 
 
 ## Whitewater Hold'em (#715)
@@ -1209,6 +1596,40 @@ Parent: Super Hold'em (#300)
 |Name|Serial #|Tags|
 |----|--------|----|
 |Pendulum (#969)|11-14-4-11-0|common
+
+
+## Kryky (#725)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|10|
+|Wilds|3|
+|Source|Invented Poker Variations|
+Tags: *common, draw, stud, table, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Deal two cards up to each player
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one common card face up to the table.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Each player may draw up to three cards.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one common card face up to the table.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card face up to the table.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+13. Any card of the same rank as the first table card flipped is wild
+
+Parent: 11810 (#310)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Kryky High/Low (#970)|7-7-5-10-3|common, draw, stud, high-low, table, wilds
 
 
 ## Draft'em (#796)
@@ -1397,6 +1818,64 @@ Parent: Padre (#699)
 |Thai Hold'em (#1062)|8-11-4-9-0|common
 
 
+## Shanghai II (#957)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Wikipedia|
+Tags: *common, stud, odd-deck*
+### Rules:
+1. Take the twos through sixes out of the deck.
+2. Deal three cards face down to each player.
+3. Deal one card up to each player.
+4. Each player discards one of their down cards.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Deal two common cards face up to the table.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one common card face up to the table.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one common card face up to the table.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+13. Each player may only use two of their down cards in making their final hand.
+
+Parent: Shanghai (#712)
+
+
+## Shanghai III (#958)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Wikipedia|
+Tags: *common, stud, odd-deck*
+### Rules:
+1. Take the twos through sixes out of the deck.
+2. Deal three cards face down to each player.
+3. Deal one card up to each player.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal two common cards face up to the table.
+6. Each player discards one of their down cards.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one common card face up to the table.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one common card face up to the table.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Showdown, high hand wins.
+13. Each player may only use two of their down cards in making their final hand.
+
+Parent: Shanghai (#712)
+
+
 ## Southern Duece Joker's Wild (#960)
 
 |Statistic|Value|
@@ -1523,6 +2002,36 @@ Tags: *common*
 10. Showdown, high hand wins.
 
 Parent: Pineapple (#717)
+
+
+## Kryky High/Low (#970)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|7|
+|Betting Rounds|5|
+|Max Cards Seen|10|
+|Wilds|3|
+|Source|Invented Poker Variations|
+Tags: *common, draw, stud, high-low, table, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Deal two cards up to each player
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal one common card face up to the table.
+5. Normal betting round, with the player with the high hand showing opening.
+6. Each player may draw up to three cards.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Deal one common card face up to the table.
+9. Normal betting round, with the player with the high hand showing opening.
+10. Deal one card face up to the table.
+11. Normal betting round, with the player with the high hand showing opening.
+12. Declare high/low simultaneously.
+13. Showdown, highest declared high hand and lowest declared low hand split the pot.
+14. Any card of the same rank as the first table card flipped is wild
+
+Parent: Kryky (#725)
 
 
 ## Double Cross (#981)
@@ -2072,6 +2581,33 @@ Parent: Double Trouble (#1103)
 |Name|Serial #|Tags|
 |----|--------|----|
 |Multiple Fruit Disorder (#1128)|7-5-4-13-0|common, fee
+
+
+## Billabong (#1116)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|7|
+|Players|9|
+|Betting Rounds|4|
+|Max Cards Seen|7|
+|Wilds|0|
+|Source|Wikipedia|
+Tags: *common, stud, odd-deck*
+### Rules:
+1. Take the twos through sixes out of the deck.
+2. Deal two cards down to each player.
+3. Deal one card up to each player.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Deal two common cards face up to the table.
+6. Normal betting round, with the player with the high hand showing opening.
+7. Deal one common card face up to the table.
+8. Normal betting round, with the player with the high hand showing opening.
+9. Deal one common card face up to the table.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Showdown, high hand wins.
+
+Parent: Out at Home (#1104)
 
 
 ## Red New Haven (#1120)

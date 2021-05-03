@@ -1,3 +1,54 @@
+## Three Card Guts (#6)
+Also known as: *Monte Carlo*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Public Domain|
+Tags: *draw, guts*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may draw one card if they wish.
+4. Showdown, high hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Root Game (#0)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Balls II (#320)|4-12-100-4-3|guts, qualifier, table, wilds
+|Baseball Guts (#321)|3-13-100-4-8|guts, wilds
+|Beat the Deck (#322)|3-12-100-4-0|draw, guts, qualifier, table
+|Bullet (#323)|3-9-100-5-8|draw, guts, qualifier, table, wilds
+|Cahones (#324)|3-8-100-6-0|draw, guts
+|Deadly 69s (#325)|3-17-100-3-8|guts, must-fold, wilds
+|Double Guts (#326)|3-7-100-6-0|guts, qualifier, table
+|Forced Guts (#327)|3-16-100-3-0|guts, qualifier, table
+|Four Card Guts (#328)|4-8-100-6-0|draw, guts
+|Full Monty (#329)|3-13-100-4-8|draw, guts, wilds
+|Herbie (#330)|3-8-100-6-0|draw, guts, qualifier, table
+|Kryptonite (#331)|3-98-100-4-3|draw, guts, qualifier, table, wilds
+|Minnesota Guts (#332)|3-13-100-4-8|draw, guts, wilds
+|Pimp Guts (#333)|3-13-100-4-0|guts
+|PJ (#334)|3-16-100-3-0|guts, wilds
+|Strong Twos (#335)|3-13-100-4-0|draw, guts
+|The Drop (#336)|3-13-100-4-0|draw, guts
+|Three Card Guts with the Weenie Rule (#337)|3-13-100-4-0|draw, guts
+|Three Card Low Guts (#338)|3-13-100-4-0|draw, guts, lowball
+|Three Card Man or Mouse (#339)|3-13-100-3-0|guts, qualifier
+|Three Card Punishment (#340)|3-13-100-4-0|draw, guts
+|Three Card Screw (#341)|3-13-100-4-0|draw, guts
+|Three Five Seven (#342)|7-7-100-7-4|guts, wilds
+|Two and One (#343)|3-17-100-3-0|guts
+|Two Card Guts (#344)|2-25-100-2-0|guts
+
+
 ## Baseball Guts (#321)
 
 |Statistic|Value|
@@ -24,6 +75,90 @@ Parent: Three Card Guts (#6)
 |Name|Serial #|Tags|
 |----|--------|----|
 |Baseball Guts II (#747)|3-13-100-5-8|draw, guts, wilds
+
+
+## Beat the Deck (#322)
+Also known as: *Three Card Guts with a Phantom Hand*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|12|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Public Domain|
+Tags: *draw, guts, qualifier, table*
+### Rules:
+1. Deal three cards face down to each player.
+2. Deal three table cards face down.
+3. Declare in/out one at a time, starting with the player to the left of the dealer.
+4. Each player may draw one card if they wish.
+5. Showdown, high hand wins.
+6. Use three card poker hands (straight flush beats three of a kind beats straight beats flush beats pair beats high card).
+7. You must beat the table hand to win.
+8. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Three Card Guts (#6)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Forty-Two Radical (#748)|3-12-100-4-0|guts, qualifier, table, wilds
+|Fred (#749)|3-16-100-3-0|guts, qualifier, table, wilds
+
+
+## Bullet (#323)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|9|
+|Betting Rounds|100|
+|Max Cards Seen|5|
+|Wilds|8|
+|Source|Rec.Gambling.Poker|
+Tags: *draw, guts, qualifier, table, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Deal three table cards face down.
+3. Declare in/out simultaneously.
+4. Each player may draw up to two cards.
+5. Showdown, high hand wins.
+6. You must beat the table hand to win.
+7. Standard poker hands, but there are no straights or flushes, and three threes beats all hands.
+8. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+9. Threes are wild.
+10. Nines are wild.
+
+Parent: Three Card Guts (#6)
+
+
+## Cahones (#324)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|8|
+|Betting Rounds|100|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Poker News|
+Tags: *draw, guts*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may twist up to three cards for minimum bet each.
+4. Showdown, high hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Three Card Guts (#6)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Cahones Lowball (#750)|3-8-100-6-0|draw, guts, fee, lowball
+|Two Card Cahones (#751)|3-13-100-4-0|draw, guts, fee
 
 
 ## Deadly 69s (#325)
@@ -105,6 +240,108 @@ Tags: *guts, qualifier, table*
 Parent: Three Card Guts (#6)
 
 
+## Full Monty (#329)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|8|
+|Source|Poker Mike|
+Tags: *draw, guts, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may draw one card if they wish.
+4. Showdown, high hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+6. Of the first up cards seen, the lowest is wild, as are all cards of the same rank.
+7. Of the first up cards seen, the highest is wild, as are all cards of the same rank.
+
+Parent: Three Card Guts (#6)
+
+
+## Herbie (#330)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|8|
+|Betting Rounds|100|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Invented Poker Variations|
+Tags: *draw, guts, qualifier, table*
+### Rules:
+1. Deal three cards face down to each player.
+2. Deal three table cards face down.
+3. Declare in/out one at a time, starting with the player to the left of the dealer.
+4. Each player may draw up to three cards.
+5. Showdown, high hand wins.
+6. Use three card poker hands (straight flush beats three of a kind beats straight beats flush beats pair beats high card).
+7. You must beat the table hand to win.
+8. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Three Card Guts (#6)
+
+
+## Kryptonite (#331)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|98|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|3|
+|Source|Home Poker Cookbook|
+Tags: *draw, guts, qualifier, table, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Deal two cards face down to the table.
+3. Deal one card face up to the table.
+4. Declare in/out one at a time, starting with the player to the left of the dealer.
+5. If no one goes in, deal another three table cards down as another kitty.
+6. Each player may draw one card if they wish.
+7. Showdown, high hand wins.
+8. Use three card poker hands (straight flush beats three of a kind beats straight beats flush beats pair beats high card).
+9. To win you must be able to beat every set of table cards.
+10. Everyone who went in and lost matches the pot. Redeal for all (except the table cards) if no one went in or no one had to match the pot.
+11. Any card of the same rank as the first table card flipped is wild
+
+Parent: Three Card Guts (#6)
+
+
+## Minnesota Guts (#332)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|8|
+|Source|Sanjay Udani|
+Tags: *draw, guts, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player in turn must draw one or three cards.
+4. Showdown, high hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+6. Fours are wild.
+7. Queens are wild.
+
+Parent: Three Card Guts (#6)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|South of Minnesota (#757)|3-13-100-4-8|draw, guts, wilds
+
+
 ## Pimp Guts (#333)
 
 |Statistic|Value|
@@ -149,6 +386,100 @@ Tags: *guts, wilds*
 Parent: Three Card Guts (#6)
 
 
+## Strong Twos (#335)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Rec.Gambling.Poker|
+Tags: *draw, guts*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may draw one card if they wish.
+4. Showdown, high hand wins.
+5. Everyone who went in and lost matches the pot, and then matches it again for each two revealed at the showdown. If no one went in or anyone matched the pot, redeal for all.
+
+Parent: Three Card Guts (#6)
+
+
+## The Drop (#336)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *draw, guts*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may draw one card if they wish.
+4. Showdown, high hand wins.
+5. Normal poker hands, but straights and flushes don't count.
+6. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Three Card Guts (#6)
+
+
+## Three Card Guts with the Weenie Rule (#337)
+Also known as: *Three Card Big Chicken, Three Card Guts with the Harsh Nelly Rule, Three Card Guts with the Wimp Rule*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Public Domain|
+Tags: *draw, guts*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may draw one card if they wish.
+4. Showdown, high hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+6. If no one goes in, the player with the highest hand must match the pot.
+
+Parent: Three Card Guts (#6)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Three Card Guts with the Nelly Rule (#758)|3-13-100-4-0|draw, guts
+
+
+## Three Card Low Guts (#338)
+Also known as: *Antiguts, Bones*.
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Rec.Gambling.Poker|
+Tags: *draw, guts, lowball*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may draw one card if they wish.
+4. Showdown, low hand wins.
+5. Straights and flushes are ignored in low hands. The lowest possible hand is A-2-3-4-5, known as the Wheel or the Bicycle.
+6. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Three Card Guts (#6)
+
+
 ## Three Card Man or Mouse (#339)
 
 |Statistic|Value|
@@ -175,6 +506,50 @@ Parent: Three Card Guts (#6)
 |Three Card Man or Mouse with Legs (#759)|3-13-100-3-0|guts, qualifier
 
 
+## Three Card Punishment (#340)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|John McLeod|
+Tags: *draw, guts*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out simultaneously.
+3. If less than two players go in, everyone who went out must match the pot.
+4. Each player may draw one card if they wish.
+5. Showdown, high hand wins.
+6. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Three Card Guts (#6)
+
+
+## Three Card Screw (#341)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Source misplaced|
+Tags: *draw, guts*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out simultaneously.
+3. If no one goes in, everyone must reante.
+4. Each player may draw one card if they wish.
+5. Showdown, high hand wins.
+6. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Three Card Guts (#6)
+
+
 ## Two and One (#343)
 Also known as: *Three Card Fierce, Three Card Guts II*.
 
@@ -195,6 +570,30 @@ Tags: *guts*
 5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
 
 Parent: Three Card Guts (#6)
+
+
+## Baseball Guts II (#747)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|5|
+|Wilds|8|
+|Source|Poker News|
+Tags: *draw, guts, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may draw one card if they wish.
+4. Anyone who went in with a four gets an extra card.
+5. Showdown, high hand wins.
+6. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+7. Threes are wild.
+8. Nines are wild.
+
+Parent: Baseball Guts (#321)
 
 
 ## Forty-Two Radical (#748)
@@ -245,6 +644,53 @@ Tags: *guts, qualifier, table, wilds*
 8. Sevens are wild.
 
 Parent: Beat the Deck (#322)
+
+
+## Cahones Lowball (#750)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|8|
+|Betting Rounds|100|
+|Max Cards Seen|6|
+|Wilds|0|
+|Source|Poker News|
+Tags: *draw, guts, fee, lowball*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may twist up to three cards for minimum bet each.
+4. Showdown, low hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Cahones (#324)
+
+
+## Two Card Cahones (#751)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Poker News|
+Tags: *draw, guts, fee*
+### Rules:
+1. Deal two cards down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may twist up to two cards for minimum bet each.
+4. Showdown, high hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Cahones (#324)
+### Children:
+
+|Name|Serial #|Tags|
+|----|--------|----|
+|Two Card Lowball Cohones (#1001)|3-13-100-4-0|draw, guts, lowball
 
 
 ## Deadly Low (#752)
@@ -347,6 +793,52 @@ Tags: *guts, must-fold, wilds*
 Parent: Deadly 69s (#325)
 
 
+## South of Minnesota (#757)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|8|
+|Source|Sanjay Udani|
+Tags: *draw, guts, wilds*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player in turn must draw one or three cards.
+4. Showdown, high hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+6. Threes are wild.
+7. Jacks are wild.
+
+Parent: Minnesota Guts (#332)
+
+
+## Three Card Guts with the Nelly Rule (#758)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Xaos Dog|
+Tags: *draw, guts*
+### Rules:
+1. Deal three cards face down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. If no one goes in, the player with the highest hand must pay max bet to the pot.
+4. Each player may draw one card if they wish.
+5. Showdown, high hand wins.
+6. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+7. If no one goes in, the player with the highest hand must match the pot.
+
+Parent: Three Card Guts with the Weenie Rule (#337)
+
+
 ## Three Card Man or Mouse with Legs (#759)
 
 |Statistic|Value|
@@ -372,6 +864,27 @@ Parent: Three Card Man or Mouse (#339)
 |Name|Serial #|Tags|
 |----|--------|----|
 |The Game II (#1004)|3-13-100-3-0|guts, qualifier
+
+
+## Two Card Lowball Cohones (#1001)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|3|
+|Players|13|
+|Betting Rounds|100|
+|Max Cards Seen|4|
+|Wilds|0|
+|Source|Poker News|
+Tags: *draw, guts, lowball*
+### Rules:
+1. Deal two cards down to each player.
+2. Declare in/out one at a time, starting with the player to the left of the dealer.
+3. Each player may twist up to two cards for minimum bet each.
+4. Showdown, low hand wins.
+5. Anyone who went in and lost must match the pot. If no one went in or someone had to match the pot, redeal for all.
+
+Parent: Two Card Cahones (#751)
 
 
 ## Bloody Sevens (#1002)

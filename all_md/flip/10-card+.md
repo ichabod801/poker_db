@@ -1,3 +1,35 @@
+## Give Me Five (#124)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|10|
+|Players|5|
+|Betting Rounds|4|
+|Max Cards Seen|10|
+|Wilds|0|
+|Source|Erich Friedman|
+Tags: *flip, pass, stud, split-pot*
+### Rules:
+1. Deal ten cards face down to each player.
+2. Each player flips over one down card of their choice.
+3. Each player simultaneously passes one card to their right, and flips it face up.
+4. Normal betting round, with the player with the high hand showing opening.
+5. Each player flips over one down card of their choice.
+6. Each player simultaneously passes one card to their right, and flips it face up.
+7. Normal betting round, with the player with the high hand showing opening.
+8. Each player flips over one down card of their choice.
+9. Each player simultaneously passes one card to their right, and flips it face up.
+10. Normal betting round, with the player with the high hand showing opening.
+11. Each player flips over one down card of their choice.
+12. Each player simultaneously passes one card to their right, and flips it face up.
+13. Normal betting round, with the player with the high hand showing opening.
+14. Each player flips over one down card of their choice.
+15. Each player simultaneously passes one card to their right, and flips it face up.
+16. Showdown, the high hand splits the pot with the player to their left.
+
+Parent: Five Card Stud (#2)
+
+
 ## Blind (#554)
 
 |Statistic|Value|
@@ -24,6 +56,53 @@ Parent: Beat It (#168)
 |Name|Serial #|Tags|
 |----|--------|----|
 |Legally Blind (#872)|12-4-300-12-0|flip, must-fold, no-peek, table
+
+
+## Lamarckian Poker (#739)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|300|
+|Players|12|
+|Betting Rounds|98|
+|Max Cards Seen|300|
+|Wilds|0|
+|Source|Cheapass Games|
+Tags: *common, draw, flip, table*
+### Rules:
+1. Deal four cards down to each player.
+2. Deal four cards face up to the table.
+3. Each player flips over one down card of their choice.
+4. Starting with the highest card showing and going in descending order, each player puts all table cards matching rank or suit with their up card into their hand as down cards, then discards their up card to the table.
+5. Normal betting round, with the player to the left of the dealer opening.
+6. Repeat the last four actions until the deck is out of cards.
+7. Showdown, high hand wins.
+
+Parent: Lame Brain (#314)
+
+
+## 7/27 Twists (#791)
+
+|Statistic|Value|
+|---------|-----|
+|Cards|202|
+|Players|98|
+|Betting Rounds|202|
+|Max Cards Seen|202|
+|Wilds|0|
+|Source|Two Plus Two Forums|
+Tags: *flip, stud, high-low, odd-ranks*
+### Rules:
+1. Deal three cards face down to each player.
+2. Each player flips over one down card of their choice.
+3. Normal betting round, with the player with the high hand showing opening.
+4. Deal each player one card face up, if they want it.
+5. Repeat the last two actions until no one wants another card.
+6. Normal betting round, with the player with the high hand showing opening.
+7. The highest showing high hand and the lowest showing low hand split the pot.
+8. Aces are 1 or 11, face cards are 1/2, all other cards are face value. High hand is closest to 27, low hand is closest to 7. Ties broken by inside, outside, high, or low as dealer calls or house rules. A 27 point hand with 10 or less cards takes high and low.
+
+Parent: Chilcoot's 7/27 (#382)
 
 
 ## Low Hand Out (#816)
