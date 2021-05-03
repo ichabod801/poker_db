@@ -8,6 +8,7 @@
 |Max Cards Seen|10|
 |Wilds|12|
 |Source|Legion West|
+
 Tags: *draw, flip, dead, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -34,6 +35,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, fee*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -67,6 +69,7 @@ Also known as: *Elevator II, Mexican Stud II, Mexican Sweat II, Ricky DeLaet, Ro
 |Max Cards Seen|6|
 |Wilds|40|
 |Source|Home Poker Cookbook|
+
 Tags: *flip, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -105,6 +108,7 @@ Parent: Mexican Stud (#132)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *flip*
 ### Rules:
 1. Deal two cards down to each player.
@@ -142,6 +146,7 @@ Parent: Mexican Stud (#132)
 |Max Cards Seen|6|
 |Wilds|24|
 |Source|Home Poker Cookbook|
+
 Tags: *flip, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -175,6 +180,7 @@ Parent: Mexican Stud (#132)
 |Max Cards Seen|18|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, flip, high-low*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -207,6 +213,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|8|
 |Wilds|36|
 |Source|Craig O'Brien|
+
 Tags: *common, draw, flip, pass, stud, high-low, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -238,6 +245,7 @@ Parent: No Way (#221)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -268,6 +276,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, fee, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -300,6 +309,7 @@ Parent: Grodnikonda (#493)
 |Max Cards Seen|18|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, flip, high-low*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -325,6 +335,7 @@ Parent: Love Canal (#528)
 |Max Cards Seen|7|
 |Wilds|28|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -365,6 +376,7 @@ Parent: Monterey (#500)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, stud*
 ### Rules:
 1. Deal two cards down to each player.

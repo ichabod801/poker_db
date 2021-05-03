@@ -8,6 +8,7 @@
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Jeff Prillaman|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -34,6 +35,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|52|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, pass*
 ### Rules:
 1. Deal the deck completely out, except each player gets the same number of cards.
@@ -62,6 +64,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|P. D. Magnus|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.

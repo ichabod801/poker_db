@@ -9,6 +9,7 @@ Also known as: *Bullets*.
 |Max Cards Seen|2|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -42,6 +43,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *guts*
 ### Rules:
 1. Ante twice, into a high pot and a low pot.
@@ -74,6 +76,7 @@ Also known as: *Whipsaw*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *guts, lowball*
 ### Rules:
 1. Deal two cards down to each player.
@@ -110,6 +113,7 @@ Parent: Three Five Seven (#342)
 |Max Cards Seen|2|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -131,6 +135,7 @@ Parent: Two Card Guts (#344)
 |Max Cards Seen|2|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *guts*
 ### Rules:
 1. Deal one card down to each player.
@@ -158,6 +163,7 @@ Parent: Two Card Guts (#344)
 |Max Cards Seen|2|
 |Wilds|0|
 |Source|Xaos Dog|
+
 Tags: *guts, qualifier, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -182,6 +188,7 @@ Also known as: *69 II*.
 |Max Cards Seen|2|
 |Wilds|0|
 |Source|Graham's Card Club|
+
 Tags: *guts, qualifier, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -205,6 +212,7 @@ Parent: Two Card Guts (#344)
 |Max Cards Seen|1|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *guts*
 ### Rules:
 1. Deal one card down to each player.
@@ -233,6 +241,7 @@ Parent: Two Card Guts (#344)
 |Max Cards Seen|2|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -254,6 +263,7 @@ Parent: Two Card Guts (#344)
 |Max Cards Seen|2|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *guts, qualifier, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -276,6 +286,7 @@ Parent: Two Card Guts (#344)
 |Max Cards Seen|52|
 |Wilds|0|
 |Source|Xaos Dog|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -298,6 +309,7 @@ Parent: Pass Your Guts (#369)
 |Max Cards Seen|2|
 |Wilds|8|
 |Source|Invented Poker Variations|
+
 Tags: *guts, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -321,6 +333,7 @@ Parent: Fierce (#767)
 |Max Cards Seen|2|
 |Wilds|2|
 |Source|Invented Poker Variations|
+
 Tags: *guts*
 ### Rules:
 1. Use a normal 52 card deck with two jokers added.
@@ -344,6 +357,7 @@ Parent: Fierce (#767)
 |Max Cards Seen|1|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *guts, lowball*
 ### Rules:
 1. Deal one card down to each player.
@@ -367,6 +381,7 @@ Also known as: *Pass the Trash II*.
 |Max Cards Seen|1|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *guts, fee-fold*
 ### Rules:
 1. Deal one card down to each player.

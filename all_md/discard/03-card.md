@@ -9,6 +9,7 @@ Also known as: *333*.
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *discard, instant-win, odd-ranks, table*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -49,6 +50,7 @@ Parent: Florida Bingo (#508)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *discard, high-low, instant-win, table*
 ### Rules:
 1. Deal three cards face down to each player.

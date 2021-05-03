@@ -9,6 +9,7 @@ Also known as: *Cowboy*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -63,6 +64,7 @@ Parent: Root Game (#0)
 |Max Cards Seen|9|
 |Wilds|28|
 |Source|Poker Phil|
+
 Tags: *common, draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -96,6 +98,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|5|
 |Wilds|12|
 |Source|Source misplaced|
+
 Tags: *draw, guts, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -118,6 +121,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts, fee, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -141,6 +145,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *guts, qualifier, table, wilds*
 ### Rules:
 1. The dealer declares one rank to be wild.
@@ -164,6 +169,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Jay Close|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -185,6 +191,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Pro Forums|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -208,6 +215,7 @@ Also known as: *Circle Jerk*.
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, guts, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -238,6 +246,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -259,6 +268,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|5|
 |Wilds|30|
 |Source|Poker Team|
+
 Tags: *guts, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -280,6 +290,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -302,6 +313,7 @@ Also known as: *Cowpatty, Shotgun Guts*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -322,6 +334,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Other Worlds Poker|
+
 Tags: *draw, guts, dead, qualifier, table, wilds*
 ### Rules:
 1. Use a normal 52 card deck with two jokers added.
@@ -348,6 +361,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, guts, fee*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -370,6 +384,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Pro Forums|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -391,6 +406,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -418,6 +434,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -445,6 +462,7 @@ Also known as: *Five Card Big Chicken, Five Card Guts with the Harsh Nelly Rule,
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -472,6 +490,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -494,6 +513,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -516,6 +536,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Xaos Dog|
+
 Tags: *draw, guts, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -539,6 +560,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -560,6 +582,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -581,6 +604,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Home Poker Cookbook|
+
 Tags: *common, draw, guts, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -611,6 +635,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|24|
 |Source|Source misplaced|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -644,6 +669,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|34|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -672,6 +698,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -698,6 +725,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -727,6 +755,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Antismite|
+
 Tags: *draw, guts, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -756,6 +785,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|28|
 |Source|Poker Phil|
+
 Tags: *common, draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -784,6 +814,7 @@ Parent: Spit Guts (#316)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -809,6 +840,7 @@ Also known as: *Balls IV*.
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *guts, qualifier, table*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -832,6 +864,7 @@ Parent: Five Card Fierce (#359)
 |Max Cards Seen|5|
 |Wilds|4|
 |Source|Graham's Card Club|
+
 Tags: *guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -855,6 +888,7 @@ Parent: Five Card Fierce (#359)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -881,6 +915,7 @@ Parent: Five Card Guts with a Draw (#360)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Xaos Dog|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -903,6 +938,7 @@ Parent: Five Card Guts with the Weenie Rule (#361)
 |Max Cards Seen|5|
 |Wilds|8|
 |Source|Source misplaced|
+
 Tags: *common, guts, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -927,6 +963,7 @@ Parent: Jacks and Piss (#367)
 |Max Cards Seen|7|
 |Wilds|24|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -952,6 +989,7 @@ Parent: King Little (#368)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Sanjay Udani|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -979,6 +1017,7 @@ Parent: King Little (#368)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *guts, high-low, qualifier, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1010,6 +1049,7 @@ Also known as: *38*.
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Home Poker Cookbook|
+
 Tags: *guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -1034,6 +1074,7 @@ Parent: Three to Five (#372)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Antismite|
+
 Tags: *draw, guts, lowball, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1056,6 +1097,7 @@ Parent: Western (#373)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Antismite|
+
 Tags: *draw, guts, high-low, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1080,6 +1122,7 @@ Also known as: *Stud Horse Poker*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *flip, guts, match-pot*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1119,6 +1162,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|3|
 |Wilds|4|
 |Source|Two Plus Two Forums|
+
 Tags: *guts, must-fold, qualifier, table*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -1143,6 +1187,7 @@ Parent: Deadly Sevens (#753)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Softsource|
+
 Tags: *guts, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -1175,6 +1220,7 @@ Parent: Napalm (#762)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *draw, guts, match-pot*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1208,6 +1254,7 @@ Parent: Oppression (#817)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Joker Poker|
+
 Tags: *draw, guts, match-pot, wilds*
 ### Rules:
 1. Deal seven cards face down to each player.

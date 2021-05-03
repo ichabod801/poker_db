@@ -8,6 +8,7 @@
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Jeff Prillaman|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -34,6 +35,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|P. D. Magnus|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -57,6 +59,7 @@ Parent: Monkey Love (#64)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw*
 ### Rules:
 1. Deal four cards down to each player.
@@ -85,6 +88,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, stud, high-low*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -121,6 +125,7 @@ Also known as: *Psychotic Omaha*.
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, high-low*
 ### Rules:
 1. Deal four cards down to each player.
@@ -151,6 +156,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, flip, stud, high-low*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -182,6 +188,7 @@ Parent: Retro Hold'em (#718)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.

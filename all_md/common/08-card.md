@@ -8,6 +8,7 @@
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *common*
 ### Rules:
 1. Deal two cards down to each player.
@@ -34,6 +35,7 @@ Also known as: *Super Eight*.
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *common*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -68,6 +70,7 @@ Parent: Texas Hold'em (#4)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *common*
 ### Rules:
 1. Deal two cards down to each player.
@@ -93,6 +96,7 @@ Parent: Texas Hold'em (#4)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *common, draw, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -122,6 +126,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *common, flip, pass, high-low*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -153,6 +158,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|All Poker Rules|
+
 Tags: *common, odd-deck*
 ### Rules:
 1. Take the twos through sixes out of the deck.
@@ -183,6 +189,7 @@ Parent: Manila (#285)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -209,6 +216,7 @@ Also known as: *Super Nine, Three Card Hold'em II, Three Card Omaha*.
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *common*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -243,6 +251,7 @@ Parent: Super Hold'em (#300)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -269,6 +278,7 @@ Parent: Super Hold'em (#300)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *common, draw, fee*
 ### Rules:
 1. Deal four cards down to each player.
@@ -299,6 +309,7 @@ Parent: Lame Brain (#314)
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *common*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -338,6 +349,7 @@ Also known as: *Around the World*.
 |Max Cards Seen|8|
 |Wilds|4|
 |Source|Brian O'Neil's Poker Page|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -373,6 +385,7 @@ Parent: Lame Brain (#314)
 |Max Cards Seen|10|
 |Wilds|4|
 |Source|Poker Mike|
+
 Tags: *common, guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -408,6 +421,7 @@ Parent: Three Five Seven (#342)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, flip, high-low, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -447,6 +461,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -474,6 +489,7 @@ Parent: Irish Hold'em (#698)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *common*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -502,6 +518,7 @@ Parent: Padre (#699)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|iPoker|
+
 Tags: *common, stud, odd-deck*
 ### Rules:
 1. Take the twos through sixes out of the deck.
@@ -529,6 +546,7 @@ Parent: Shanghai (#712)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -556,6 +574,7 @@ Also known as: *Phold'em*.
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, mod-ranks, odd-deck*
 ### Rules:
 1. Use a pinochle deck. That is, shuffle the nine through ace from two decks together. Unless otherwise stated, a straight flush beats five of a kind.
@@ -583,6 +602,7 @@ Parent: Tahoe (#719)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, high-low, qualifier*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -612,6 +632,7 @@ Parent: Tahoe (#719)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, high-low, qualifier*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -640,6 +661,7 @@ Parent: Tahoe (#719)
 |Max Cards Seen|8|
 |Wilds|6|
 |Source|Public Domain|
+
 Tags: *common, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -676,6 +698,7 @@ Parent: Bel-Aire (#726)
 |Max Cards Seen|12|
 |Wilds|4|
 |Source|Tim P. McNerny|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -710,6 +733,7 @@ Also known as: *The Big H*.
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *common*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -742,6 +766,7 @@ Parent: Elevator (#734)
 |Max Cards Seen|8|
 |Wilds|4|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, draw, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -772,6 +797,7 @@ Parent: Forty Four (#735)
 |Max Cards Seen|8|
 |Wilds|4|
 |Source|Brian O'Neil's Poker Page|
+
 Tags: *common, qualifier, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -801,6 +827,7 @@ Parent: Forty Four (#735)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *common, split-card*
 ### Rules:
 1. Deal four cards down to each player.
@@ -835,6 +862,7 @@ Parent: Forty Four (#735)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -867,6 +895,7 @@ Parent: Malaysian Hold'em (#937)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -899,6 +928,7 @@ Parent: Malaysian Hold'em (#937)
 |Max Cards Seen|8|
 |Wilds|6|
 |Source|Source misplaced|
+
 Tags: *common, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -929,6 +959,7 @@ Parent: Pyramid (#971)
 |Max Cards Seen|8|
 |Wilds|6|
 |Source|Source misplaced|
+
 Tags: *common, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -967,6 +998,7 @@ Parent: Pyramid (#971)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, high-low, qualifier*
 ### Rules:
 1. Deal four cards down to each player.
@@ -997,6 +1029,7 @@ Parent: Sumatran Hold'em (#1061)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, high-low, qualifier*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1027,6 +1060,7 @@ Parent: Thai Hold'em (#1062)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *common, fee, high-low*
 ### Rules:
 1. Deal each player two sets of three down cards.
@@ -1060,6 +1094,7 @@ Parent: Crazy Pineapple 8 (#1066)
 |Max Cards Seen|20|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1096,6 +1131,7 @@ Parent: Bingo (#1079)
 |Max Cards Seen|20|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.

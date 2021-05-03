@@ -9,6 +9,7 @@ Also known as: *Oedipus, Pass the Garbage, Pass the Trash, Pass the Trash and Ro
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -71,6 +72,7 @@ Also known as: *Stake in the Heart*.
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *pass, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -106,6 +108,7 @@ Also known as: *Up the Fruit Basket*.
 |Max Cards Seen|26|
 |Wilds|0|
 |Source|Brian O'Neil's Poker Page|
+
 Tags: *pass, stud*
 ### Rules:
 1. The dealer declares one rank to be the rotate rank.
@@ -143,6 +146,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *pass, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -175,6 +179,7 @@ Also known as: *Selection/Rejection*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *pass, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -208,6 +213,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, pass*
 ### Rules:
 1. Deal two cards down to each player.
@@ -234,6 +240,7 @@ Parent: Texas Hold'em (#4)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -268,6 +275,7 @@ Also known as: *Pass the Trash III*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -304,6 +312,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *flip, pass*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -338,6 +347,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|4|
 |Source|Sanjay Udani|
+
 Tags: *flip, pass, high-low, table, wilds*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -372,6 +382,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|28|
 |Wilds|0|
 |Source|Aidtopia|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -412,6 +423,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -449,6 +461,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -481,6 +494,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -512,6 +526,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -547,6 +562,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|35|
 |Source|Jay Close|
+
 Tags: *flip, pass, high-low, wilds*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -580,6 +596,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|8|
 |Source|Public Domain|
+
 Tags: *flip, pass, high-low, wilds*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -619,6 +636,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|14|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *flip, pass, fee, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -653,6 +671,7 @@ Also known as: *Merry Christmas*.
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *flip, pass, split-pot*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -684,6 +703,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Aidtopia|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -716,6 +736,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Intellectual Orgy|
+
 Tags: *pass*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -745,6 +766,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -777,6 +799,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -809,6 +832,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -845,6 +869,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|14|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -877,6 +902,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|28|
 |Source|Source misplaced|
+
 Tags: *flip, pass, high-low, wilds*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -910,6 +936,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -941,6 +968,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|28|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *pass*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -980,6 +1008,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Poker Phil|
+
 Tags: *pass, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1009,6 +1038,7 @@ Parent: Have a Heart (#199)
 |Max Cards Seen|7|
 |Wilds|6|
 |Source|John McLeod|
+
 Tags: *pass, stud, jokers, wilds*
 ### Rules:
 1. Use a normal 52 card deck with two jokers added.
@@ -1042,6 +1072,7 @@ Parent: Joker Twist (#207)
 |Max Cards Seen|11|
 |Wilds|28|
 |Source|Invented Poker Variations|
+
 Tags: *pass, stud, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1071,6 +1102,7 @@ Parent: Macintosh (#214)
 |Max Cards Seen|18|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *pass, stud*
 ### Rules:
 1. The dealer declares one rank to be the rotate rank.
@@ -1106,6 +1138,7 @@ Parent: Rotate (#231)
 |Max Cards Seen|26|
 |Wilds|0|
 |Source|Brian O'Neil's Poker Page|
+
 Tags: *pass, stud*
 ### Rules:
 1. The dealer declares one rank as the left passing rank, and another as the right passing rank.
@@ -1136,6 +1169,7 @@ Parent: Rotate (#231)
 |Max Cards Seen|25|
 |Wilds|4|
 |Source|Poker.Net Glossary|
+
 Tags: *pass, stud, wilds*
 ### Rules:
 1. The dealer declares one rank to be the rotate rank.
@@ -1167,6 +1201,7 @@ Parent: Rotate (#231)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, pass, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1200,6 +1235,7 @@ Parent: Want It? Want It? Got It! (#264)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, flip, pass, fee, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1232,6 +1268,7 @@ Also known as: *Anaconda High/Low*.
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1262,6 +1299,7 @@ Parent: Anaconda III (#390)
 |Max Cards Seen|25|
 |Wilds|0|
 |Source|Aidtopia|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1295,6 +1333,7 @@ Parent: Anorexia (#393)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *flip, pass, lowball*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1331,6 +1370,7 @@ Parent: Australian Rules Anaconda (#394)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, pass*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1358,6 +1398,7 @@ Also known as: *AC/DC*.
 |Max Cards Seen|15|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1388,6 +1429,7 @@ Parent: Basketball (#395)
 |Max Cards Seen|17|
 |Wilds|8|
 |Source|Rec.Gambling.Poker|
+
 Tags: *flip, pass, high-low, wilds*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1426,6 +1468,7 @@ Parent: Howdy Doody (#399)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Intellectual Orgy|
+
 Tags: *pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1450,6 +1493,7 @@ Parent: Pass the Trash IV (#404)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, pass, stud, lowball*
 ### Rules:
 1. Deal one card down to each player.
@@ -1480,6 +1524,7 @@ Parent: Shuck'em (#473)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *pass, stud, high-low*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1509,6 +1554,7 @@ Parent: Pussy Cat (#482)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *flip, pass, fee, must-fold, no-peek, redeal, table, wilds*
 ### Rules:
 1. Deal seven cards down to each player. No player may look at these cards.
@@ -1538,6 +1584,7 @@ Parent: Midnight Baseball (#561)
 |Max Cards Seen|19|
 |Wilds|0|
 |Source|Sweet Foca|
+
 Tags: *draw, pass, stud*
 ### Rules:
 1. The dealer declares one rank to be the rotate rank.
@@ -1568,6 +1615,7 @@ Parent: Partial Rotate (#657)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *flip, pass, split-pot*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1599,6 +1647,7 @@ Parent: Rich's Revenge (#795)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Tim Murtaugh|
+
 Tags: *pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1623,6 +1672,7 @@ Parent: Real Poker (#798)
 |Max Cards Seen|15|
 |Wilds|3|
 |Source|Source misplaced|
+
 Tags: *pass, high-low, table, wilds*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1651,6 +1701,7 @@ Parent: Real Poker (#798)
 |Max Cards Seen|11|
 |Wilds|28|
 |Source|P. D. Magnus|
+
 Tags: *flip, pass*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -1682,6 +1733,7 @@ Parent: Roll Your Neighbor (#842)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, pass*
 ### Rules:
 1. Deal three cards face down to each player.

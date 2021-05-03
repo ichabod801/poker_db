@@ -8,6 +8,7 @@
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Scarne's Guide to Modern Poker|
+
 Tags: *draw, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -41,6 +42,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|5|
 |Wilds|8|
 |Source|Source misplaced|
+
 Tags: *draw, stud, fee, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -70,6 +72,7 @@ Parent: Fairview (#113)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.

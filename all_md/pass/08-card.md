@@ -8,6 +8,7 @@
 |Max Cards Seen|11|
 |Wilds|28|
 |Source|Kurt Hanna|
+
 Tags: *flip, pass, qualifier, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -51,6 +52,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *common, flip, pass, high-low*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -82,6 +84,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *pass, stud, high-low, must-fold, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -113,6 +116,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|14|
 |Wilds|0|
 |Source|Intellectual Orgy|
+
 Tags: *pass*
 ### Rules:
 1. Deal eight cards face down to each player

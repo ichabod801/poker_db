@@ -8,6 +8,7 @@
 |Max Cards Seen|52|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *draw, flip, stud, lowball, no-peek, odd-ranks*
 ### Rules:
 1. Deal two cards face down to each player. No player may look at these cards.

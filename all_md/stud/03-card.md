@@ -9,6 +9,7 @@ Also known as: *Three Toed Pete*.
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -39,6 +40,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *stud, mod-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -69,6 +71,7 @@ Parent: Three Card Monte (#153)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *stud, odd-deck*
 ### Rules:
 1. Take the twos through sixes out of the deck.
@@ -93,6 +96,7 @@ Parent: Three Card Monte (#153)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *stud, mod-ranks*
 ### Rules:
 1. Deal one card down to each player.

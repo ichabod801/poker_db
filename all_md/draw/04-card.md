@@ -8,6 +8,7 @@
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw*
 ### Rules:
 1. Deal four cards down to each player.
@@ -29,6 +30,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal four cards down to each player.
@@ -55,6 +57,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|52|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *draw, flip, stud, lowball, no-peek, odd-ranks*
 ### Rules:
 1. Deal two cards face down to each player. No player may look at these cards.
@@ -83,6 +86,7 @@ Parent: Four Card Stud (#123)
 |Max Cards Seen|6|
 |Wilds|32|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -108,6 +112,7 @@ Also known as: *Badougi, Padooki, Paduki*.
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, lowball, odd-ranks*
 ### Rules:
 1. Deal four cards down to each player.

@@ -8,6 +8,7 @@
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Poker Phil|
+
 Tags: *discard, instant-win, table*
 ### Rules:
 1. Deal seven cards face down to each player.

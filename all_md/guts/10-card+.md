@@ -8,6 +8,7 @@
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.

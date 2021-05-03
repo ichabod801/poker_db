@@ -8,6 +8,7 @@
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, pass, stud, split-pot*
 ### Rules:
 1. Deal ten cards face down to each player.
@@ -40,6 +41,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *pass, stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -64,6 +66,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|48|
 |Wilds|0|
 |Source|Cheapass Games|
+
 Tags: *pass, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -94,6 +97,7 @@ Parent: Three Card Monte (#153)
 |Max Cards Seen|48|
 |Wilds|0|
 |Source|Cheapass Games|
+
 Tags: *pass, stud*
 ### Rules:
 1. Deal one card down to each player.

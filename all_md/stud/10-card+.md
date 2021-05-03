@@ -8,6 +8,7 @@
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -49,6 +50,7 @@ Parent: Root Game (#0)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, pass, stud, split-pot*
 ### Rules:
 1. Deal ten cards face down to each player.
@@ -81,6 +83,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -110,6 +113,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -134,6 +138,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -158,6 +163,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -182,6 +188,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -206,6 +213,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Ultimate Bet|
+
 Tags: *draw, stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -231,6 +239,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -255,6 +264,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -279,6 +289,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal two cards down to each player.
@@ -308,6 +319,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *pass, stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -332,6 +344,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -356,6 +369,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -381,6 +395,7 @@ Also known as: *31*.
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker Phil|
+
 Tags: *stud, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -405,6 +420,7 @@ Parent: 7/27 (#8)
 |Max Cards Seen|99|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *stud, odd-deal*
 ### Rules:
 1. Deal one card to each player in turn, until two cards match in rank. Give the last card to the player who already had a card of that rank.
@@ -425,6 +441,7 @@ Parent: Dutch Stud (#9)
 |Max Cards Seen|48|
 |Wilds|0|
 |Source|Cheapass Games|
+
 Tags: *pass, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -455,6 +472,7 @@ Parent: Three Card Monte (#153)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *stud, high-low, odd-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -479,6 +497,7 @@ Parent: 3/33 (#374)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *flip, stud, high-low, odd-ranks*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -504,6 +523,7 @@ Also known as: *Voyeur Edition*.
 |Max Cards Seen|204|
 |Wilds|0|
 |Source|Softsource|
+
 Tags: *stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -528,6 +548,7 @@ Parent: Kenosha Cheese Porn (#505)
 |Max Cards Seen|48|
 |Wilds|0|
 |Source|Cheapass Games|
+
 Tags: *pass, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -553,6 +574,7 @@ Parent: Suck (#535)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -592,6 +614,7 @@ Parent: Nine Card Stud (#600)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *stud*
 ### Rules:
 1. Deal two cards down to each player.

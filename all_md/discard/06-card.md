@@ -8,6 +8,7 @@
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *discard, high-low, instant-win, table*
 ### Rules:
 1. Deal six cards face down to each player.

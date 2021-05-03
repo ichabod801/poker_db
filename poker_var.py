@@ -386,6 +386,7 @@ class Variant(object):
 		lines.append(f'|Wilds|{self.wilds}|')
 		lines.append(f'|Source|{self.source}|')
 		tag_text = ', '.join(self.tags)
+		lines.append('')
 		lines.append(f'Tags: *{tag_text}*')
 		# Set up the rules
 		lines.append('### Rules:')

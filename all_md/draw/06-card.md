@@ -8,6 +8,7 @@
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *draw, mod-ranks*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -30,6 +31,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *draw, fee, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -58,6 +60,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|10|
 |Wilds|12|
 |Source|Legion West|
+
 Tags: *draw, flip, dead, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -85,6 +88,7 @@ Also known as: *3-2-1*.
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *draw, qualifier, table*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -120,6 +124,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -152,6 +157,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *common, draw, lowball*
 ### Rules:
 1. Deal four cards down to each player.
@@ -178,6 +184,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *draw, stud, table*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -204,6 +211,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, fee*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -237,6 +245,7 @@ Also known as: *3-2-1 with Wild*.
 |Max Cards Seen|12|
 |Wilds|2|
 |Source|Invented Poker Variations|
+
 Tags: *draw, qualifier, table, wilds*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -269,6 +278,7 @@ Parent: Three Two One (#92)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, pass, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -303,6 +313,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -343,6 +354,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -371,6 +383,7 @@ Parent: English Stud (#188)
 |Max Cards Seen|8|
 |Wilds|36|
 |Source|Craig O'Brien|
+
 Tags: *common, draw, flip, pass, stud, high-low, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -402,6 +415,7 @@ Parent: No Way (#221)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -432,6 +446,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, fee, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -465,6 +480,7 @@ Also known as: *Choice*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Poker.Net Glossary|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -502,6 +518,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, draw, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -533,6 +550,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -563,6 +581,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -593,6 +612,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, high-low, qualifier*
 ### Rules:
 1. Deal one card down to each player.
@@ -627,6 +647,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|7|
 |Wilds|28|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -667,6 +688,7 @@ Parent: Monterey (#500)
 |Max Cards Seen|7|
 |Wilds|8|
 |Source|Tom Jolly|
+
 Tags: *draw, stud, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -699,6 +721,7 @@ Parent: Big Squeeze (#855)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -733,6 +756,7 @@ Parent: Big Squeeze (#855)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal two cards down to each player.

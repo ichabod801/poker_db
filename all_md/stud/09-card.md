@@ -8,6 +8,7 @@
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -48,6 +49,7 @@ Parent: Eight Card Stud (#187)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, stud, high-low*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -84,6 +86,7 @@ Also known as: *99*.
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Joker Poker|
+
 Tags: *stud, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -117,6 +120,7 @@ Parent: Nine Card Stud (#600)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -145,6 +149,7 @@ Parent: Studaha (#706)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, flip, stud, high-low*
 ### Rules:
 1. Deal three cards face down to each player.

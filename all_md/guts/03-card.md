@@ -9,6 +9,7 @@ Also known as: *Monte Carlo*.
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -59,6 +60,7 @@ Parent: Root Game (#0)
 |Max Cards Seen|4|
 |Wilds|8|
 |Source|Poker News|
+
 Tags: *guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -88,6 +90,7 @@ Also known as: *Three Card Guts with a Phantom Hand*.
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, guts, qualifier, table*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -118,6 +121,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|5|
 |Wilds|8|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -144,6 +148,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -171,6 +176,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|3|
 |Wilds|8|
 |Source|Poker Mike|
+
 Tags: *guts, must-fold, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -203,6 +209,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *guts, qualifier, table*
 ### Rules:
 1. Ante twice, into a high pot and a low pot.
@@ -227,6 +234,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *guts, qualifier, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -250,6 +258,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|4|
 |Wilds|8|
 |Source|Poker Mike|
+
 Tags: *draw, guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -273,6 +282,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *draw, guts, qualifier, table*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -297,6 +307,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|4|
 |Wilds|3|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -324,6 +335,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|4|
 |Wilds|8|
 |Source|Sanjay Udani|
+
 Tags: *draw, guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -352,6 +364,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -373,6 +386,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Graham's Card Club|
+
 Tags: *guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -396,6 +410,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -417,6 +432,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -440,6 +456,7 @@ Also known as: *Three Card Big Chicken, Three Card Guts with the Harsh Nelly Rul
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -468,6 +485,7 @@ Also known as: *Antiguts, Bones*.
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, guts, lowball*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -490,6 +508,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *guts, qualifier*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -516,6 +535,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -538,6 +558,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -561,6 +582,7 @@ Also known as: *Three Card Fierce, Three Card Guts II*.
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -582,6 +604,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|5|
 |Wilds|8|
 |Source|Poker News|
+
 Tags: *draw, guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -607,6 +630,7 @@ Also known as: *42 Radical*.
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Scott Harker|
+
 Tags: *guts, qualifier, table, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -632,6 +656,7 @@ Parent: Beat the Deck (#322)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Graham's Card Club|
+
 Tags: *guts, qualifier, table, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -656,6 +681,7 @@ Parent: Beat the Deck (#322)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts, fee, lowball*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -677,6 +703,7 @@ Parent: Cahones (#324)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts, fee*
 ### Rules:
 1. Deal two cards down to each player.
@@ -703,6 +730,7 @@ Parent: Cahones (#324)
 |Max Cards Seen|3|
 |Wilds|51|
 |Source|Poker Mike|
+
 Tags: *guts, must-fold, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -726,6 +754,7 @@ Parent: Deadly 69s (#325)
 |Max Cards Seen|3|
 |Wilds|4|
 |Source|Poker Mike|
+
 Tags: *guts, must-fold, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -755,6 +784,7 @@ Parent: Deadly 69s (#325)
 |Max Cards Seen|3|
 |Wilds|13|
 |Source|Poker Mike|
+
 Tags: *guts, must-fold, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -778,6 +808,7 @@ Parent: Deadly 69s (#325)
 |Max Cards Seen|3|
 |Wilds|39|
 |Source|Poker Mike|
+
 Tags: *guts, must-fold, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -803,6 +834,7 @@ Parent: Deadly 69s (#325)
 |Max Cards Seen|4|
 |Wilds|8|
 |Source|Sanjay Udani|
+
 Tags: *draw, guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -826,6 +858,7 @@ Parent: Minnesota Guts (#332)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Xaos Dog|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -849,6 +882,7 @@ Parent: Three Card Guts with the Weenie Rule (#337)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *guts, qualifier*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -876,6 +910,7 @@ Parent: Three Card Man or Mouse (#339)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts, lowball*
 ### Rules:
 1. Deal two cards down to each player.
@@ -897,6 +932,7 @@ Parent: Two Card Cahones (#751)
 |Max Cards Seen|3|
 |Wilds|4|
 |Source|Poker News|
+
 Tags: *guts, must-fold, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -920,6 +956,7 @@ Parent: Deadly Sevens (#753)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *guts, qualifier*
 ### Rules:
 1. Deal three cards face down to each player.

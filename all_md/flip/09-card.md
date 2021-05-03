@@ -9,6 +9,7 @@ Also known as: *4-2-1*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *common, flip, fee*
 ### Rules:
 1. Deal four cards down to each player.
@@ -42,6 +43,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *common, flip, guts, qualifier, table*
 ### Rules:
 1. Deal four cards down to each player.
@@ -76,6 +78,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, flip*
 ### Rules:
 1. Deal four cards down to each player.
@@ -109,6 +112,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|9|
 |Wilds|20|
 |Source|Poker News|
+
 Tags: *flip, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -149,6 +153,7 @@ Parent: Roll the Other Guy's (#501)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -179,6 +184,7 @@ Parent: Nine Card Stud (#600)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Two Plus Two Forums|
+
 Tags: *common, flip, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -214,6 +220,7 @@ Parent: Nine Card Stud (#600)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Variant Database|
+
 Tags: *common, flip, high-low, qualifier*
 ### Rules:
 1. Deal four cards down to each player.
@@ -244,6 +251,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, flip*
 ### Rules:
 1. Deal four cards down to each player.
@@ -272,6 +280,7 @@ Parent: Studaha (#706)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, flip, stud, high-low*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -303,6 +312,7 @@ Parent: Retro Hold'em (#718)
 |Max Cards Seen|14|
 |Wilds|0|
 |Source|Scarne's Guide to Modern Poker|
+
 Tags: *common, flip*
 ### Rules:
 1. Deal four cards down to each player.
@@ -341,6 +351,7 @@ Parent: Twin Beds (#743)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, flip, high-low, qualifier*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -374,6 +385,7 @@ Parent: Bicester (#812)
 |Max Cards Seen|9|
 |Wilds|20|
 |Source|Poker News|
+
 Tags: *flip, wilds*
 ### Rules:
 1. Deal three cards face down to each player.

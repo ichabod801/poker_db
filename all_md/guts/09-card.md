@@ -8,6 +8,7 @@
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *common, flip, guts, qualifier, table*
 ### Rules:
 1. Deal four cards down to each player.
@@ -42,6 +43,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *common, guts*
 ### Rules:
 1. Deal four cards down to each player.
@@ -75,6 +77,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *common, guts*
 ### Rules:
 1. Deal four cards down to each player.
@@ -103,6 +106,7 @@ Parent: Omaha Burns (#951)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *common, guts*
 ### Rules:
 1. Deal four cards down to each player.
@@ -130,6 +134,7 @@ Parent: Four Three (#1013)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *common, guts, legs*
 ### Rules:
 1. Deal four cards down to each player.

@@ -9,6 +9,7 @@ Also known as: *Molotov, Ting-a-Ling*.
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Tim P. McNerny|
+
 Tags: *discard, instant-win, odd-ranks, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -63,6 +64,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *discard, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -111,6 +113,7 @@ Parent: Numbers (#137)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *discard, must-fold, odd-ranks, table*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -133,6 +136,7 @@ Parent: Numbers (#137)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *discard, pass, high-low, instant-win, table*
 ### Rules:
 1. Deal five cards face down to each player.

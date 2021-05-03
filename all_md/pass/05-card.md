@@ -8,6 +8,7 @@
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|P. D. Magnus|
+
 Tags: *pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -29,6 +30,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -51,6 +53,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -79,6 +82,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|50|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -106,6 +110,7 @@ Also known as: *Crazy Stud, Forward Pass, Hilo Piccolo, Push, Shove'em, Take It 
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Scarne's Guide to Modern Poker|
+
 Tags: *draw, pass, stud, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -147,6 +152,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|34|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -175,6 +181,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -198,6 +205,7 @@ Parent: Switch (#87)
 |Max Cards Seen|50|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, pass, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -220,6 +228,7 @@ Parent: Trees (#94)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, pass, stud, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -249,6 +258,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Joker Poker|
+
 Tags: *pass, stud, mod-ranks, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -283,6 +293,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *pass, stud, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -310,6 +321,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|9|
 |Wilds|32|
 |Source|American Poker|
+
 Tags: *pass, stud, high-low, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -338,6 +350,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, pass, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -367,6 +380,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|52|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -392,6 +406,7 @@ Parent: Buddha's Folly (#350)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *pass, split-pot*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -416,6 +431,7 @@ Parent: Basketball (#395)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -437,6 +453,7 @@ Parent: Screwy Louie (#408)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *flip, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -471,6 +488,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|50|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *flip, pass, fee*
 ### Rules:
 1. Players do not ante.
@@ -501,6 +519,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|10|
 |Wilds|4|
 |Source|Poker Phil|
+
 Tags: *draw, pass, stud, high-low, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -532,6 +551,7 @@ Parent: Kings (#478)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *discard, pass, high-low, instant-win, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -568,6 +588,7 @@ Parent: Slugs (#511)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -597,6 +618,7 @@ Parent: Double Exposure (#814)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *flip, pass*
 ### Rules:
 1. Deal five cards face down to each player.

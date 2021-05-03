@@ -8,6 +8,7 @@
 |Max Cards Seen|10|
 |Wilds|4|
 |Source|Poker Mike|
+
 Tags: *common, guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.

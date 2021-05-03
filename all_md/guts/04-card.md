@@ -8,6 +8,7 @@
 |Max Cards Seen|4|
 |Wilds|3|
 |Source|Poker Phil|
+
 Tags: *guts, qualifier, table, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -35,6 +36,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal four cards down to each player.
@@ -61,6 +63,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|6|
 |Wilds|32|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal four cards down to each player.

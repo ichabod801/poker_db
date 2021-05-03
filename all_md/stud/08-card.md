@@ -8,6 +8,7 @@
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -45,6 +46,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|8|
 |Wilds|4|
 |Source|Public Domain|
+
 Tags: *stud, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -74,6 +76,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *pass, stud, high-low, must-fold, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -105,6 +108,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -137,6 +141,7 @@ Also known as: *88*.
 |Max Cards Seen|8|
 |Wilds|4|
 |Source|Poker Phil|
+
 Tags: *stud, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -169,6 +174,7 @@ Also known as: *4-44*.
 |Max Cards Seen|8|
 |Wilds|4|
 |Source|Home Poker Cookbook|
+
 Tags: *stud, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -202,6 +208,7 @@ Parent: Eight Card Stud (#187)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|David Zanetti|
+
 Tags: *stud*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -235,6 +242,7 @@ Also known as: *4-42*.
 |Max Cards Seen|8|
 |Wilds|4|
 |Source|Home Poker Cookbook|
+
 Tags: *stud, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -263,6 +271,7 @@ Parent: Four Forty Four (#599)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|iPoker|
+
 Tags: *common, stud, odd-deck*
 ### Rules:
 1. Take the twos through sixes out of the deck.

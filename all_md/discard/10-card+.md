@@ -8,6 +8,7 @@
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Sweet Foca|
+
 Tags: *common, discard, table*
 ### Rules:
 1. Deal five cards face down to each player.

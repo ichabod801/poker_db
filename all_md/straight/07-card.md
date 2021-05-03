@@ -9,6 +9,7 @@ Also known as: *Seven Card Blind*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *straight*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -41,6 +42,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *straight*
 ### Rules:
 1. Deal three cards face down to each player.

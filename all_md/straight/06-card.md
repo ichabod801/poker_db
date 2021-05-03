@@ -8,6 +8,7 @@
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *straight, high-low*
 ### Rules:
 1. Deal two cards down to each player.

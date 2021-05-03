@@ -8,6 +8,7 @@
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *common, draw, lowball*
 ### Rules:
 1. Deal four cards down to each player.
@@ -34,6 +35,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|18|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, flip, high-low*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -66,6 +68,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, stud, must-fold, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -97,6 +100,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|8|
 |Wilds|36|
 |Source|Craig O'Brien|
+
 Tags: *common, draw, flip, pass, stud, high-low, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -128,6 +132,7 @@ Parent: No Way (#221)
 |Max Cards Seen|6|
 |Wilds|4|
 |Source|John McLeod|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -155,6 +160,7 @@ Parent: Lame Brain (#314)
 |Max Cards Seen|18|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, flip, high-low*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -180,6 +186,7 @@ Parent: Love Canal (#528)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, draw, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.

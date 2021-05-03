@@ -9,6 +9,7 @@ Also known as: *Showdownburn*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -44,6 +45,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Jon Shemitz|
+
 Tags: *guts, stud, redeal*
 ### Rules:
 1. Deal one card down to each player.
@@ -74,6 +76,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|7|
 |Wilds|4|
 |Source|Public Domain|
+
 Tags: *guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -115,6 +118,7 @@ Parent: Three Card Guts (#6)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Softsource|
+
 Tags: *common, guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -137,6 +141,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -166,6 +171,7 @@ Parent: Cut it Off (#180)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *guts, split-card, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -198,6 +204,7 @@ Also known as: *Crazy 3-5-7*.
 |Max Cards Seen|7|
 |Wilds|12|
 |Source|Invented Poker Variations|
+
 Tags: *guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -231,6 +238,7 @@ Parent: Three Five Seven (#342)
 |Max Cards Seen|7|
 |Wilds|4|
 |Source|Two Plus Two Forums|
+
 Tags: *guts, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -267,6 +275,7 @@ Also known as: *2-3-2*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *guts*
 ### Rules:
 1. Deal two cards down to each player.
@@ -297,6 +306,7 @@ Parent: Three Five Seven (#342)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *guts, stud*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -324,6 +334,7 @@ Also known as: *Apeshit*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -352,6 +363,7 @@ Parent: Three to Five (#372)
 |Max Cards Seen|7|
 |Wilds|4|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *guts, must-fold, wilds*
 ### Rules:
 1. The dealer declares one rank to be wild.
@@ -375,6 +387,7 @@ Parent: Two More Inches (#784)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *guts*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -399,6 +412,7 @@ Parent: Seven Card Guts (#785)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -422,6 +436,7 @@ Also known as: *4-3*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *guts*
 ### Rules:
 1. Deal four cards down to each player.
@@ -450,6 +465,7 @@ Parent: Seven Card Guts (#785)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *guts*
 ### Rules:
 1. Deal four cards down to each player.

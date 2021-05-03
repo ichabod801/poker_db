@@ -8,6 +8,7 @@
 |Max Cards Seen|8|
 |Wilds|1|
 |Source|Pro Forums|
+
 Tags: *draw, flip, jokers, must-fold, no-peek, wilds*
 ### Rules:
 1. Use a 52 card deck with one joker added.
@@ -35,6 +36,7 @@ Also known as: *Money Back, Skinny Minnie*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, flip, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -75,6 +77,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Scott Harker|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -97,6 +100,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *flip, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -124,6 +128,7 @@ Also known as: *Five Card Sweat, No Peek, No Peeky*.
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *flip, must-fold, no-peek, table*
 ### Rules:
 1. Deal five cards down to each player. No player may look at these cards.
@@ -147,6 +152,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *flip, no-peek*
 ### Rules:
 1. Deal five cards down to each player. No player may look at these cards.
@@ -173,6 +179,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, mod-ranks*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -208,6 +215,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, stud, high-low*
 ### Rules:
 1. Deal four cards down to each player.
@@ -244,6 +252,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Oswald Jacoby on Poker|
+
 Tags: *draw, flip, stud, high-low, mod-ranks*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -275,6 +284,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Poker Phil|
+
 Tags: *flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -310,6 +320,7 @@ Also known as: *Five Card Stud Roll Your Own, Flip II, Flip Poker, Mexican Rollo
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *flip*
 ### Rules:
 1. Deal two cards down to each player.
@@ -349,6 +360,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *draw, flip, stud*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -376,6 +388,7 @@ Also known as: *Turbo Five Card Stud*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Game Report|
+
 Tags: *flip, stud*
 ### Rules:
 1. Deal four cards down to each player.
@@ -406,6 +419,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *common, draw, flip, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -440,6 +454,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *flip, high-low*
 ### Rules:
 1. Deal ten cards face down to each player.
@@ -474,6 +489,7 @@ Parent: Rollouts (#75)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Scarne's Guide to Modern Poker|
+
 Tags: *draw, flip, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -507,6 +523,7 @@ Also known as: *Shotgun II*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -551,6 +568,7 @@ Also known as: *Double Barreled Shotgun*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, flip, high-low*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -584,6 +602,7 @@ Parent: Shotgun (#80)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -605,6 +624,7 @@ Parent: The Emporer's New Cards (#89)
 |Max Cards Seen|15|
 |Wilds|0|
 |Source|Tim P. McNerny|
+
 Tags: *flip, stud*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -647,6 +667,7 @@ Also known as: *Ten Cards*.
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *flip, stud, high-low*
 ### Rules:
 1. Deal ten cards face down to each player. No player may look at these cards.
@@ -690,6 +711,7 @@ Parent: Double Double (#111)
 |Max Cards Seen|15|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, stud, high-low, qualifier*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -721,6 +743,7 @@ Parent: Double Double (#111)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -748,6 +771,7 @@ Parent: Left to Right (#128)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *flip, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -776,6 +800,7 @@ Parent: Left to Right (#128)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *flip, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -807,6 +832,7 @@ Parent: Mexican Stud (#132)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Sweet Foca|
+
 Tags: *flip*
 ### Rules:
 1. Deal two cards down to each player.
@@ -844,6 +870,7 @@ Parent: Mexican Stud (#132)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *flip, stud, high-low*
 ### Rules:
 1. Deal two cards down to each player.
@@ -871,6 +898,7 @@ Parent: Satan (#145)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, stud, split-pot*
 ### Rules:
 1. Deal two cards down to each player.
@@ -905,6 +933,7 @@ Parent: The Game (#152)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *common, draw, flip, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -936,6 +965,7 @@ Also known as: *Ten, Ten Card Regrets*.
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *flip, high-low*
 ### Rules:
 1. Deal ten cards face down to each player. No player may look at these cards.
@@ -979,6 +1009,7 @@ Parent: Henway (#450)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Aidtopia|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1013,6 +1044,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *flip, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1048,6 +1080,7 @@ Also known as: *Stud Horse Poker*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *flip, guts, match-pot*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -1087,6 +1120,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|50|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *flip, pass, fee*
 ### Rules:
 1. Players do not ante.
@@ -1117,6 +1151,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *flip, stud, high-low*
 ### Rules:
 1. Deal ten cards face down to each player. No player may look at these cards.
@@ -1147,6 +1182,7 @@ Parent: Bunk Beds (#485)
 |Max Cards Seen|5|
 |Wilds|40|
 |Source|Sweet Foca|
+
 Tags: *flip, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1179,6 +1215,7 @@ Parent: Mexican Stud IV (#499)
 |Max Cards Seen|5|
 |Wilds|40|
 |Source|Sweet Foca|
+
 Tags: *flip, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1211,6 +1248,7 @@ Parent: Mexican Stud IV (#499)
 |Max Cards Seen|10|
 |Wilds|8|
 |Source|Sanjay Udani|
+
 Tags: *flip, high-low, wilds*
 ### Rules:
 1. Deal ten cards face down to each player. No player may look at these cards.
@@ -1251,6 +1289,7 @@ Parent: Henway no Peek (#811)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *flip, pass, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1280,6 +1319,7 @@ Parent: Double Exposure (#814)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *flip, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1308,6 +1348,7 @@ Parent: Double Exposure (#814)
 |Max Cards Seen|6|
 |Wilds|32|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, high-low, qualifier, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1338,6 +1379,7 @@ Parent: Dog of the Nile (#851)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, high-low, qualifier*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1368,6 +1410,7 @@ Parent: Dog of the Nile (#851)
 |Max Cards Seen|6|
 |Wilds|32|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, high-low, qualifier, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1399,6 +1442,7 @@ Parent: Dog of the Nile (#851)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, high-low, qualifier*
 ### Rules:
 1. Deal one card down to each player.
@@ -1429,6 +1473,7 @@ Parent: Dog of the Nile (#851)
 |Max Cards Seen|10|
 |Wilds|25|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, wilds*
 ### Rules:
 1. Deal two cards down to each player.

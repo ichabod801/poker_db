@@ -8,6 +8,7 @@
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *common, draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -39,6 +40,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Intellectual Orgy|
+
 Tags: *draw*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -60,6 +62,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|7|
 |Wilds|4|
 |Source|Brian O'Neil's Poker Page|
+
 Tags: *draw, stud, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -93,6 +96,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, flip, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -138,6 +142,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, flip, stud*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -174,6 +179,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *common, draw*
 ### Rules:
 1. Deal two cards down to each player.
@@ -206,6 +212,7 @@ Parent: Texas Hold'em (#4)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Texas Hold'em St.|
+
 Tags: *common, draw, fee*
 ### Rules:
 1. Deal two cards down to each player.
@@ -234,6 +241,7 @@ Parent: Texas Hold'em (#4)
 |Max Cards Seen|14|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, flip, pass, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -266,6 +274,7 @@ Parent: Anaconda (#10)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Graham's Card Club|
+
 Tags: *common, draw, flip, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -298,6 +307,7 @@ Parent: Five and Two (#37)
 |Max Cards Seen|8|
 |Wilds|28|
 |Source|Source misplaced|
+
 Tags: *draw, stud, fee, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -329,6 +339,7 @@ Parent: Low in the Hole (#211)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -355,6 +366,7 @@ Parent: Psycho (#227)
 |Max Cards Seen|11|
 |Wilds|4|
 |Source|Craig O'Brien|
+
 Tags: *draw, flip, stud, high-low, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -384,6 +396,7 @@ Parent: Psycho (#227)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Poker.Net|
+
 Tags: *draw, flip, stud*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -415,6 +428,7 @@ Parent: Psycho (#227)
 |Max Cards Seen|11|
 |Wilds|12|
 |Source|Source misplaced|
+
 Tags: *draw, flip, stud, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -445,6 +459,7 @@ Parent: Psycho (#227)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, stud, fee, high-low*
 ### Rules:
 1. Deal two cards down to each player.
@@ -483,6 +498,7 @@ Parent: Seven Stud High/Low (#243)
 |Max Cards Seen|207|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, fee, fee-fold*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -504,6 +520,7 @@ Parent: The Price is Right (#258)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, pass, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -537,6 +554,7 @@ Parent: Want It? Want It? Got It! (#264)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw*
 ### Rules:
 1. Deal two cards down to each player.
@@ -566,6 +584,7 @@ Parent: Hollywood Hold'em (#281)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, draw, stud, high-low, qualifier*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -594,6 +613,7 @@ Parent: Oxford Stud (#290)
 |Max Cards Seen|10|
 |Wilds|3|
 |Source|Invented Poker Variations|
+
 Tags: *common, draw, stud, table, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -628,6 +648,7 @@ Parent: 11810 (#310)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, flip, pass, fee, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -660,6 +681,7 @@ Also known as: *5/7/9*.
 |Max Cards Seen|15|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -694,6 +716,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, pass, stud, lowball*
 ### Rules:
 1. Deal one card down to each player.
@@ -725,6 +748,7 @@ Also known as: *Speedway*.
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, stud, fee, high-low*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -762,6 +786,7 @@ Parent: Grodnikonda (#493)
 |Max Cards Seen|8|
 |Wilds|8|
 |Source|Tom Jolly|
+
 Tags: *draw, stud, fee, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -799,6 +824,7 @@ Parent: Follow the Queen II (#608)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, stud, lowball*
 ### Rules:
 1. Deal two cards down to each player.
@@ -829,6 +855,7 @@ Parent: Lowball (#621)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, high-low, qualifier*
 ### Rules:
 1. Deal two cards down to each player.
@@ -861,6 +888,7 @@ Parent: Stud Eight/Trips (#622)
 |Max Cards Seen|19|
 |Wilds|0|
 |Source|Sweet Foca|
+
 Tags: *draw, pass, stud*
 ### Rules:
 1. The dealer declares one rank to be the rotate rank.
@@ -891,6 +919,7 @@ Parent: Partial Rotate (#657)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, stud, fee, high-low*
 ### Rules:
 1. Deal two cards down to each player.
@@ -926,6 +955,7 @@ Parent: Stan Burns (#670)
 |Max Cards Seen|10|
 |Wilds|3|
 |Source|Invented Poker Variations|
+
 Tags: *common, draw, stud, high-low, table, wilds*
 ### Rules:
 1. Deal three cards face down to each player.

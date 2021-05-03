@@ -8,6 +8,7 @@
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Kenneth Churilla|
+
 Tags: *common, stud, high-low, mod-ranks*
 ### Rules:
 1. Deal one card up to each player.

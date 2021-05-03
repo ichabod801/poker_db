@@ -8,6 +8,7 @@
 |Max Cards Seen|3|
 |Wilds|3|
 |Source|Hoyle|
+
 Tags: *straight, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -35,6 +36,7 @@ Parent: Three Card Draw (#90)
 |Max Cards Seen|3|
 |Wilds|8|
 |Source|Hoyle|
+
 Tags: *straight, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -56,6 +58,7 @@ Parent: Brag (#462)
 |Max Cards Seen|3|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *straight, mod-ranks*
 ### Rules:
 1. Deal one card down to each player.

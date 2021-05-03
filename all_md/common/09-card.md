@@ -8,6 +8,7 @@
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -53,6 +54,7 @@ Parent: Texas Hold'em (#4)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common*
 ### Rules:
 1. Deal two cards down to each player.
@@ -79,6 +81,7 @@ Parent: Texas Hold'em (#4)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal two cards down to each player.
@@ -106,6 +109,7 @@ Also known as: *4-2-1*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *common, flip, fee*
 ### Rules:
 1. Deal four cards down to each player.
@@ -139,6 +143,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *common, flip, guts, qualifier, table*
 ### Rules:
 1. Deal four cards down to each player.
@@ -173,6 +178,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|52|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, pass*
 ### Rules:
 1. Deal the deck completely out, except each player gets the same number of cards.
@@ -202,6 +208,7 @@ Also known as: *Chowaha Teddy*.
 |Max Cards Seen|16|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -236,6 +243,7 @@ Parent: Chowaha (#272)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, split-card*
 ### Rules:
 1. Deal four cards down to each player.
@@ -264,6 +272,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|John McLeod|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -291,6 +300,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -322,6 +332,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|9|
 |Wilds|12|
 |Source|Sanjay Udani|
+
 Tags: *common, wilds*
 ### Rules:
 1. Roll a six-sided die.
@@ -353,6 +364,7 @@ Also known as: *Omaha 8's*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *common, high-low, qualifier*
 ### Rules:
 1. Deal four cards down to each player.
@@ -397,6 +409,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, split-card*
 ### Rules:
 1. Deal four cards down to each player.
@@ -424,6 +437,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, flip*
 ### Rules:
 1. Deal four cards down to each player.
@@ -457,6 +471,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -478,6 +493,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw*
 ### Rules:
 1. Deal four cards down to each player.
@@ -506,6 +522,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|13|
 |Wilds|8|
 |Source|John McLeod|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -535,6 +552,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -562,6 +580,7 @@ Parent: Omaha Hold'em (#287)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, stud, high-low*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -598,6 +617,7 @@ Also known as: *Church, Fire on the Cross, La Crosse*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -638,6 +658,7 @@ Parent: Lame Brain (#314)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *common*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -672,6 +693,7 @@ Parent: Lame Brain (#314)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, qualifier*
 ### Rules:
 1. Deal four cards down to each player.
@@ -703,6 +725,7 @@ Parent: Lame Brain (#314)
 |Max Cards Seen|14|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -743,6 +766,7 @@ Also known as: *Zig Zag*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *common*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -773,6 +797,7 @@ Parent: Lame Brain (#314)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Two Plus Two Forums|
+
 Tags: *common, flip, wilds*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -809,6 +834,7 @@ Also known as: *Chewbacca*.
 |Max Cards Seen|16|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, high-low, qualifier*
 ### Rules:
 1. Deal four cards down to each player.
@@ -839,6 +865,7 @@ Parent: Chowahaha (#685)
 |Max Cards Seen|15|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, high-low*
 ### Rules:
 1. Deal four cards down to each player.
@@ -872,6 +899,7 @@ Parent: Chowahaha (#685)
 |Max Cards Seen|29|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -905,6 +933,7 @@ Also known as: *54, Fifty Four*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -930,6 +959,7 @@ Parent: Irish Hold'em (#698)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -956,6 +986,7 @@ Parent: Nebraska II (#701)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Variant Database|
+
 Tags: *common, high-low, qualifier*
 ### Rules:
 1. Deal four cards down to each player.
@@ -983,6 +1014,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, high-low, qualifier*
 ### Rules:
 1. Deal eight cards face down to each player
@@ -1013,6 +1045,7 @@ Also known as: *Psychotic Omaha*.
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, high-low*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1043,6 +1076,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, high-low, lowball, qualifier*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1075,6 +1109,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Variant Database|
+
 Tags: *common, flip, high-low, qualifier*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1105,6 +1140,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Poker Variant Database|
+
 Tags: *common, high-low, qualifier, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1140,6 +1176,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *common, fee, high-low, qualifier*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -1167,6 +1204,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *common, fee, high-low*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1195,6 +1233,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *common, guts*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1228,6 +1267,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Variant Database|
+
 Tags: *common, split-pot*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1255,6 +1295,7 @@ Parent: Omaha High/Low (#704)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, flip*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1283,6 +1324,7 @@ Parent: Studaha (#706)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -1311,6 +1353,7 @@ Parent: Studaha (#706)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, flip, stud, high-low*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -1343,6 +1386,7 @@ Also known as: *Utah*.
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Public Domain|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1383,6 +1427,7 @@ Parent: Cross Over (#731)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *common*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1428,6 +1473,7 @@ Parent: Cross Over (#731)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1462,6 +1508,7 @@ Parent: Dizzy Liz (#733)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1500,6 +1547,7 @@ Parent: Heaven and Hell (#736)
 |Max Cards Seen|14|
 |Wilds|0|
 |Source|Scarne's Guide to Modern Poker|
+
 Tags: *common, flip*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1538,6 +1586,7 @@ Parent: Twin Beds (#743)
 |Max Cards Seen|14|
 |Wilds|8|
 |Source|Hoyle|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1575,6 +1624,7 @@ Parent: Twin Beds (#743)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, flip, high-low, qualifier*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -1608,6 +1658,7 @@ Parent: Bicester (#812)
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, high-low*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1636,6 +1687,7 @@ Parent: Triple Board Omaha (#928)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1664,6 +1716,7 @@ Parent: Jamaican Irish Pineapple (#932)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Poker Variant Database|
+
 Tags: *common, high-low, qualifier, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1694,6 +1747,7 @@ Parent: Joemaha (#948)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *common, guts*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1722,6 +1776,7 @@ Parent: Omaha Burns (#951)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Poker Tips|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1755,6 +1810,7 @@ Parent: Bush League (#979)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Aidtopia|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1793,6 +1849,7 @@ Parent: Criss Cross (#980)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Boards IE|
+
 Tags: *common*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1832,6 +1889,7 @@ Parent: Southern Cross (#983)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Boards IE|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1873,6 +1931,7 @@ Parent: Southern Cross (#983)
 |Max Cards Seen|14|
 |Wilds|8|
 |Source|Hoyle|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1905,6 +1964,7 @@ Parent: Twin Beds Wild (#1000)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *common, guts*
 ### Rules:
 1. Deal four cards down to each player.
@@ -1932,6 +1992,7 @@ Parent: Four Three (#1013)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *common, guts, legs*
 ### Rules:
 1. Deal four cards down to each player.

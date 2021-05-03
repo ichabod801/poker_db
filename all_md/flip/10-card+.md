@@ -8,6 +8,7 @@
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, pass, stud, split-pot*
 ### Rules:
 1. Deal ten cards face down to each player.
@@ -40,6 +41,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, must-fold, no-peek, table*
 ### Rules:
 1. Deal twelve cards down to each player. No player may look at these cards.
@@ -68,6 +70,7 @@ Parent: Beat It (#168)
 |Max Cards Seen|300|
 |Wilds|0|
 |Source|Cheapass Games|
+
 Tags: *common, draw, flip, table*
 ### Rules:
 1. Deal four cards down to each player.
@@ -91,6 +94,7 @@ Parent: Lame Brain (#314)
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *flip, stud, high-low, odd-ranks*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -115,6 +119,7 @@ Parent: Chilcoot's 7/27 (#382)
 |Max Cards Seen|15|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, must-fold*
 ### Rules:
 1. Deal fifteen cards face down to each player.
@@ -142,6 +147,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *flip, high-low, table*
 ### Rules:
 1. Deal thirteen cards face down to each player.
@@ -181,6 +187,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, must-fold, no-peek, table*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -205,6 +212,7 @@ Parent: Blind (#554)
 |Max Cards Seen|15|
 |Wilds|0|
 |Source|Erich Friedman|
+
 Tags: *flip, legs*
 ### Rules:
 1. Deal fifteen cards face down to each player.

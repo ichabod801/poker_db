@@ -8,6 +8,7 @@
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *stud, high-low, odd-deal*
 ### Rules:
 1. Deal one card up to each player.
@@ -37,6 +38,7 @@ Parent: Root Game (#0)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -67,6 +69,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|52|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *draw, flip, stud, lowball, no-peek, odd-ranks*
 ### Rules:
 1. Deal two cards face down to each player. No player may look at these cards.
@@ -95,6 +98,7 @@ Parent: Four Card Stud (#123)
 |Max Cards Seen|4|
 |Wilds|0|
 |Source|Kenneth Churilla|
+
 Tags: *common, stud, high-low, mod-ranks*
 ### Rules:
 1. Deal one card up to each player.

@@ -9,6 +9,7 @@ Also known as: *Kenosha*.
 |Max Cards Seen|202|
 |Wilds|0|
 |Source|Softsource|
+
 Tags: *straight*
 ### Rules:
 1. Deal two cards down to each player.

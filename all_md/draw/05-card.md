@@ -8,6 +8,7 @@
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -122,6 +123,7 @@ Also known as: *Spit*.
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Public Domain|
+
 Tags: *common, draw, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -160,6 +162,7 @@ Also known as: *Cowboy*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -214,6 +217,7 @@ Parent: Root Game (#0)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -237,6 +241,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -258,6 +263,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|8|
 |Wilds|1|
 |Source|Pro Forums|
+
 Tags: *draw, flip, jokers, must-fold, no-peek, wilds*
 ### Rules:
 1. Use a 52 card deck with one joker added.
@@ -284,6 +290,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker.Net Glossary|
+
 Tags: *draw, forced-bet*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -310,6 +317,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|24|
 |Source|Jay Close|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -332,6 +340,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *draw, forced-bet*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -358,6 +367,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|1|
 |Source|Public Domain|
+
 Tags: *draw, jokers, limited*
 ### Rules:
 1. Use a 52 card deck with one joker added.
@@ -381,6 +391,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|16|
 |Source|Graham's Card Club|
+
 Tags: *draw, wilds*
 ### Rules:
 1. The dealer declares one rank to be the call rank.
@@ -409,6 +420,7 @@ Also known as: *Sows'em*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, mod-ranks*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -431,6 +443,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|7|
 |Source|Free Times|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -455,6 +468,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|28|
 |Source|Poker Mike|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -478,6 +492,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Aidtopia|
+
 Tags: *draw, must-fold, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -502,6 +517,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Brian O'Neil's Poker Page|
+
 Tags: *draw, fee, match-pot, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -526,6 +542,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, fee, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -549,6 +566,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|13|
 |Wilds|8|
 |Source|John McLeod|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -574,6 +592,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -607,6 +626,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|12|
 |Source|Tom Jolly|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -636,6 +656,7 @@ Also known as: *Two Leg Poker*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -663,6 +684,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -686,6 +708,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -712,6 +735,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -734,6 +758,7 @@ Also known as: *Australian Poker II, Blind Draw, Blind Tiger II*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|iPoker|
+
 Tags: *draw, forced-bet*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -755,6 +780,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Aidtopia|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -781,6 +807,7 @@ Also known as: *The Full Monty*.
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Intellectual Orgy|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -802,6 +829,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|2|
 |Source|Public Domain|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -825,6 +853,7 @@ Also known as: *Roll Your Own II*.
 |Max Cards Seen|9|
 |Wilds|6|
 |Source|Hoyle|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -852,6 +881,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|24|
 |Source|Hoyle|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -874,6 +904,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, high-low, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -897,6 +928,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Legion West|
+
 Tags: *draw, match-pot, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -926,6 +958,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Invented Poker Variations|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -948,6 +981,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|30|
 |Source|Aidtopia|
+
 Tags: *draw, limited*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -977,6 +1011,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Craig O'Brien|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1000,6 +1035,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1027,6 +1063,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Variant Database|
+
 Tags: *draw, mod-ranks*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1049,6 +1086,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|205|
 |Wilds|4|
 |Source|Invented Poker Variations|
+
 Tags: *draw, fee, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1072,6 +1110,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1095,6 +1134,7 @@ Also known as: *Gardena Jackpots, Jackpots*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1131,6 +1171,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|28|
 |Source|Poker Mike|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1159,6 +1200,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Aidtopia|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1183,6 +1225,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, mod-ranks*
 ### Rules:
 1. The dealer declares one poker hand (such as pair of threes) that will beat all other hands.
@@ -1206,6 +1249,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Hoyle|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1228,6 +1272,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|24|
 |Source|Source misplaced|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1251,6 +1296,7 @@ Also known as: *Single Draw Lowball*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Xaos Dog|
+
 Tags: *draw, lowball*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1277,6 +1323,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|30|
 |Source|Jay Close|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1305,6 +1352,7 @@ Also known as: *CEBU Special*.
 |Max Cards Seen|9|
 |Wilds|12|
 |Source|Joker Poker|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1329,6 +1377,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Will Smith|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1353,6 +1402,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, jokers, mod-ranks, odd-deck, wilds*
 ### Rules:
 1. Take the twos, eights, nines, and tens out of the deck, and add four jokers.
@@ -1377,6 +1427,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Mike Tsao|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1399,6 +1450,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|12|
 |Source|Graham's Card Club|
+
 Tags: *draw, mod-ranks, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1430,6 +1482,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, forced-bet, mod-ranks*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1453,6 +1506,7 @@ Also known as: *Axe King*.
 |Max Cards Seen|9|
 |Wilds|1|
 |Source|Hoyle|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1475,6 +1529,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, fee*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1496,6 +1551,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Jon Shemitz|
+
 Tags: *draw, fee*
 ### Rules:
 1. Players do not ante.
@@ -1518,6 +1574,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Hoyle|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1540,6 +1597,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|12|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1564,6 +1622,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Graham's Card Club|
+
 Tags: *draw, odd-ranks, split-pot*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1587,6 +1646,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *draw, odd-ranks*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1610,6 +1670,7 @@ Also known as: *Money Back, Skinny Minnie*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, flip, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1650,6 +1711,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Aidtopia|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1672,6 +1734,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1694,6 +1757,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, odd-deck*
 ### Rules:
 1. Take the twos through sixes out of the deck.
@@ -1717,6 +1781,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *draw*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -1749,6 +1814,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -1776,6 +1842,7 @@ Also known as: *69 Draw*.
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|P. D. Magnus|
+
 Tags: *draw, limited*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1799,6 +1866,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|3|
 |Source|Hoyle|
+
 Tags: *draw, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1823,6 +1891,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1847,6 +1916,7 @@ Also known as: *Bet or Drop*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|iPoker|
+
 Tags: *draw, forced-bet*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1868,6 +1938,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1896,6 +1967,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Phil|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1918,6 +1990,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1945,6 +2018,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, fee*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -1966,6 +2040,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|10|
 |Wilds|20|
 |Source|Joker Poker|
+
 Tags: *draw, table, wilds*
 ### Rules:
 1. Deal six cards face down to each player.
@@ -1990,6 +2065,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Scott Harker|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2013,6 +2089,7 @@ Also known as: *Five Draw Place*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, mod-ranks*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2040,6 +2117,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Phil|
+
 Tags: *draw, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2062,6 +2140,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -2095,6 +2174,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -2128,6 +2208,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, mod-ranks*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -2164,6 +2245,7 @@ Also known as: *Crazy Stud, Forward Pass, Hilo Piccolo, Push, Shove'em, Take It 
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Scarne's Guide to Modern Poker|
+
 Tags: *draw, pass, stud, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -2205,6 +2287,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Oswald Jacoby on Poker|
+
 Tags: *draw, flip, stud, high-low, mod-ranks*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2236,6 +2319,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|17|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -2264,6 +2348,7 @@ Also known as: *Choice High/Low, Five Card Option, Little Squeeze, Low-Bo, Old W
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *draw, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -2302,6 +2387,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *draw, flip, stud*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -2328,6 +2414,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -2367,6 +2454,7 @@ Also known as: *Bank Night*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -2401,6 +2489,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|6|
 |Wilds|4|
 |Source|Hoyle|
+
 Tags: *common, draw, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -2428,6 +2517,7 @@ Parent: Texas Hold'em (#4)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *common, draw, flip, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -2462,6 +2552,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|9|
 |Wilds|28|
 |Source|Poker Phil|
+
 Tags: *common, draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -2495,6 +2586,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Home Poker Cookbook|
+
 Tags: *common, draw, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -2519,6 +2611,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *common, draw*
 ### Rules:
 1. Deal four cards down to each player.
@@ -2547,6 +2640,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|9|
 |Wilds|3|
 |Source|Home Poker Cookbook|
+
 Tags: *common, draw, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -2570,6 +2664,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|5|
 |Wilds|12|
 |Source|Source misplaced|
+
 Tags: *draw, guts, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2592,6 +2687,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts, fee, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2615,6 +2711,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Jay Close|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2636,6 +2733,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Pro Forums|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2659,6 +2757,7 @@ Also known as: *Circle Jerk*.
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, guts, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2689,6 +2788,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2710,6 +2810,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Invented Poker Variations|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2731,6 +2832,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Other Worlds Poker|
+
 Tags: *draw, guts, dead, qualifier, table, wilds*
 ### Rules:
 1. Use a normal 52 card deck with two jokers added.
@@ -2757,6 +2859,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, guts, fee*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2779,6 +2882,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Pro Forums|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2800,6 +2904,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2827,6 +2932,7 @@ Also known as: *Five Card Big Chicken, Five Card Guts with the Harsh Nelly Rule,
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2854,6 +2960,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2876,6 +2983,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2898,6 +3006,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Xaos Dog|
+
 Tags: *draw, guts, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2921,6 +3030,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -2942,6 +3052,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Home Poker Cookbook|
+
 Tags: *common, draw, guts, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -2972,6 +3083,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|24|
 |Source|Source misplaced|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3005,6 +3117,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|34|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, guts, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3033,6 +3146,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3059,6 +3173,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Antismite|
+
 Tags: *draw, guts, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3088,6 +3203,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *draw, forced-bet, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3117,6 +3233,7 @@ Parent: Australian Poker (#16)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, fee, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3147,6 +3264,7 @@ Parent: Bid Poker (#18)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *draw, fee, forced-bet*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3168,6 +3286,7 @@ Parent: Blind Tiger (#19)
 |Max Cards Seen|9|
 |Wilds|20|
 |Source|Graham's Card Club|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3192,6 +3311,7 @@ Parent: Call a Wild (#21)
 |Max Cards Seen|13|
 |Wilds|4|
 |Source|Aidtopia|
+
 Tags: *draw, mod-ranks, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3217,6 +3337,7 @@ Parent: Double Draw (#29)
 |Max Cards Seen|13|
 |Wilds|6|
 |Source|Tim Murtaugh|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3247,6 +3368,7 @@ Parent: Double Draw (#29)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Tim Murtaugh|
+
 Tags: *draw, split-card*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3271,6 +3393,7 @@ Parent: Double Draw (#29)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3294,6 +3417,7 @@ Parent: Double Draw (#29)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Tim Murtaugh|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3317,6 +3441,7 @@ Parent: Double Draw (#29)
 |Max Cards Seen|17|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3348,6 +3473,7 @@ Parent: Double Draw (#29)
 |Max Cards Seen|9|
 |Wilds|11|
 |Source|Tom Jolly|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3373,6 +3499,7 @@ Also known as: *Three Legged Race II*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3400,6 +3527,7 @@ Parent: Double Legged Poker (#31)
 |Max Cards Seen|9|
 |Wilds|10|
 |Source|The Poker Pages|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3423,6 +3551,7 @@ Parent: Five Draw Any Card Wild (#40)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Scott Harker|
+
 Tags: *draw, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3447,6 +3576,7 @@ Also known as: *Nice Frankenstein*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Legion West|
+
 Tags: *draw, match-pot, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3470,6 +3600,7 @@ Parent: Frankenstein (#44)
 |Max Cards Seen|9|
 |Wilds|30|
 |Source|P. D. Magnus|
+
 Tags: *draw, limited*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3492,6 +3623,7 @@ Parent: Fuzzy Draw (#46)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Home Poker Cookbook|
+
 Tags: *draw, high-low, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3516,6 +3648,7 @@ Parent: Hot Pastrami (#48)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3539,6 +3672,7 @@ Also known as: *Freakpots*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3562,6 +3696,7 @@ Also known as: *Jacks Back, Jackson, Johnson, Johnson Draw, Reverse*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Other Worlds Poker|
+
 Tags: *draw, forced-bet, high-low, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3589,6 +3724,7 @@ Parent: Jacks or Better (#52)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3613,6 +3749,7 @@ Also known as: *Progression*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3636,6 +3773,7 @@ Parent: Jacks or Better (#52)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3663,6 +3801,7 @@ Parent: Jacks or Better (#52)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3686,6 +3825,7 @@ Also known as: *Mistigris*.
 |Max Cards Seen|9|
 |Wilds|1|
 |Source|Public Domain|
+
 Tags: *draw, jokers, qualifier, wilds*
 ### Rules:
 1. Use a 52 card deck with one joker added.
@@ -3710,6 +3850,7 @@ Parent: Jacks or Better (#52)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3732,6 +3873,7 @@ Parent: Jacks or Better (#52)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3754,6 +3896,7 @@ Parent: Jacks or Better (#52)
 |Max Cards Seen|9|
 |Wilds|28|
 |Source|Poker Mike|
+
 Tags: *draw, match-pot, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3778,6 +3921,7 @@ Parent: Kings and Low Men (#53)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, jokers, lowball, wilds*
 ### Rules:
 1. Use a 52 card deck with one joker added.
@@ -3801,6 +3945,7 @@ Parent: Lowboy (#58)
 |Max Cards Seen|9|
 |Wilds|30|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, split-pot, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3824,6 +3969,7 @@ Parent: Magic (#59)
 |Max Cards Seen|9|
 |Wilds|12|
 |Source|Graham's Card Club|
+
 Tags: *draw, mod-ranks, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3849,6 +3995,7 @@ Parent: Neal Deal Red (#65)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Graham's Card Club|
+
 Tags: *draw, mod-ranks, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3873,6 +4020,7 @@ Parent: Neal Deal Red (#65)
 |Max Cards Seen|9|
 |Wilds|13|
 |Source|Source misplaced|
+
 Tags: *draw, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3895,6 +4043,7 @@ Parent: Five Card Draw (#1)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Scarne's Guide to Modern Poker|
+
 Tags: *draw, flip, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3928,6 +4077,7 @@ Also known as: *Shotgun II*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -3971,6 +4121,7 @@ Parent: Rollouts (#75)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *draw*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -4001,6 +4152,7 @@ Parent: Shotgun (#80)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *draw*
 ### Rules:
 1. Deal four cards down to each player.
@@ -4024,6 +4176,7 @@ Parent: Shotgun (#80)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Pro Forums|
+
 Tags: *draw, stud, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -4049,6 +4202,7 @@ Parent: Shotgun (#80)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *draw*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -4075,6 +4229,7 @@ Also known as: *Double Barreled Shotgun*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, flip, high-low*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -4108,6 +4263,7 @@ Parent: Shotgun (#80)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Poker Mike|
+
 Tags: *draw, pass*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4131,6 +4287,7 @@ Parent: Switch (#87)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4152,6 +4309,7 @@ Parent: The Emporer's New Cards (#89)
 |Max Cards Seen|13|
 |Wilds|4|
 |Source|Mike Tsao|
+
 Tags: *draw, stud, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4181,6 +4339,7 @@ Parent: The Emporer's New Cards (#89)
 |Max Cards Seen|50|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, pass, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4203,6 +4362,7 @@ Parent: Trees (#94)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, mod-ranks*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4226,6 +4386,7 @@ Parent: Vice President (#96)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -4254,6 +4415,7 @@ Parent: Bid'em (#102)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, lowball*
 ### Rules:
 1. Deal one card down to each player.
@@ -4288,6 +4450,7 @@ Parent: Bombay (#105)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, pass, stud, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -4317,6 +4480,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, pass, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -4346,6 +4510,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|8|
 |Wilds|24|
 |Source|Joker Poker|
+
 Tags: *draw, stud, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -4375,6 +4540,7 @@ Also known as: *Add It Up*.
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, high-low, odd-ranks, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4407,6 +4573,7 @@ Parent: Numbers (#137)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, stud, fee, high-low, mod-ranks*
 ### Rules:
 1. Deal one card down to each player.
@@ -4438,6 +4605,7 @@ Parent: Option Alley (#139)
 |Max Cards Seen|10|
 |Wilds|4|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, stud, fee, high-low, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -4468,6 +4636,7 @@ Parent: Option Alley (#139)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, fee, high-low, qualifier*
 ### Rules:
 1. Deal one card down to each player.
@@ -4503,6 +4672,7 @@ Parent: Option Alley (#139)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -4536,6 +4706,7 @@ Also known as: *Six Card Option II*.
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -4570,6 +4741,7 @@ Also known as: *52, Fifty-Two*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -4601,6 +4773,7 @@ Also known as: *English Poker II*.
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -4629,6 +4802,7 @@ Parent: English Stud (#188)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *common, draw, flip, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -4659,6 +4833,7 @@ Parent: Phlegm (#315)
 |Max Cards Seen|9|
 |Wilds|28|
 |Source|Poker Phil|
+
 Tags: *common, draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -4687,6 +4862,7 @@ Parent: Spit Guts (#316)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4713,6 +4889,7 @@ Parent: Five Card Guts with a Draw (#360)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Xaos Dog|
+
 Tags: *draw, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4735,6 +4912,7 @@ Parent: Five Card Guts with the Weenie Rule (#361)
 |Max Cards Seen|7|
 |Wilds|24|
 |Source|Rec.Gambling.Poker|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4760,6 +4938,7 @@ Parent: King Little (#368)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Sanjay Udani|
+
 Tags: *draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4787,6 +4966,7 @@ Parent: King Little (#368)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Antismite|
+
 Tags: *draw, guts, lowball, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4809,6 +4989,7 @@ Parent: Western (#373)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Antismite|
+
 Tags: *draw, guts, high-low, qualifier, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4832,6 +5013,7 @@ Parent: Western (#373)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, fee, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4861,6 +5043,7 @@ Parent: Bid Poker II (#414)
 |Max Cards Seen|19|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, fee, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4885,6 +5068,7 @@ Parent: Bid Poker II (#414)
 |Max Cards Seen|13|
 |Wilds|6|
 |Source|Tim Murtaugh|
+
 Tags: *draw, table, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4913,6 +5097,7 @@ Parent: Double Draw II (#418)
 |Max Cards Seen|17|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw, lowball*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4947,6 +5132,7 @@ Parent: Threes (#422)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker Phil|
+
 Tags: *draw*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4970,6 +5156,7 @@ Also known as: *Kingston*.
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *draw, forced-bet, high-low, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -4992,6 +5179,7 @@ Parent: High Back to Low (#434)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Casino City|
+
 Tags: *draw, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -5019,6 +5207,7 @@ Parent: Jacks Progressive (#437)
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Ox House|
+
 Tags: *common, draw, fee*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -5044,6 +5233,7 @@ Parent: Henway (#450)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Aidtopia|
+
 Tags: *draw, flip*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -5078,6 +5268,7 @@ Parent: Roll'em Out (#453)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Craig O'Brien|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -5103,6 +5294,7 @@ Parent: Double Ought (#454)
 |Max Cards Seen|13|
 |Wilds|4|
 |Source|Mike Tsao|
+
 Tags: *draw, stud, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -5127,6 +5319,7 @@ Parent: Windows (#461)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, stud, lowball*
 ### Rules:
 1. Deal one card down to each player. Twice during the game each player may reject their dealt card and get another one.
@@ -5153,6 +5346,7 @@ Parent: Shuck'em (#473)
 |Max Cards Seen|10|
 |Wilds|4|
 |Source|Poker Phil|
+
 Tags: *draw, pass, stud, high-low, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -5184,6 +5378,7 @@ Parent: Kings (#478)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, high-low, qualifier*
 ### Rules:
 1. Deal one card down to each player.
@@ -5217,6 +5412,7 @@ Parent: Pair No Pair (#515)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -5243,6 +5439,7 @@ Parent: Cathy's Game (#516)
 |Max Cards Seen|6|
 |Wilds|32|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, fee, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -5271,6 +5468,7 @@ Parent: Option Alley (#139)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, fee, high-low, qualifier*
 ### Rules:
 1. Deal one card down to each player.
@@ -5311,6 +5509,7 @@ Also known as: *131 Replace*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Antismite|
+
 Tags: *draw, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -5343,6 +5542,7 @@ Also known as: *66*.
 |Max Cards Seen|6|
 |Wilds|4|
 |Source|Poker.Net Glossary|
+
 Tags: *draw, stud, fee, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -5372,6 +5572,7 @@ Parent: One Card Substitution (#538)
 |Max Cards Seen|13|
 |Wilds|0|
 |Source|Poker News|
+
 Tags: *draw, fee, table*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -5396,6 +5597,7 @@ Parent: Bid Slam (#803)
 |Max Cards Seen|17|
 |Wilds|8|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, lowball, wilds*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -5424,6 +5626,7 @@ Parent: Triple Draw Lowball (#806)
 |Max Cards Seen|18|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, lowball*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -5451,6 +5654,7 @@ Parent: Triple Draw Lowball (#806)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *draw, fee, qualifier*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -5473,6 +5677,7 @@ Parent: Progressive Draw (#809)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Joker Poker|
+
 Tags: *draw, guts, match-pot*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -5506,6 +5711,7 @@ Parent: Oppression (#817)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, fee, qualifier*
 ### Rules:
 1. Deal one card down to each player.
@@ -5535,6 +5741,7 @@ Parent: Dog of the Nile (#851)
 |Max Cards Seen|6|
 |Wilds|32|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, high-low, qualifier, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -5565,6 +5772,7 @@ Parent: Dog of the Nile (#851)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, high-low, qualifier*
 ### Rules:
 1. Deal two cards down to each player.
@@ -5595,6 +5803,7 @@ Parent: Dog of the Nile (#851)
 |Max Cards Seen|6|
 |Wilds|32|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, high-low, qualifier, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -5626,6 +5835,7 @@ Parent: Dog of the Nile (#851)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, flip, stud, fee, high-low, qualifier*
 ### Rules:
 1. Deal one card down to each player.
@@ -5656,6 +5866,7 @@ Parent: Dog of the Nile (#851)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Joker Poker|
+
 Tags: *draw, guts, match-pot, wilds*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -5685,6 +5896,7 @@ Parent: Advanced Oppression (#1028)
 |Max Cards Seen|10|
 |Wilds|25|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -5721,6 +5933,7 @@ Parent: Escalator (#1032)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *draw*
 ### Rules:
 1. Deal six cards face down to each player.

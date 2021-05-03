@@ -8,6 +8,7 @@
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Gambling Poker|
+
 Tags: *stud*
 ### Rules:
 1. Deal two cards up to each player
@@ -35,6 +36,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -77,6 +79,7 @@ Parent: Five Card Stud (#2)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *stud*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -110,6 +113,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|9|
 |Wilds|0|
 |Source|John McLeod|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -142,6 +146,7 @@ Parent: Seven Card Stud (#3)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *draw, stud, table*
 ### Rules:
 1. Deal three cards face down to each player.
@@ -168,6 +173,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, pass, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -202,6 +208,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|10|
 |Wilds|0|
 |Source|Hoyle|
+
 Tags: *pass, stud, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -236,6 +243,7 @@ Parent: Crazy Fives (#108)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|David Zanetti|
+
 Tags: *stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -262,6 +270,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|6|
 |Wilds|4|
 |Source|Kurt Hanna|
+
 Tags: *stud, split-pot, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -292,6 +301,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Wikipedia|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -333,6 +343,7 @@ Also known as: *69*.
 |Max Cards Seen|6|
 |Wilds|8|
 |Source|Source misplaced|
+
 Tags: *stud, fee, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -363,6 +374,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, stud, must-fold, table*
 ### Rules:
 1. Deal two cards down to each player.
@@ -395,6 +407,7 @@ Also known as: *3-33*.
 |Max Cards Seen|6|
 |Wilds|4|
 |Source|Poker Mike|
+
 Tags: *stud, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -423,6 +436,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Source misplaced|
+
 Tags: *stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -450,6 +464,7 @@ Parent: Six Card Stud (#147)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -478,6 +493,7 @@ Parent: English Stud (#188)
 |Max Cards Seen|8|
 |Wilds|36|
 |Source|Craig O'Brien|
+
 Tags: *common, draw, flip, pass, stud, high-low, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -509,6 +525,7 @@ Parent: No Way (#221)
 |Max Cards Seen|11|
 |Wilds|4|
 |Source|Sweet Foca|
+
 Tags: *pass, stud, fee, high-low, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -545,6 +562,7 @@ Also known as: *Choice*.
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Poker.Net Glossary|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal one card down to each player.
@@ -582,6 +600,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, draw, stud, fee, high-low*
 ### Rules:
 1. Deal one card down to each player.
@@ -613,6 +632,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -643,6 +663,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Mike Tsao|
+
 Tags: *draw, stud, fee*
 ### Rules:
 1. Deal one card down to each player.
@@ -673,6 +694,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *draw, stud, high-low, qualifier*
 ### Rules:
 1. Deal one card down to each player.
@@ -707,6 +729,7 @@ Parent: Six Card Option (#529)
 |Max Cards Seen|6|
 |Wilds|0|
 |Source|Poker Tips|
+
 Tags: *stud, high-low, qualifier*
 ### Rules:
 1. Deal one card down to each player.
@@ -739,6 +762,7 @@ Also known as: *Super Kings*.
 |Max Cards Seen|17|
 |Wilds|4|
 |Source|Sweet Foca|
+
 Tags: *pass, stud, fee, high-low, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -769,6 +793,7 @@ Parent: Kings II (#833)
 |Max Cards Seen|7|
 |Wilds|8|
 |Source|Tom Jolly|
+
 Tags: *draw, stud, wilds*
 ### Rules:
 1. Deal one card down to each player.
@@ -801,6 +826,7 @@ Parent: Big Squeeze (#855)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, flip, stud*
 ### Rules:
 1. Deal two cards down to each player.
@@ -835,6 +861,7 @@ Parent: Big Squeeze (#855)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Tom Jolly|
+
 Tags: *draw, stud*
 ### Rules:
 1. Deal two cards down to each player.

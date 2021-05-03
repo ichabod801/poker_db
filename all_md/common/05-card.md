@@ -9,6 +9,7 @@ Also known as: *Spit*.
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Public Domain|
+
 Tags: *common, draw, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -46,6 +47,7 @@ Parent: Root Game (#0)
 |Max Cards Seen|6|
 |Wilds|4|
 |Source|Hoyle|
+
 Tags: *common, draw, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -73,6 +75,7 @@ Parent: Texas Hold'em (#4)
 |Max Cards Seen|7|
 |Wilds|0|
 |Source|Home Poker Cookbook|
+
 Tags: *common, forced-bet, high-low*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -97,6 +100,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *common, draw, flip, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -131,6 +135,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|9|
 |Wilds|28|
 |Source|Poker Phil|
+
 Tags: *common, draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -164,6 +169,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Home Poker Cookbook|
+
 Tags: *common, draw, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -188,6 +194,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Public Domain|
+
 Tags: *common, draw*
 ### Rules:
 1. Deal four cards down to each player.
@@ -216,6 +223,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|9|
 |Wilds|3|
 |Source|Home Poker Cookbook|
+
 Tags: *common, draw, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -239,6 +247,7 @@ Parent: Spit in the Ocean (#5)
 |Max Cards Seen|8|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, guts*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -260,6 +269,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|9|
 |Wilds|8|
 |Source|Home Poker Cookbook|
+
 Tags: *common, draw, guts, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -290,6 +300,7 @@ Parent: Five Card Guts (#7)
 |Max Cards Seen|5|
 |Wilds|0|
 |Source|Graham's Card Club|
+
 Tags: *common, stud, fee-fold, limited, must-fold*
 ### Rules:
 1. Deal one card down to each player.
@@ -319,6 +330,7 @@ Parent: Bug Stud (#106)
 |Max Cards Seen|9|
 |Wilds|4|
 |Source|Poker Mike, cross referenced from other pages|
+
 Tags: *common, draw, flip, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -349,6 +361,7 @@ Parent: Phlegm (#315)
 |Max Cards Seen|9|
 |Wilds|28|
 |Source|Poker Phil|
+
 Tags: *common, draw, guts, qualifier, table, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -377,6 +390,7 @@ Parent: Spit Guts (#316)
 |Max Cards Seen|5|
 |Wilds|8|
 |Source|Source misplaced|
+
 Tags: *common, guts, wilds*
 ### Rules:
 1. Deal four cards down to each player.
@@ -401,6 +415,7 @@ Parent: Jacks and Piss (#367)
 |Max Cards Seen|12|
 |Wilds|0|
 |Source|Ox House|
+
 Tags: *common, draw, fee*
 ### Rules:
 1. Deal seven cards face down to each player.
@@ -426,6 +441,7 @@ Parent: Henway (#450)
 |Max Cards Seen|18|
 |Wilds|0|
 |Source|Two Plus Two Forums|
+
 Tags: *common, draw, lowball*
 ### Rules:
 1. Deal five cards face down to each player.
@@ -453,6 +469,7 @@ Parent: Triple Draw Lowball (#806)
 |Max Cards Seen|13|
 |Wilds|4|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -491,6 +508,7 @@ Parent: Bingo (#1079)
 |Max Cards Seen|11|
 |Wilds|13|
 |Source|Jon Shemitz|
+
 Tags: *common*
 ### Rules:
 1. Deal two cards down to each player.
@@ -518,6 +536,7 @@ Parent: New Haven (#1109)
 |Max Cards Seen|11|
 |Wilds|52|
 |Source|Brian O'Neil's Poker Page|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -546,6 +565,7 @@ Parent: New Haven (#1109)
 |Max Cards Seen|11|
 |Wilds|52|
 |Source|Brian O'Neil's Poker Page|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -574,6 +594,7 @@ Parent: New Haven (#1109)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Scott Harker|
+
 Tags: *common*
 ### Rules:
 1. Deal two cards down to each player.
@@ -605,6 +626,7 @@ Parent: New Haven (#1109)
 |Max Cards Seen|11|
 |Wilds|4|
 |Source|Brian O'Neil's Poker Page|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -632,6 +654,7 @@ Parent: New Haven (#1109)
 |Max Cards Seen|13|
 |Wilds|4|
 |Source|Rec.Gambling.Poker|
+
 Tags: *common, wilds*
 ### Rules:
 1. Deal two cards down to each player.
@@ -665,6 +688,7 @@ Parent: Tic Tac Hold'em (#1111)
 |Max Cards Seen|11|
 |Wilds|0|
 |Source|Scott Harker|
+
 Tags: *common*
 ### Rules:
 1. Deal two cards down to each player.
