@@ -22,6 +22,7 @@ See <http://www.gnu.org/licenses/> for details on this license (GPLv3).
 
 Constants:
 HELP_GENERAL: General help text for the interface. (str)
+HELP_RULE_TYPES: A description of rule types. (str)
 HELP_SERIAL: A description of serial numbers for variants. (str)
 HELP_TAGS: A list of tags and their meaning. (str)
 WORDS: Poker terms for default names of libraries. (list of str)
@@ -66,6 +67,46 @@ and parent variants listed (and you can control how the children are listed).
 I'm still working on other functionality, including:
    * The creation of new rules and variants.
    * The modification of current rules and variants (for data cleaning).
+"""
+
+HELP_RULE_TYPES = """
+Each rule has a type, describing what sort of action the rule concerns. The
+available rule types are:
+
+* bet: Rules for rounds of payments into the pot.
+* common: Rules for dealing common cards.
+* dead: Rules specifying cards with that do not contribute to hand value.
+* deal: Rules for dealing cards to players from the deck. Does not include
+   discarding cards to get more cards.
+* deck: Rules for adding or removing cards from the deck.
+* declare: Rules for player declaration, including in/out and high/low.
+* deprecated: Deprecated rules are no longer used.
+* discard: Rules for removing cards from a player's hand with out getting cards
+   back.
+* draw: Rules for discarding cards to get cards from the deck (or somewhere).
+* hand: Rules determining which cards you can use in your hand.
+* flip: Rules for flipping down cards face up, from a player's hand.
+* fold: Rules for actions or events that can cause a player to fold.
+* limited: Rules for limited wild cards.
+* match: Rules for matching the pot or other fees after a declare or showdown.
+* other: Rules for everything else
+* pass: Rules about passing cards from one player to another.
+* qualifier: Rules for hands required to open betting or to win the pot.
+* rank: Rules about how hands are ranked against each other.
+* repeat: Rules about repeating a number of actions (other rules) until a 
+   condition is met.
+* showdown: Rules about how to divide the pot.
+* shuffle: Rules about shuffling or reshuffling the deck somehow.
+* stack: Rules about players putting their cards into a stack.
+* table: Rules about dealing table cards.
+* turn: Rules about flipping over face down table or common cards.
+* variant: Rules about playing a specific variant.
+* wild: Rules about what cards are wild. Also see 'limited' and 'dead'.
+* win: Rules covering situations where a player instantly wins the variant.
+
+Each rule also has a card number, which generally describes how many cards the
+rule is referring to. See the data dictionary for details on the card number
+for each rule type.
 """
 
 HELP_SERIAL = """
@@ -695,11 +736,12 @@ class Viewer(cmd.Cmd):
 	postcmd
 	"""
 
-	aliases = {'&': 'intersection', '-': 'minus', '|': 'union', 'dbr': 'drop by rule', 'drs': 'drop by stats',
-		'drt': 'drop by tag', 'kbr': 'keep by rule', 'kbs': 'keep by stats', 'kbt': 'keep by tag',
-		'lib': 'library', 'lbr': 'load by rule', 'lbs': 'load by stats', 'lbt': 'load by tag', 'p': 'page', 
-		'q': 'quit', 's': 'step', 'var': 'variant'}
-	help_text = {'help': HELP_GENERAL, 'serial numbers': HELP_SERIAL, 'tags': HELP_TAGS}
+	aliases = {'&': 'intersection', '-': 'minus', '|': 'union', 'dbr': 'drop by rule', 
+		'drs': 'drop by stats', 'drt': 'drop by tag', 'kbr': 'keep by rule', 'kbs': 'keep by stats', 
+		'kbt': 'keep by tag', 'lib': 'library', 'lbr': 'load by rule', 'lbs': 'load by stats', 
+		'lbt': 'load by tag', 'p': 'page', 'q': 'quit', 's': 'step', 'var': 'variant'}
+	help_text = {'help': HELP_GENERAL, 'rules': HELP_RULE_TYPES, 'serial numbers': HELP_SERIAL, 
+		'tags': HELP_TAGS}
 	prompt = 'IPVDB >> '
 	valid_export = set(('by-cards', 'by-tag', 'child-name', 'child-serial', 'child-summary', 'child-stags', 
 		'child-tags', 'html', 'markdown', 'multi-all', 'multi-alpha', 'mutli-freq', 'text'))
@@ -931,7 +973,7 @@ class Viewer(cmd.Cmd):
 		you can use 'load by tags' or 'load stats', followed by the search
 		specification as detailed below. The aliases for these ways to load are 
 		lbr, lbs, and lbt, respectively. You can also use 'load all' to load the
-		entire database into one library.
+		entire database into one library. 
 
 		Loading by rules can be done three ways. If you just pass a number, it will
 		search for games with that rule ID. If you pass the word 'type' and a rule 
@@ -939,7 +981,8 @@ class Viewer(cmd.Cmd):
 		you can also pass a card number to search by rule type and card number. 
 		Anything else will be interpretted as a search of the rule's full text. Use
 		SQL wildcards when doing this search: % for any sequence of zero or more
-		characters and _ for any single character.
+		characters and _ for any single character. Type 'help rules' for information
+		on the various rule types.
 
 		Loading by stats can be done using three part search terms. The first part 
 		of a search term can be any variable on the variants table: variant_id, name, 
@@ -950,7 +993,7 @@ class Viewer(cmd.Cmd):
 
 		Loading by tags takes a list of tags as an argument. Tags can be listed plain
 		or with a preceding -. Matching variants will have one of the plain tags, and 
-		none of the -tags.
+		none of the -tags. Type 'help tags' for information on the available tags.
 		"""
 		try:
 			self.load_variants(arguments)
