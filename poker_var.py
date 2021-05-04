@@ -651,8 +651,6 @@ class Viewer(cmd.Cmd):
 	valid_export: The valid arguments to the export command. (set of str)
 
 	Methods:
-	do_commit: Commit the latest changes to the database. (None)
-	do_discard: Discard any changes made to the database. (None)
 	do_drop: Specify which variants to remove from the current library. (None)
 	do_export: Export a library to one or more files. (None)
 	do_intersection: Generate the intersection between two libraries. (None)
@@ -719,45 +717,6 @@ class Viewer(cmd.Cmd):
 			return self.onecmd(' '.join(words))
 		else:
 			return super(Viewer, self).default(line)
-
-	def do_commit(self, arguments):
-		"""
-		Commit the latest changes to the database.
-		"""
-		if self.edit_mode == 'variant':
-			if self.current_variant is None or not self.current_variant.changes:
-				print('There are no changes to commit.')
-			else:
-				self.current_variant.commit(self.conn, self.cursor)
-		else:
-			if self.rule_changes:
-				code = 'update rules set type_id = ?, cards = ?, short = ?, full = ?'
-				code = f'{code} where rule_id = ?'
-				values = (self.rule_type_ids[self.current_rule[1]],)
-				values += self.current_rule[2:] + self.current_rule[:1]
-				self.cursor.execute(code, values)
-				self.conn.commit()
-				self.rule_changes = False
-				print('Note that rule changes do no propogate to variants already loaded.')
-				print('You must reload your libraries to change the rules loaded for them.')
-			else:
-				print('There are no changes to commit.')
-
-	def do_discard(self, arguments):
-		"""
-		Discard any changes made to the database.
-		"""
-		if self.edit_mod == 'variant':
-			if self.current_variant is None or not self.current_variant.changes:
-				print('There are no changes to commit.')
-			else:
-				self.current_variant.reset(self.conn, self.cursor)
-		else:
-			if self.rule_changes:
-				self.current_rule = None
-				self.rule_changes = False
-			else:
-				print('There are no changes to commit.')
 
 	def do_drop(self, arguments):
 		"""
@@ -1474,35 +1433,6 @@ class Viewer(cmd.Cmd):
 			code = f'{code} and var_tag2.tag_id in ({qmarks})'
 		# Pull the values.
 		self.cursor.execute(code, neutral + negative)
-
-	def load_csv_data(self):
-		"""
-		Load the csv data from the old database. (dict of str: tuple)
-
-		Each table in the old data is given a key in the returned dictionary. Note
-		that the tables in the old database do not correspond exactly to the tables in
-		the new database. Some things that should have been lookup tables weren't.
-		"""
-		data = {}
-		with open('alias_data.csv') as alias_file:
-			alias_reader = csv.reader(alias_file)
-			data['aliases'] = tuple(alias_reader)
-		with open('game_data.csv') as game_file:
-			game_reader = csv.reader(game_file)
-			data['variants'] = tuple(game_reader)
-		with open('game_rules.csv') as game_rules_file:
-			game_rules_reader = csv.reader(game_rules_file)
-			data['variant-rules'] = tuple(game_rules_reader)
-		with open('game_tags.csv') as game_tags_file:
-			game_tags_reader = csv.reader(game_tags_file)
-			data['variant-tags'] = tuple(game_tags_reader)
-		with open('rule_data.csv') as rule_file:
-			rule_reader = csv.reader(rule_file)
-			data['rules'] = tuple(rule_reader)
-		with open('tag_data.csv') as tag_file:
-			tags_reader = csv.reader(tag_file)
-			data['tags'] = tuple(tags_reader)
-		return data
 
 	def load_lookups(self):
 		"""Load the lookups tables that are used internally. (None)"""
