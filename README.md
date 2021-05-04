@@ -6,7 +6,7 @@ However, some people had linked to my collection, and were sad to see it go bye-
 
 ## Using the Database
 
-To use the database, just go to the all_web folder, and open up the all_web_toc.html file. That provides links to all of the sub-files with the poker variants in them, and you can just browse from there. Alternatively, you can look in the all_md folder for markdown versions of those files. The markdown files do not have links, so there is no table of contents file. Also, since there are no links, variants with multiple tags are duplicated in the files for the different tags.
+To use the database, just download the all_web folder, and open up the all_web_toc.html file. That provides links to all of the sub-files with the poker variants in them, and you can just browse from there. Alternatively, you can look in the all_md folder for markdown versions of those files, which can be viewed on GitHub. The markdown files do not have links, so there is no table of contents file. Also, since there are no links, variants with multiple tags are duplicated in the files for the different tags.
 
 To use the interface to the database, download the zip of the latest release or clone the current repo. Then open poker_var.py with Python. The interface has tools for loading subsets of the database into libraries and then exporting them in different formats. Type 'help' for an introduction to those tools.
 

@@ -191,7 +191,7 @@ Rules for removing cards from a player's hand with out getting cards back. The c
 
 ### draw
 	
-Rules for discarding cards to get more cards from the deck (or somewhere). This includes 'twisting,' which is paying money to the pot in order to draw cards. The card number is the maximum number of cards each player can draw.
+Rules for discarding cards to get cards from the deck (or somewhere). This includes 'twisting,' which is paying money to the pot in order to draw cards. The card number is the maximum number of cards each player can draw.
 
 ### hand
 	
