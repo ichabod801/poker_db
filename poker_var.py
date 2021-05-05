@@ -255,25 +255,6 @@ class Variant(object):
 		tags = ', '.join(self.tags)
 		return f'{self.name} (#{self.variant_id}): {tags}'
 
-	def commit(self, conn, cursor):
-		"""
-		Commit any modifications made to the variant. (None)
-
-		Parameters:
-		conn: A database connection. (Connection)
-		cursor: A cursor to execute database commands. (Cursor)
-		"""
-		for variable, action, value in self.changes:
-			if (variable, action) == ('alias', 'add'):
-				code = 'insert into aliases(variant_id, alias) values (?, ?)'
-				cursor.execute(code, (self.variant_id, self.alias))
-			elif (variable, action) == ('alias', 'remove'):
-				code = 'delete from aliases where variant_id = ? and alias = ?'
-				cursor.execute(code, (self.variant_id, self.alias))
-			print(f'Change: {variable}/{action}')
-		conn.commit()
-		self.changes = []
-
 	def display(self):
 		"""Text representation for viewing in the CLI. (str)"""
 		# Set up the title.
@@ -621,22 +602,6 @@ class Variant(object):
 			return f'../{target_path[1]}/{target_path[2]}.html#variant-{target_id}'
 		else:
 			return f'{target_path[-1]}.html#variant-{target_id}'
-
-	def reset(self, cursor):
-		"""
-		Reset the variant from the database. (None)
-
-		Parameters:
-		cursor: A cursor for executing SQL commands. (Cursor)
-		"""
-		# Save the base attributes
-		code = 'select * from variants where variant_id = ?'
-		cursor.execute(code, (self.variant_id,))
-		self.load_row(cursor.fetchone())
-		# Set the edit tracking.
-		self.changes = []
-		# Load the attributes from the database.
-		self.load_data(cursor)
 
 	def serial_number(self):
 		"""Give a serial number of the stats of the variant. (str)"""
