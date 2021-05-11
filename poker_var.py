@@ -218,6 +218,9 @@ class Variant(object):
 		"""
 		Commit any modifications made to the variant. (None)
 
+		!! This doesn't make a lot of sense. The code should be executed when the 
+		change is made. This should only commit those changes.
+
 		Parameters:
 		conn: A database connection. (Connection)
 		cursor: A cursor to execute database commands. (Cursor)
@@ -232,6 +235,20 @@ class Variant(object):
 			print(f'Change: {variable}/{action}')
 		conn.commit()
 		self.changes = []
+
+	def copy(self, name, cursor):
+		"""
+		Create a copy of this variant. (Variant)
+
+		Parameters:
+		name: The name of the new variant. (str)
+		cursor: A cursor to execute database commands. (Cursor)
+		"""
+		row = (name, self.cards, self.players, self.rounds, self.max_seen, self.wilds, self.variant_id, 57)
+		code = 'insert in sources(name, cards, players, round, max_seen, wilds, parent_id, source_id)'
+		code = f'{code} values (?, ?, ?, ?, ?, ?, ?, ?, ?)'
+		cursor.execute(code, row)
+		row = (cursor.lastrowid,) + row
 
 	def display(self):
 		"""Text representation for viewing in the CLI. (str)"""
@@ -644,6 +661,7 @@ class Viewer(cmd.Cmd):
 	tag_ids: A lookup table for tag IDs. (dict of str: int)
 	tag_lookup: A lookup table for tag. (dict of int: str)
 	variants: Variants that have been loaded, keyed by ID (dict of int: Variant)
+	variant_changes: A flag for changes made to the curren variant. (bool)
 
 	Class Attributes:
 	aliases: Command aliases. (dict of str: str)
@@ -1033,6 +1051,23 @@ class Viewer(cmd.Cmd):
 			pass
 		else:
 			self.library_sql()
+
+	def do_new(self, arguments):
+		"""
+		Create a new game based on the current one.
+		"""
+		if self.edit_mode == 'rule' and self.changes:
+			print('There are uncommitted changes. Please commit or discard.')
+			return
+		if self.current_variant is None:
+			print('There is no current variant to base a new one on.')
+			print('Please use the variant command to select one from a loaded library.')
+			return
+		self.edit_mode == 'variant'
+		name = arguments.strip()
+		while not name:
+			name = input('Please enter the name of the new variant: ').strip()
+		variant = self.current_variant.copy(name)
 
 	def do_minus(self, arguments):
 		"""
@@ -1643,6 +1678,7 @@ class Viewer(cmd.Cmd):
 		self.view_mode = 'tags'
 		# Set the variant tracking.
 		self.current_variant = None
+		self.variant_changes = False
 		# Set up the edit tracking.
 		self.edit_mode = 'variant'
 		self.current_rule = None
